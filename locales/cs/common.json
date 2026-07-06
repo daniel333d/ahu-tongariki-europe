@@ -1,0 +1,391 @@
+{
+  "language": {
+    "aria": "Změnit jazyk",
+    "choose1": "Please choose your language",
+    "choose2": "Vyberte jazyk",
+    "choose3": "Choisissez votre langue",
+    "names": {
+      "pl": "Polski",
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "cs": "Čeština"
+    }
+  },
+  "intro": {
+    "subtitle": "The Spirit of Rapa Nui Lives Here",
+    "welcomeWords": "Welcome · Bienvenue · Willkommen · Bienvenido · Vítejte · Witamy",
+    "tagline": "Prožijte ducha Rapa Nui",
+    "motto": "Monumentální dědictví. Nadčasový zážitek.",
+    "imageAlt": "Panorama Ahu Tongariki při východu slunce"
+  },
+  "audio": {
+    "enable": "Activer le son de l’océan",
+    "disable": "Désactiver le son de l’océan",
+    "retry": "Cliquez à nouveau pour lancer le son de l’océan."
+  },
+  "login": {
+    "concept": "Koncepční projekt",
+    "slogan1": "„Strážci z Rapa Nui",
+    "slogan2": "budou nyní bdít nad",
+    "slogan3": "Bystrzyca Kłodzka.“",
+    "private": "Soukromá prezentace",
+    "access": "Přístup pouze pro osoby s heslem.",
+    "password": "Heslo",
+    "confidentiality": "Potvrzuji, že materiály prezentované na této stránce jsou důvěrné, a zavazuji se, že je nebudu kopírovat, šířit ani zpřístupňovat třetím osobám bez písemného souhlasu autora projektu.",
+    "rules": "Pravidla důvěrnosti",
+    "rulesText": "Materiály prezentované na této stránce tvoří autorskou koncepci projektu Ahu Tongariki Europe a mají důvěrný charakter. Přístup je určen výhradně vybraným osobám k seznámení s projektem. Bez předchozího písemného souhlasu je zakázáno materiály kopírovat, šířit, publikovat nebo využívat vcelku či zčásti.",
+    "confirmRequired": "Pro získání přístupu potvrďte pravidla důvěrnosti.",
+    "invalidPassword": "Nesprávné heslo.",
+    "enter": "VSTOUPIT",
+    "footerCopyright": "© Ahu Tongariki Europe",
+    "passwordPlaceholder": "Zadejte p??stupov? heslo"
+  },
+  "nav": {
+    "contact": "Kontakt pro investory",
+    "open": "Otevřít menu",
+    "close": "Zavřít menu",
+    "items": [
+      "Projekt",
+      "IORANA MOAI",
+      "Uspořádání soch",
+      "Lokalita",
+      "Kontakt"
+    ],
+    "logout": "Odhlásit"
+  },
+  "hero": {
+    "location": "Bystrzyca Kłodzka, Dolní Slezsko, Polsko",
+    "title": "Ahu Tongariki Europe",
+    "subtitle": "Jediná rekonstrukce Ahu Tongariki na světě – 15 Moai v plném měřítku.",
+    "ctaProject": "Poznat projekt",
+    "ctaContact": "Kontakt pro investory",
+    "imageAlt": "Vizualizace patnácti soch Moai na monumentální kamenné platformě",
+    "stats": [
+      [
+        "Měřítko",
+        "15 Moai"
+      ],
+      [
+        "Platforma",
+        "cca 100 m"
+      ],
+      [
+        "Území",
+        "16 ha"
+      ],
+      [
+        "Charakter",
+        "kultura / turismus / vzdělávání"
+      ]
+    ]
+  },
+  "slogan": {
+    "text1": "Strážci z",
+    "gold1": "Rapa Nui",
+    "text2": "budou nyní bdít nad",
+    "gold2": "Bystrzyca Kłodzka",
+    "description": "Ahu Tongariki Europe je koncepce vytvoření plnohodnotné rekonstrukce jednoho z nejznámějších archeologických souborů světa v Polsku. Projekt propojuje vzdělávání, kulturu, cestovní ruch a respekt k dědictví Rapa Nui.",
+    "imageAlt": "Moai obrácení k panoramatu Bystrzyca Kłodzka při západu slunce"
+  },
+  "project": {
+    "kicker": "O projektu",
+    "title": "Místo, kde se architektonické měřítko setkává se vzděláním, krajinou a kulturní pamětí.",
+    "body": "Ahu Tongariki Europe je koncepce vytvoření rekonstrukce Ahu Tongariki v plném měřítku v Polsku, jednoho z nejznámějších archeologických souborů světa z Rapa Nui. Plán počítá s 15 Moai v kompozici inspirované originálem, s respektem ke kulturnímu dědictví Velikonočního ostrova."
+  },
+  "iorana": {
+    "kicker": "Respekt ke kultuře Rapa Nui",
+    "title": "IORANA MOAI",
+    "intro": "Tato část projektu je pojata jako pocta tvůrcům Moai a dědictví Rapa Nui. Jejím cílem je šířit poznání, vybízet k objevování historie Ahu Tongariki a vytvářet citlivý most mezi Evropou a Velikonočním ostrovem.",
+    "imageAlt": "Visualisation muséale de Rano Raraku avec un Moai inachevé dans la roche",
+    "imageKicker": "Rano Raraku",
+    "imageTitle": "Místo, kde se kámen měnil v paměť.",
+    "imageBody": "Le grand Moai inachevé de Rano Raraku évoque l’ambition, la maîtrise technique et la dimension spirituelle du travail des anciens habitants de l’île. Ici, l’image sert la réflexion, l’éducation et l’invitation respectueuse à découvrir l’histoire authentique de Rapa Nui.",
+    "themes": [
+      [
+        "Origine des Moai",
+        "Une histoire de savoir ancestral, de travail de la pierre et du rôle de Rano Raraku comme lieu de naissance de nombreuses statues."
+      ],
+      [
+        "Archéologie et mémoire",
+        "Une perspective éducative fondée sur le respect de la recherche, de la documentation et de l’histoire authentique des complexes Ahu."
+      ],
+      [
+        "Un pont entre les cultures",
+        "La conception européenne vise à faire connaître le patrimoine de Rapa Nui et à approfondir la curiosité pour ses sources."
+      ]
+    ],
+    "dialogueKicker": "Dialog a odpovědnost",
+    "dialogueBody": "„IORANA MOAI“ nepředstavuje kulturu Rapa Nui jako dekoraci. Je pozváním k pozornému poznávání její historie, úspěchů a významu ve světovém dědictví, s respektem ke komunitě, která tuto paměť nese."
+  },
+  "statues": {
+    "imageAlt": "Détail architectural de l’alignement des Moai",
+    "imageKicker": "Composition spatiale",
+    "imageCaption": "Une séquence de quinze figures lue comme une ligne horizontale dans le paysage.",
+    "kicker": "Uspořádání soch",
+    "title": "Uspořádání soch – věrná kopie z Rapa Nui",
+    "intro": "Plánovaná kompozice vychází z čitelné osy platformy Ahu, sekvence patnácti postav a charakteristického rytmu známého z rekonstrukce Ahu Tongariki z roku 1995.",
+    "facts": [
+      [
+        "15",
+        "Moai v plném měřítku"
+      ],
+      [
+        "5,6–8,7 m",
+        "předpokládaný rozsah výšek"
+      ],
+      [
+        "Moai s pukao",
+        "Socha s červenou pokrývkou hlavy (Pukao)"
+      ],
+      [
+        "1995",
+        "uspořádání inspirované rekonstrukcí Ahu Tongariki"
+      ]
+    ]
+  },
+  "location": {
+    "mapAlt": "Mapa Evropy se zv?razn?n?m Polskem a lokalitou projektu v jihoz?padn? ??sti zem?",
+    "mapsAria": "Ouvrir la localisation du projet Ahu Tongariki Europe dans Google Maps",
+    "tooltip": [
+      "Ahu Tongariki Europe",
+      "Bystrzyca Kłodzka",
+      "Dolní Slezsko, Polsko"
+    ],
+    "mapKicker": "Localisation en Europe",
+    "mapTitle": "Bystrzyca Kłodzka, Dolní Slezsko, Polsko",
+    "mapBody": "Un point du sud-ouest de la Pologne, près de la frontière tchèque.",
+    "orientationLabel": "Orientation",
+    "orientationValue": "vers la ville",
+    "contextLabel": "Contexte",
+    "contextValue": "Vallée de Kłodzko",
+    "kicker": "Localisation",
+    "title": "Jihozápadní Polsko jako těžiště plánované kulturní atrakce.",
+    "intro": "Koncepce umisťuje komplex do Bystrzyca Kłodzka v Dolním Slezsku, s výhledovou vazbou na město a Kladskou kotlinu.",
+    "quote": "Sochy mají směřovat k Bystrzyca Kłodzka a vytvářet vztah mezi krajinou, dědictvím a novou turistickou funkcí místa.",
+    "openMap": "Klikněte na miniaturu Ahu Tongariki\na otevřete lokalitu v Google Maps",
+    "mapCode": "PL / SW"
+  },
+  "functions": {
+    "kicker": "Funkce komplexu",
+    "title": "Program navržený jako ucelená kulturně-turistická destinace.",
+    "intro": "Funkce jsou navrženy pro delší návštěvu, vzdělávání, obsluhu návštěvníků a tvorbu nové hodnoty pro region.",
+    "items": [
+      [
+        "Rekonstrukce Ahu Tongariki",
+        "Monumentální osa kamenné platformy a patnácti soch."
+      ],
+      [
+        "Vzdělávací centrum",
+        "Programy o dědictví Rapa Nui, archeologii a ochraně kultury."
+      ],
+      [
+        "Výstavní zóna",
+        "Dočasné výstavy, modely, multimédia a příběh rekonstrukce."
+      ],
+      [
+        "Gastronomie a místní produkty",
+        "Zázemí pro hosty založené na nabídce regionu."
+      ],
+      [
+        "Vyhlídkový bod",
+        "Dialog s krajinou Kladské kotliny a panoramatem Bystrzyca."
+      ],
+      [
+        "Kulturní události",
+        "Komorní koncerty, setkání, přednášky a partnerské programy."
+      ]
+    ]
+  },
+  "night": {
+    "kicker": "Zážitky po setmění",
+    "title": "NOCI AHU TONGARIKI",
+    "subtitle": "Když kámen ožívá.",
+    "body": "Když slunce zapadá, Ahu Tongariki Europe odhaluje svou druhou tvář.\n\nMonumentální siluety Moai vystupují ze tmy díky pečlivě navrženému osvětlení a vytvářejí prostor ticha, reflexe a úžasu.\n\nVečerní světelné prezentace, noční vyhlídky, astronomická setkání a komorní kulturní akce dávají každé noci vlastní charakter.",
+    "imageAlt": "No?n? iluminace patn?cti Moai na platform? Ahu Tongariki Europe",
+    "panelKicker": "Illumination architecturale",
+    "panelTitle": "Světlo, které vyvolává historii z kamene.",
+    "panelBody": "L’éclairage guide le regard sur les traits des visages, la texture de la pierre et le rythme de toute la plateforme, pour une expérience calme, digne et éloignée de tout spectacle de parc d’attractions.",
+    "cards": [
+      [
+        "Illuminations du soir",
+        "Une expérience lumineuse quotidienne après le coucher du soleil, soulignant la présence monumentale des statues."
+      ],
+      [
+        "Séances nocturnes",
+        "Un espace de silence et de contemplation face au panorama de Bystrzyca Kłodzka."
+      ],
+      [
+        "Astronomie et étoiles",
+        "Soirées avec télescopes, observation du ciel et de la Voie lactée."
+      ],
+      [
+        "Événements intimistes",
+        "Musique acoustique, récits historiques, rencontres éducatives et rendez-vous culturels."
+      ]
+    ],
+    "finalWhite": "Od prvních paprsků slunce po noc rozsvícenou hvězdami.",
+    "finalGold": "Ahu Tongariki Europe znovu odkrývá svou krásu v každé části dne."
+  },
+  "regional": {
+    "kicker": "Význam pro region",
+    "title": "Projekt s hospodářským, propagačním a vzdělávacím impulsem.",
+    "intro": "Plánovaná rekonstrukce může regionu sloužit po celý rok: jako cíl cesty, důvod k delšímu pobytu a rozpoznatelný symbol nové turistické nabídky.",
+    "items": [
+      "turistická atrakce světového měřítka",
+      "propagace Bystrzyca Kłodzka a Dolního Slezska",
+      "potenciál vzniku nových pracovních míst",
+      "vzdělávací a kulturní programy",
+      "prostor pro mezinárodní spolupráci"
+    ]
+  },
+  "partnership": {
+    "imageAlt": "Monumentální vizualizace Moai v pozadí sekce partnerství s Rapa Nui.",
+    "title": "Partnerství s Rapa Nui",
+    "body": "Projekt by měl být rozvíjen s respektem ke kulturnímu dědictví Rapa Nui a v dialogu s oficiálními zástupci ostrova, místní komunitou a institucemi zabývajícími se ochranou dědictví."
+  },
+  "technical": {
+    "kicker": "Technické údaje",
+    "title": "Parametry měřítka důležité pro plánování a investiční jednání.",
+    "intro": "Údaje uspořádávají prostorové předpoklady koncepce a pomáhají posoudit potenciál komplexu v Bystrzyca Kłodzka.",
+    "rows": [
+      [
+        "počet soch",
+        "15"
+      ],
+      [
+        "výška",
+        "cca 5,6–8,7 m"
+      ],
+      [
+        "délka platformy Ahu",
+        "cca 100 m"
+      ],
+      [
+        "plocha území",
+        "16 ha"
+      ],
+      [
+        "lokalita",
+        "Bystrzyca Kłodzka"
+      ]
+    ]
+  },
+  "contact": {
+    "kicker": "Kontakt",
+    "title": "Investiční dotazy",
+    "intro": "Pokud máte zájem o spolupráci, investici nebo další informace o Ahu Tongariki Europe, kontaktujte nás prostřednictvím níže uvedeného formuláře.",
+    "fullName": "Jméno a příjmení",
+    "organization": "Firma / Instituce (volitelné)",
+    "email": "E-mailová adresa",
+    "phone": "Telefon (volitelné)",
+    "subject": "Předmět zprávy",
+    "message": "Zpráva",
+    "consent": "Souhlasím se zpracováním svých údajů výhradně za účelem odpovědi na tento dotaz.",
+    "sending": "Odesílání...",
+    "submit": "Odeslat dotaz",
+    "required": "Vyplňte prosím všechna povinná pole.",
+    "invalidEmail": "Zadejte prosím platnou e-mailovou adresu.",
+    "consentRequired": "Pro odeslání dotazu je nutný souhlas se zpracováním údajů.",
+    "sendError": "Zprávu se nepodařilo odeslat. Zkuste to prosím znovu za několik minut.",
+    "success": "Děkujeme za odeslání dotazu.\n\nVaše zpráva byla úspěšně odeslána.\n\nNa uvedenou e-mailovou adresu bylo odesláno potvrzení.\n\nBudeme vás kontaktovat co nejdříve.",
+    "placeholders": {
+      "fullName": "Jm?no a p??jmen?",
+      "organization": "N?zev firmy nebo instituce",
+      "email": "jmeno@example.com",
+      "phone": "+420 ...",
+      "subject": "P?edm?t dotazu",
+      "message": "Popi?te pros?m sv?j z?jem o projekt."
+    }
+  },
+  "footer": {
+    "brand": "Ahu Tongariki Europe",
+    "domain": "ahutongariki.pl"
+  },
+  "system": {
+    "loading": "Načítání",
+    "i18nProviderError": "useI18n musí být použito uvnitř I18nProvider."
+  },
+  "brand": {
+    "name": "Ahu Tongariki Europe",
+    "domain": "ahutongariki.pl",
+    "iorana": "IORANA",
+    "ioranaMoai": "IORANA MOAI"
+  },
+  "seo": {
+    "title": "Ahu Tongariki Europe | Rekonstrukce v plném měřítku v Polsku",
+    "description": "Koncepce rekonstrukce Ahu Tongariki v plném měřítku v Evropě, v Bystrzyca Kłodzka.",
+    "locale": "cs_CZ",
+    "canonical": "https://ahutongariki.pl/cs",
+    "image": "/ahu-tongariki-hero.png",
+    "structuredDataName": "Ahu Tongariki Europe",
+    "structuredDataType": "TouristAttraction",
+    "addressLocality": "Bystrzyca Kłodzka",
+    "addressRegion": "Dolní Slezsko",
+    "addressCountry": "PL"
+  },
+  "server": {
+    "investorInquiry": {
+      "subject": "Investiční dotaz – Ahu Tongariki Europe",
+      "autoReplySubject": "Děkujeme za kontakt – Ahu Tongariki Europe",
+      "genericSendError": "Zprávu se nepodařilo odeslat. Zkuste to prosím znovu za několik minut.",
+      "rateLimited": "Byl dosažen limit odesílání. Zkuste to prosím později.",
+      "invalidJson": "Neplatná data formuláře.",
+      "honeypotAccepted": "Děkujeme za odeslání zprávy.",
+      "submittedTooFast": "Formulář byl odeslán příliš rychle.",
+      "validationError": "Vyplňte prosím všechna povinná pole formuláře.",
+      "invalidEmail": "Zadejte prosím platnou e-mailovou adresu.",
+      "missingResendApiKey": "Na serveru chybí proměnná prostředí RESEND_API_KEY.",
+      "unknownSendError": "Neznámá chyba odesílání.",
+      "sent": "Zpráva byla odeslána.",
+      "defaultFromEmail": "Ahu Tongariki Europe <onboarding@resend.dev>",
+      "websiteUrl": "https://www.ahutongariki.pl",
+      "websiteLabel": "www.ahutongariki.pl",
+      "labels": {
+        "fullName": "Jméno a příjmení",
+        "organization": "Firma / Instituce",
+        "email": "E-mailová adresa",
+        "phone": "Telefon",
+        "formSubject": "Předmět z formuláře",
+        "notProvided": "Neuvedeno"
+      },
+      "consentConfirmed": "Souhlas se zpracováním údajů byl ve formuláři potvrzen.",
+      "autoReplyLines": [
+        "Vážení,",
+        "děkujeme za váš zájem o Ahu Tongariki Europe a za odeslání zprávy.",
+        "Potvrzujeme přijetí vašeho dotazu.",
+        "Každou zprávu posuzujeme individuálně. Ozveme se vám co nejdříve.",
+        "S úctou",
+        "Projektový tým",
+        "Ahu Tongariki Europe"
+      ]
+    }
+  },
+  "accessibility": {
+    "skipToContent": "P?ej?t na hlavn? obsah",
+    "mainContentLabel": "Hlavn? obsah webu Ahu Tongariki Europe",
+    "languageWelcomeLabel": "V?b?r jazyka webu",
+    "languageOptionLabel": "Vybrat jazyk: {language}",
+    "languageMenuTitle": "Vyberte jazyk webu",
+    "languageMenuLabel": "Dostupn? jazyky",
+    "currentLanguage": "Aktu?ln? vybran? jazyk",
+    "logoutTitle": "Odhl?sit se a vr?tit se na p?ihla?ovac? obrazovku",
+    "openMenuTitle": "Otev??t naviga?n? menu",
+    "closeMenuTitle": "Zav??t naviga?n? menu",
+    "investorContactTitle": "P?ej?t na kontaktn? formul?? pro investory",
+    "projectCtaTitle": "P?ej?t na p?ehled projektu",
+    "confidentialityToggleTitle": "Zobrazit nebo skr?t pravidla d?v?rnosti",
+    "loginSubmitTitle": "Vstoupit do soukrom? prezentace projektu",
+    "mapsTitle": "Otev??t lokalitu projektu v Google Maps v nov? kart?",
+    "contactFormLabel": "Formul?? investi?n?ho dotazu",
+    "contactStatusSuccess": "Potvrzen? odesl?n? formul??e",
+    "contactStatusError": "Chyba kontaktn?ho formul??e",
+    "submitInquiryTitle": "Odeslat investi?n? dotaz",
+    "requiredFieldHint": "Povinn? pole",
+    "optionalFieldHint": "Voliteln? pole",
+    "loadingStatus": "Str?nka se na??t?",
+    "navigationLabel": "Hlavn? navigace",
+    "mobileMenuLabel": "Mobiln? naviga?n? menu"
+  }
+}

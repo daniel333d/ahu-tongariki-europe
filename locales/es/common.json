@@ -1,0 +1,391 @@
+{
+  "language": {
+    "aria": "Cambiar idioma",
+    "choose1": "Please choose your language",
+    "choose2": "Elige tu idioma",
+    "choose3": "Choisissez votre langue",
+    "names": {
+      "pl": "Polski",
+      "en": "English",
+      "fr": "Français",
+      "es": "Español",
+      "de": "Deutsch",
+      "cs": "Čeština"
+    }
+  },
+  "intro": {
+    "subtitle": "The Spirit of Rapa Nui Lives Here",
+    "welcomeWords": "Welcome · Bienvenue · Willkommen · Bienvenido · Vítejte · Witamy",
+    "tagline": "Vivir el espíritu de Rapa Nui",
+    "motto": "Patrimonio monumental. Una experiencia atemporal.",
+    "imageAlt": "Panorámica de Ahu Tongariki al amanecer"
+  },
+  "audio": {
+    "enable": "Activer le son de l’océan",
+    "disable": "Désactiver le son de l’océan",
+    "retry": "Cliquez à nouveau pour lancer le son de l’océan."
+  },
+  "login": {
+    "concept": "Proyecto conceptual",
+    "slogan1": "«Los guardianes de Rapa Nui",
+    "slogan2": "velarán desde ahora por",
+    "slogan3": "Bystrzyca Kłodzka.»",
+    "private": "Presentación privada",
+    "access": "Acceso reservado a personas con contraseña.",
+    "password": "Contraseña",
+    "confidentiality": "Confirmo que los materiales presentados en este sitio son confidenciales y me comprometo a no copiarlos, difundirlos ni compartirlos con terceros sin el consentimiento escrito del autor del proyecto.",
+    "rules": "Normas de confidencialidad",
+    "rulesText": "Los materiales presentados en este sitio constituyen el concepto de autor del proyecto Ahu Tongariki Europe y son confidenciales. El acceso se concede únicamente a destinatarios seleccionados para conocer el proyecto. Queda prohibida toda copia, difusión, publicación o utilización total o parcial sin autorización escrita previa.",
+    "confirmRequired": "Para acceder, confirme las normas de confidencialidad.",
+    "invalidPassword": "Contraseña incorrecta.",
+    "enter": "ENTRAR",
+    "footerCopyright": "© Ahu Tongariki Europe",
+    "passwordPlaceholder": "Introduzca la contrase?a"
+  },
+  "nav": {
+    "contact": "Contacto inversores",
+    "open": "Abrir menú",
+    "close": "Cerrar menú",
+    "items": [
+      "Proyecto",
+      "IORANA MOAI",
+      "Disposición de estatuas",
+      "Ubicación",
+      "Contacto"
+    ],
+    "logout": "Cerrar sesión"
+  },
+  "hero": {
+    "location": "Bystrzyca Kłodzka, Baja Silesia, Polonia",
+    "title": "Ahu Tongariki Europe",
+    "subtitle": "La única reconstrucción de Ahu Tongariki en el mundo – 15 Moai a escala real.",
+    "ctaProject": "Conocer el proyecto",
+    "ctaContact": "Contacto inversores",
+    "imageAlt": "Visualización de quince estatuas Moai sobre una plataforma monumental de piedra",
+    "stats": [
+      [
+        "Escala",
+        "15 Moai"
+      ],
+      [
+        "Plataforma",
+        "aprox. 100 m"
+      ],
+      [
+        "Terreno",
+        "16 ha"
+      ],
+      [
+        "Carácter",
+        "cultura / turismo / educación"
+      ]
+    ]
+  },
+  "slogan": {
+    "text1": "Los guardianes de",
+    "gold1": "Rapa Nui",
+    "text2": "velarán desde ahora por",
+    "gold2": "Bystrzyca Kłodzka",
+    "description": "Ahu Tongariki Europe es una concepción para crear en Polonia una reconstrucción a escala real de uno de los conjuntos arqueológicos más reconocibles del mundo. El proyecto une educación, cultura, turismo y respeto por el patrimonio de Rapa Nui.",
+    "imageAlt": "Moai orientados hacia la panorámica de Bystrzyca Kłodzka al atardecer"
+  },
+  "project": {
+    "kicker": "Sobre el proyecto",
+    "title": "Un lugar donde la escala arquitectónica se encuentra con la educación, el paisaje y la memoria cultural.",
+    "body": "Ahu Tongariki Europe es una concepción para crear en Polonia una reconstrucción a escala real de Ahu Tongariki, uno de los conjuntos arqueológicos más reconocibles del mundo, procedente de Rapa Nui. El plan contempla 15 Moai en una composición inspirada en el original, con respeto por el patrimonio cultural de la Isla de Pascua."
+  },
+  "iorana": {
+    "kicker": "Respeto por la cultura Rapa Nui",
+    "title": "IORANA MOAI",
+    "intro": "Esta parte del proyecto se concibe como un homenaje a los creadores de los Moai y al patrimonio de Rapa Nui. Su propósito es difundir conocimiento, invitar a descubrir la historia de Ahu Tongariki y tender un puente respetuoso entre Europa y la Isla de Pascua.",
+    "imageAlt": "Visualisation muséale de Rano Raraku avec un Moai inachevé dans la roche",
+    "imageKicker": "Rano Raraku",
+    "imageTitle": "Donde la piedra se convertía en memoria.",
+    "imageBody": "Le grand Moai inachevé de Rano Raraku évoque l’ambition, la maîtrise technique et la dimension spirituelle du travail des anciens habitants de l’île. Ici, l’image sert la réflexion, l’éducation et l’invitation respectueuse à découvrir l’histoire authentique de Rapa Nui.",
+    "themes": [
+      [
+        "Origine des Moai",
+        "Une histoire de savoir ancestral, de travail de la pierre et du rôle de Rano Raraku comme lieu de naissance de nombreuses statues."
+      ],
+      [
+        "Archéologie et mémoire",
+        "Une perspective éducative fondée sur le respect de la recherche, de la documentation et de l’histoire authentique des complexes Ahu."
+      ],
+      [
+        "Un pont entre les cultures",
+        "La conception européenne vise à faire connaître le patrimoine de Rapa Nui et à approfondir la curiosité pour ses sources."
+      ]
+    ],
+    "dialogueKicker": "Diálogo y responsabilidad",
+    "dialogueBody": "«IORANA MOAI» no presenta la cultura Rapa Nui como decoración. Es una invitación a acercarse a su historia, sus logros y su lugar en el patrimonio mundial con atención y respeto hacia la comunidad que sostiene esa memoria."
+  },
+  "statues": {
+    "imageAlt": "Détail architectural de l’alignement des Moai",
+    "imageKicker": "Composition spatiale",
+    "imageCaption": "Une séquence de quinze figures lue comme une ligne horizontale dans le paysage.",
+    "kicker": "Disposición de estatuas",
+    "title": "Disposición de estatuas – copia fiel de Rapa Nui",
+    "intro": "La composición prevista se apoya en el eje claro de la plataforma Ahu, una secuencia de quince figuras y el ritmo característico conocido por la reconstrucción de Ahu Tongariki de 1995.",
+    "facts": [
+      [
+        "15",
+        "Moai a escala real"
+      ],
+      [
+        "5,6–8,7 m",
+        "rango de altura previsto"
+      ],
+      [
+        "Moai con pukao",
+        "La estatua con tocado rojo (Pukao)"
+      ],
+      [
+        "1995",
+        "disposición inspirada en la reconstrucción de Ahu Tongariki"
+      ]
+    ]
+  },
+  "location": {
+    "mapAlt": "Mapa de Europa que destaca Polonia y la ubicaci?n del proyecto en el suroeste del pa?s",
+    "mapsAria": "Ouvrir la localisation du projet Ahu Tongariki Europe dans Google Maps",
+    "tooltip": [
+      "Ahu Tongariki Europe",
+      "Bystrzyca Kłodzka",
+      "Baja Silesia, Polonia"
+    ],
+    "mapKicker": "Localisation en Europe",
+    "mapTitle": "Bystrzyca Kłodzka, Baja Silesia, Polonia",
+    "mapBody": "Un point du sud-ouest de la Pologne, près de la frontière tchèque.",
+    "orientationLabel": "Orientation",
+    "orientationValue": "vers la ville",
+    "contextLabel": "Contexte",
+    "contextValue": "Vallée de Kłodzko",
+    "kicker": "Localisation",
+    "title": "El suroeste de Polonia como centro de gravedad de una atracción cultural planificada.",
+    "intro": "El concepto sitúa el complejo en Bystrzyca Kłodzka, en Baja Silesia, con una relación visual con la ciudad y el valle de Kłodzko.",
+    "quote": "Las estatuas están concebidas para mirar hacia Bystrzyca Kłodzka, creando una relación entre paisaje, patrimonio y una nueva función turística.",
+    "openMap": "Haz clic en la miniatura de Ahu Tongariki\npara abrir la ubicación en Google Maps",
+    "mapCode": "PL / SW"
+  },
+  "functions": {
+    "kicker": "Funciones del complejo",
+    "title": "Un programa diseñado como destino cultural y turístico coherente.",
+    "intro": "Las funciones se orientan a visitas prolongadas, educación, atención al visitante y creación de nuevo valor para la región.",
+    "items": [
+      [
+        "Reconstrucción de Ahu Tongariki",
+        "Un eje monumental de plataforma de piedra y quince estatuas."
+      ],
+      [
+        "Centro educativo",
+        "Programas sobre patrimonio de Rapa Nui, arqueología y protección cultural."
+      ],
+      [
+        "Zona expositiva",
+        "Exposiciones temporales, maquetas, multimedia y relato del proceso de reconstrucción."
+      ],
+      [
+        "Gastronomía y productos locales",
+        "Servicios para visitantes vinculados a la oferta regional."
+      ],
+      [
+        "Mirador",
+        "Diálogo con el paisaje del valle de Kłodzko y la panorámica de Bystrzyca."
+      ],
+      [
+        "Eventos culturales",
+        "Conciertos íntimos, encuentros, conferencias y programas asociados."
+      ]
+    ]
+  },
+  "night": {
+    "kicker": "Experiencias al anochecer",
+    "title": "NOCHES DE AHU TONGARIKI",
+    "subtitle": "Cuando la piedra despierta.",
+    "body": "Cuando el sol se pone, Ahu Tongariki Europe revela una segunda identidad.\n\nLas siluetas monumentales de los Moai emergen de la oscuridad mediante una iluminación cuidadosamente diseñada, creando un espacio de silencio, reflexión y asombro.\n\nPresentaciones de luz, sesiones nocturnas, encuentros de astronomía y eventos culturales íntimos convierten cada noche en una experiencia propia.",
+    "imageAlt": "Iluminaci?n nocturna de quince Moai sobre la plataforma Ahu Tongariki Europe",
+    "panelKicker": "Illumination architecturale",
+    "panelTitle": "La luz que extrae la historia de la piedra.",
+    "panelBody": "L’éclairage guide le regard sur les traits des visages, la texture de la pierre et le rythme de toute la plateforme, pour une expérience calme, digne et éloignée de tout spectacle de parc d’attractions.",
+    "cards": [
+      [
+        "Illuminations du soir",
+        "Une expérience lumineuse quotidienne après le coucher du soleil, soulignant la présence monumentale des statues."
+      ],
+      [
+        "Séances nocturnes",
+        "Un espace de silence et de contemplation face au panorama de Bystrzyca Kłodzka."
+      ],
+      [
+        "Astronomie et étoiles",
+        "Soirées avec télescopes, observation du ciel et de la Voie lactée."
+      ],
+      [
+        "Événements intimistes",
+        "Musique acoustique, récits historiques, rencontres éducatives et rendez-vous culturels."
+      ]
+    ],
+    "finalWhite": "Desde los primeros rayos del sol hasta la noche iluminada por las estrellas.",
+    "finalGold": "Ahu Tongariki Europe revela su belleza de nuevo a cada hora del día."
+  },
+  "regional": {
+    "kicker": "Importancia regional",
+    "title": "Un proyecto con impulso económico, promocional y educativo.",
+    "intro": "La reconstrucción planificada puede trabajar para la región durante todo el año: como destino, motivo para prolongar la estancia y símbolo reconocible de una nueva oferta turística.",
+    "items": [
+      "una atracción turística de escala mundial",
+      "promoción de Bystrzyca Kłodzka y Baja Silesia",
+      "potencial de creación de empleo",
+      "programas educativos y culturales",
+      "espacio para la cooperación internacional"
+    ]
+  },
+  "partnership": {
+    "imageAlt": "Visualización monumental de los Moai como fondo de la sección de colaboración con Rapa Nui.",
+    "title": "Colaboración con Rapa Nui",
+    "body": "El proyecto debe desarrollarse con respeto por el patrimonio cultural de Rapa Nui y en diálogo con representantes oficiales de la isla, la comunidad local e instituciones dedicadas a la protección del patrimonio."
+  },
+  "technical": {
+    "kicker": "Datos técnicos",
+    "title": "Parámetros de escala relevantes para la planificación y la inversión.",
+    "intro": "Los datos ordenan las premisas espaciales del concepto y ayudan a valorar el potencial del complejo en Bystrzyca Kłodzka.",
+    "rows": [
+      [
+        "número de estatuas",
+        "15"
+      ],
+      [
+        "altura",
+        "aprox. 5,6–8,7 m"
+      ],
+      [
+        "longitud de la plataforma Ahu",
+        "aprox. 100 m"
+      ],
+      [
+        "superficie del terreno",
+        "16 ha"
+      ],
+      [
+        "ubicación",
+        "Bystrzyca Kłodzka"
+      ]
+    ]
+  },
+  "contact": {
+    "kicker": "Contacto",
+    "title": "Consultas de inversión",
+    "intro": "Si tienen interés en colaborar, invertir u obtener más información sobre Ahu Tongariki Europe, les invitamos a contactar mediante el siguiente formulario.",
+    "fullName": "Nombre y apellidos",
+    "organization": "Empresa / Institución (opcional)",
+    "email": "Correo electrónico",
+    "phone": "Teléfono (opcional)",
+    "subject": "Asunto del mensaje",
+    "message": "Mensaje",
+    "consent": "Acepto el tratamiento de mis datos exclusivamente para responder a esta consulta.",
+    "sending": "Enviando...",
+    "submit": "Enviar consulta",
+    "required": "Complete todos los campos obligatorios.",
+    "invalidEmail": "Introduzca una dirección de correo válida.",
+    "consentRequired": "Es necesario aceptar el tratamiento de datos para enviar la consulta.",
+    "sendError": "No se pudo enviar el mensaje. Inténtelo de nuevo dentro de unos minutos.",
+    "success": "Gracias por enviar su consulta.\n\nSu mensaje se ha enviado correctamente.\n\nSe ha enviado una confirmación a la dirección de correo indicada.\n\nNos pondremos en contacto lo antes posible.",
+    "placeholders": {
+      "fullName": "Nombre y apellidos",
+      "organization": "Nombre de empresa o instituci?n",
+      "email": "nombre@example.com",
+      "phone": "+34 ...",
+      "subject": "Asunto de la consulta",
+      "message": "Describa su inter?s en el proyecto."
+    }
+  },
+  "footer": {
+    "brand": "Ahu Tongariki Europe",
+    "domain": "ahutongariki.pl"
+  },
+  "system": {
+    "loading": "Cargando",
+    "i18nProviderError": "useI18n debe utilizarse dentro de I18nProvider."
+  },
+  "brand": {
+    "name": "Ahu Tongariki Europe",
+    "domain": "ahutongariki.pl",
+    "iorana": "IORANA",
+    "ioranaMoai": "IORANA MOAI"
+  },
+  "seo": {
+    "title": "Ahu Tongariki Europe | Reconstrucción a escala real en Polonia",
+    "description": "Concepto de reconstrucción a escala real de Ahu Tongariki en Europa, en Bystrzyca Kłodzka.",
+    "locale": "es_ES",
+    "canonical": "https://ahutongariki.pl/es",
+    "image": "/ahu-tongariki-hero.png",
+    "structuredDataName": "Ahu Tongariki Europe",
+    "structuredDataType": "TouristAttraction",
+    "addressLocality": "Bystrzyca Kłodzka",
+    "addressRegion": "Baja Silesia",
+    "addressCountry": "PL"
+  },
+  "server": {
+    "investorInquiry": {
+      "subject": "Consulta de inversión – Ahu Tongariki Europe",
+      "autoReplySubject": "Gracias por contactar – Ahu Tongariki Europe",
+      "genericSendError": "No se pudo enviar el mensaje. Inténtelo de nuevo dentro de unos minutos.",
+      "rateLimited": "Se ha alcanzado el límite de envío. Inténtelo más tarde.",
+      "invalidJson": "Datos del formulario no válidos.",
+      "honeypotAccepted": "Gracias por enviar su mensaje.",
+      "submittedTooFast": "El formulario se ha enviado demasiado rápido.",
+      "validationError": "Complete todos los campos obligatorios del formulario.",
+      "invalidEmail": "Introduzca una dirección de correo válida.",
+      "missingResendApiKey": "Falta la variable de entorno RESEND_API_KEY en el servidor.",
+      "unknownSendError": "Error de envío desconocido.",
+      "sent": "El mensaje ha sido enviado.",
+      "defaultFromEmail": "Ahu Tongariki Europe <onboarding@resend.dev>",
+      "websiteUrl": "https://www.ahutongariki.pl",
+      "websiteLabel": "www.ahutongariki.pl",
+      "labels": {
+        "fullName": "Nombre y apellidos",
+        "organization": "Empresa / Institución",
+        "email": "Correo electrónico",
+        "phone": "Teléfono",
+        "formSubject": "Asunto del formulario",
+        "notProvided": "No indicado"
+      },
+      "consentConfirmed": "El consentimiento para el tratamiento de datos fue confirmado en el formulario.",
+      "autoReplyLines": [
+        "Estimados señores:",
+        "gracias por su interés en Ahu Tongariki Europe y por enviar su mensaje.",
+        "Confirmamos la recepción de su consulta.",
+        "Cada mensaje se analiza individualmente. Nos pondremos en contacto lo antes posible.",
+        "Atentamente",
+        "Equipo del Proyecto",
+        "Ahu Tongariki Europe"
+      ]
+    }
+  },
+  "accessibility": {
+    "skipToContent": "Saltar al contenido principal",
+    "mainContentLabel": "Contenido principal del sitio Ahu Tongariki Europe",
+    "languageWelcomeLabel": "Selecci?n de idioma del sitio",
+    "languageOptionLabel": "Seleccionar idioma: {language}",
+    "languageMenuTitle": "Seleccionar idioma del sitio",
+    "languageMenuLabel": "Idiomas disponibles",
+    "currentLanguage": "Idioma seleccionado actualmente",
+    "logoutTitle": "Cerrar sesi?n y volver a la pantalla de acceso",
+    "openMenuTitle": "Abrir men? de navegaci?n",
+    "closeMenuTitle": "Cerrar men? de navegaci?n",
+    "investorContactTitle": "Ir al formulario de contacto para inversores",
+    "projectCtaTitle": "Ir a la secci?n de presentaci?n del proyecto",
+    "confidentialityToggleTitle": "Mostrar u ocultar las normas de confidencialidad",
+    "loginSubmitTitle": "Entrar en la presentaci?n privada del proyecto",
+    "mapsTitle": "Abrir la ubicaci?n del proyecto en Google Maps en una nueva pesta?a",
+    "contactFormLabel": "Formulario de consultas de inversi?n",
+    "contactStatusSuccess": "Confirmaci?n de env?o del formulario",
+    "contactStatusError": "Error del formulario de contacto",
+    "submitInquiryTitle": "Enviar consulta de inversi?n",
+    "requiredFieldHint": "Campo obligatorio",
+    "optionalFieldHint": "Campo opcional",
+    "loadingStatus": "La p?gina se est? cargando",
+    "navigationLabel": "Navegaci?n principal",
+    "mobileMenuLabel": "Men? de navegaci?n m?vil"
+  }
+}
