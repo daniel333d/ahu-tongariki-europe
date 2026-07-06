@@ -1,4 +1,4 @@
-{
+notepad package.json{
   "name": "ahu-tongariki-europe",
   "version": "1.0.0",
   "private": true,
@@ -16,7 +16,7 @@
     "react-dom": "19.2.7",
     "lucide-react": "0.468.0",
     "resend": "^6.6.0",
-    "sanity": "^4.23.0",
+    "sanity": "^3.88.4",
     "styled-components": "^6.1.19"
   },
   "devDependencies": {
