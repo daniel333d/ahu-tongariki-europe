@@ -7,3 +7,5 @@ node_modules/
 node_modules/
 .next/
 .pnpm-store/
+.claude/settings.local.json
+.claude/*.lock
