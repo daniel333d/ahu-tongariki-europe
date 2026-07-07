@@ -651,7 +651,7 @@ function HomeContent() {
           <div className="w-full">
             <div className="max-w-4xl">
               <p className="section-kicker mb-5 max-w-[18rem] sm:mb-6 sm:max-w-none">{copy.hero.location}</p>
-              <h1 className="font-serif text-[3.35rem] font-semibold leading-[0.92] text-balance min-[430px]:text-[3.85rem] sm:text-7xl lg:text-[7.5rem]">
+              <h1 className="hero-title font-serif text-[3.35rem] font-semibold leading-[0.92] text-balance min-[430px]:text-[3.85rem] sm:text-7xl lg:text-[7.5rem]">
                 {copy.brand.name}
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-7 text-white/80 sm:mt-8 sm:max-w-2xl sm:text-2xl sm:leading-8">
