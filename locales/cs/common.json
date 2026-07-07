@@ -21,9 +21,9 @@
     "imageAlt": "Panorama Ahu Tongariki při východu slunce"
   },
   "audio": {
-    "enable": "Activer le son de l’océan",
-    "disable": "Désactiver le son de l’océan",
-    "retry": "Cliquez à nouveau pour lancer le son de l’océan."
+    "enable": "Zapnout zvuk oceánu",
+    "disable": "Vypnout zvuk oceánu",
+    "retry": "Klikněte znovu pro spuštění zvuku oceánu."
   },
   "login": {
     "concept": "Koncepční projekt",
@@ -40,7 +40,7 @@
     "invalidPassword": "Nesprávné heslo.",
     "enter": "VSTOUPIT",
     "footerCopyright": "© Ahu Tongariki Europe",
-    "passwordPlaceholder": "Zadejte p??stupov? heslo"
+    "passwordPlaceholder": "Zadejte přístupové heslo"
   },
   "nav": {
     "contact": "Kontakt pro investory",
@@ -98,31 +98,31 @@
     "kicker": "Respekt ke kultuře Rapa Nui",
     "title": "IORANA MOAI",
     "intro": "Tato část projektu je pojata jako pocta tvůrcům Moai a dědictví Rapa Nui. Jejím cílem je šířit poznání, vybízet k objevování historie Ahu Tongariki a vytvářet citlivý most mezi Evropou a Velikonočním ostrovem.",
-    "imageAlt": "Visualisation muséale de Rano Raraku avec un Moai inachevé dans la roche",
+    "imageAlt": "Muzejní vizualizace Rano Raraku s nedokončeným Moai zasazeným do skály",
     "imageKicker": "Rano Raraku",
     "imageTitle": "Místo, kde se kámen měnil v paměť.",
-    "imageBody": "Le grand Moai inachevé de Rano Raraku évoque l’ambition, la maîtrise technique et la dimension spirituelle du travail des anciens habitants de l’île. Ici, l’image sert la réflexion, l’éducation et l’invitation respectueuse à découvrir l’histoire authentique de Rapa Nui.",
+    "imageBody": "Velký nedokončený Moai na svahu Rano Raraku připomíná ambice, technickou zručnost a duchovní rozměr práce dávných obyvatel ostrova. Vizualizace zde slouží k reflexi, vzdělávání a uctivému pozvání k poznání autentické historie Rapa Nui.",
     "themes": [
       [
-        "Origine des Moai",
-        "Une histoire de savoir ancestral, de travail de la pierre et du rôle de Rano Raraku comme lieu de naissance de nombreuses statues."
+        "Původ Moai",
+        "Příběh o dávném vědění, práci s kamenem a roli Rano Raraku jako místa zrodu mnoha soch."
       ],
       [
-        "Archéologie et mémoire",
-        "Une perspective éducative fondée sur le respect de la recherche, de la documentation et de l’histoire authentique des complexes Ahu."
+        "Archeologie a paměť",
+        "Vzdělávací pohled založený na respektu k výzkumu, dokumentaci a autentické historii komplexů Ahu."
       ],
       [
-        "Un pont entre les cultures",
-        "La conception européenne vise à faire connaître le patrimoine de Rapa Nui et à approfondir la curiosité pour ses sources."
+        "Most mezi kulturami",
+        "Evropská koncepce má přiblížit dědictví Rapa Nui širšímu publiku a prohloubit zájem o jeho kořeny."
       ]
     ],
     "dialogueKicker": "Dialog a odpovědnost",
     "dialogueBody": "„IORANA MOAI“ nepředstavuje kulturu Rapa Nui jako dekoraci. Je pozváním k pozornému poznávání její historie, úspěchů a významu ve světovém dědictví, s respektem ke komunitě, která tuto paměť nese."
   },
   "statues": {
-    "imageAlt": "Détail architectural de l’alignement des Moai",
-    "imageKicker": "Composition spatiale",
-    "imageCaption": "Une séquence de quinze figures lue comme une ligne horizontale dans le paysage.",
+    "imageAlt": "Architektonický detail řady soch Moai",
+    "imageKicker": "Prostorová kompozice",
+    "imageCaption": "Řada patnácti postav vnímaná jako vodorovná linie v krajině.",
     "kicker": "Uspořádání soch",
     "title": "Uspořádání soch – věrná kopie z Rapa Nui",
     "intro": "Plánovaná kompozice vychází z čitelné osy platformy Ahu, sekvence patnácti postav a charakteristického rytmu známého z rekonstrukce Ahu Tongariki z roku 1995.",
@@ -146,21 +146,21 @@
     ]
   },
   "location": {
-    "mapAlt": "Mapa Evropy se zv?razn?n?m Polskem a lokalitou projektu v jihoz?padn? ??sti zem?",
-    "mapsAria": "Ouvrir la localisation du projet Ahu Tongariki Europe dans Google Maps",
+    "mapAlt": "Mapa Evropy se zvýrazněným Polskem a lokalitou projektu v jihozápadní části země",
+    "mapsAria": "Otevřít lokalitu projektu Ahu Tongariki Europe v Google Maps",
     "tooltip": [
       "Ahu Tongariki Europe",
       "Bystrzyca Kłodzka",
       "Dolní Slezsko, Polsko"
     ],
-    "mapKicker": "Localisation en Europe",
+    "mapKicker": "Poloha v Evropě",
     "mapTitle": "Bystrzyca Kłodzka, Dolní Slezsko, Polsko",
-    "mapBody": "Un point du sud-ouest de la Pologne, près de la frontière tchèque.",
-    "orientationLabel": "Orientation",
-    "orientationValue": "vers la ville",
-    "contextLabel": "Contexte",
-    "contextValue": "Vallée de Kłodzko",
-    "kicker": "Localisation",
+    "mapBody": "Místo v jihozápadním Polsku, poblíž české hranice.",
+    "orientationLabel": "Orientace",
+    "orientationValue": "směrem k městu",
+    "contextLabel": "Kontext",
+    "contextValue": "Kladská kotlina",
+    "kicker": "Lokalita",
     "title": "Jihozápadní Polsko jako těžiště plánované kulturní atrakce.",
     "intro": "Koncepce umisťuje komplex do Bystrzyca Kłodzka v Dolním Slezsku, s výhledovou vazbou na město a Kladskou kotlinu.",
     "quote": "Sochy mají směřovat k Bystrzyca Kłodzka a vytvářet vztah mezi krajinou, dědictvím a novou turistickou funkcí místa.",
@@ -203,26 +203,26 @@
     "title": "NOCI AHU TONGARIKI",
     "subtitle": "Když kámen ožívá.",
     "body": "Když slunce zapadá, Ahu Tongariki Europe odhaluje svou druhou tvář.\n\nMonumentální siluety Moai vystupují ze tmy díky pečlivě navrženému osvětlení a vytvářejí prostor ticha, reflexe a úžasu.\n\nVečerní světelné prezentace, noční vyhlídky, astronomická setkání a komorní kulturní akce dávají každé noci vlastní charakter.",
-    "imageAlt": "No?n? iluminace patn?cti Moai na platform? Ahu Tongariki Europe",
-    "panelKicker": "Illumination architecturale",
+    "imageAlt": "Noční iluminace patnácti Moai na platformě Ahu Tongariki Europe",
+    "panelKicker": "Architektonická iluminace",
     "panelTitle": "Světlo, které vyvolává historii z kamene.",
-    "panelBody": "L’éclairage guide le regard sur les traits des visages, la texture de la pierre et le rythme de toute la plateforme, pour une expérience calme, digne et éloignée de tout spectacle de parc d’attractions.",
+    "panelBody": "Osvětlení má vést pohled po rysech tváří, struktuře kamene a rytmu celé platformy a vytvářet zážitek, který je klidný, důstojný a vzdálený spektáklu zábavního parku.",
     "cards": [
       [
-        "Illuminations du soir",
-        "Une expérience lumineuse quotidienne après le coucher du soleil, soulignant la présence monumentale des statues."
+        "Večerní iluminace",
+        "Denní světelný zážitek po západu slunce, zdůrazňující monumentální přítomnost soch."
       ],
       [
-        "Séances nocturnes",
-        "Un espace de silence et de contemplation face au panorama de Bystrzyca Kłodzka."
+        "Noční vyhlídky",
+        "Tichá zóna pro rozjímání a pozorování panoramatu Bystrzyca Kłodzka."
       ],
       [
-        "Astronomie et étoiles",
-        "Soirées avec télescopes, observation du ciel et de la Voie lactée."
+        "Astronomie a hvězdy",
+        "Večery s dalekohledy, pozorováním oblohy a Mléčné dráhy."
       ],
       [
-        "Événements intimistes",
-        "Musique acoustique, récits historiques, rencontres éducatives et rendez-vous culturels."
+        "Komorní akce",
+        "Akustická hudba, historické vyprávění, vzdělávací setkání a kulturní shromáždění."
       ]
     ],
     "finalWhite": "Od prvních paprsků slunce po noc rozsvícenou hvězdami.",
@@ -291,12 +291,12 @@
     "sendError": "Zprávu se nepodařilo odeslat. Zkuste to prosím znovu za několik minut.",
     "success": "Děkujeme za odeslání dotazu.\n\nVaše zpráva byla úspěšně odeslána.\n\nNa uvedenou e-mailovou adresu bylo odesláno potvrzení.\n\nBudeme vás kontaktovat co nejdříve.",
     "placeholders": {
-      "fullName": "Jm?no a p??jmen?",
-      "organization": "N?zev firmy nebo instituce",
+      "fullName": "Jméno a příjmení",
+      "organization": "Název firmy nebo instituce",
       "email": "jmeno@example.com",
       "phone": "+420 ...",
-      "subject": "P?edm?t dotazu",
-      "message": "Popi?te pros?m sv?j z?jem o projekt."
+      "subject": "Předmět dotazu",
+      "message": "Popište prosím svůj zájem o projekt."
     }
   },
   "footer": {
@@ -363,29 +363,29 @@
     }
   },
   "accessibility": {
-    "skipToContent": "P?ej?t na hlavn? obsah",
-    "mainContentLabel": "Hlavn? obsah webu Ahu Tongariki Europe",
-    "languageWelcomeLabel": "V?b?r jazyka webu",
+    "skipToContent": "Přejít na hlavní obsah",
+    "mainContentLabel": "Hlavní obsah webu Ahu Tongariki Europe",
+    "languageWelcomeLabel": "Výběr jazyka webu",
     "languageOptionLabel": "Vybrat jazyk: {language}",
     "languageMenuTitle": "Vyberte jazyk webu",
-    "languageMenuLabel": "Dostupn? jazyky",
-    "currentLanguage": "Aktu?ln? vybran? jazyk",
-    "logoutTitle": "Odhl?sit se a vr?tit se na p?ihla?ovac? obrazovku",
-    "openMenuTitle": "Otev??t naviga?n? menu",
-    "closeMenuTitle": "Zav??t naviga?n? menu",
-    "investorContactTitle": "P?ej?t na kontaktn? formul?? pro investory",
-    "projectCtaTitle": "P?ej?t na p?ehled projektu",
-    "confidentialityToggleTitle": "Zobrazit nebo skr?t pravidla d?v?rnosti",
-    "loginSubmitTitle": "Vstoupit do soukrom? prezentace projektu",
-    "mapsTitle": "Otev??t lokalitu projektu v Google Maps v nov? kart?",
-    "contactFormLabel": "Formul?? investi?n?ho dotazu",
-    "contactStatusSuccess": "Potvrzen? odesl?n? formul??e",
-    "contactStatusError": "Chyba kontaktn?ho formul??e",
-    "submitInquiryTitle": "Odeslat investi?n? dotaz",
-    "requiredFieldHint": "Povinn? pole",
-    "optionalFieldHint": "Voliteln? pole",
-    "loadingStatus": "Str?nka se na??t?",
-    "navigationLabel": "Hlavn? navigace",
-    "mobileMenuLabel": "Mobiln? naviga?n? menu"
+    "languageMenuLabel": "Dostupné jazyky",
+    "currentLanguage": "Aktuálně vybraný jazyk",
+    "logoutTitle": "Odhlásit se a vrátit se na přihlašovací obrazovku",
+    "openMenuTitle": "Otevřít navigační menu",
+    "closeMenuTitle": "Zavřít navigační menu",
+    "investorContactTitle": "Přejít na kontaktní formulář pro investory",
+    "projectCtaTitle": "Přejít na přehled projektu",
+    "confidentialityToggleTitle": "Zobrazit nebo skrýt pravidla důvěrnosti",
+    "loginSubmitTitle": "Vstoupit do soukromé prezentace projektu",
+    "mapsTitle": "Otevřít lokalitu projektu v Google Maps v nové kartě",
+    "contactFormLabel": "Formulář investičního dotazu",
+    "contactStatusSuccess": "Potvrzení odeslání formuláře",
+    "contactStatusError": "Chyba kontaktního formuláře",
+    "submitInquiryTitle": "Odeslat investiční dotaz",
+    "requiredFieldHint": "Povinné pole",
+    "optionalFieldHint": "Volitelné pole",
+    "loadingStatus": "Stránka se načítá",
+    "navigationLabel": "Hlavní navigace",
+    "mobileMenuLabel": "Mobilní navigační menu"
   }
 }

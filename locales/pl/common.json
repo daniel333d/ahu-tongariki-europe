@@ -40,7 +40,7 @@
     "invalidPassword": "Nieprawidłowe hasło.",
     "enter": "WEJDŹ",
     "footerCopyright": "© Ahu Tongariki Europe",
-    "passwordPlaceholder": "Wpisz has?o dost?pu"
+    "passwordPlaceholder": "Wpisz hasło dostępu"
   },
   "nav": {
     "contact": "Kontakt inwestorski",
@@ -291,12 +291,12 @@
     "sendError": "Nie udało się wysłać wiadomości. Prosimy spróbować ponownie za kilka minut.",
     "success": "Dziękujemy za przesłanie zapytania.\n\nPaństwa wiadomość została pomyślnie wysłana.\n\nNa podany adres e-mail zostało wysłane potwierdzenie otrzymania wiadomości.\n\nSkontaktujemy się z Państwem możliwie najszybciej.",
     "placeholders": {
-      "fullName": "Imi? i nazwisko",
+      "fullName": "Imię i nazwisko",
       "organization": "Nazwa firmy lub instytucji",
       "email": "adres@email.pl",
       "phone": "+48 ...",
       "subject": "Temat zapytania",
-      "message": "Prosimy opisa? zakres zainteresowania projektem."
+      "message": "Prosimy opisać zakres zainteresowania projektem."
     }
   },
   "footer": {
@@ -363,29 +363,29 @@
     }
   },
   "accessibility": {
-    "skipToContent": "Przejd? do g??wnej tre?ci",
-    "mainContentLabel": "G??wna tre?? strony Ahu Tongariki Europe",
-    "languageWelcomeLabel": "Wyb?r j?zyka strony",
-    "languageOptionLabel": "Wybierz j?zyk: {language}",
-    "languageMenuTitle": "Wybierz j?zyk strony",
-    "languageMenuLabel": "Lista dost?pnych j?zyk?w",
-    "currentLanguage": "Aktualnie wybrany j?zyk",
-    "logoutTitle": "Wyloguj i wr?? do ekranu logowania",
-    "openMenuTitle": "Otw?rz menu nawigacji",
+    "skipToContent": "Przejdź do głównej treści",
+    "mainContentLabel": "Główna treść strony Ahu Tongariki Europe",
+    "languageWelcomeLabel": "Wybór języka strony",
+    "languageOptionLabel": "Wybierz język: {language}",
+    "languageMenuTitle": "Wybierz język strony",
+    "languageMenuLabel": "Lista dostępnych języków",
+    "currentLanguage": "Aktualnie wybrany język",
+    "logoutTitle": "Wyloguj i wróć do ekranu logowania",
+    "openMenuTitle": "Otwórz menu nawigacji",
     "closeMenuTitle": "Zamknij menu nawigacji",
-    "investorContactTitle": "Przejd? do formularza kontaktu inwestorskiego",
-    "projectCtaTitle": "Przejd? do sekcji opisuj?cej projekt",
-    "confidentialityToggleTitle": "Rozwi? lub ukryj zasady poufno?ci",
-    "loginSubmitTitle": "Wejd? do prywatnej prezentacji projektu",
-    "mapsTitle": "Otw?rz lokalizacj? projektu w Google Maps w nowej karcie",
-    "contactFormLabel": "Formularz zapyta? inwestorskich",
-    "contactStatusSuccess": "Potwierdzenie wys?ania formularza",
-    "contactStatusError": "B??d formularza kontaktowego",
-    "submitInquiryTitle": "Wy?lij zapytanie inwestorskie",
+    "investorContactTitle": "Przejdź do formularza kontaktu inwestorskiego",
+    "projectCtaTitle": "Przejdź do sekcji opisującej projekt",
+    "confidentialityToggleTitle": "Rozwiń lub ukryj zasady poufności",
+    "loginSubmitTitle": "Wejdź do prywatnej prezentacji projektu",
+    "mapsTitle": "Otwórz lokalizację projektu w Google Maps w nowej karcie",
+    "contactFormLabel": "Formularz zapytań inwestorskich",
+    "contactStatusSuccess": "Potwierdzenie wysłania formularza",
+    "contactStatusError": "Błąd formularza kontaktowego",
+    "submitInquiryTitle": "Wyślij zapytanie inwestorskie",
     "requiredFieldHint": "Pole wymagane",
     "optionalFieldHint": "Pole opcjonalne",
-    "loadingStatus": "Strona jest ?adowana",
-    "navigationLabel": "G??wna nawigacja",
+    "loadingStatus": "Strona jest ładowana",
+    "navigationLabel": "Główna nawigacja",
     "mobileMenuLabel": "Mobilne menu nawigacyjne"
   }
 }

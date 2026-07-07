@@ -21,9 +21,9 @@
     "imageAlt": "Panorámica de Ahu Tongariki al amanecer"
   },
   "audio": {
-    "enable": "Activer le son de l’océan",
-    "disable": "Désactiver le son de l’océan",
-    "retry": "Cliquez à nouveau pour lancer le son de l’océan."
+    "enable": "Activar el sonido del océano",
+    "disable": "Desactivar el sonido del océano",
+    "retry": "Haga clic de nuevo para iniciar el sonido del océano."
   },
   "login": {
     "concept": "Proyecto conceptual",
@@ -40,7 +40,7 @@
     "invalidPassword": "Contraseña incorrecta.",
     "enter": "ENTRAR",
     "footerCopyright": "© Ahu Tongariki Europe",
-    "passwordPlaceholder": "Introduzca la contrase?a"
+    "passwordPlaceholder": "Introduzca la contraseña"
   },
   "nav": {
     "contact": "Contacto inversores",
@@ -98,31 +98,31 @@
     "kicker": "Respeto por la cultura Rapa Nui",
     "title": "IORANA MOAI",
     "intro": "Esta parte del proyecto se concibe como un homenaje a los creadores de los Moai y al patrimonio de Rapa Nui. Su propósito es difundir conocimiento, invitar a descubrir la historia de Ahu Tongariki y tender un puente respetuoso entre Europa y la Isla de Pascua.",
-    "imageAlt": "Visualisation muséale de Rano Raraku avec un Moai inachevé dans la roche",
+    "imageAlt": "Visualización de estilo museístico de Rano Raraku con un Moai inacabado incrustado en la roca",
     "imageKicker": "Rano Raraku",
     "imageTitle": "Donde la piedra se convertía en memoria.",
-    "imageBody": "Le grand Moai inachevé de Rano Raraku évoque l’ambition, la maîtrise technique et la dimension spirituelle du travail des anciens habitants de l’île. Ici, l’image sert la réflexion, l’éducation et l’invitation respectueuse à découvrir l’histoire authentique de Rapa Nui.",
+    "imageBody": "El gran Moai inacabado en las laderas de Rano Raraku habla de ambición, maestría técnica y la dimensión espiritual del trabajo de los primeros habitantes de la isla. Aquí, la visualización sirve a la reflexión, la educación y una invitación respetuosa a descubrir la historia auténtica de Rapa Nui.",
     "themes": [
       [
-        "Origine des Moai",
-        "Une histoire de savoir ancestral, de travail de la pierre et du rôle de Rano Raraku comme lieu de naissance de nombreuses statues."
+        "Orígenes de los Moai",
+        "Una historia de conocimiento ancestral, trabajo de la piedra y el papel de Rano Raraku como lugar de origen de numerosas estatuas."
       ],
       [
-        "Archéologie et mémoire",
-        "Une perspective éducative fondée sur le respect de la recherche, de la documentation et de l’histoire authentique des complexes Ahu."
+        "Arqueología y memoria",
+        "Una perspectiva educativa basada en el respeto por la investigación, la documentación y la historia auténtica de los complejos Ahu."
       ],
       [
-        "Un pont entre les cultures",
-        "La conception européenne vise à faire connaître le patrimoine de Rapa Nui et à approfondir la curiosité pour ses sources."
+        "Un puente entre culturas",
+        "El concepto europeo busca acercar el patrimonio de Rapa Nui a un público más amplio y profundizar la curiosidad por sus orígenes."
       ]
     ],
     "dialogueKicker": "Diálogo y responsabilidad",
     "dialogueBody": "«IORANA MOAI» no presenta la cultura Rapa Nui como decoración. Es una invitación a acercarse a su historia, sus logros y su lugar en el patrimonio mundial con atención y respeto hacia la comunidad que sostiene esa memoria."
   },
   "statues": {
-    "imageAlt": "Détail architectural de l’alignement des Moai",
-    "imageKicker": "Composition spatiale",
-    "imageCaption": "Une séquence de quinze figures lue comme une ligne horizontale dans le paysage.",
+    "imageAlt": "Detalle arquitectónico de la alineación de los Moai",
+    "imageKicker": "Composición espacial",
+    "imageCaption": "Una secuencia de quince figuras que se lee como una línea horizontal en el paisaje.",
     "kicker": "Disposición de estatuas",
     "title": "Disposición de estatuas – copia fiel de Rapa Nui",
     "intro": "La composición prevista se apoya en el eje claro de la plataforma Ahu, una secuencia de quince figuras y el ritmo característico conocido por la reconstrucción de Ahu Tongariki de 1995.",
@@ -146,21 +146,21 @@
     ]
   },
   "location": {
-    "mapAlt": "Mapa de Europa que destaca Polonia y la ubicaci?n del proyecto en el suroeste del pa?s",
-    "mapsAria": "Ouvrir la localisation du projet Ahu Tongariki Europe dans Google Maps",
+    "mapAlt": "Mapa de Europa que destaca Polonia y la ubicación del proyecto en el suroeste del país",
+    "mapsAria": "Abrir la ubicación del proyecto Ahu Tongariki Europe en Google Maps",
     "tooltip": [
       "Ahu Tongariki Europe",
       "Bystrzyca Kłodzka",
       "Baja Silesia, Polonia"
     ],
-    "mapKicker": "Localisation en Europe",
+    "mapKicker": "Ubicación en Europa",
     "mapTitle": "Bystrzyca Kłodzka, Baja Silesia, Polonia",
-    "mapBody": "Un point du sud-ouest de la Pologne, près de la frontière tchèque.",
-    "orientationLabel": "Orientation",
-    "orientationValue": "vers la ville",
-    "contextLabel": "Contexte",
-    "contextValue": "Vallée de Kłodzko",
-    "kicker": "Localisation",
+    "mapBody": "Un punto en el suroeste de Polonia, cerca de la frontera checa.",
+    "orientationLabel": "Orientación",
+    "orientationValue": "hacia la ciudad",
+    "contextLabel": "Contexto",
+    "contextValue": "Valle de Kłodzko",
+    "kicker": "Ubicación",
     "title": "El suroeste de Polonia como centro de gravedad de una atracción cultural planificada.",
     "intro": "El concepto sitúa el complejo en Bystrzyca Kłodzka, en Baja Silesia, con una relación visual con la ciudad y el valle de Kłodzko.",
     "quote": "Las estatuas están concebidas para mirar hacia Bystrzyca Kłodzka, creando una relación entre paisaje, patrimonio y una nueva función turística.",
@@ -203,26 +203,26 @@
     "title": "NOCHES DE AHU TONGARIKI",
     "subtitle": "Cuando la piedra despierta.",
     "body": "Cuando el sol se pone, Ahu Tongariki Europe revela una segunda identidad.\n\nLas siluetas monumentales de los Moai emergen de la oscuridad mediante una iluminación cuidadosamente diseñada, creando un espacio de silencio, reflexión y asombro.\n\nPresentaciones de luz, sesiones nocturnas, encuentros de astronomía y eventos culturales íntimos convierten cada noche en una experiencia propia.",
-    "imageAlt": "Iluminaci?n nocturna de quince Moai sobre la plataforma Ahu Tongariki Europe",
-    "panelKicker": "Illumination architecturale",
+    "imageAlt": "Iluminación nocturna de quince Moai sobre la plataforma Ahu Tongariki Europe",
+    "panelKicker": "Iluminación arquitectónica",
     "panelTitle": "La luz que extrae la historia de la piedra.",
-    "panelBody": "L’éclairage guide le regard sur les traits des visages, la texture de la pierre et le rythme de toute la plateforme, pour une expérience calme, digne et éloignée de tout spectacle de parc d’attractions.",
+    "panelBody": "La iluminación busca guiar la mirada por los rasgos faciales, la textura de la piedra y el ritmo de toda la plataforma, creando una experiencia serena, digna y alejada del espectáculo de parque de atracciones.",
     "cards": [
       [
-        "Illuminations du soir",
-        "Une expérience lumineuse quotidienne après le coucher du soleil, soulignant la présence monumentale des statues."
+        "Iluminación nocturna",
+        "Una experiencia lumínica diaria tras la puesta de sol, que resalta la presencia monumental de las estatuas."
       ],
       [
-        "Séances nocturnes",
-        "Un espace de silence et de contemplation face au panorama de Bystrzyca Kłodzka."
+        "Sesiones de observación nocturna",
+        "Una zona tranquila para la contemplación y la observación de la panorámica de Bystrzyca Kłodzka."
       ],
       [
-        "Astronomie et étoiles",
-        "Soirées avec télescopes, observation du ciel et de la Voie lactée."
+        "Astronomía y estrellas",
+        "Veladas con telescopios, observación del cielo y la Vía Láctea."
       ],
       [
-        "Événements intimistes",
-        "Musique acoustique, récits historiques, rencontres éducatives et rendez-vous culturels."
+        "Eventos íntimos",
+        "Música acústica, narración histórica, encuentros educativos y reuniones culturales."
       ]
     ],
     "finalWhite": "Desde los primeros rayos del sol hasta la noche iluminada por las estrellas.",
@@ -292,11 +292,11 @@
     "success": "Gracias por enviar su consulta.\n\nSu mensaje se ha enviado correctamente.\n\nSe ha enviado una confirmación a la dirección de correo indicada.\n\nNos pondremos en contacto lo antes posible.",
     "placeholders": {
       "fullName": "Nombre y apellidos",
-      "organization": "Nombre de empresa o instituci?n",
+      "organization": "Nombre de empresa o institución",
       "email": "nombre@example.com",
       "phone": "+34 ...",
       "subject": "Asunto de la consulta",
-      "message": "Describa su inter?s en el proyecto."
+      "message": "Describa su interés en el proyecto."
     }
   },
   "footer": {
@@ -365,27 +365,27 @@
   "accessibility": {
     "skipToContent": "Saltar al contenido principal",
     "mainContentLabel": "Contenido principal del sitio Ahu Tongariki Europe",
-    "languageWelcomeLabel": "Selecci?n de idioma del sitio",
+    "languageWelcomeLabel": "Selección de idioma del sitio",
     "languageOptionLabel": "Seleccionar idioma: {language}",
     "languageMenuTitle": "Seleccionar idioma del sitio",
     "languageMenuLabel": "Idiomas disponibles",
     "currentLanguage": "Idioma seleccionado actualmente",
-    "logoutTitle": "Cerrar sesi?n y volver a la pantalla de acceso",
-    "openMenuTitle": "Abrir men? de navegaci?n",
-    "closeMenuTitle": "Cerrar men? de navegaci?n",
+    "logoutTitle": "Cerrar sesión y volver a la pantalla de acceso",
+    "openMenuTitle": "Abrir menú de navegación",
+    "closeMenuTitle": "Cerrar menú de navegación",
     "investorContactTitle": "Ir al formulario de contacto para inversores",
-    "projectCtaTitle": "Ir a la secci?n de presentaci?n del proyecto",
+    "projectCtaTitle": "Ir a la sección de presentación del proyecto",
     "confidentialityToggleTitle": "Mostrar u ocultar las normas de confidencialidad",
-    "loginSubmitTitle": "Entrar en la presentaci?n privada del proyecto",
-    "mapsTitle": "Abrir la ubicaci?n del proyecto en Google Maps en una nueva pesta?a",
-    "contactFormLabel": "Formulario de consultas de inversi?n",
-    "contactStatusSuccess": "Confirmaci?n de env?o del formulario",
+    "loginSubmitTitle": "Entrar en la presentación privada del proyecto",
+    "mapsTitle": "Abrir la ubicación del proyecto en Google Maps en una nueva pestaña",
+    "contactFormLabel": "Formulario de consultas de inversión",
+    "contactStatusSuccess": "Confirmación de envío del formulario",
     "contactStatusError": "Error del formulario de contacto",
-    "submitInquiryTitle": "Enviar consulta de inversi?n",
+    "submitInquiryTitle": "Enviar consulta de inversión",
     "requiredFieldHint": "Campo obligatorio",
     "optionalFieldHint": "Campo opcional",
-    "loadingStatus": "La p?gina se est? cargando",
-    "navigationLabel": "Navegaci?n principal",
-    "mobileMenuLabel": "Men? de navegaci?n m?vil"
+    "loadingStatus": "La página se está cargando",
+    "navigationLabel": "Navegación principal",
+    "mobileMenuLabel": "Menú de navegación móvil"
   }
 }
