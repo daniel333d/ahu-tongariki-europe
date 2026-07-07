@@ -312,6 +312,10 @@ function LoginScreen({
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(200,164,90,0.14),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.07),transparent_42%)]" />
       <div className="absolute inset-0 opacity-[0.18] [background-image:linear-gradient(120deg,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(30deg,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:72px_72px]" />
 
+      <div className="relative z-10 mb-6 flex w-full justify-end sm:mb-8">
+        <LanguageSwitcher className="relative" />
+      </div>
+
       <section className="login-panel relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center justify-center text-center">
         <div className="w-full max-w-2xl">
           <p className="text-xs font-bold uppercase tracking-[0.32em] text-gold">{copy.brand.name.toUpperCase()}</p>
@@ -462,6 +466,7 @@ function HomeContent() {
       setPassword("");
       setLoginError("");
       setConfidentialityAccepted(false);
+      window.scrollTo(0, 0);
       return;
     }
 
@@ -476,6 +481,7 @@ function HomeContent() {
     setConfidentialityAccepted(false);
     setConfidentialityOpen(false);
     setMobileMenuOpen(false);
+    window.scrollTo(0, 0);
   }
 
   function updateContactField<K extends keyof ContactFormState>(field: K, value: ContactFormState[K]) {
@@ -550,19 +556,16 @@ function HomeContent() {
 
   if (!isAuthenticated) {
     return (
-      <>
-        <LanguageSwitcher />
-        <LoginScreen
-          password={password}
-          error={loginError}
-          confidentialityAccepted={confidentialityAccepted}
-          confidentialityOpen={confidentialityOpen}
-          onPasswordChange={setPassword}
-          onConfidentialityChange={setConfidentialityAccepted}
-          onConfidentialityToggle={() => setConfidentialityOpen((isOpen) => !isOpen)}
-          onSubmit={handleLogin}
-        />
-      </>
+      <LoginScreen
+        password={password}
+        error={loginError}
+        confidentialityAccepted={confidentialityAccepted}
+        confidentialityOpen={confidentialityOpen}
+        onPasswordChange={setPassword}
+        onConfidentialityChange={setConfidentialityAccepted}
+        onConfidentialityToggle={() => setConfidentialityOpen((isOpen) => !isOpen)}
+        onSubmit={handleLogin}
+      />
     );
   }
 
