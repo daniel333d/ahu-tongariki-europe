@@ -242,13 +242,13 @@ function LanguageWelcome() {
   );
 }
 
-function LanguageSwitcher() {
+function LanguageSwitcher({ className = "fixed right-4 top-16 z-50 sm:right-6 sm:top-20" }: { className?: string }) {
   const { copy, language: selectedLanguage, selectLanguage } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
   const activeLanguage = languageOptions.find((language) => language.code === selectedLanguage) ?? languageOptions[0];
 
   return (
-    <div className="fixed right-4 top-16 z-50 sm:right-6 sm:top-20">
+    <div className={className}>
       <button
         type="button"
         onClick={() => setIsOpen((open) => !open)}
@@ -571,16 +571,18 @@ function HomeContent() {
       <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[90] focus:bg-gold focus:px-4 focus:py-3 focus:text-sm focus:font-bold focus:text-navy">
         {copy.accessibility.skipToContent}
       </a>
-      <LanguageSwitcher />
-      <button
-        type="button"
-        onClick={handleLogout}
-        title={copy.accessibility.logoutTitle}
-        aria-label={copy.accessibility.logoutTitle}
-        className="fixed right-4 top-4 z-50 border border-white/20 bg-navy/72 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/74 backdrop-blur transition hover:border-gold hover:text-gold sm:right-6 sm:top-6"
-      >
-        {copy.nav.logout}
-      </button>
+      <div className="fixed right-4 top-24 z-50 flex flex-wrap items-center justify-end gap-3 sm:right-6 sm:top-28">
+        <LanguageSwitcher className="relative" />
+        <button
+          type="button"
+          onClick={handleLogout}
+          title={copy.accessibility.logoutTitle}
+          aria-label={copy.accessibility.logoutTitle}
+          className="border border-white/20 bg-navy/72 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/74 backdrop-blur transition hover:border-gold hover:text-gold"
+        >
+          {copy.nav.logout}
+        </button>
+      </div>
       <section className="relative min-h-screen bg-navy text-white">
         <Image
           src="/ahu-tongariki-hero.png"
