@@ -168,11 +168,11 @@ function CinematicIntro() {
         className="cinematic-intro-image object-cover object-center"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.94)_0%,rgba(2,8,16,0.76)_36%,rgba(4,13,25,0.6)_100%),radial-gradient(circle_at_50%_56%,rgba(200,164,90,0.18),transparent_30%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.5)_0%,rgba(2,8,16,0.32)_36%,rgba(4,13,25,0.22)_100%),radial-gradient(circle_at_50%_56%,rgba(200,164,90,0.18),transparent_30%)]" />
       <div className="cinematic-dust absolute inset-0 opacity-45" />
       <section className="relative z-10 flex min-h-screen items-center justify-center px-6 text-center">
         <div className="cinematic-title-wrap">
-          <h1 className="cinematic-title font-serif text-[4rem] font-semibold tracking-[0.22em] text-gold min-[430px]:text-7xl sm:text-8xl">
+          <h1 className="cinematic-title font-polynesian text-[4rem] font-semibold tracking-[0.22em] text-gold min-[430px]:text-7xl sm:text-8xl">
             {copy.brand.iorana}
           </h1>
           <p className="cinematic-subtitle mt-6 text-sm uppercase tracking-[0.28em] text-white/70 sm:text-base">
@@ -197,11 +197,11 @@ function LanguageWelcome() {
         className="language-welcome-image object-cover object-center"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,18,0.74),rgba(3,9,18,0.88)),linear-gradient(90deg,rgba(3,9,18,0.9),rgba(3,9,18,0.38)_52%,rgba(3,9,18,0.82))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,18,0.42),rgba(3,9,18,0.55)),linear-gradient(90deg,rgba(3,9,18,0.55),rgba(3,9,18,0.2)_52%,rgba(3,9,18,0.5))]" />
       <div className="cinematic-dust absolute inset-0 opacity-35" />
       <section className="relative z-10 mx-auto flex min-h-[calc(100vh-5rem)] max-w-6xl flex-col items-center justify-center text-center">
         <p className="text-xs font-bold uppercase tracking-[0.32em] text-gold">{copy.brand.name}</p>
-        <h1 className="mt-8 font-serif text-[4.6rem] font-semibold leading-none tracking-[0.16em] text-gold min-[430px]:text-8xl sm:text-9xl">
+        <h1 className="mt-8 font-polynesian text-[4.6rem] font-semibold leading-none tracking-[0.16em] text-gold min-[430px]:text-8xl sm:text-9xl">
           {copy.brand.iorana}
         </h1>
         <p className="mt-6 max-w-xl text-sm uppercase tracking-[0.24em] text-white/62 sm:text-base">
@@ -445,7 +445,7 @@ function HomeContent() {
   useEffect(() => {
     const introTimer = window.setTimeout(() => {
       setIsIntroComplete(true);
-    }, 5200);
+    }, 7400);
 
     return () => window.clearTimeout(introTimer);
   }, []);

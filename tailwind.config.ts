@@ -17,7 +17,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["Inter", "Segoe UI", "system-ui", "sans-serif"],
-        serif: ["Cormorant Garamond", "Georgia", "serif"]
+        serif: ["Cormorant Garamond", "Georgia", "serif"],
+        polynesian: ["var(--font-polynesian)", "Cinzel", "serif"]
       },
       boxShadow: {
         premium: "0 24px 70px rgba(7, 20, 38, 0.16)",

@@ -121,13 +121,13 @@ a {
 }
 
 .cinematic-intro {
-  animation: cinematicExit 5.2s ease-in-out forwards;
+  animation: cinematicExit 7.8s ease-in-out forwards;
 }
 
 .cinematic-intro-image {
   opacity: 0;
   transform: scale(1.08);
-  animation: introImageReveal 5.2s ease-in-out forwards;
+  animation: introImageReveal 4.8s ease-in-out forwards;
 }
 
 .cinematic-title-wrap {
@@ -270,7 +270,7 @@ a {
 
 @keyframes cinematicExit {
   0%,
-  84% {
+  61.5% {
     opacity: 1;
   }
   100% {
@@ -285,10 +285,10 @@ a {
     transform: scale(1.1);
   }
   58% {
-    opacity: 0.45;
+    opacity: 0.6;
   }
   100% {
-    opacity: 0.86;
+    opacity: 1;
     transform: scale(1.03);
   }
 }
