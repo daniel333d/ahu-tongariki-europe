@@ -54,10 +54,10 @@ const LOCATION_MAPS_URL = "https://maps.app.goo.gl/iAmH8QfGfYALpzUD6";
 function AhuTongarikiMiniature({ className = "" }: { className?: string }) {
   return (
     <Image
-      src="/ahu-tongariki-miniature.png"
+      src="/ahu-tongariki-single-moai.png"
       alt=""
-      width={1504}
-      height={284}
+      width={100}
+      height={236}
       aria-hidden="true"
       className={className}
     />
@@ -86,7 +86,7 @@ function EuropeMap() {
           aria-label={copy.location.mapsAria}
           title={copy.accessibility.mapsTitle}
           aria-describedby="location-map-tooltip"
-          className="block h-5 w-16 rotate-[18deg] cursor-pointer drop-shadow-[0_0_8px_rgba(184,150,72,0.42)] transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_16px_rgba(184,150,72,0.72)]"
+          className="block h-9 w-4 cursor-pointer drop-shadow-[0_0_8px_rgba(184,150,72,0.42)] transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_16px_rgba(184,150,72,0.72)]"
         >
           <AhuTongarikiMiniature className="h-full w-full object-contain" />
         </a>
@@ -837,7 +837,7 @@ function HomeContent() {
               className="mt-12 flex flex-col items-start justify-between gap-5 rounded border border-gold/65 bg-white px-6 py-5 text-navy shadow-[0_18px_45px_rgba(7,20,38,0.08)] transition duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-[0_24px_65px_rgba(7,20,38,0.13)] sm:flex-row sm:items-center sm:gap-6"
             >
               <span className="shrink-0 drop-shadow-[0_0_10px_rgba(184,150,72,0.3)]">
-                <AhuTongarikiMiniature className="h-14 w-28 object-contain" />
+                <AhuTongarikiMiniature className="h-16 w-7 object-contain" />
               </span>
               <span className="min-w-0 flex-1 whitespace-pre-line text-lg font-bold leading-snug">{copy.location.openMap}</span>
               <ArrowRight className="shrink-0 text-gold" size={26} />
