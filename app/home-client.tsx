@@ -78,7 +78,7 @@ function EuropeMap() {
         sizes="(min-width: 1024px) 45vw, 100vw"
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,20,38,0.82),rgba(7,20,38,0.24)_52%,rgba(7,20,38,0.12)),radial-gradient(circle_at_66%_48%,rgba(184,150,72,0.16),transparent_22%)]" />
-      <div className="group absolute left-[47.1%] top-[60.9%] z-20 -translate-x-1/2 -translate-y-1/2">
+      <div className="group absolute left-[42.4%] top-[62.9%] z-20 -translate-x-1/2 -translate-y-1/2 lg:left-[52.5%] lg:top-[62.2%]">
         <a
           href={LOCATION_MAPS_URL}
           target="_blank"
@@ -172,7 +172,7 @@ function CinematicIntro() {
       <div className="cinematic-dust absolute inset-0 opacity-45" />
       <section className="relative z-10 flex min-h-screen items-center justify-center px-6 text-center">
         <div className="cinematic-title-wrap">
-          <h1 className="cinematic-title font-polynesian text-[4rem] font-semibold tracking-[0.22em] text-gold min-[430px]:text-7xl sm:text-8xl">
+          <h1 className="cinematic-title font-polynesian text-5xl font-semibold tracking-[0.22em] text-gold min-[430px]:text-7xl sm:text-8xl">
             {copy.brand.iorana}
           </h1>
           <p className="cinematic-subtitle mt-6 text-sm uppercase tracking-[0.28em] text-white/70 sm:text-base">
@@ -201,7 +201,7 @@ function LanguageWelcome() {
       <div className="cinematic-dust absolute inset-0 opacity-35" />
       <section className="relative z-10 mx-auto flex min-h-[calc(100vh-5rem)] max-w-6xl flex-col items-center justify-center text-center">
         <p className="text-xs font-bold uppercase tracking-[0.32em] text-gold">{copy.brand.name}</p>
-        <h1 className="mt-8 font-polynesian text-[4.6rem] font-semibold leading-none tracking-[0.16em] text-gold min-[430px]:text-8xl sm:text-9xl">
+        <h1 className="mt-8 font-polynesian text-5xl font-semibold leading-none tracking-[0.16em] text-gold min-[430px]:text-8xl sm:text-9xl">
           {copy.brand.iorana}
         </h1>
         <p className="mt-6 max-w-xl text-sm uppercase tracking-[0.24em] text-white/62 sm:text-base">
