@@ -1,6 +1,13 @@
 import "./globals.css";
 import { headers } from "next/headers";
+import { Cinzel } from "next/font/google";
 import { isLanguageCode } from "./i18n";
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-polynesian"
+});
 
 export default async function RootLayout({
   children
@@ -12,7 +19,7 @@ export default async function RootLayout({
   const lang = isLanguageCode(headerLanguage) ? headerLanguage : "pl";
 
   return (
-    <html lang={lang}>
+    <html lang={lang} className={cinzel.variable}>
       <body className="font-sans">{children}</body>
     </html>
   );

@@ -8,9 +8,7 @@ import {
   ArrowRight,
   BriefcaseBusiness,
   Building2,
-  Camera,
   ChevronDown,
-  Coffee,
   Globe2,
   GraduationCap,
   Handshake,
@@ -19,7 +17,6 @@ import {
   Menu,
   MapPin,
   Mountain,
-  ShoppingBag,
   X,
   Utensils,
   UsersRound
@@ -29,25 +26,6 @@ const SITE_PASSWORD = "JoranaSkiba2026";
 const AUTH_STORAGE_KEY = "ahu-tongariki-authenticated";
 
 const functionIcons = [Landmark, GraduationCap, Building2, Utensils, Mountain, UsersRound];
-const experienceIcons = [Landmark, Utensils, Coffee, Camera, GraduationCap, ShoppingBag];
-
-const moaiVariants = [
-  { height: 46, width: 18, tilt: -4, tone: 0 },
-  { height: 52, width: 19, tilt: -2, tone: 1 },
-  { height: 49, width: 17, tilt: 2, tone: 2 },
-  { height: 58, width: 20, tilt: -1, tone: 1 },
-  { height: 54, width: 18, tilt: 3, tone: 0 },
-  { height: 62, width: 20, tilt: -3, tone: 2 },
-  { height: 57, width: 19, tilt: 1, tone: 1 },
-  { height: 66, width: 21, tilt: -1, tone: 0 },
-  { height: 60, width: 20, tilt: 2, tone: 2 },
-  { height: 64, width: 19, tilt: -2, tone: 1 },
-  { height: 56, width: 18, tilt: 1, tone: 0 },
-  { height: 70, width: 22, tilt: -1, tone: 2 },
-  { height: 63, width: 20, tilt: 3, tone: 1 },
-  { height: 72, width: 22, tilt: -2, tone: 0, pukao: true },
-  { height: 61, width: 19, tilt: 2, tone: 2 }
-];
 
 type ContactFormState = {
   fullName: string;
@@ -100,7 +78,7 @@ function EuropeMap() {
         sizes="(min-width: 1024px) 45vw, 100vw"
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,20,38,0.82),rgba(7,20,38,0.24)_52%,rgba(7,20,38,0.12)),radial-gradient(circle_at_66%_48%,rgba(184,150,72,0.16),transparent_22%)]" />
-      <div className="group absolute left-[36.9%] top-[62.9%] z-20 -translate-x-1/2 -translate-y-1/2 lg:left-[52.5%] lg:top-[62.2%]">
+      <div className="group absolute left-[36.9%] top-[62.9%] z-20 -translate-x-1/2 -translate-y-1/2 lg:left-[49.6%] lg:top-[62.2%]">
         <a
           href={LOCATION_MAPS_URL}
           target="_blank"
@@ -173,256 +151,6 @@ function SectionHeading({
         </p>
       ) : null}
     </div>
-  );
-}
-
-function ExperienceMoaiRow({ compact = false }: { compact?: boolean }) {
-  return (
-    <div className={`experience-moai-row ${compact ? "experience-moai-row-compact" : ""}`} aria-hidden="true">
-      {moaiVariants.map((variant, index) => (
-        <span
-          key={`${variant.height}-${index}`}
-          className={`experience-moai experience-moai-tone-${variant.tone} ${variant.pukao ? "experience-moai-pukao" : ""}`}
-          style={{
-            "--moai-height": `${compact ? variant.height * 0.66 : variant.height}px`,
-            "--moai-width": `${compact ? variant.width * 0.7 : variant.width}px`,
-            "--moai-tilt": `${variant.tilt}deg`,
-            "--moai-delay": `${index * 42}ms`
-          } as CSSProperties}
-        />
-      ))}
-    </div>
-  );
-}
-
-function ExperienceInteriorPreview({ index }: { index: number }) {
-  return (
-    <div className={`experience-interior-preview experience-interior-${index}`} aria-hidden="true">
-      <div className="experience-interior-window" />
-      <div className="experience-interior-floor" />
-      <span className="experience-interior-moai" />
-      <span className="experience-interior-light experience-interior-light-a" />
-      <span className="experience-interior-light experience-interior-light-b" />
-      <span className="experience-interior-table" />
-    </div>
-  );
-}
-
-function ExperiencePlanBuilding({
-  index,
-  label,
-  active,
-  onSelect
-}: {
-  index: number;
-  label: string;
-  active: boolean;
-  onSelect: () => void;
-}) {
-  const positions = [
-    "left-[11%] top-[54%]",
-    "left-[72%] top-[70%]",
-    "left-[80%] top-[44%]",
-    "left-[58%] top-[13%]",
-    "left-[24%] top-[31%]",
-    "left-[45%] top-[79%]"
-  ];
-
-  return (
-    <button
-      type="button"
-      onClick={onSelect}
-      aria-pressed={active}
-      aria-label={label}
-      title={label}
-      className={`experience-plan-building experience-plan-building-${index + 1} absolute ${positions[index]} ${active ? "is-active" : ""}`}
-    >
-      <span className="experience-plan-number">{String(index + 1).padStart(2, "0")}</span>
-      <span className="experience-plan-roof" />
-      <span className="experience-plan-glass" />
-    </button>
-  );
-}
-
-function ExperienceSection({
-  activeIndex,
-  isOpen,
-  onSelect,
-  onClose
-}: {
-  activeIndex: number;
-  isOpen: boolean;
-  onSelect: (index: number) => void;
-  onClose: () => void;
-}) {
-  const { copy } = useI18n();
-  const activeExperience = copy.experience.cards[activeIndex] ?? copy.experience.cards[0];
-
-  return (
-    <section id="przestrzen-doswiadczen" className="experience-section multilingual-layout relative overflow-hidden bg-[#071426] px-6 py-24 text-white sm:py-28 lg:px-10">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_68%_12%,rgba(200,164,90,0.18),transparent_28%),linear-gradient(180deg,rgba(7,20,38,0.98),rgba(5,12,23,1))]" />
-      <div className="experience-stars absolute inset-0 opacity-40" />
-      <div className="relative mx-auto max-w-[1500px]">
-        <div className="grid gap-6 xl:grid-cols-[1fr_320px]">
-          <div className="experience-hero relative min-h-[560px] overflow-hidden border border-white/10 bg-navy shadow-architectural sm:min-h-[650px] lg:min-h-[720px]">
-            <Image
-              src="/slogan-sunset.png"
-              alt={copy.experience.heroAlt}
-              fill
-              className="experience-hero-image object-cover object-center"
-              sizes="(min-width: 1280px) 1120px, 100vw"
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,12,23,0.78),rgba(5,12,23,0.18)_52%,rgba(5,12,23,0.44)),linear-gradient(180deg,rgba(5,12,23,0.2),rgba(5,12,23,0.48)_78%,rgba(5,12,23,0.9))]" />
-            <div className="absolute left-6 top-7 z-10 max-w-3xl sm:left-10 sm:top-10">
-              <h2 className="font-serif text-4xl font-semibold uppercase leading-none tracking-[0.02em] text-gold sm:text-5xl lg:text-6xl">
-                {copy.experience.title}
-              </h2>
-              <p className="mt-4 text-sm font-semibold uppercase tracking-[0.16em] text-sand sm:text-base">
-                {copy.experience.subtitle}
-              </p>
-            </div>
-            <div className="experience-hero-complex absolute inset-x-[5%] bottom-[11%] z-10 sm:inset-x-[8%]">
-              <div className="experience-hero-platform">
-                <ExperienceMoaiRow />
-              </div>
-              <div className="experience-hero-path experience-hero-path-a" />
-              <div className="experience-hero-path experience-hero-path-b" />
-              <div className="experience-hero-building experience-hero-building-left" />
-              <div className="experience-hero-building experience-hero-building-right" />
-              <div className="experience-hero-viewpoint">
-                <span />
-              </div>
-            </div>
-          </div>
-
-          <aside className="border border-white/10 bg-black/24 p-7 shadow-[0_28px_80px_rgba(0,0,0,0.32)] backdrop-blur sm:p-9 xl:py-12">
-            <p className="font-serif text-2xl uppercase leading-tight text-gold sm:text-3xl">{copy.experience.sideTitle}</p>
-            <div className="mt-6 h-px w-12 bg-gold" />
-            <p className="mt-7 text-base leading-8 text-white/70">{copy.experience.body}</p>
-            <button
-              type="button"
-              onClick={() => onSelect(0)}
-              className="stable-action mt-9 inline-flex items-center gap-4 rounded-full border border-gold/70 px-6 py-3 text-xs font-bold uppercase tracking-[0.14em] text-gold transition hover:bg-gold hover:text-navy"
-              title={copy.experience.cta}
-            >
-              {copy.experience.cta}
-              <ArrowRight size={16} />
-            </button>
-          </aside>
-        </div>
-
-        <div className="mt-6 grid gap-3 md:grid-cols-2 xl:grid-cols-6">
-          {copy.experience.cards.map((card, index) => {
-            const Icon = experienceIcons[index] ?? Landmark;
-
-            return (
-              <button
-                type="button"
-                key={card.title}
-                onClick={() => onSelect(index)}
-                className="experience-card group border border-white/12 bg-white/[0.035] p-4 text-left transition duration-300 hover:-translate-y-1 hover:border-gold/50 hover:bg-white/[0.055]"
-                title={card.title}
-              >
-                <div className="flex items-center gap-4">
-                  <span className="font-serif text-sm text-gold/72">{String(index + 1).padStart(2, "0")}</span>
-                  <Icon size={24} className="text-gold" />
-                  <h3 className="text-sm font-semibold uppercase tracking-[0.08em] text-white">{card.title}</h3>
-                </div>
-                <div className="mt-5 overflow-hidden border border-white/8">
-                  <ExperienceInteriorPreview index={index} />
-                </div>
-                <ul className="mt-5 space-y-2 text-xs leading-5 text-white/62">
-                  {card.bullets.map((item) => (
-                    <li key={item} className="flex gap-2">
-                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-gold/80" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </button>
-            );
-          })}
-        </div>
-
-        <div className={`mt-6 grid gap-6 xl:items-stretch ${isOpen ? "xl:grid-cols-[0.7fr_1.55fr_0.9fr]" : "xl:grid-cols-[0.7fr_1.85fr]"}`}>
-          <div className="border border-white/10 bg-black/18 p-7">
-            <p className="font-serif text-3xl uppercase text-gold">{copy.experience.planTitle}</p>
-            <p className="mt-6 whitespace-pre-line text-base leading-8 text-white/68">{copy.experience.planIntro}</p>
-            <ul className="mt-9 space-y-5 text-sm text-white/70">
-              {copy.experience.legend.map((item, index) => (
-                <li key={item} className="flex items-center gap-4">
-                  <span className={`experience-legend-mark experience-legend-mark-${index}`} />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="experience-plan relative min-h-[460px] overflow-hidden border border-white/10 bg-[#09111d] shadow-architectural sm:min-h-[560px]">
-            <div className="experience-plan-terrain absolute inset-0" />
-            <div className="experience-plan-path experience-plan-path-main" />
-            <div className="experience-plan-path experience-plan-path-loop" />
-            <div className="experience-plan-green experience-plan-green-a" />
-            <div className="experience-plan-green experience-plan-green-b" />
-            <div className="experience-plan-platform" aria-label={copy.experience.planMoaiAria}>
-              <ExperienceMoaiRow compact />
-            </div>
-            {copy.experience.cards.map((card, index) => (
-              <ExperiencePlanBuilding
-                key={card.title}
-                index={index}
-                label={card.title}
-                active={index === activeIndex}
-                onSelect={() => onSelect(index)}
-              />
-            ))}
-            <p className="absolute inset-x-0 bottom-6 z-20 text-center text-[10px] font-semibold uppercase tracking-[0.18em] text-white/52">
-              {copy.experience.planInstruction}
-            </p>
-          </div>
-
-          {isOpen ? (
-          <aside className="experience-detail-panel border border-white/12 bg-white/[0.035] p-5 shadow-[0_24px_80px_rgba(0,0,0,0.3)] sm:p-7">
-            <div className="flex items-center justify-between gap-4">
-              <h3 className="font-serif text-2xl uppercase text-gold">
-                {String(activeIndex + 1).padStart(2, "0")} <span className="ml-3 text-white">{activeExperience.title}</span>
-              </h3>
-              <button
-                type="button"
-                onClick={onClose}
-                aria-label={copy.experience.close}
-                title={copy.experience.close}
-                className="text-white/50 transition hover:text-gold"
-              >
-                <X size={20} />
-              </button>
-            </div>
-            <div className="mt-6 overflow-hidden border border-white/10">
-              <ExperienceInteriorPreview index={activeIndex} />
-            </div>
-            <p className="mt-5 text-sm leading-7 text-white/70">{activeExperience.detail}</p>
-            <div className="mt-6 grid grid-cols-3 gap-px bg-white/10 text-center">
-              {activeExperience.stats.map(([value, label]) => (
-                <div key={label} className="bg-[#071426] p-3">
-                  <strong className="block font-serif text-xl text-gold">{value}</strong>
-                  <span className="mt-1 block text-[10px] uppercase tracking-[0.12em] text-white/52">{label}</span>
-                </div>
-              ))}
-            </div>
-            <button
-              type="button"
-              className="stable-action mt-6 inline-flex w-full items-center justify-center gap-3 rounded-full border border-gold/70 px-5 py-3 text-xs font-bold uppercase tracking-[0.13em] text-gold transition hover:bg-gold hover:text-navy"
-              onClick={() => onSelect(activeIndex)}
-              title={copy.experience.modalCta}
-            >
-              {copy.experience.modalCta}
-              <ArrowRight size={16} />
-            </button>
-          </aside>
-          ) : null}
-        </div>
-      </div>
-    </section>
   );
 }
 
@@ -702,8 +430,6 @@ function HomeContent() {
   const [contactMessage, setContactMessage] = useState("");
   const [isContactSubmitting, setIsContactSubmitting] = useState(false);
   const [contactFormStartedAt, setContactFormStartedAt] = useState(() => Date.now());
-  const [activeExperienceIndex, setActiveExperienceIndex] = useState(0);
-  const [isExperiencePanelOpen, setIsExperiencePanelOpen] = useState(true);
   const statueFacts = copy.statues.facts;
   const functions = copy.functions.items.map(([title, detail], index) => ({
     title,
@@ -763,11 +489,6 @@ function HomeContent() {
       ...currentForm,
       [field]: value
     }));
-  }
-
-  function handleExperienceSelect(index: number) {
-    setActiveExperienceIndex(index);
-    setIsExperiencePanelOpen(true);
   }
 
   async function handleContactSubmit(event: FormEvent<HTMLFormElement>) {
@@ -1151,13 +872,6 @@ function HomeContent() {
           </div>
         </div>
       </section>
-
-      <ExperienceSection
-        activeIndex={activeExperienceIndex}
-        isOpen={isExperiencePanelOpen}
-        onSelect={handleExperienceSelect}
-        onClose={() => setIsExperiencePanelOpen(false)}
-      />
 
       <section className="night-section relative overflow-hidden bg-[#06101f] px-6 py-28 text-white sm:py-32 lg:px-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_18%,rgba(200,164,90,0.12),transparent_24%),linear-gradient(180deg,rgba(7,20,38,0.96),rgba(6,16,31,0.98))]" />
