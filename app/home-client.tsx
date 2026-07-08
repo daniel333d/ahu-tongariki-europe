@@ -78,7 +78,7 @@ function EuropeMap() {
         sizes="(min-width: 1024px) 45vw, 100vw"
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,20,38,0.82),rgba(7,20,38,0.24)_52%,rgba(7,20,38,0.12)),radial-gradient(circle_at_66%_48%,rgba(184,150,72,0.16),transparent_22%)]" />
-      <div className="group absolute left-[42.4%] top-[62.9%] z-20 -translate-x-1/2 -translate-y-1/2 lg:left-[52.5%] lg:top-[62.2%]">
+      <div className="group absolute left-[36.9%] top-[62.9%] z-20 -translate-x-1/2 -translate-y-1/2 lg:left-[52.5%] lg:top-[62.2%]">
         <a
           href={LOCATION_MAPS_URL}
           target="_blank"
