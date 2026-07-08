@@ -22,7 +22,6 @@ import {
   UsersRound
 } from "lucide-react";
 
-const SITE_PASSWORD = "JoranaSkiba2026";
 const AUTH_STORAGE_KEY = "ahu-tongariki-authenticated";
 
 const functionIcons = [Landmark, GraduationCap, Building2, Utensils, Mountain, UsersRound];
@@ -454,20 +453,33 @@ function HomeContent() {
     return () => window.clearTimeout(introTimer);
   }, []);
 
-  function handleLogin() {
+  async function handleLogin() {
     if (!confidentialityAccepted) {
       setLoginError(copy.login.confirmRequired);
       return;
     }
 
-    if (password === SITE_PASSWORD) {
-      window.localStorage.setItem(AUTH_STORAGE_KEY, "true");
-      setIsAuthenticated(true);
-      setPassword("");
-      setLoginError("");
-      setConfidentialityAccepted(false);
-      window.scrollTo(0, 0);
-      return;
+    try {
+      const response = await fetch("/api/verify-password", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ password })
+      });
+      const data = (await response.json()) as { valid?: boolean };
+
+      if (data.valid) {
+        window.localStorage.setItem(AUTH_STORAGE_KEY, "true");
+        setIsAuthenticated(true);
+        setPassword("");
+        setLoginError("");
+        setConfidentialityAccepted(false);
+        window.scrollTo(0, 0);
+        return;
+      }
+    } catch {
+      // fall through to invalid password error
     }
 
     setLoginError(copy.login.invalidPassword);
