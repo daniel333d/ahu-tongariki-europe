@@ -387,5 +387,171 @@
     "loadingStatus": "Stránka se načítá",
     "navigationLabel": "Hlavní navigace",
     "mobileMenuLabel": "Mobilní navigační menu"
+  },
+  "experience": {
+    "title": "PROSTOR ZÁŽITKŮ",
+    "subtitle": "ARCHITEKTURA INSPIROVANÁ KRAJINOU RAPA NUI",
+    "heroAlt": "Vizualizace návštěvnického centra Ahu Tongariki Europe v Kladské kotlině při západu slunce",
+    "sideTitle": "Místo, kde se historie potkává se současností",
+    "body": "Koncepce počítá se současným návštěvnickým centrem citlivě zasazeným do krajiny Kladské kotliny. Architektura má zůstat klidným rámcem monumentálních Moai a nabídnout návštěvníkům komfort i prostor k poznávání kultury Rapa Nui.",
+    "cta": "Zobrazit vizualizaci",
+    "planTitle": "PLÁN KOMPLEXU",
+    "planIntro": "Vyberte budovu,\nabyste zobrazili detaily a vizualizaci interiéru.",
+    "planMoaiAria": "Architektonická maketa platformy Ahu s přesně patnácti různorodými sochami Moai a jedním červeným pukao na čtrnácté pozici.",
+    "planInstruction": "Posuňte pro prohlížení • klikněte pro detaily",
+    "legend": [
+      "Hlavní trasy",
+      "Pěší stezky",
+      "Vstupy",
+      "Zelené zóny"
+    ],
+    "modalCta": "Zobrazit vizualizace interiéru",
+    "close": "Zavřít panel vizualizace interiéru",
+    "cards": [
+      {
+        "title": "MUZEUM",
+        "bullets": [
+          "Exponáty",
+          "Historie",
+          "Multimédia",
+          "Artefakty"
+        ],
+        "detail": "Současný výstavní prostor přibližující historii Rapa Nui, význam Moai a archeologické objevy.",
+        "stats": [
+          [
+            "1200 m?",
+            "Plocha"
+          ],
+          [
+            "3",
+            "S?ly"
+          ],
+          [
+            "200+",
+            "Expon?t?"
+          ]
+        ]
+      },
+      {
+        "title": "RESTAURACE",
+        "bullets": [
+          "Výhled na Moai",
+          "Regionální kuchyně",
+          "Polynéské inspirace",
+          "Místní produkty"
+        ],
+        "detail": "Restaurace s panoramatickým výhledem na platformu Ahu, založená na regionální kuchyni a jemných cestovatelských inspiracích.",
+        "stats": [
+          [
+            "420 m?",
+            "S?l"
+          ],
+          [
+            "140",
+            "M?st"
+          ],
+          [
+            "2",
+            "Terasy"
+          ]
+        ]
+      },
+      {
+        "title": "KAVÁRNA",
+        "bullets": [
+          "Terasa s výhledem na Ahu",
+          "Prémiová káva a dezerty",
+          "Západy slunce",
+          "Komorní atmosféra"
+        ],
+        "detail": "Komorní kavárna navržená jako klidné místo pro pozorování krajiny a rytmu monumentální platformy.",
+        "stats": [
+          [
+            "180 m?",
+            "Z?na"
+          ],
+          [
+            "60",
+            "M?st"
+          ],
+          [
+            "1",
+            "Terasa"
+          ]
+        ]
+      },
+      {
+        "title": "VYHLÍDKA",
+        "bullets": [
+          "Panorama celého komplexu",
+          "Skleněné zábradlí",
+          "Ideální místo pro fotografie",
+          "Výjimečné výhledy v každou dobu"
+        ],
+        "detail": "Vyvýšená vyhlídková platforma umožňující obsáhnout celý komplex, Kladskou kotlinu i linii patnácti Moai.",
+        "stats": [
+          [
+            "16 m",
+            "V??ka"
+          ],
+          [
+            "360?",
+            "V?hled"
+          ],
+          [
+            "24/7",
+            "Sv?tlo"
+          ]
+        ]
+      },
+      {
+        "title": "VZDĚLÁVACÍ CENTRUM",
+        "bullets": [
+          "Workshopy a přednášky",
+          "Filmy a prezentace",
+          "VR / AR zážitky",
+          "Vzdělávání pro všechny"
+        ],
+        "detail": "Vzdělávací centrum pro školy, rodiny a institucionální partnery propojující archeologii, kulturu a imerzivní média.",
+        "stats": [
+          [
+            "680 m?",
+            "Program"
+          ],
+          [
+            "4",
+            "S?ly"
+          ],
+          [
+            "VR/AR",
+            "M?dia"
+          ]
+        ]
+      },
+      {
+        "title": "OBCHOD",
+        "bullets": [
+          "Publikace a alba",
+          "Modely Moai",
+          "Řemeslo",
+          "Prémiové suvenýry"
+        ],
+        "detail": "Muzejní butik s publikacemi, modely, řemeslnými předměty a elegantními suvenýry spojenými s projektem.",
+        "stats": [
+          [
+            "150 m?",
+            "Butik"
+          ],
+          [
+            "300+",
+            "Polo?ek"
+          ],
+          [
+            "Premium",
+            "Nab?dka"
+          ]
+        ]
+      }
+    ]
   }
 }

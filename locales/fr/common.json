@@ -387,5 +387,171 @@
     "loadingStatus": "La page est en cours de chargement",
     "navigationLabel": "Navigation principale",
     "mobileMenuLabel": "Menu de navigation mobile"
+  },
+  "experience": {
+    "title": "ESPACE D’EXPÉRIENCES",
+    "subtitle": "UNE ARCHITECTURE INSPIRÉE PAR LE PAYSAGE DE RAPA NUI",
+    "heroAlt": "Visualisation du centre d’accueil Ahu Tongariki Europe dans la vallée de Kłodzko au coucher du soleil",
+    "sideTitle": "Un lieu où l’histoire rencontre la modernité",
+    "body": "Le projet prévoit un centre d’accueil contemporain, intégré avec retenue au paysage de la vallée de Kłodzko. L’architecture demeure un cadre discret pour les Moai monumentaux, offrant confort et espace pour découvrir la culture de Rapa Nui.",
+    "cta": "Voir la visualisation",
+    "planTitle": "PLAN DU COMPLEXE",
+    "planIntro": "Sélectionnez un bâtiment\npour découvrir les détails et la visualisation intérieure.",
+    "planMoaiAria": "Maquette architecturale d’une plateforme Ahu avec exactement quinze Moai différenciés et un pukao rouge en quatorzième position.",
+    "planInstruction": "Déplacez pour explorer • cliquez pour voir les détails",
+    "legend": [
+      "Axes principaux",
+      "Promenades",
+      "Entrées",
+      "Espaces végétalisés"
+    ],
+    "modalCta": "Voir les visualisations intérieures",
+    "close": "Fermer le panneau de visualisation intérieure",
+    "cards": [
+      {
+        "title": "MUSÉE",
+        "bullets": [
+          "Expositions",
+          "Histoire",
+          "Multimédia",
+          "Artefacts"
+        ],
+        "detail": "Un espace d’exposition contemporain consacré à l’histoire de Rapa Nui, à la signification des Moai et aux découvertes archéologiques.",
+        "stats": [
+          [
+            "1200 m?",
+            "Surface"
+          ],
+          [
+            "3",
+            "Salles"
+          ],
+          [
+            "200+",
+            "Objets"
+          ]
+        ]
+      },
+      {
+        "title": "RESTAURANT",
+        "bullets": [
+          "Vue sur les Moai",
+          "Cuisine régionale",
+          "Inspirations polynésiennes",
+          "Produits locaux"
+        ],
+        "detail": "Un restaurant avec vue panoramique sur la plateforme Ahu, fondé sur la cuisine régionale et des inspirations de voyage subtiles.",
+        "stats": [
+          [
+            "420 m?",
+            "Salle"
+          ],
+          [
+            "140",
+            "Places"
+          ],
+          [
+            "2",
+            "Terrasses"
+          ]
+        ]
+      },
+      {
+        "title": "CAFÉ",
+        "bullets": [
+          "Terrasse sur l’Ahu",
+          "Cafés et desserts premium",
+          "Couchers de soleil",
+          "Atmosphère intime"
+        ],
+        "detail": "Un café intime pensé comme un lieu calme d’observation du paysage et du rythme de la plateforme monumentale.",
+        "stats": [
+          [
+            "180 m?",
+            "Espace"
+          ],
+          [
+            "60",
+            "Places"
+          ],
+          [
+            "1",
+            "Terrasse"
+          ]
+        ]
+      },
+      {
+        "title": "BELVÉDÈRE",
+        "bullets": [
+          "Panorama du complexe",
+          "Garde-corps vitré",
+          "Lieu idéal pour les photos",
+          "Vues remarquables à toute heure"
+        ],
+        "detail": "Une plateforme élevée permettant d’embrasser le complexe, la vallée de Kłodzko et la ligne des quinze Moai.",
+        "stats": [
+          [
+            "16 m",
+            "Hauteur"
+          ],
+          [
+            "360?",
+            "Vue"
+          ],
+          [
+            "24/7",
+            "Lumi?re"
+          ]
+        ]
+      },
+      {
+        "title": "CENTRE ÉDUCATIF",
+        "bullets": [
+          "Ateliers et conférences",
+          "Films et présentations",
+          "Expériences VR / AR",
+          "Éducation pour tous"
+        ],
+        "detail": "Un centre éducatif pour les écoles, les familles et les partenaires institutionnels, entre archéologie, culture et médias immersifs.",
+        "stats": [
+          [
+            "680 m?",
+            "Programme"
+          ],
+          [
+            "4",
+            "Salles"
+          ],
+          [
+            "VR/AR",
+            "M?dias"
+          ]
+        ]
+      },
+      {
+        "title": "BOUTIQUE",
+        "bullets": [
+          "Livres et albums",
+          "Modèles de Moai",
+          "Artisanat",
+          "Souvenirs premium"
+        ],
+        "detail": "Une boutique muséale proposant publications, modèles, artisanat et souvenirs élégants liés au projet.",
+        "stats": [
+          [
+            "150 m?",
+            "Boutique"
+          ],
+          [
+            "300+",
+            "Articles"
+          ],
+          [
+            "Premium",
+            "Offre"
+          ]
+        ]
+      }
+    ]
   }
 }
