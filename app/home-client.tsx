@@ -804,8 +804,8 @@ function HomeContent() {
               sizes="(min-width: 1024px) 58vw, 100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy/82 via-navy/16 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 border-t border-white/18 p-6 text-white md:p-10">
-              <span className="text-xs uppercase tracking-[0.22em] text-gold">{copy.statues.imageKicker}</span>
+            <div className="absolute bottom-0 left-0 right-0 p-6 text-white md:p-10">
+              <span className="text-sm font-bold uppercase tracking-[0.22em] text-gold">{copy.statues.imageKicker}</span>
               <p className="mt-3 max-w-2xl text-xl font-semibold leading-snug sm:text-2xl">{copy.statues.imageCaption}</p>
             </div>
           </div>
