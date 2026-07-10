@@ -7,5 +7,12 @@ node_modules/
 node_modules/
 .next/
 .pnpm-store/
+*.log
+*.err
+*.tsbuildinfo
+.preview-*/
+docs/preview-*/
+docs/final-release-v1/
+ate-*.png
 .claude/settings.local.json
 .claude/*.lock

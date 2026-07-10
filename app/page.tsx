@@ -1,18 +1,15 @@
-import type { Metadata } from "next";
-import HomeClient from "./home-client";
-import { getLanguageMetadata, getStructuredData } from "./seo";
-
-export const metadata: Metadata = getLanguageMetadata("pl");
+import { FeatureCards } from "../components/cards/FeatureCards";
+import { HeroSection } from "../components/hero/HeroSection";
+import { HistorySection } from "../components/history/HistorySection";
+import { MasterplanSection } from "../components/masterplan/MasterplanSection";
 
 export default function Page() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(getStructuredData("pl")) }}
-      />
-      <HomeClient />
-    </>
+    <main className="min-h-screen overflow-hidden bg-[#02080d] text-white">
+      <HeroSection />
+      <FeatureCards />
+      <MasterplanSection />
+      <HistorySection />
+    </main>
   );
 }

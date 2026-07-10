@@ -14,7 +14,13 @@ type SanityLocalizedContent = {
   gallery?: Array<{ image?: unknown; caption?: string; alt?: string }>;
   cards?: Array<{ title?: string; subtitle?: string; description?: string; content?: string }>;
   timeline?: Array<{ title?: string; subtitle?: string; description?: string; date?: string }>;
-  events?: Array<{ title?: string; subtitle?: string; description?: string; date?: string; location?: string }>;
+  events?: Array<{
+    title?: string;
+    subtitle?: string;
+    description?: string;
+    date?: string;
+    location?: string;
+  }>;
   captions?: Record<string, string>;
   alt?: Record<string, string>;
   seo?: DeepPartial<Dictionary["seo"]>;
@@ -49,7 +55,8 @@ function sanityQuery(language: LanguageCode) {
 }
 
 function mapCmsToDictionary(cms: SanityLocalizedContent, fallback: Dictionary): DeepPartial<Dictionary> {
-  const dictionaryOverride = typeof cms.dictionary === "string" ? parseDictionaryOverride(cms.dictionary) : cms.dictionary;
+  const dictionaryOverride =
+    typeof cms.dictionary === "string" ? parseDictionaryOverride(cms.dictionary) : cms.dictionary;
 
   return {
     ...dictionaryOverride,

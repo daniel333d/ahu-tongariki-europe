@@ -10,12 +10,7 @@ export const dictionaries = { pl, en, fr, es, de, cs };
 export type LanguageCode = keyof typeof dictionaries;
 export type Dictionary = typeof pl;
 export type TranslationValue =
-  | string
-  | number
-  | boolean
-  | null
-  | TranslationValue[]
-  | { [key: string]: TranslationValue };
+  string | number | boolean | null | TranslationValue[] | { [key: string]: TranslationValue };
 
 export const defaultLanguage: LanguageCode = "pl";
 

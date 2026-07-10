@@ -27,10 +27,13 @@ export function mergeDictionary(base: Dictionary, override?: DeepPartial<Diction
     }
 
     if (isRecord(baseValue) && isRecord(overrideValue)) {
-      return Object.keys({ ...baseValue, ...overrideValue }).reduce<Record<string, unknown>>((merged, key) => {
-        merged[key] = mergeValue(baseValue[key], overrideValue[key]);
-        return merged;
-      }, {});
+      return Object.keys({ ...baseValue, ...overrideValue }).reduce<Record<string, unknown>>(
+        (merged, key) => {
+          merged[key] = mergeValue(baseValue[key], overrideValue[key]);
+          return merged;
+        },
+        {}
+      );
     }
 
     return overrideValue;
