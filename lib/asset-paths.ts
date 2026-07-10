@@ -1,6 +1,6 @@
 export const assets = {
   hero: {
-    panorama: "/assets/hero/hero-background-v1.webp",
+    panorama: "/ahu-tongariki-hero.png",
     moaiPlatformLayer: "/assets/hero/hero-moai-platform-layer.webp",
     valleySunsetLayer: "/assets/hero/hero-valley-sunset-layer.webp"
   },
