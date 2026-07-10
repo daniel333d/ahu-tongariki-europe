@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import { type CSSProperties, type FormEvent, useEffect, useState } from "react";
+import { FeatureCards } from "../components/cards/FeatureCards";
+import { HeroSection as ExperienceHeroSection } from "../components/hero/HeroSection";
+import { MasterplanSection } from "../components/masterplan/MasterplanSection";
 import { languageOptions } from "./i18n";
 import { I18nProvider, useI18n } from "./i18n-provider";
 import {
@@ -60,6 +63,16 @@ function AhuTongarikiMiniature({ className = "" }: { className?: string }) {
       aria-hidden="true"
       className={className}
     />
+  );
+}
+
+function ExperienceSection() {
+  return (
+    <div id="przestrzen-doswiadczen" className="bg-[#02080d]" aria-label="Przestrzeń doświadczeń">
+      <ExperienceHeroSection />
+      <FeatureCards />
+      <MasterplanSection />
+    </div>
   );
 }
 
@@ -829,6 +842,7 @@ function HomeContent() {
                 src="/iorana-moai-rano-raraku.png"
                 alt={copy.iorana.imageAlt}
                 fill
+                loading="eager"
                 className="object-cover object-[63%_center] sm:object-center"
                 sizes="(min-width: 1024px) 1400px, 100vw"
               />
@@ -999,6 +1013,7 @@ function HomeContent() {
                 src="/ahu-tongariki-night.png"
                 alt={copy.night.imageAlt}
                 fill
+                loading="eager"
                 className="night-hero-image object-cover object-[52%_center] sm:object-center"
                 sizes="(min-width: 1024px) 1400px, 100vw"
               />
@@ -1109,6 +1124,8 @@ function HomeContent() {
           </div>
         </div>
       </section>
+
+      <ExperienceSection />
 
       <section id="kontakt" className="bg-ivory px-6 py-28 sm:py-32 lg:px-10">
         <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[0.75fr_1.25fr]">

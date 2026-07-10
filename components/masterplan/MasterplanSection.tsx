@@ -11,7 +11,7 @@ export function MasterplanSection() {
 
   const activeObject = useMemo(
     () => masterplanObjects.find((object) => object.id === activeId) ?? masterplanObjects[0],
-    [activeId]
+    [activeId],
   );
 
   return (
@@ -26,10 +26,10 @@ export function MasterplanSection() {
             <br />
             kompleksu
           </p>
-          <p className="text-white/78 mt-7 text-sm leading-7 2xl:mt-6 2xl:text-[0.82rem] 2xl:leading-6">
+          <p className="mt-7 text-sm leading-7 text-white/78 2xl:mt-6 2xl:text-[0.82rem] 2xl:leading-6">
             Interaktywny plan kompleksu. Wybierz budynek, aby zobaczyć szczegóły i wizualizację wnętrz.
           </p>
-          <div className="text-white/76 mt-8 space-y-4 text-sm 2xl:mt-7 2xl:space-y-3 2xl:text-[0.82rem]">
+          <div className="mt-8 space-y-4 text-sm text-white/76 2xl:mt-7 2xl:space-y-3 2xl:text-[0.82rem]">
             <div className="flex items-center gap-4">
               <span className="h-px w-8 bg-[#d9b461]" />
               Ścieżki główne

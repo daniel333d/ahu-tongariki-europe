@@ -19,6 +19,7 @@ export function MasterplanMap({ activeId, onSelect }: MasterplanMapProps) {
         src={assets.masterplan.aerial}
         alt=""
         fill
+        loading="eager"
         sizes="(min-width: 1024px) 60vw, 100vw"
         className="scale-[0.92] object-cover brightness-[1.14] contrast-[1.12] saturate-[1.06]"
       />

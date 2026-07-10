@@ -1,25 +1,16 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import { headers } from "next/headers";
+import { Cinzel } from "next/font/google";
 import { isLanguageCode } from "./i18n";
 
-export const metadata: Metadata = {
-  title: "Ahu Tongariki Europe | Przestrzeń doświadczeń",
-  description:
-    "Koncepcja Ahu Tongariki Europe w Bystrzycy Kłodzkiej: 15 Moai, centrum kultury, edukacji i doświadczeń turystycznych.",
-  metadataBase: new URL("https://ahutongariki.pl"),
-  openGraph: {
-    title: "Ahu Tongariki Europe",
-    description:
-      "Premium presentation of Ahu Tongariki Europe: architecture, culture, education and tourism inspired by Rapa Nui heritage.",
-    url: "https://ahutongariki.pl",
-    siteName: "Ahu Tongariki Europe",
-    type: "website"
-  }
-};
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-polynesian",
+});
 
 export default async function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -28,7 +19,7 @@ export default async function RootLayout({
   const lang = isLanguageCode(headerLanguage) ? headerLanguage : "pl";
 
   return (
-    <html lang={lang}>
+    <html lang={lang} className={cinzel.variable}>
       <body className="font-sans">{children}</body>
     </html>
   );
