@@ -1,11 +1,11 @@
 export const assets = {
   hero: {
-    panorama: "/ahu-tongariki-hero.png",
+    panorama: "/assets/hero/hero-sunset.webp",
     moaiPlatformLayer: "/assets/hero/hero-moai-platform-layer.webp",
     valleySunsetLayer: "/assets/hero/hero-valley-sunset-layer.webp"
   },
   masterplan: {
-    aerial: "/assets/masterplan/masterplan-aerial-board-v1.webp",
+    aerial: "/assets/masterplan/masterplan-aerial-board-v2.webp",
     pathsGlow: "/assets/masterplan/masterplan-paths-glow.webp",
     greenAreas: "/assets/masterplan/masterplan-green-areas.webp"
   },

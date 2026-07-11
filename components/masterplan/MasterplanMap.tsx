@@ -26,10 +26,10 @@ export function MasterplanMap({ activeId, onSelect }: MasterplanMapProps) {
         fill
         loading="eager"
         sizes="(min-width: 1024px) 60vw, 100vw"
-        className="scale-[0.94] object-cover brightness-[1.16] contrast-[0.94] saturate-[1] blur-[1.8px]"
+        className="scale-[0.94] object-cover brightness-[1.16] contrast-[0.94] saturate-[1]"
       />
 
-      {/* soft gallery light + depth vignette (also quiets the baked-in mockup digits) */}
+      {/* soft gallery light + depth vignette */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_28%_18%,rgba(255,244,214,0.1),transparent_42%),linear-gradient(180deg,rgba(2,8,13,0.02),rgba(2,8,13,0.26)_100%)]" />
       <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_60px_rgba(0,0,0,0.4)]" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white/[0.06] to-transparent" />
