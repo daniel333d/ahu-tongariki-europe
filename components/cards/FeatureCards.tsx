@@ -6,7 +6,7 @@ import { featureCards } from "./feature-data";
 export function FeatureCards() {
   return (
     <section
-      className="bg-[#02080d] px-6 py-3 text-white sm:px-10 lg:px-12 xl:px-16 2xl:py-4"
+      className="bg-[#02080d] px-6 pb-3 pt-8 text-white sm:px-10 lg:px-12 xl:px-16 2xl:pb-4"
       aria-label="Funkcje kompleksu"
     >
       <div className="mx-auto max-w-[1920px]">

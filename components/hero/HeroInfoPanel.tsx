@@ -72,7 +72,7 @@ export function HeroInfoPanel({ variant }: HeroInfoPanelProps) {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1.2, delay: 0.45 }}
+      transition={{ duration: 0.9, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
       className="bg-[#061017]/72 mt-16 grid gap-3 rounded-xl border border-white/10 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.4)] backdrop-blur-xl sm:grid-cols-2 lg:hidden"
       aria-label="Najważniejsze informacje o projekcie"
     >

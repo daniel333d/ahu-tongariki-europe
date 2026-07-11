@@ -20,7 +20,7 @@ const categoryLabels: Record<MasterplanObject["category"], string> = {
 
 export function MasterplanDetails({ object }: MasterplanDetailsProps) {
   return (
-    <aside className="border-white/12 bg-[#061017]/82 relative overflow-hidden rounded-xl border p-5 shadow-[0_28px_80px_rgba(0,0,0,0.46),inset_0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-xl 2xl:p-5">
+    <aside className="border-white/10 bg-[#061017]/82 relative overflow-hidden rounded-xl border p-5 shadow-[0_28px_80px_rgba(0,0,0,0.46),inset_0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-xl">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#c8a45a]/55 to-transparent" />
       <motion.div
         key={object.id}
@@ -32,7 +32,7 @@ export function MasterplanDetails({ object }: MasterplanDetailsProps) {
           <motion.span
             initial={{ textShadow: "0 0 0 rgba(200,164,90,0)" }}
             animate={{ textShadow: "0 0 22px rgba(200,164,90,0.5)" }}
-            transition={{ duration: 0.25 }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="font-serif text-2xl text-[#d9b461]"
           >
             {object.number}
@@ -69,7 +69,7 @@ export function MasterplanDetails({ object }: MasterplanDetailsProps) {
         <p className="text-white/76 mt-5 text-sm leading-7">{object.description}</p>
 
         <div className="mt-5 rounded-lg border border-white/10 bg-white/[0.03] p-4">
-          <p className="text-white/42 text-[0.68rem] font-semibold uppercase tracking-[0.16em]">
+          <p className="text-white/55 text-[0.68rem] font-semibold uppercase tracking-[0.16em]">
             Funkcja obiektu
           </p>
           <p className="mt-3 font-serif text-xl text-[#d9b461]">{object.functionLabel}</p>
@@ -99,7 +99,7 @@ export function MasterplanDetails({ object }: MasterplanDetailsProps) {
 
         <button
           type="button"
-          className="mt-5 inline-flex w-full items-center justify-center gap-4 rounded-md border border-[#c8a45a]/60 px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#f2d184] transition-colors duration-[250ms] hover:border-[#f2d184] hover:bg-[#c8a45a]/10 lg:py-3"
+          className="mt-5 inline-flex w-full items-center justify-center gap-4 rounded-md border border-[#c8a45a]/70 px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#f2d184] transition-colors duration-[250ms] hover:border-[#f2d184] hover:bg-[#c8a45a]/10 lg:py-3"
         >
           Poznaj szczegóły
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
