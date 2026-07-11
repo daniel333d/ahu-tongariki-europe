@@ -17,8 +17,8 @@ export function FeatureCard({ card }: FeatureCardProps) {
       initial={{ opacity: 0, y: 28, filter: "blur(10px)" }}
       whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ y: -6 }}
+      transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ y: -6, transition: { duration: 0.25, ease: [0.22, 1, 0.36, 1] } }}
       className="group relative flex h-full min-h-[285px] min-w-[250px] flex-col overflow-hidden rounded-lg border border-white/10 bg-[linear-gradient(180deg,rgba(12,22,30,0.9),rgba(3,9,14,0.96))] shadow-[0_24px_70px_rgba(0,0,0,0.32),inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-md transition-[border-color,box-shadow] duration-[250ms] hover:border-[#c8a45a]/55 hover:shadow-[0_28px_80px_rgba(0,0,0,0.42),0_0_30px_rgba(200,164,90,0.1),inset_0_1px_0_rgba(255,255,255,0.06)] md:min-w-0 2xl:min-h-[330px]"
       data-asset={card.assetPath}
     >

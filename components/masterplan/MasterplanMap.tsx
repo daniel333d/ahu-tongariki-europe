@@ -42,7 +42,7 @@ export function MasterplanMap({ activeId, onSelect }: MasterplanMapProps) {
       <motion.div
         className="pointer-events-none absolute z-10 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(241,205,122,0.34)_0%,rgba(200,164,90,0.14)_46%,transparent_72%)]"
         animate={{ left: `${activeObject.positionX}%`, top: `${activeObject.positionY}%` }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
         aria-hidden="true"
       />
 

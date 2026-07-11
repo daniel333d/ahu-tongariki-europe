@@ -26,13 +26,13 @@ export function MasterplanDetails({ object }: MasterplanDetailsProps) {
         key={object.id}
         initial={{ opacity: 0, y: 14, filter: "blur(6px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        transition={{ duration: 0.26, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="flex min-h-[42px] items-baseline gap-4">
           <motion.span
             initial={{ textShadow: "0 0 0 rgba(200,164,90,0)" }}
             animate={{ textShadow: "0 0 22px rgba(200,164,90,0.5)" }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.25 }}
             className="font-serif text-2xl text-[#d9b461]"
           >
             {object.number}
