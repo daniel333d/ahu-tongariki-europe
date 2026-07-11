@@ -20,18 +20,19 @@ const categoryLabels: Record<MasterplanObject["category"], string> = {
 
 export function MasterplanDetails({ object }: MasterplanDetailsProps) {
   return (
-    <aside className="border-white/12 bg-[#071018]/86 rounded-lg border p-5 shadow-[0_24px_70px_rgba(0,0,0,0.34),inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-xl 2xl:p-5">
+    <aside className="border-white/12 bg-[#061017]/82 relative overflow-hidden rounded-xl border p-5 shadow-[0_28px_80px_rgba(0,0,0,0.46),inset_0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-xl 2xl:p-5">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#c8a45a]/55 to-transparent" />
       <motion.div
         key={object.id}
-        initial={{ opacity: 0, y: 18 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
+        initial={{ opacity: 0, y: 14, filter: "blur(6px)" }}
+        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        transition={{ duration: 0.26, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="flex min-h-[42px] items-baseline gap-4">
           <motion.span
             initial={{ textShadow: "0 0 0 rgba(200,164,90,0)" }}
             animate={{ textShadow: "0 0 22px rgba(200,164,90,0.5)" }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3 }}
             className="font-serif text-2xl text-[#d9b461]"
           >
             {object.number}
@@ -96,8 +97,11 @@ export function MasterplanDetails({ object }: MasterplanDetailsProps) {
           </div>
         </div>
 
-        <button className="mt-5 inline-flex w-full items-center justify-center gap-4 rounded-md border border-[#c8a45a]/60 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#f2d184] transition hover:border-[#f2d184] hover:bg-[#c8a45a]/10">
-          Zobacz szczegóły
+        <button
+          type="button"
+          className="mt-5 inline-flex w-full items-center justify-center gap-4 rounded-md border border-[#c8a45a]/60 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#f2d184] transition-colors duration-[250ms] hover:border-[#f2d184] hover:bg-[#c8a45a]/10"
+        >
+          Poznaj szczegóły
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </button>
       </motion.div>
