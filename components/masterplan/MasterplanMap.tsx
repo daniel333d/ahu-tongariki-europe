@@ -2,18 +2,20 @@
 
 import { motion } from "framer-motion";
 import { assets } from "../../lib/asset-paths";
+import { useI18n } from "../../app/i18n-provider";
 import { AssetImage } from "../common/AssetImage";
-import { masterplanObjects } from "./masterplan-data";
 import { MasterplanMarker } from "./MasterplanMarker";
 import type { MasterplanObject } from "./types";
 
 type MasterplanMapProps = {
+  objects: MasterplanObject[];
   activeId: MasterplanObject["id"];
   onSelect: (id: MasterplanObject["id"]) => void;
 };
 
-export function MasterplanMap({ activeId, onSelect }: MasterplanMapProps) {
-  const activeObject = masterplanObjects.find((object) => object.id === activeId) ?? masterplanObjects[0];
+export function MasterplanMap({ objects, activeId, onSelect }: MasterplanMapProps) {
+  const { copy } = useI18n();
+  const activeObject = objects.find((object) => object.id === activeId) ?? objects[0];
 
   return (
     <div
@@ -46,7 +48,7 @@ export function MasterplanMap({ activeId, onSelect }: MasterplanMapProps) {
         aria-hidden="true"
       />
 
-      {masterplanObjects.map((object) => (
+      {objects.map((object) => (
         <MasterplanMarker
           key={object.id}
           object={object}
@@ -56,8 +58,8 @@ export function MasterplanMap({ activeId, onSelect }: MasterplanMapProps) {
       ))}
 
       <div className="bg-[#02080d]/78 text-white/66 absolute bottom-3 left-3 right-3 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-white/12 px-4 py-3 text-[0.65rem] uppercase tracking-[0.12em] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-md">
-        <span className="text-[#d9b461]">Platforma Ahu jako centrum planu</span>
-        <span>Ścieżki piesze · zieleń · tarasy · punkty widokowe</span>
+        <span className="text-[#d9b461]">{copy.experience.masterplanMap.caption}</span>
+        <span>{copy.experience.masterplanMap.subcaption}</span>
       </div>
     </div>
   );

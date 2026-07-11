@@ -67,8 +67,10 @@ function AhuTongarikiMiniature({ className = "" }: { className?: string }) {
 }
 
 function ExperienceSection() {
+  const { copy } = useI18n();
+
   return (
-    <div id="przestrzen-doswiadczen" className="bg-[#02080d]" aria-label="Przestrzeń doświadczeń">
+    <div id="przestrzen-doswiadczen" className="bg-[#02080d]" aria-label={copy.experience.sectionAriaLabel}>
       <ExperienceHeroSection />
       <FeatureCards />
       <MasterplanSection />
@@ -1069,7 +1071,7 @@ function HomeContent() {
           />
           <div className="grid gap-px bg-black/10">
             {regionalValue.map((item, index) => (
-              <div key={item} className="grid grid-cols-[72px_1fr] bg-white">
+              <div key={item} className="grid grid-cols-[88px_1fr] bg-white">
                 <span className="border-r border-black/10 p-5 font-serif text-3xl text-gold">
                   {String(index + 1).padStart(2, "0")}
                 </span>

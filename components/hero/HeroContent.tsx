@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Landmark } from "lucide-react";
+import { useI18n } from "../../app/i18n-provider";
 import { HeroCTA } from "./HeroCTA";
 
 const fadeUp = {
@@ -10,6 +11,8 @@ const fadeUp = {
 };
 
 export function HeroContent() {
+  const { copy } = useI18n();
+
   return (
     <motion.div
       initial="hidden"
@@ -22,22 +25,21 @@ export function HeroContent() {
         <span className="flex h-8 w-8 items-center justify-center rounded-sm border border-[#c8a45a]/50 text-[#c8a45a]">
           <Landmark className="h-4 w-4" aria-hidden="true" />
         </span>
-        <span>Ahu Tongariki Europe</span>
+        <span>{copy.experience.hero.badge}</span>
       </div>
 
       <h1 className="max-w-[590px] font-serif text-4xl font-semibold uppercase leading-[0.9] tracking-[0.01em] text-[#d9b461] sm:text-6xl lg:text-[4rem] 2xl:text-[3.75rem]">
-        PRZESTRZEŃ
+        {copy.experience.hero.titleLine1}
         <br />
-        DOŚWIADCZEŃ
+        {copy.experience.hero.titleLine2}
       </h1>
 
       <p className="mt-5 max-w-[640px] text-xs font-medium uppercase tracking-[0.16em] text-[#d7b56a] sm:text-sm lg:text-base 2xl:mt-6 2xl:text-sm">
-        ARCHITEKTURA INSPIROWANA KRAJOBRAZEM RAPA NUI
+        {copy.experience.hero.subtitle}
       </p>
 
       <p className="text-white/88 mt-5 max-w-[450px] text-sm leading-7 sm:text-base 2xl:mt-4 2xl:max-w-[420px] 2xl:text-sm 2xl:leading-6">
-        Monumentalna historia Rapa Nui spotyka się z nowoczesną architekturą i naturą Kotliny Kłodzkiej,
-        tworząc miejsce wyjątkowe w skali świata.
+        {copy.experience.hero.description}
       </p>
 
       <HeroCTA />

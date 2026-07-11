@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useI18n } from "../../app/i18n-provider";
 import { AssetImage } from "../common/AssetImage";
 import type { FeatureCardData } from "./types";
 
@@ -10,6 +11,7 @@ type FeatureCardProps = {
 };
 
 export function FeatureCard({ card }: FeatureCardProps) {
+  const { copy } = useI18n();
   const Icon = card.icon;
 
   return (
@@ -58,7 +60,7 @@ export function FeatureCard({ card }: FeatureCardProps) {
           type="button"
           className="mt-auto flex items-center justify-between gap-2 border-t border-white/10 px-4 py-4 text-[0.64rem] font-semibold uppercase tracking-[0.14em] text-[#c8a45a]/85 transition-colors duration-[250ms] hover:text-[#f1cd7a] lg:py-2.5"
         >
-          Dowiedz się więcej
+          {copy.experience.cards.ctaLabel}
           <ArrowRight
             className="h-3.5 w-3.5 transition-transform duration-[250ms] group-hover:translate-x-0.5"
             aria-hidden="true"

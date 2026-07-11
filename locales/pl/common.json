@@ -240,6 +240,163 @@
       "przestrzeń do współpracy międzynarodowej"
     ]
   },
+  "experience": {
+    "sectionAriaLabel": "Przestrzeń doświadczeń",
+    "hero": {
+      "ariaLabel": "Panorama główna Ahu Tongariki Europe z platformą {count} Moai. Moai z pukao znajduje się na pozycji {position}. od lewej strony.",
+      "badge": "Ahu Tongariki Europe",
+      "titleLine1": "PRZESTRZEŃ",
+      "titleLine2": "DOŚWIADCZEŃ",
+      "subtitle": "ARCHITEKTURA INSPIROWANA KRAJOBRAZEM RAPA NUI",
+      "description": "Monumentalna historia Rapa Nui spotyka się z nowoczesną architekturą i naturą Kotliny Kłodzkiej, tworząc miejsce wyjątkowe w skali świata.",
+      "cta": "POZNAJ CAŁY KOMPLEKS"
+    },
+    "infoPanel": {
+      "ariaLabel": "Najważniejsze informacje o projekcie",
+      "items": [
+        {
+          "title": "BYSTRZYCA KŁODZKA",
+          "description": "DOLNY ŚLĄSK, POLSKA"
+        },
+        {
+          "title": "16 HA",
+          "description": "POWIERZCHNIA KOMPLEKSU"
+        },
+        {
+          "title": "15 MOAI",
+          "description": "WIERNA KOPIA AHU TONGARIKI Z WYSPY WIELKANOCNEJ"
+        },
+        {
+          "title": "CENTRUM KULTURY",
+          "description": "I EDUKACJI"
+        },
+        {
+          "title": "PANORAMA KOTLINY",
+          "description": "KŁODZKIEJ"
+        }
+      ]
+    },
+    "cards": {
+      "ariaLabel": "Funkcje kompleksu",
+      "ctaLabel": "Dowiedz się więcej",
+      "items": [
+        {
+          "title": "Muzeum",
+          "description": "Przestrzeń ekspozycyjna poświęcona historii Rapa Nui, znaczeniu Moai i odkryciom archeologicznym."
+        },
+        {
+          "title": "Restauracja",
+          "description": "Kameralne miejsce z widokiem na platformę Ahu, inspirowane kuchnią regionalną i produktami lokalnymi."
+        },
+        {
+          "title": "Kawiarnia",
+          "description": "Elegancka strefa odpoczynku z tarasem, światłem zachodu słońca i spokojną atmosferą kompleksu."
+        },
+        {
+          "title": "Punkt widokowy",
+          "description": "Panorama całego założenia, Kotliny Kłodzkiej i osi widokowej prowadzącej ku posągom Moai."
+        },
+        {
+          "title": "Centrum edukacyjne",
+          "description": "Warsztaty, prelekcje, projekcje i programy edukacyjne dla szkół, rodzin oraz gości międzynarodowych."
+        },
+        {
+          "title": "Sklep",
+          "description": "Wyselekcjonowane publikacje, modele Moai, rzemiosło i pamiątki premium związane z projektem."
+        }
+      ]
+    },
+    "masterplanSection": {
+      "ariaLabel": "Plan kompleksu",
+      "titleLine1": "Plan",
+      "titleLine2": "kompleksu",
+      "intro": "Interaktywny plan kompleksu. Wybierz budynek, aby zobaczyć szczegóły i wizualizację wnętrz.",
+      "legend": {
+        "mainPaths": "Ścieżki główne",
+        "walkingPaths": "Ścieżki spacerowe",
+        "entrances": "Wejścia",
+        "greenZones": "Strefy zielone"
+      }
+    },
+    "masterplanMap": {
+      "caption": "Platforma Ahu jako centrum planu",
+      "subcaption": "Ścieżki piesze · zieleń · tarasy · punkty widokowe"
+    },
+    "masterplanMarker": {
+      "ariaLabelPrefix": "Pokaż szczegóły"
+    },
+    "masterplanDetails": {
+      "categoryLabels": {
+        "museum": "Muzeum",
+        "restaurant": "Gastronomia",
+        "cafe": "Kawiarnia",
+        "viewpoint": "Widok",
+        "education": "Edukacja",
+        "shop": "Handel premium"
+      },
+      "functionLabel": "Funkcja obiektu",
+      "visitTimeLabel": "Czas zwiedzania",
+      "capacityLabel": "Pojemność",
+      "characterLabel": "Charakter",
+      "cta": "Poznaj szczegóły"
+    },
+    "masterplanObjects": [
+      {
+        "title": "Muzeum",
+        "subtitle": "Historia Rapa Nui i znaczenie Moai",
+        "description": "Nowoczesna przestrzeń ekspozycyjna prezentująca kontekst Ahu Tongariki, dziedzictwo Rapa Nui oraz archeologiczne znaczenie posągów Moai.",
+        "estimatedVisitTime": "60-90 min",
+        "capacity": "1200 m²",
+        "functionLabel": "Ekspozycja i interpretacja dziedzictwa",
+        "accentLabel": "Ekspozycja główna"
+      },
+      {
+        "title": "Restauracja",
+        "subtitle": "Kuchnia regionalna i widok na Ahu",
+        "description": "Restauracja wpisana w krajobraz kompleksu, zaprojektowana jako spokojne miejsce spotkań z widokiem na platformę i panoramę doliny.",
+        "estimatedVisitTime": "75 min",
+        "capacity": "180 miejsc",
+        "functionLabel": "Gastronomia i spotkania",
+        "accentLabel": "Widok na Moai"
+      },
+      {
+        "title": "Kawiarnia",
+        "subtitle": "Taras, kawa i zachód słońca",
+        "description": "Kameralna strefa odpoczynku z tarasem, ciepłym światłem i perspektywą na założenie Ahu Tongariki Europe.",
+        "estimatedVisitTime": "30-45 min",
+        "capacity": "70 miejsc",
+        "functionLabel": "Odpoczynek i taras widokowy",
+        "accentLabel": "Taras premium"
+      },
+      {
+        "title": "Punkt widokowy",
+        "subtitle": "Panorama Kotliny Kłodzkiej",
+        "description": "Podwyższona platforma widokowa kierująca wzrok na oś Moai, Bystrzycę Kłodzką i rozległy krajobraz doliny.",
+        "estimatedVisitTime": "20-30 min",
+        "capacity": "120 osób",
+        "functionLabel": "Obserwacja panoramy",
+        "accentLabel": "Najwyższy punkt"
+      },
+      {
+        "title": "Centrum edukacyjne",
+        "subtitle": "Warsztaty, prelekcje i programy",
+        "description": "Miejsce edukacji historycznej i archeologicznej z salami warsztatowymi, programami dla szkół oraz spotkaniami eksperckimi.",
+        "estimatedVisitTime": "45-120 min",
+        "capacity": "3 sale",
+        "functionLabel": "Edukacja i programy publiczne",
+        "accentLabel": "Edukacja i kultura"
+      },
+      {
+        "title": "Sklep",
+        "subtitle": "Publikacje, modele i pamiątki premium",
+        "description": "Butik muzealny z wydawnictwami, modelami Moai, rzemiosłem i starannie dobranymi pamiątkami związanymi z projektem.",
+        "estimatedVisitTime": "15-25 min",
+        "capacity": "300+ pozycji",
+        "functionLabel": "Publikacje i pamiątki premium",
+        "accentLabel": "Butik muzealny"
+      }
+    ]
+  },
   "partnership": {
     "imageAlt": "Monumentalna wizualizacja Moai w tle sekcji partnerstwa z Rapa Nui.",
     "title": "Partnerstwo z Rapa Nui",

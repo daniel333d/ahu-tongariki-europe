@@ -240,6 +240,163 @@
       "prostor pro mezinárodní spolupráci"
     ]
   },
+  "experience": {
+    "sectionAriaLabel": "Prostor zážitků",
+    "hero": {
+      "ariaLabel": "Hlavní panorama Ahu Tongariki Europe s plošinou {count} soch Moai. Moai s pukao se nachází na pozici {position} zleva.",
+      "badge": "Ahu Tongariki Europe",
+      "titleLine1": "PROSTOR",
+      "titleLine2": "ZÁŽITKŮ",
+      "subtitle": "ARCHITEKTURA INSPIROVANÁ KRAJINOU RAPA NUI",
+      "description": "Monumentální historie Rapa Nui se setkává s moderní architekturou a přírodou Kladského údolí a vytváří místo jedinečné v celosvětovém měřítku.",
+      "cta": "POZNAT CELÝ KOMPLEX"
+    },
+    "infoPanel": {
+      "ariaLabel": "Nejdůležitější informace o projektu",
+      "items": [
+        {
+          "title": "BYSTRZYCA KŁODZKA",
+          "description": "DOLNÍ SLEZSKO, POLSKO"
+        },
+        {
+          "title": "16 HA",
+          "description": "ROZLOHA KOMPLEXU"
+        },
+        {
+          "title": "15 MOAI",
+          "description": "VĚRNÁ KOPIE AHU TONGARIKI Z VELIKONOČNÍHO OSTROVA"
+        },
+        {
+          "title": "CENTRUM KULTURY",
+          "description": "A VZDĚLÁVÁNÍ"
+        },
+        {
+          "title": "PANORAMA KLADSKÉHO",
+          "description": "ÚDOLÍ"
+        }
+      ]
+    },
+    "cards": {
+      "ariaLabel": "Funkce komplexu",
+      "ctaLabel": "Zjistit více",
+      "items": [
+        {
+          "title": "Muzeum",
+          "description": "Výstavní prostor věnovaný historii Rapa Nui, významu Moai a archeologickým objevům."
+        },
+        {
+          "title": "Restaurace",
+          "description": "Komorní místo s výhledem na plošinu Ahu, inspirované regionální kuchyní a místními produkty."
+        },
+        {
+          "title": "Kavárna",
+          "description": "Elegantní odpočinková zóna s terasou, světlem zapadajícího slunce a klidnou atmosférou komplexu."
+        },
+        {
+          "title": "Vyhlídka",
+          "description": "Panorama celého areálu, Kladského údolí a vizuální osy směřující k sochám Moai."
+        },
+        {
+          "title": "Vzdělávací centrum",
+          "description": "Workshopy, přednášky, projekce a vzdělávací programy pro školy, rodiny i zahraniční návštěvníky."
+        },
+        {
+          "title": "Obchod",
+          "description": "Vybrané publikace, modely Moai, řemeslné výrobky a prémiové suvenýry spojené s projektem."
+        }
+      ]
+    },
+    "masterplanSection": {
+      "ariaLabel": "Plán komplexu",
+      "titleLine1": "Plán",
+      "titleLine2": "komplexu",
+      "intro": "Interaktivní plán komplexu. Vyberte budovu a zobrazte si podrobnosti a vizualizace interiérů.",
+      "legend": {
+        "mainPaths": "Hlavní cesty",
+        "walkingPaths": "Procházkové cesty",
+        "entrances": "Vstupy",
+        "greenZones": "Zelené zóny"
+      }
+    },
+    "masterplanMap": {
+      "caption": "Plošina Ahu jako centrum plánu",
+      "subcaption": "Pěší cesty · zeleň · terasy · vyhlídky"
+    },
+    "masterplanMarker": {
+      "ariaLabelPrefix": "Zobrazit podrobnosti"
+    },
+    "masterplanDetails": {
+      "categoryLabels": {
+        "museum": "Muzeum",
+        "restaurant": "Gastronomie",
+        "cafe": "Kavárna",
+        "viewpoint": "Vyhlídka",
+        "education": "Vzdělávání",
+        "shop": "Prémiový obchod"
+      },
+      "functionLabel": "Funkce objektu",
+      "visitTimeLabel": "Doba prohlídky",
+      "capacityLabel": "Kapacita",
+      "characterLabel": "Charakter",
+      "cta": "Zjistit podrobnosti"
+    },
+    "masterplanObjects": [
+      {
+        "title": "Muzeum",
+        "subtitle": "Historie Rapa Nui a význam Moai",
+        "description": "Moderní výstavní prostor představující kontext Ahu Tongariki, dědictví Rapa Nui a archeologický význam soch Moai.",
+        "estimatedVisitTime": "60-90 min",
+        "capacity": "1200 m²",
+        "functionLabel": "Výstava a interpretace dědictví",
+        "accentLabel": "Hlavní expozice"
+      },
+      {
+        "title": "Restaurace",
+        "subtitle": "Regionální kuchyně a výhled na Ahu",
+        "description": "Restaurace zasazená do krajiny komplexu, navržená jako klidné místo setkávání s výhledem na plošinu a panorama údolí.",
+        "estimatedVisitTime": "75 min",
+        "capacity": "180 míst",
+        "functionLabel": "Gastronomie a setkávání",
+        "accentLabel": "Výhled na Moai"
+      },
+      {
+        "title": "Kavárna",
+        "subtitle": "Terasa, káva a západ slunce",
+        "description": "Komorní odpočinková zóna s terasou, teplým světlem a výhledem na areál Ahu Tongariki Europe.",
+        "estimatedVisitTime": "30-45 min",
+        "capacity": "70 míst",
+        "functionLabel": "Odpočinek a vyhlídková terasa",
+        "accentLabel": "Prémiová terasa"
+      },
+      {
+        "title": "Vyhlídka",
+        "subtitle": "Panorama Kladského údolí",
+        "description": "Zvýšená vyhlídková plošina směřující pohled podél osy Moai k Bystrzyci Kłodzké a rozlehlé krajině údolí.",
+        "estimatedVisitTime": "20-30 min",
+        "capacity": "120 osob",
+        "functionLabel": "Pozorování panoramatu",
+        "accentLabel": "Nejvyšší bod"
+      },
+      {
+        "title": "Vzdělávací centrum",
+        "subtitle": "Workshopy, přednášky a programy",
+        "description": "Místo historického a archeologického vzdělávání s dílenskými sály, školními programy a setkáními s odborníky.",
+        "estimatedVisitTime": "45-120 min",
+        "capacity": "3 sály",
+        "functionLabel": "Vzdělávání a veřejné programy",
+        "accentLabel": "Vzdělávání a kultura"
+      },
+      {
+        "title": "Obchod",
+        "subtitle": "Publikace, modely a prémiové suvenýry",
+        "description": "Muzejní butik s publikacemi, modely Moai, řemeslnými výrobky a pečlivě vybranými suvenýry spojenými s projektem.",
+        "estimatedVisitTime": "15-25 min",
+        "capacity": "300+ položek",
+        "functionLabel": "Publikace a prémiové suvenýry",
+        "accentLabel": "Muzejní butik"
+      }
+    ]
+  },
   "partnership": {
     "imageAlt": "Monumentální vizualizace Moai v pozadí sekce partnerství s Rapa Nui.",
     "title": "Partnerství s Rapa Nui",

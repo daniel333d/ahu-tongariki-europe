@@ -1,5 +1,6 @@
 "use client";
 
+import { useI18n } from "../../app/i18n-provider";
 import { HeroBackground } from "./HeroBackground";
 import { HeroContent } from "./HeroContent";
 import { HeroInfoPanel } from "./HeroInfoPanel";
@@ -9,10 +10,15 @@ const MOAI_COUNT = 15;
 const PUKAO_POSITION_FROM_LEFT = 14;
 
 export function HeroSection() {
+  const { copy } = useI18n();
+  const ariaLabel = copy.experience.hero.ariaLabel
+    .replace("{count}", String(MOAI_COUNT))
+    .replace("{position}", String(PUKAO_POSITION_FROM_LEFT));
+
   return (
     <section
       className="relative min-h-[470px] overflow-hidden bg-[#02080d] text-white lg:h-[47vw] lg:max-h-[640px] 2xl:h-[36vw] 2xl:max-h-[490px]"
-      aria-label={`Panorama główna Ahu Tongariki Europe z platformą ${MOAI_COUNT} Moai. Moai z pukao znajduje się na pozycji ${PUKAO_POSITION_FROM_LEFT}. od lewej strony.`}
+      aria-label={ariaLabel}
       data-moai-count={MOAI_COUNT}
       data-pukao-position-from-left={PUKAO_POSITION_FROM_LEFT}
     >

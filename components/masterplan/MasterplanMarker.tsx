@@ -1,3 +1,6 @@
+"use client";
+
+import { useI18n } from "../../app/i18n-provider";
 import type { MasterplanObject } from "./types";
 
 type MasterplanMarkerProps = {
@@ -7,6 +10,8 @@ type MasterplanMarkerProps = {
 };
 
 export function MasterplanMarker({ object, isActive, onSelect }: MasterplanMarkerProps) {
+  const { copy } = useI18n();
+
   return (
     <button
       type="button"
@@ -20,7 +25,7 @@ export function MasterplanMarker({ object, isActive, onSelect }: MasterplanMarke
       style={{ left: `${object.positionX}%`, top: `${object.positionY}%` }}
       onClick={() => onSelect(object.id)}
       aria-pressed={isActive}
-      aria-label={`Pokaż szczegóły: ${object.title}`}
+      aria-label={`${copy.experience.masterplanMarker.ariaLabelPrefix}: ${object.title}`}
     >
       {object.number}
     </button>

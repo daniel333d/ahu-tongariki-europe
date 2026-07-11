@@ -2,40 +2,18 @@
 
 import { motion } from "framer-motion";
 import { BookOpen, Landmark, Map, MapPin, Mountain } from "lucide-react";
+import { useI18n } from "../../app/i18n-provider";
 
 type HeroInfoPanelProps = {
   variant: "desktop" | "mobile";
 };
 
-const infoItems = [
-  {
-    icon: MapPin,
-    title: "BYSTRZYCA KŁODZKA",
-    description: "DOLNY ŚLĄSK, POLSKA"
-  },
-  {
-    icon: Map,
-    title: "16 HA",
-    description: "POWIERZCHNIA KOMPLEKSU"
-  },
-  {
-    icon: Landmark,
-    title: "15 MOAI",
-    description: "WIERNA KOPIA AHU TONGARIKI Z WYSPY WIELKANOCNEJ"
-  },
-  {
-    icon: BookOpen,
-    title: "CENTRUM KULTURY",
-    description: "I EDUKACJI"
-  },
-  {
-    icon: Mountain,
-    title: "PANORAMA KOTLINY",
-    description: "KŁODZKIEJ"
-  }
-];
+const infoIcons = [MapPin, Map, Landmark, BookOpen, Mountain];
 
 export function HeroInfoPanel({ variant }: HeroInfoPanelProps) {
+  const { copy } = useI18n();
+  const infoItems = copy.experience.infoPanel.items;
+
   if (variant === "desktop") {
     return (
       <motion.aside
@@ -43,11 +21,11 @@ export function HeroInfoPanel({ variant }: HeroInfoPanelProps) {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.9, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
         className="bg-[#061017]/82 hidden w-[300px] shrink-0 rounded-xl border border-white/10 p-5 shadow-[0_28px_80px_rgba(0,0,0,0.46)] backdrop-blur-xl lg:block xl:w-[320px]"
-        aria-label="Najważniejsze informacje o projekcie"
+        aria-label={copy.experience.infoPanel.ariaLabel}
       >
         <div className="divide-y divide-white/10">
-          {infoItems.map((item) => {
-            const Icon = item.icon;
+          {infoItems.map((item, index) => {
+            const Icon = infoIcons[index];
 
             return (
               <div key={item.title} className="flex gap-5 py-4 first:pt-0 last:pb-0">
@@ -74,10 +52,10 @@ export function HeroInfoPanel({ variant }: HeroInfoPanelProps) {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.9, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
       className="bg-[#061017]/72 mt-16 grid gap-3 rounded-xl border border-white/10 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.4)] backdrop-blur-xl sm:grid-cols-2 lg:hidden"
-      aria-label="Najważniejsze informacje o projekcie"
+      aria-label={copy.experience.infoPanel.ariaLabel}
     >
-      {infoItems.map((item) => {
-        const Icon = item.icon;
+      {infoItems.map((item, index) => {
+        const Icon = infoIcons[index];
 
         return (
           <div

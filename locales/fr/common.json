@@ -240,6 +240,163 @@
       "espace de coopération internationale"
     ]
   },
+  "experience": {
+    "sectionAriaLabel": "Espace d'expériences",
+    "hero": {
+      "ariaLabel": "Panorama principal d'Ahu Tongariki Europe avec une plateforme de {count} Moai. Le Moai avec pukao se trouve à la position {position} en partant de la gauche.",
+      "badge": "Ahu Tongariki Europe",
+      "titleLine1": "ESPACE",
+      "titleLine2": "D'EXPÉRIENCES",
+      "subtitle": "UNE ARCHITECTURE INSPIRÉE DU PAYSAGE DE RAPA NUI",
+      "description": "L'histoire monumentale de Rapa Nui rencontre une architecture moderne et la nature de la vallée de Kłodzko, créant un lieu unique à l'échelle mondiale.",
+      "cta": "DÉCOUVRIR TOUT LE COMPLEXE"
+    },
+    "infoPanel": {
+      "ariaLabel": "Informations clés sur le projet",
+      "items": [
+        {
+          "title": "BYSTRZYCA KŁODZKA",
+          "description": "BASSE-SILÉSIE, POLOGNE"
+        },
+        {
+          "title": "16 HA",
+          "description": "SUPERFICIE DU COMPLEXE"
+        },
+        {
+          "title": "15 MOAI",
+          "description": "COPIE FIDÈLE D'AHU TONGARIKI DE L'ÎLE DE PÂQUES"
+        },
+        {
+          "title": "CENTRE CULTUREL",
+          "description": "ET ÉDUCATIF"
+        },
+        {
+          "title": "PANORAMA DE LA",
+          "description": "VALLÉE DE KŁODZKO"
+        }
+      ]
+    },
+    "cards": {
+      "ariaLabel": "Fonctions du complexe",
+      "ctaLabel": "En savoir plus",
+      "items": [
+        {
+          "title": "Musée",
+          "description": "Un espace d'exposition consacré à l'histoire de Rapa Nui, à la signification des Moai et aux découvertes archéologiques."
+        },
+        {
+          "title": "Restaurant",
+          "description": "Un lieu intimiste avec vue sur la plateforme Ahu, inspiré de la cuisine régionale et des produits locaux."
+        },
+        {
+          "title": "Café",
+          "description": "Un espace de détente élégant avec terrasse, lumière du coucher de soleil et atmosphère paisible du complexe."
+        },
+        {
+          "title": "Point de vue",
+          "description": "Un panorama sur l'ensemble du complexe, la vallée de Kłodzko et l'axe visuel menant vers les statues Moai."
+        },
+        {
+          "title": "Centre éducatif",
+          "description": "Ateliers, conférences, projections et programmes éducatifs pour les écoles, les familles et les visiteurs internationaux."
+        },
+        {
+          "title": "Boutique",
+          "description": "Publications sélectionnées, modèles de Moai, artisanat et souvenirs haut de gamme liés au projet."
+        }
+      ]
+    },
+    "masterplanSection": {
+      "ariaLabel": "Plan du complexe",
+      "titleLine1": "Plan",
+      "titleLine2": "du complexe",
+      "intro": "Plan interactif du complexe. Sélectionnez un bâtiment pour voir les détails et les visualisations intérieures.",
+      "legend": {
+        "mainPaths": "Allées principales",
+        "walkingPaths": "Sentiers de promenade",
+        "entrances": "Entrées",
+        "greenZones": "Zones vertes"
+      }
+    },
+    "masterplanMap": {
+      "caption": "La plateforme Ahu au centre du plan",
+      "subcaption": "Sentiers piétons · verdure · terrasses · points de vue"
+    },
+    "masterplanMarker": {
+      "ariaLabelPrefix": "Afficher les détails"
+    },
+    "masterplanDetails": {
+      "categoryLabels": {
+        "museum": "Musée",
+        "restaurant": "Gastronomie",
+        "cafe": "Café",
+        "viewpoint": "Vue",
+        "education": "Éducation",
+        "shop": "Boutique premium"
+      },
+      "functionLabel": "Fonction du bâtiment",
+      "visitTimeLabel": "Durée de la visite",
+      "capacityLabel": "Capacité",
+      "characterLabel": "Caractère",
+      "cta": "Découvrir les détails"
+    },
+    "masterplanObjects": [
+      {
+        "title": "Musée",
+        "subtitle": "Histoire de Rapa Nui et signification des Moai",
+        "description": "Un espace d'exposition moderne présentant le contexte d'Ahu Tongariki, le patrimoine de Rapa Nui et la signification archéologique des statues Moai.",
+        "estimatedVisitTime": "60-90 min",
+        "capacity": "1200 m²",
+        "functionLabel": "Exposition et interprétation du patrimoine",
+        "accentLabel": "Exposition principale"
+      },
+      {
+        "title": "Restaurant",
+        "subtitle": "Cuisine régionale et vue sur l'Ahu",
+        "description": "Un restaurant intégré au paysage du complexe, conçu comme un lieu de rencontre paisible avec vue sur la plateforme et le panorama de la vallée.",
+        "estimatedVisitTime": "75 min",
+        "capacity": "180 places",
+        "functionLabel": "Gastronomie et rencontres",
+        "accentLabel": "Vue sur les Moai"
+      },
+      {
+        "title": "Café",
+        "subtitle": "Terrasse, café et coucher de soleil",
+        "description": "Un espace de détente intimiste avec terrasse, lumière chaleureuse et perspective sur l'ensemble d'Ahu Tongariki Europe.",
+        "estimatedVisitTime": "30-45 min",
+        "capacity": "70 places",
+        "functionLabel": "Détente et terrasse panoramique",
+        "accentLabel": "Terrasse premium"
+      },
+      {
+        "title": "Point de vue",
+        "subtitle": "Panorama de la vallée de Kłodzko",
+        "description": "Une plateforme d'observation surélevée dirigeant le regard le long de l'axe des Moai, vers Bystrzyca Kłodzka et le vaste paysage de la vallée.",
+        "estimatedVisitTime": "20-30 min",
+        "capacity": "120 personnes",
+        "functionLabel": "Observation du panorama",
+        "accentLabel": "Point culminant"
+      },
+      {
+        "title": "Centre éducatif",
+        "subtitle": "Ateliers, conférences et programmes",
+        "description": "Un lieu d'éducation historique et archéologique avec des salles d'atelier, des programmes scolaires et des rencontres avec des experts.",
+        "estimatedVisitTime": "45-120 min",
+        "capacity": "3 salles",
+        "functionLabel": "Éducation et programmes publics",
+        "accentLabel": "Éducation et culture"
+      },
+      {
+        "title": "Boutique",
+        "subtitle": "Publications, modèles et souvenirs premium",
+        "description": "Une boutique muséale proposant publications, modèles de Moai, artisanat et souvenirs soigneusement sélectionnés liés au projet.",
+        "estimatedVisitTime": "15-25 min",
+        "capacity": "300+ articles",
+        "functionLabel": "Publications et souvenirs premium",
+        "accentLabel": "Boutique muséale"
+      }
+    ]
+  },
   "partnership": {
     "imageAlt": "Visualisation monumentale des Moai en arrière-plan de la section consacrée au partenariat avec Rapa Nui.",
     "title": "Partenariat avec Rapa Nui",
