@@ -31,19 +31,26 @@ export function MasterplanSection() {
           </p>
           <div className="mt-8 space-y-4 text-sm text-white/76 2xl:mt-7 2xl:space-y-3 2xl:text-[0.82rem]">
             <div className="flex items-center gap-4">
-              <span className="h-px w-8 bg-[#d9b461]" />
-              Ścieżki główne
+              <span className="flex h-4 w-8 shrink-0 items-center">
+                <span className="h-px w-8 bg-[#d9b461]" />
+              </span>
+              <span>Ścieżki główne</span>
             </div>
             <div className="flex items-center gap-4">
-              <span className="h-px w-8 border-t border-dashed border-[#d9b461]" />
-              Ścieżki spacerowe
+              <span className="flex h-4 w-8 shrink-0 items-center">
+                <span className="h-px w-8 border-t border-dashed border-[#d9b461]" />
+              </span>
+              <span>Ścieżki spacerowe</span>
             </div>
             <div className="flex items-center gap-4">
-              <span className="text-[#d9b461]">▸</span>Wejścia
+              <span className="flex h-4 w-8 shrink-0 items-center justify-center text-[#d9b461]">▸</span>
+              <span>Wejścia</span>
             </div>
             <div className="flex items-center gap-4">
-              <span className="h-4 w-4 rounded-full bg-[#496d38]" />
-              Strefy zielone
+              <span className="flex h-4 w-8 shrink-0 items-center justify-center">
+                <span className="h-4 w-4 rounded-full bg-[#496d38]" />
+              </span>
+              <span>Strefy zielone</span>
             </div>
           </div>
         </div>
