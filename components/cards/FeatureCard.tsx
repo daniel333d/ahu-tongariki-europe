@@ -56,7 +56,7 @@ export function FeatureCard({ card }: FeatureCardProps) {
 
         <button
           type="button"
-          className="mt-auto flex items-center justify-between gap-2 border-t border-white/10 px-4 py-2.5 text-[0.64rem] font-semibold uppercase tracking-[0.14em] text-[#c8a45a]/85 transition-colors duration-[250ms] hover:text-[#f1cd7a]"
+          className="mt-auto flex items-center justify-between gap-2 border-t border-white/10 px-4 py-4 text-[0.64rem] font-semibold uppercase tracking-[0.14em] text-[#c8a45a]/85 transition-colors duration-[250ms] hover:text-[#f1cd7a] lg:py-2.5"
         >
           Dowiedz się więcej
           <ArrowRight

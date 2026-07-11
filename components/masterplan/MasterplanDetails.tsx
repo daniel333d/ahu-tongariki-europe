@@ -99,7 +99,7 @@ export function MasterplanDetails({ object }: MasterplanDetailsProps) {
 
         <button
           type="button"
-          className="mt-5 inline-flex w-full items-center justify-center gap-4 rounded-md border border-[#c8a45a]/60 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-[#f2d184] transition-colors duration-[250ms] hover:border-[#f2d184] hover:bg-[#c8a45a]/10"
+          className="mt-5 inline-flex w-full items-center justify-center gap-4 rounded-md border border-[#c8a45a]/60 px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#f2d184] transition-colors duration-[250ms] hover:border-[#f2d184] hover:bg-[#c8a45a]/10 lg:py-3"
         >
           Poznaj szczegóły
           <ArrowRight className="h-4 w-4" aria-hidden="true" />

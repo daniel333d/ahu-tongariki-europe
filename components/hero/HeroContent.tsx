@@ -25,7 +25,7 @@ export function HeroContent() {
         <span>Ahu Tongariki Europe</span>
       </div>
 
-      <h1 className="max-w-[590px] font-serif text-5xl font-semibold uppercase leading-[0.9] tracking-[0.01em] text-[#d9b461] sm:text-6xl md:text-7xl lg:text-[5.5rem] 2xl:text-[3.75rem]">
+      <h1 className="max-w-[590px] font-serif text-4xl font-semibold uppercase leading-[0.9] tracking-[0.01em] text-[#d9b461] sm:text-6xl lg:text-[4rem] 2xl:text-[3.75rem]">
         PRZESTRZEŃ
         <br />
         DOŚWIADCZEŃ

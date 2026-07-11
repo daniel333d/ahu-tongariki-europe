@@ -11,7 +11,7 @@ const PUKAO_POSITION_FROM_LEFT = 14;
 export function HeroSection() {
   return (
     <section
-      className="relative h-[47vw] max-h-[640px] min-h-[470px] overflow-hidden bg-[#02080d] text-white 2xl:h-[36vw] 2xl:max-h-[490px]"
+      className="relative min-h-[470px] overflow-hidden bg-[#02080d] text-white lg:h-[47vw] lg:max-h-[640px] 2xl:h-[36vw] 2xl:max-h-[490px]"
       aria-label={`Panorama główna Ahu Tongariki Europe z platformą ${MOAI_COUNT} Moai. Moai z pukao znajduje się na pozycji ${PUKAO_POSITION_FROM_LEFT}. od lewej strony.`}
       data-moai-count={MOAI_COUNT}
       data-pukao-position-from-left={PUKAO_POSITION_FROM_LEFT}
