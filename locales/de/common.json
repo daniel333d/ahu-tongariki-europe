@@ -445,8 +445,8 @@
     "required": "Bitte füllen Sie alle Pflichtfelder aus.",
     "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
     "consentRequired": "Für den Versand ist die Einwilligung zur Datenverarbeitung erforderlich.",
-    "sendError": "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es in einigen Minuten erneut.",
-    "success": "Vielen Dank für Ihre Anfrage.\n\nIhre Nachricht wurde erfolgreich gesendet.\n\nEine Bestätigung wurde an die angegebene E-Mail-Adresse gesendet.\n\nWir werden uns so bald wie möglich mit Ihnen in Verbindung setzen.",
+    "sendError": "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+    "success": "Vielen Dank. Ihre Nachricht wurde gesendet.",
     "placeholders": {
       "fullName": "Vor- und Nachname",
       "organization": "Name des Unternehmens oder der Institution",
@@ -496,7 +496,7 @@
       "missingResendApiKey": "Die Umgebungsvariable RESEND_API_KEY fehlt auf dem Server.",
       "unknownSendError": "Unbekannter Sendefehler.",
       "sent": "Die Nachricht wurde gesendet.",
-      "defaultFromEmail": "Ahu Tongariki Europe <onboarding@resend.dev>",
+      "defaultFromEmail": "Ahu Tongariki Europe <kontakt@ahutongariki.pl>",
       "websiteUrl": "https://www.ahutongariki.pl",
       "websiteLabel": "www.ahutongariki.pl",
       "labels": {

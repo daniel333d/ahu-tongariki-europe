@@ -16,3 +16,5 @@ docs/final-release-v1/
 ate-*.png
 .claude/settings.local.json
 .claude/*.lock
+
+.env*

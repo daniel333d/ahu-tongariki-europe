@@ -445,8 +445,8 @@
     "required": "Vyplňte prosím všechna povinná pole.",
     "invalidEmail": "Zadejte prosím platnou e-mailovou adresu.",
     "consentRequired": "Pro odeslání dotazu je nutný souhlas se zpracováním údajů.",
-    "sendError": "Zprávu se nepodařilo odeslat. Zkuste to prosím znovu za několik minut.",
-    "success": "Děkujeme za odeslání dotazu.\n\nVaše zpráva byla úspěšně odeslána.\n\nNa uvedenou e-mailovou adresu bylo odesláno potvrzení.\n\nBudeme vás kontaktovat co nejdříve.",
+    "sendError": "Zprávu se nepodařilo odeslat. Zkuste to prosím znovu.",
+    "success": "Děkujeme. Vaše zpráva byla odeslána.",
     "placeholders": {
       "fullName": "Jméno a příjmení",
       "organization": "Název firmy nebo instituce",
@@ -496,7 +496,7 @@
       "missingResendApiKey": "Na serveru chybí proměnná prostředí RESEND_API_KEY.",
       "unknownSendError": "Neznámá chyba odesílání.",
       "sent": "Zpráva byla odeslána.",
-      "defaultFromEmail": "Ahu Tongariki Europe <onboarding@resend.dev>",
+      "defaultFromEmail": "Ahu Tongariki Europe <kontakt@ahutongariki.pl>",
       "websiteUrl": "https://www.ahutongariki.pl",
       "websiteLabel": "www.ahutongariki.pl",
       "labels": {
