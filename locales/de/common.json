@@ -165,7 +165,13 @@
     "intro": "Das Konzept verortet den Komplex in Bystrzyca Kłodzka in Niederschlesien, mit Sichtbezug zur Stadt und zum Kłodzko-Tal.",
     "quote": "Die Statuen sollen nach Bystrzyca Kłodzka ausgerichtet sein und eine Beziehung zwischen Landschaft, Erbe und neuer touristischer Funktion schaffen.",
     "openMap": "Klicken Sie auf die Miniatur von Ahu Tongariki,\num den Standort in Google Maps zu öffnen",
-    "mapCode": "PL / SW"
+    "mapCode": "PL / SW",
+    "video": {
+      "caption": "Imagefilm",
+      "playAriaLabel": "Video von Ahu Tongariki Europe abspielen",
+      "posterHeading": "Haere mai, mataki i te ata",
+      "playLabel": "PLAY"
+    }
   },
   "functions": {
     "kicker": "Funktionen des Komplexes",

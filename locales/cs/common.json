@@ -165,7 +165,13 @@
     "intro": "Koncepce umisťuje komplex do Bystrzyca Kłodzka v Dolním Slezsku, s výhledovou vazbou na město a Kladskou kotlinu.",
     "quote": "Sochy mají směřovat k Bystrzyca Kłodzka a vytvářet vztah mezi krajinou, dědictvím a novou turistickou funkcí místa.",
     "openMap": "Klikněte na miniaturu Ahu Tongariki\na otevřete lokalitu v Google Maps",
-    "mapCode": "PL / SW"
+    "mapCode": "PL / SW",
+    "video": {
+      "caption": "Propagační video",
+      "playAriaLabel": "Přehrát video Ahu Tongariki Europe",
+      "posterHeading": "Haere mai, mataki i te ata",
+      "playLabel": "PLAY"
+    }
   },
   "functions": {
     "kicker": "Funkce komplexu",

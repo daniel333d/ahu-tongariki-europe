@@ -165,7 +165,13 @@
     "intro": "El concepto sitúa el complejo en Bystrzyca Kłodzka, en Baja Silesia, con una relación visual con la ciudad y el valle de Kłodzko.",
     "quote": "Las estatuas están concebidas para mirar hacia Bystrzyca Kłodzka, creando una relación entre paisaje, patrimonio y una nueva función turística.",
     "openMap": "Haz clic en la miniatura de Ahu Tongariki\npara abrir la ubicación en Google Maps",
-    "mapCode": "PL / SW"
+    "mapCode": "PL / SW",
+    "video": {
+      "caption": "Vídeo promocional",
+      "playAriaLabel": "Reproducir el vídeo de Ahu Tongariki Europe",
+      "posterHeading": "Haere mai, mataki i te ata",
+      "playLabel": "PLAY"
+    }
   },
   "functions": {
     "kicker": "Funciones del complejo",

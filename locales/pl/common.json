@@ -165,7 +165,13 @@
     "intro": "Koncepcja zakłada lokalizację kompleksu w Bystrzycy Kłodzkiej, na Dolnym Śląsku, z ekspozycją widokową na miasto i Kotlinę Kłodzką.",
     "quote": "Posągi mają patrzeć w stronę Bystrzycy Kłodzkiej, tworząc relację między krajobrazem, dziedzictwem i nową funkcją turystyczną miejsca.",
     "openMap": "Kliknij miniaturę Ahu Tongariki,\naby otworzyć lokalizację w Google Maps",
-    "mapCode": "PL / SW"
+    "mapCode": "PL / SW",
+    "video": {
+      "caption": "Film promocyjny",
+      "playAriaLabel": "Odtwórz film o Ahu Tongariki Europe",
+      "posterHeading": "Haere mai, mataki i te ata",
+      "playLabel": "PLAY"
+    }
   },
   "functions": {
     "kicker": "Funkcje kompleksu",

@@ -165,7 +165,13 @@
     "intro": "The concept locates the complex in Bystrzyca Kłodzka, Lower Silesia, with a viewing relationship to the town and the Kłodzko Valley.",
     "quote": "The statues are intended to face Bystrzyca Kłodzka, creating a relationship between landscape, heritage and a new tourism function for the place.",
     "openMap": "Click the Ahu Tongariki miniature\nto open the location in Google Maps",
-    "mapCode": "PL / SW"
+    "mapCode": "PL / SW",
+    "video": {
+      "caption": "Promotional film",
+      "playAriaLabel": "Play the Ahu Tongariki Europe film",
+      "posterHeading": "Haere mai, mataki i te ata",
+      "playLabel": "PLAY"
+    }
   },
   "functions": {
     "kicker": "Functions of the complex",

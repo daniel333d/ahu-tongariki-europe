@@ -5,6 +5,7 @@ import { type CSSProperties, type FormEvent, useEffect, useState } from "react";
 import { FeatureCards } from "../components/cards/FeatureCards";
 import { HeroSection as ExperienceHeroSection } from "../components/hero/HeroSection";
 import { MasterplanSection } from "../components/masterplan/MasterplanSection";
+import { VideoPlayer } from "../components/video/VideoPlayer";
 import { languageOptions } from "./i18n";
 import { I18nProvider, useI18n } from "./i18n-provider";
 import {
@@ -929,39 +930,55 @@ function HomeContent() {
       </section>
 
       <section id="lokalizacja" className="bg-white px-6 py-28 sm:py-32 lg:px-10">
-        <div className="mx-auto grid max-w-[1400px] gap-16 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
-          <EuropeMap />
-          <div className="lg:pl-8">
-            <SectionHeading
-              kicker={copy.location.kicker}
-              title={copy.location.title}
-              intro={copy.location.intro}
-            />
-            <div className="mt-12 border-l border-gold pl-7">
-              <p className="text-xl font-semibold leading-snug text-navy sm:text-2xl">
-                {copy.location.quote}
-              </p>
+        <div className="mx-auto max-w-[1400px]">
+          <div className="grid gap-16 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
+            <EuropeMap />
+            <div className="lg:pl-8">
+              <SectionHeading
+                kicker={copy.location.kicker}
+                title={copy.location.title}
+                intro={copy.location.intro}
+              />
+              <div className="mt-12 border-l border-gold pl-7">
+                <p className="text-xl font-semibold leading-snug text-navy sm:text-2xl">
+                  {copy.location.quote}
+                </p>
+              </div>
+              <div className="mt-8 flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-navy">
+                <MapPin className="text-gold" size={18} />
+                {copy.location.mapTitle}
+              </div>
+              <a
+                href={LOCATION_MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={copy.location.mapsAria}
+                title={copy.accessibility.mapsTitle}
+                className="mt-12 flex flex-col items-start justify-between gap-5 rounded border border-gold/65 bg-white px-6 py-5 text-navy shadow-[0_18px_45px_rgba(7,20,38,0.08)] transition duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-[0_24px_65px_rgba(7,20,38,0.13)] sm:flex-row sm:items-center sm:gap-6"
+              >
+                <span className="shrink-0 drop-shadow-[0_0_10px_rgba(184,150,72,0.3)]">
+                  <AhuTongarikiMiniature className="h-16 w-7 object-contain" />
+                </span>
+                <span className="min-w-0 flex-1 whitespace-pre-line text-lg font-bold leading-snug">
+                  {copy.location.openMap}
+                </span>
+                <ArrowRight className="shrink-0 text-gold" size={26} />
+              </a>
             </div>
-            <div className="mt-8 flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-navy">
-              <MapPin className="text-gold" size={18} />
-              {copy.location.mapTitle}
+          </div>
+
+          <div className="mt-20 sm:mt-24">
+            <p className="section-kicker text-center">{copy.location.video.caption}</p>
+            <div className="mt-6">
+              <VideoPlayer
+                videoSrc="/assets/video/ahu-tongariki-europe-film.mp4"
+                posterSrc="/assets/video/ahu-tongariki-europe-poster.webp"
+                orientation="portrait"
+                playAriaLabel={copy.location.video.playAriaLabel}
+                posterHeading={copy.location.video.posterHeading}
+                playLabel={copy.location.video.playLabel}
+              />
             </div>
-            <a
-              href={LOCATION_MAPS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={copy.location.mapsAria}
-              title={copy.accessibility.mapsTitle}
-              className="mt-12 flex flex-col items-start justify-between gap-5 rounded border border-gold/65 bg-white px-6 py-5 text-navy shadow-[0_18px_45px_rgba(7,20,38,0.08)] transition duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-[0_24px_65px_rgba(7,20,38,0.13)] sm:flex-row sm:items-center sm:gap-6"
-            >
-              <span className="shrink-0 drop-shadow-[0_0_10px_rgba(184,150,72,0.3)]">
-                <AhuTongarikiMiniature className="h-16 w-7 object-contain" />
-              </span>
-              <span className="min-w-0 flex-1 whitespace-pre-line text-lg font-bold leading-snug">
-                {copy.location.openMap}
-              </span>
-              <ArrowRight className="shrink-0 text-gold" size={26} />
-            </a>
           </div>
         </div>
       </section>
