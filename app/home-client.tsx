@@ -156,38 +156,64 @@ function EuropeMap() {
 function GovernmentPartnershipSection() {
   const { copy } = useI18n();
   const gp = copy.governmentPartnership;
-  const [imageFailed, setImageFailed] = useState(false);
+  const [emblemFailed, setEmblemFailed] = useState(false);
   const cardIcons = [Megaphone, Handshake, Globe2];
 
   return (
     <section className="relative overflow-hidden bg-navy px-6 py-28 text-white sm:py-32 lg:px-10">
       <div className="mx-auto max-w-[1400px]">
         <div className="grid gap-14 lg:grid-cols-2 lg:items-stretch lg:gap-16">
-          <div className="relative min-h-[320px] overflow-hidden rounded-lg border border-gold/30 shadow-architectural lg:min-h-[520px]">
-            {!imageFailed ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src="/assets/government/bystrzyca-klodzka.jpg"
-                alt={gp.imageAlt}
-                className="absolute inset-0 h-full w-full object-cover"
-                onError={() => setImageFailed(true)}
-              />
-            ) : (
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-[linear-gradient(160deg,#0c1f38_0%,#071426_55%,#04101f_100%)] px-8 text-center">
-                <span
-                  className="pointer-events-none absolute inset-0 opacity-70 [background-image:radial-gradient(circle_at_20%_15%,rgba(184,150,72,0.16),transparent_40%),radial-gradient(circle_at_82%_82%,rgba(184,150,72,0.14),transparent_42%)]"
-                  aria-hidden="true"
-                />
-                <Building2 className="relative h-10 w-10 text-gold/70" aria-hidden="true" />
-                <p className="relative font-serif text-2xl font-semibold text-gold sm:text-3xl">Bystrzyca Kłodzka</p>
+          <div className="relative flex min-h-[420px] flex-col items-center justify-center overflow-hidden rounded-lg border border-gold/45 bg-[#02080d] px-8 py-14 shadow-premium lg:min-h-[520px] lg:px-10">
+            <div
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(184,150,72,0.14),transparent_50%),radial-gradient(ellipse_at_50%_100%,rgba(184,150,72,0.1),transparent_55%)]"
+              aria-hidden="true"
+            />
+            <div
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(2,8,13,0.6)_100%)]"
+              aria-hidden="true"
+            />
+            <div
+              className="pointer-events-none absolute inset-0 bg-[linear-gradient(160deg,rgba(255,255,255,0.05)_0%,transparent_32%)]"
+              aria-hidden="true"
+            />
+
+            <div className="relative z-10 flex w-full flex-1 flex-col items-center justify-center">
+              <div className="flex h-full max-h-[400px] w-full items-center justify-center py-2">
+                {!emblemFailed ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src="/assets/government/bystrzyca-klodzka-herb.webp"
+                    alt={gp.emblemAlt}
+                    className="max-h-full max-w-[78%] object-contain"
+                    onError={() => setEmblemFailed(true)}
+                  />
+                ) : (
+                  <div className="flex aspect-[4/5] max-h-full items-center justify-center rounded border border-gold/25 px-6 text-center">
+                    <p className="font-serif text-lg text-gold/70">{gp.emblemAlt}</p>
+                  </div>
+                )}
               </div>
-            )}
-            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(0deg,rgba(7,20,38,0.55)_0%,transparent_38%)]" />
+            </div>
+
+            <div className="relative z-10 mt-8 h-px w-16 bg-gold/70" aria-hidden="true" />
+            <p className="relative z-10 mt-6 text-center font-serif text-3xl font-bold text-gold sm:text-4xl">
+              Bystrzyca Kłodzka
+            </p>
+            <p className="relative z-10 mt-2 text-center text-xs font-semibold uppercase tracking-[0.28em] text-gold/80">
+              {gp.cityMotto}
+            </p>
           </div>
 
           <div>
-            <SectionHeading kicker={gp.kicker} title={gp.title} light />
-            <div className="mt-8 space-y-5">
+            <h2 className="text-balance font-serif text-[2.5rem] font-semibold leading-[1.1] text-white sm:text-5xl lg:text-[3.25rem]">
+              {gp.title}
+            </h2>
+            <div className="mt-7 flex items-center gap-3" aria-hidden="true">
+              <span className="h-px w-14 bg-gold/70" />
+              <span className="h-1.5 w-1.5 rotate-45 border border-gold/70" />
+              <span className="h-px w-14 bg-gold/70" />
+            </div>
+            <div className="mt-9 space-y-7">
               {gp.paragraphs.map((paragraph, index) => (
                 <p key={index} className="text-white/76 text-base leading-8 sm:text-lg">
                   {paragraph}
@@ -196,7 +222,7 @@ function GovernmentPartnershipSection() {
             </div>
             <div className="mt-10 border-l-2 border-gold pl-6">
               <p className="font-serif text-xl font-semibold text-gold">{gp.signatureName}</p>
-              <p className="text-white/56 mt-1 text-sm uppercase tracking-[0.16em]">{gp.signatureTitle}</p>
+              <p className="text-white/90 mt-1 text-sm uppercase tracking-[0.16em]">{gp.signatureTitle}</p>
             </div>
           </div>
         </div>
@@ -217,6 +243,98 @@ function GovernmentPartnershipSection() {
         </div>
       </div>
     </section>
+  );
+}
+
+function CinematicVideoSection({
+  caption,
+  videoSrc,
+  posterSrc,
+  playAriaLabel,
+  posterHeading,
+  playLabel
+}: {
+  caption: string;
+  videoSrc: string;
+  posterSrc: string;
+  playAriaLabel: string;
+  posterHeading: string;
+  playLabel: string;
+}) {
+  const [backgroundFailed, setBackgroundFailed] = useState(false);
+
+  return (
+    <div className="relative mx-[calc(50%-50vw)] mt-20 w-screen overflow-hidden sm:mt-24">
+      <div className="relative isolate flex min-h-screen flex-col items-center justify-center px-6 py-24 sm:py-32 lg:px-10">
+        {!backgroundFailed ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src="/assets/video/bystrzyca-cinematic-background.webp"
+            alt=""
+            aria-hidden="true"
+            onError={() => setBackgroundFailed(true)}
+            className="absolute inset-0 -z-30 h-full w-full object-cover object-center"
+            style={{ filter: "saturate(1.1) contrast(1.08) brightness(0.88)" }}
+          />
+        ) : (
+          <div
+            className="absolute inset-0 -z-30 bg-[linear-gradient(160deg,#0c1f38_0%,#071426_55%,#04101f_100%)]"
+            aria-hidden="true"
+          />
+        )}
+
+        {/* golden sunset wash */}
+        <div
+          className="pointer-events-none absolute inset-0 -z-20 opacity-70 mix-blend-overlay [background:radial-gradient(ellipse_at_28%_18%,rgba(184,150,72,0.55),transparent_55%)]"
+          aria-hidden="true"
+        />
+
+        {/* deep navy shadow wash */}
+        <div
+          className="pointer-events-none absolute inset-0 -z-20 [background:linear-gradient(200deg,rgba(4,10,20,0.1)_0%,rgba(4,10,20,0.55)_65%,rgba(4,10,20,0.78)_100%)]"
+          aria-hidden="true"
+        />
+
+        {/* soft mist over the valley */}
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-1/3 opacity-60 blur-2xl [background:linear-gradient(to_top,rgba(216,199,162,0.28),transparent)]"
+          aria-hidden="true"
+        />
+
+        {/* overall darken */}
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-navy/35" aria-hidden="true" />
+
+        {/* vignette */}
+        <div
+          className="pointer-events-none absolute inset-0 -z-10 [background:radial-gradient(ellipse_at_center,transparent_38%,rgba(2,7,15,0.75)_100%)]"
+          aria-hidden="true"
+        />
+
+        {/* top / bottom gradients for legible text */}
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-navy/90 to-transparent sm:h-56"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-navy/90 to-transparent sm:h-56"
+          aria-hidden="true"
+        />
+
+        <div className="relative z-10 mx-auto flex w-full max-w-[1400px] flex-col items-center">
+          <p className="section-kicker text-center">{caption}</p>
+          <div className="mt-8 drop-shadow-[0_45px_90px_rgba(2,7,15,0.65)]">
+            <VideoPlayer
+              videoSrc={videoSrc}
+              posterSrc={posterSrc}
+              orientation="portrait"
+              playAriaLabel={playAriaLabel}
+              posterHeading={posterHeading}
+              playLabel={playLabel}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -1035,19 +1153,14 @@ function HomeContent() {
             </div>
           </div>
 
-          <div className="mt-20 sm:mt-24">
-            <p className="section-kicker text-center">{copy.location.video.caption}</p>
-            <div className="mt-6">
-              <VideoPlayer
-                videoSrc="/assets/video/ahu-tongariki-europe-film.mp4"
-                posterSrc="/assets/video/ahu-tongariki-europe-poster.webp"
-                orientation="portrait"
-                playAriaLabel={copy.location.video.playAriaLabel}
-                posterHeading={copy.location.video.posterHeading}
-                playLabel={copy.location.video.playLabel}
-              />
-            </div>
-          </div>
+          <CinematicVideoSection
+            caption={copy.location.video.caption}
+            videoSrc="/assets/video/ahu-tongariki-europe-film.mp4"
+            posterSrc="/assets/video/ahu-tongariki-europe-poster.webp"
+            playAriaLabel={copy.location.video.playAriaLabel}
+            posterHeading={copy.location.video.posterHeading}
+            playLabel={copy.location.video.playLabel}
+          />
         </div>
       </section>
 
