@@ -1,7 +1,7 @@
-import js from "./node_modules/.pnpm/@eslint+js@9.39.4/node_modules/@eslint/js/src/index.js";
-import nextPlugin from "./node_modules/.pnpm/@next+eslint-plugin-next@15.5.20/node_modules/@next/eslint-plugin-next/dist/index.js";
-import tsParser from "./node_modules/.pnpm/@typescript-eslint+parser@8_b222577ee2fbd2ad10b0efef6aeb24b9/node_modules/@typescript-eslint/parser/dist/index.js";
-import tsPlugin from "./node_modules/.pnpm/@typescript-eslint+eslint-p_b2d17cdb18b59adfce7c5cc726bc6e5a/node_modules/@typescript-eslint/eslint-plugin/dist/index.js";
+import js from "@eslint/js";
+import nextPlugin from "@next/eslint-plugin-next";
+import tsParser from "@typescript-eslint/parser";
+import tsPlugin from "@typescript-eslint/eslint-plugin";
 
 export default [
   {
