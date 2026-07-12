@@ -550,5 +550,23 @@
     "loadingStatus": "Strona jest ładowana",
     "navigationLabel": "Główna nawigacja",
     "mobileMenuLabel": "Mobilne menu nawigacyjne"
+  },
+  "governmentPartnership": {
+    "kicker": "Współpraca i rozwój regionu",
+    "title": "Samorząd otwarty na wyjątkową wizję",
+    "paragraphs": [
+      "Projekt Ahu Tongariki Europe spotkał się z zainteresowaniem władz samorządowych Bystrzycy Kłodzkiej, które dostrzegają jego potencjał jako wyjątkowej atrakcji turystycznej, kulturalnej i edukacyjnej.",
+      "Burmistrz Bystrzycy Kłodzkiej, Renata Surma, wyraziła otwartość na dalszy dialog dotyczący rozwoju projektu, promocji regionu oraz budowania jego międzynarodowego znaczenia.",
+      "Wspólną ambicją jest stworzenie przedsięwzięcia, które może wzmacniać rozpoznawalność Kotliny Kłodzkiej, wspierać lokalną turystykę i przedsiębiorczość, a jednocześnie stać się przestrzenią spotkania kultur.",
+      "Istotnym kierunkiem pozostaje możliwość nawiązania relacji partnerskich z przedstawicielami Rapa Nui — opartych na szacunku dla dziedzictwa wyspy, wymianie doświadczeń oraz współpracy kulturalnej, edukacyjnej i promocyjnej."
+    ],
+    "imageAlt": "Bystrzyca Kłodzka — panorama miasta w Kotlinie Kłodzkiej",
+    "signatureName": "Renata Surma",
+    "signatureTitle": "Burmistrz Bystrzycy Kłodzkiej",
+    "cards": [
+      "Promocja regionu",
+      "Partnerstwo lokalne",
+      "Most do Rapa Nui"
+    ]
   }
 }

@@ -18,6 +18,7 @@ import {
   Handshake,
   Landmark,
   Mail,
+  Megaphone,
   Menu,
   MapPin,
   Mountain,
@@ -149,6 +150,73 @@ function EuropeMap() {
         </div>
       </div>
     </div>
+  );
+}
+
+function GovernmentPartnershipSection() {
+  const { copy } = useI18n();
+  const gp = copy.governmentPartnership;
+  const [imageFailed, setImageFailed] = useState(false);
+  const cardIcons = [Megaphone, Handshake, Globe2];
+
+  return (
+    <section className="relative overflow-hidden bg-navy px-6 py-28 text-white sm:py-32 lg:px-10">
+      <div className="mx-auto max-w-[1400px]">
+        <div className="grid gap-14 lg:grid-cols-2 lg:items-stretch lg:gap-16">
+          <div className="relative min-h-[320px] overflow-hidden rounded-lg border border-gold/30 shadow-architectural lg:min-h-[520px]">
+            {!imageFailed ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src="/assets/government/bystrzyca-klodzka.jpg"
+                alt={gp.imageAlt}
+                className="absolute inset-0 h-full w-full object-cover"
+                onError={() => setImageFailed(true)}
+              />
+            ) : (
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-[linear-gradient(160deg,#0c1f38_0%,#071426_55%,#04101f_100%)] px-8 text-center">
+                <span
+                  className="pointer-events-none absolute inset-0 opacity-70 [background-image:radial-gradient(circle_at_20%_15%,rgba(184,150,72,0.16),transparent_40%),radial-gradient(circle_at_82%_82%,rgba(184,150,72,0.14),transparent_42%)]"
+                  aria-hidden="true"
+                />
+                <Building2 className="relative h-10 w-10 text-gold/70" aria-hidden="true" />
+                <p className="relative font-serif text-2xl font-semibold text-gold sm:text-3xl">Bystrzyca Kłodzka</p>
+              </div>
+            )}
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(0deg,rgba(7,20,38,0.55)_0%,transparent_38%)]" />
+          </div>
+
+          <div>
+            <SectionHeading kicker={gp.kicker} title={gp.title} light />
+            <div className="mt-8 space-y-5">
+              {gp.paragraphs.map((paragraph, index) => (
+                <p key={index} className="text-white/76 text-base leading-8 sm:text-lg">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            <div className="mt-10 border-l-2 border-gold pl-6">
+              <p className="font-serif text-xl font-semibold text-gold">{gp.signatureName}</p>
+              <p className="text-white/56 mt-1 text-sm uppercase tracking-[0.16em]">{gp.signatureTitle}</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16 grid gap-5 sm:grid-cols-3 lg:mt-20 lg:gap-6">
+          {gp.cards.map((cardTitle, index) => {
+            const Icon = cardIcons[index];
+            return (
+              <div
+                key={cardTitle}
+                className="border-white/12 bg-white/[0.03] flex items-center gap-4 rounded-lg border px-6 py-5 backdrop-blur-sm transition-colors duration-300 hover:border-gold/45"
+              >
+                <Icon className="text-gold shrink-0" size={24} aria-hidden="true" />
+                <p className="font-serif text-base font-semibold leading-snug text-white sm:text-lg">{cardTitle}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -1145,6 +1213,8 @@ function HomeContent() {
       </section>
 
       <ExperienceSection />
+
+      <GovernmentPartnershipSection />
 
       <section id="kontakt" className="bg-ivory px-6 py-28 sm:py-32 lg:px-10">
         <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[0.75fr_1.25fr]">

@@ -550,5 +550,23 @@
     "loadingStatus": "Stránka se načítá",
     "navigationLabel": "Hlavní navigace",
     "mobileMenuLabel": "Mobilní navigační menu"
+  },
+  "governmentPartnership": {
+    "kicker": "Spolupráce a rozvoj regionu",
+    "title": "Samospráva otevřená výjimečné vizi",
+    "paragraphs": [
+      "Projekt Ahu Tongariki Europe se setkal se zájmem samosprávy Bystrzyce Kłodzké, která vnímá jeho potenciál jako výjimečné turistické, kulturní a vzdělávací atrakce.",
+      "Starostka Bystrzyce Kłodzké Renata Surma vyjádřila otevřenost k dalšímu dialogu o rozvoji projektu, propagaci regionu a budování jeho mezinárodního významu.",
+      "Společnou ambicí je vytvořit projekt, který může posílit rozpoznatelnost Kladského údolí, podpořit místní cestovní ruch a podnikání a zároveň se stát prostorem setkávání kultur.",
+      "Důležitým směrem zůstává možnost navázání partnerských vztahů se zástupci Rapa Nui – založených na úctě k dědictví ostrova, výměně zkušeností a kulturní, vzdělávací a propagační spolupráci."
+    ],
+    "imageAlt": "Bystrzyca Kłodzka — panorama města v Kladském údolí",
+    "signatureName": "Renata Surma",
+    "signatureTitle": "Starostka Bystrzyce Kłodzké",
+    "cards": [
+      "Propagace regionu",
+      "Místní partnerství",
+      "Most k Rapa Nui"
+    ]
   }
 }

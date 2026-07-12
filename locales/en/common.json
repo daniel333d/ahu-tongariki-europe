@@ -550,5 +550,23 @@
     "loadingStatus": "The page is loading",
     "navigationLabel": "Main navigation",
     "mobileMenuLabel": "Mobile navigation menu"
+  },
+  "governmentPartnership": {
+    "kicker": "Regional cooperation and development",
+    "title": "A local government open to an extraordinary vision",
+    "paragraphs": [
+      "The Ahu Tongariki Europe project has drawn the interest of the local government of Bystrzyca Kłodzka, which recognises its potential as an extraordinary tourist, cultural and educational attraction.",
+      "The Mayor of Bystrzyca Kłodzka, Renata Surma, expressed openness to further dialogue on developing the project, promoting the region and building its international significance.",
+      "The shared ambition is to create an undertaking that can strengthen the recognisability of the Kłodzko Valley, support local tourism and entrepreneurship, and at the same time become a space where cultures meet.",
+      "An important direction remains the possibility of establishing partnership relations with representatives of Rapa Nui — based on respect for the island's heritage, the exchange of experience, and cultural, educational and promotional cooperation."
+    ],
+    "imageAlt": "Bystrzyca Kłodzka — panorama of the town in the Kłodzko Valley",
+    "signatureName": "Renata Surma",
+    "signatureTitle": "Mayor of Bystrzyca Kłodzka",
+    "cards": [
+      "Regional promotion",
+      "Local partnership",
+      "A bridge to Rapa Nui"
+    ]
   }
 }
