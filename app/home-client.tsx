@@ -274,7 +274,7 @@ function CinematicVideoSection({
             aria-hidden="true"
             onError={() => setBackgroundFailed(true)}
             className="absolute inset-0 -z-30 h-full w-full object-cover object-center"
-            style={{ filter: "saturate(1.1) contrast(1.08) brightness(0.88)" }}
+            style={{ filter: "saturate(1.1) contrast(1.08) brightness(0.97)" }}
           />
         ) : (
           <div
