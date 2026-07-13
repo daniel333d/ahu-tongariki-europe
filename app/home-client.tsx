@@ -204,7 +204,7 @@ function GovernmentPartnershipSection() {
             </p>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <h2 className="text-balance font-serif text-[2.5rem] font-semibold leading-[1.1] text-white sm:text-5xl lg:text-[3.25rem]">
               {gp.title}
             </h2>
@@ -219,10 +219,6 @@ function GovernmentPartnershipSection() {
                   {paragraph}
                 </p>
               ))}
-            </div>
-            <div className="mt-10 border-l-2 border-gold pl-6">
-              <p className="font-serif text-xl font-semibold text-gold">{gp.signatureName}</p>
-              <p className="text-white/90 mt-1 text-sm uppercase tracking-[0.16em]">{gp.signatureTitle}</p>
             </div>
           </div>
         </div>
@@ -265,7 +261,7 @@ function CinematicVideoSection({
 
   return (
     <div className="relative mx-[calc(50%-50vw)] mt-20 w-screen overflow-hidden sm:mt-24">
-      <div className="relative isolate flex min-h-screen flex-col items-center justify-center px-6 py-24 sm:py-32 lg:px-10">
+      <div className="relative isolate flex min-h-[640px] flex-col items-center justify-center px-6 py-24 sm:min-h-[820px] sm:py-32 lg:min-h-screen lg:px-10">
         {!backgroundFailed ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
