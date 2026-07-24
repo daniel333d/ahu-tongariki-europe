@@ -206,10 +206,10 @@
   },
   "night": {
     "kicker": "Zážitky po setmění",
-    "title": "NOCI RAPA NUI PARK",
+    "title": "NOCI AHU TONGARIKI",
     "subtitle": "Když kámen ožívá.",
-    "body": "Když slunce zapadá, Rapa Nui Park odhaluje svou druhou tvář.\n\nMonumentální siluety Moai vystupují ze tmy díky pečlivě navrženému osvětlení a vytvářejí prostor ticha, reflexe a úžasu.\n\nVečerní světelné prezentace, noční vyhlídky, astronomická setkání a komorní kulturní akce dávají každé noci vlastní charakter.",
-    "imageAlt": "Noční iluminace patnácti Moai na platformě Rapa Nui Park",
+    "body": "Když slunce zapadá, Ahu Tongariki odhaluje svou druhou tvář.\n\nMonumentální siluety Moai vystupují ze tmy díky pečlivě navrženému osvětlení a vytvářejí prostor ticha, reflexe a úžasu.\n\nVečerní světelné prezentace, noční vyhlídky, astronomická setkání a komorní kulturní akce dávají každé noci vlastní charakter.",
+    "imageAlt": "Noční iluminace patnácti Moai na platformě Ahu Tongariki",
     "panelKicker": "Architektonická iluminace",
     "panelTitle": "Světlo, které vyvolává historii z kamene.",
     "panelBody": "Osvětlení má vést pohled po rysech tváří, struktuře kamene a rytmu celé platformy a vytvářet zážitek, který je klidný, důstojný a vzdálený spektáklu zábavního parku.",
@@ -232,7 +232,7 @@
       ]
     ],
     "finalWhite": "Od prvních paprsků slunce po noc rozsvícenou hvězdami.",
-    "finalGold": "Rapa Nui Park znovu odkrývá svou krásu v každé části dne."
+    "finalGold": "Ahu Tongariki znovu odkrývá svou krásu v každé části dne."
   },
   "regional": {
     "kicker": "Význam pro region",

@@ -206,10 +206,10 @@
   },
   "night": {
     "kicker": "Doświadczenia po zmroku",
-    "title": "NOCE RAPA NUI PARK",
+    "title": "NOCE AHU TONGARIKI",
     "subtitle": "Gdy kamień budzi się do życia.",
-    "body": "Gdy zachodzi słońce, Rapa Nui Park odsłania swoje drugie oblicze.\n\nMonumentalne sylwetki Moai wyłaniają się z mroku w świetle starannie zaprojektowanej iluminacji, tworząc przestrzeń ciszy, refleksji i zachwytu.\n\nWieczorne pokazy światła, nocne seanse widokowe, spotkania z astronomią oraz kameralne wydarzenia kulturalne sprawiają, że każda noc staje się osobnym doświadczeniem.",
-    "imageAlt": "Nocna iluminacja piętnastu posągów Moai na platformie Rapa Nui Park",
+    "body": "Gdy zachodzi słońce, Ahu Tongariki odsłania swoje drugie oblicze.\n\nMonumentalne sylwetki Moai wyłaniają się z mroku w świetle starannie zaprojektowanej iluminacji, tworząc przestrzeń ciszy, refleksji i zachwytu.\n\nWieczorne pokazy światła, nocne seanse widokowe, spotkania z astronomią oraz kameralne wydarzenia kulturalne sprawiają, że każda noc staje się osobnym doświadczeniem.",
+    "imageAlt": "Nocna iluminacja piętnastu posągów Moai na platformie Ahu Tongariki",
     "panelKicker": "Iluminacja architektoniczna",
     "panelTitle": "Światło, które wydobywa historię z kamienia.",
     "panelBody": "Oświetlenie ma prowadzić wzrok po rysach twarzy, strukturze kamienia i rytmie całej platformy, tworząc doświadczenie spokojne, dostojne i dalekie od widowiskowości parku rozrywki.",
@@ -232,7 +232,7 @@
       ]
     ],
     "finalWhite": "Od pierwszych promieni słońca po noc rozświetloną gwiazdami.",
-    "finalGold": "Rapa Nui Park odkrywa swoje piękno na nowo o każdej porze dnia."
+    "finalGold": "Ahu Tongariki odkrywa swoje piękno na nowo o każdej porze dnia."
   },
   "regional": {
     "kicker": "Znaczenie dla regionu",

@@ -206,10 +206,10 @@
   },
   "night": {
     "kicker": "Experiencias al anochecer",
-    "title": "NOCHES DE RAPA NUI PARK",
+    "title": "NOCHES DE AHU TONGARIKI",
     "subtitle": "Cuando la piedra despierta.",
-    "body": "Cuando el sol se pone, Rapa Nui Park revela una segunda identidad.\n\nLas siluetas monumentales de los Moai emergen de la oscuridad mediante una iluminación cuidadosamente diseñada, creando un espacio de silencio, reflexión y asombro.\n\nPresentaciones de luz, sesiones nocturnas, encuentros de astronomía y eventos culturales íntimos convierten cada noche en una experiencia propia.",
-    "imageAlt": "Iluminación nocturna de quince Moai sobre la plataforma Rapa Nui Park",
+    "body": "Cuando el sol se pone, Ahu Tongariki revela una segunda identidad.\n\nLas siluetas monumentales de los Moai emergen de la oscuridad mediante una iluminación cuidadosamente diseñada, creando un espacio de silencio, reflexión y asombro.\n\nPresentaciones de luz, sesiones nocturnas, encuentros de astronomía y eventos culturales íntimos convierten cada noche en una experiencia propia.",
+    "imageAlt": "Iluminación nocturna de quince Moai sobre la plataforma Ahu Tongariki",
     "panelKicker": "Iluminación arquitectónica",
     "panelTitle": "La luz que extrae la historia de la piedra.",
     "panelBody": "La iluminación busca guiar la mirada por los rasgos faciales, la textura de la piedra y el ritmo de toda la plataforma, creando una experiencia serena, digna y alejada del espectáculo de parque de atracciones.",
@@ -232,7 +232,7 @@
       ]
     ],
     "finalWhite": "Desde los primeros rayos del sol hasta la noche iluminada por las estrellas.",
-    "finalGold": "Rapa Nui Park revela su belleza de nuevo a cada hora del día."
+    "finalGold": "Ahu Tongariki revela su belleza de nuevo a cada hora del día."
   },
   "regional": {
     "kicker": "Importancia regional",
