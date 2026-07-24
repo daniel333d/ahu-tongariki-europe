@@ -206,10 +206,10 @@
   },
   "night": {
     "kicker": "Erlebnisse nach Einbruch der Dunkelheit",
-    "title": "NÄCHTE VON RAPA NUI PARK",
+    "title": "NÄCHTE VON AHU TONGARIKI",
     "subtitle": "Wenn Stein zum Leben erwacht.",
-    "body": "Wenn die Sonne untergeht, zeigt Rapa Nui Park sein zweites Gesicht.\n\nDie monumentalen Silhouetten der Moai treten durch sorgfältig gestaltete Beleuchtung aus der Dunkelheit hervor und schaffen einen Raum der Stille, Reflexion und Ehrfurcht.\n\nAbendliche Lichtinszenierungen, nächtliche Aussichtserlebnisse, Astronomie-Begegnungen und intime Kulturveranstaltungen machen jede Nacht zu einem eigenen Erlebnis.",
-    "imageAlt": "Nachtbeleuchtung von fünfzehn Moai auf der Plattform Rapa Nui Park",
+    "body": "Wenn die Sonne untergeht, zeigt Ahu Tongariki sein zweites Gesicht.\n\nDie monumentalen Silhouetten der Moai treten durch sorgfältig gestaltete Beleuchtung aus der Dunkelheit hervor und schaffen einen Raum der Stille, Reflexion und Ehrfurcht.\n\nAbendliche Lichtinszenierungen, nächtliche Aussichtserlebnisse, Astronomie-Begegnungen und intime Kulturveranstaltungen machen jede Nacht zu einem eigenen Erlebnis.",
+    "imageAlt": "Nachtbeleuchtung von fünfzehn Moai auf der Plattform Ahu Tongariki",
     "panelKicker": "Architektonische Beleuchtung",
     "panelTitle": "Licht, das Geschichte aus dem Stein hervorholt.",
     "panelBody": "Die Beleuchtung soll den Blick über Gesichtszüge, Steinstruktur und den Rhythmus der gesamten Plattform lenken und ein Erlebnis schaffen, das ruhig, würdevoll und weit entfernt von Vergnügungspark-Spektakel ist.",
@@ -232,7 +232,7 @@
       ]
     ],
     "finalWhite": "Von den ersten Sonnenstrahlen bis zur sternenerhellten Nacht.",
-    "finalGold": "Rapa Nui Park offenbart seine Schönheit zu jeder Tageszeit neu."
+    "finalGold": "Ahu Tongariki offenbart seine Schönheit zu jeder Tageszeit neu."
   },
   "regional": {
     "kicker": "Bedeutung für die Region",
