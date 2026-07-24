@@ -35,11 +35,11 @@
     "password": "Heslo",
     "confidentiality": "Potvrzuji, že materiály prezentované na této stránce jsou důvěrné, a zavazuji se, že je nebudu kopírovat, šířit ani zpřístupňovat třetím osobám bez písemného souhlasu autora projektu.",
     "rules": "Pravidla důvěrnosti",
-    "rulesText": "Materiály prezentované na této stránce tvoří autorskou koncepci projektu Ahu Tongariki Europe a mají důvěrný charakter. Přístup je určen výhradně vybraným osobám k seznámení s projektem. Bez předchozího písemného souhlasu je zakázáno materiály kopírovat, šířit, publikovat nebo využívat vcelku či zčásti.",
+    "rulesText": "Materiály prezentované na této stránce tvoří autorskou koncepci projektu Rapa Nui Park a mají důvěrný charakter. Přístup je určen výhradně vybraným osobám k seznámení s projektem. Bez předchozího písemného souhlasu je zakázáno materiály kopírovat, šířit, publikovat nebo využívat vcelku či zčásti.",
     "confirmRequired": "Pro získání přístupu potvrďte pravidla důvěrnosti.",
     "invalidPassword": "Nesprávné heslo.",
     "enter": "VSTOUPIT",
-    "footerCopyright": "© Ahu Tongariki Europe",
+    "footerCopyright": "© Rapa Nui Park",
     "passwordPlaceholder": "Zadejte přístupové heslo"
   },
   "nav": {
@@ -57,7 +57,7 @@
   },
   "hero": {
     "location": "Bystrzyca Kłodzka, Dolní Slezsko, Polsko",
-    "title": "Ahu Tongariki Europe",
+    "title": "Rapa Nui Park",
     "subtitle": "První plnohodnotný monument na světě inspirovaný Ahu Tongariki mimo Velikonoční ostrov.",
     "ctaProject": "Poznat projekt",
     "ctaContact": "Kontakt pro investory",
@@ -86,13 +86,13 @@
     "gold1": "Rapa Nui",
     "text2": "budou nyní bdít nad",
     "gold2": "Bystrzyca Kłodzka",
-    "description": "Ahu Tongariki Europe je koncepce vytvoření plnohodnotné rekonstrukce jednoho z nejznámějších archeologických souborů světa v Polsku. Projekt propojuje vzdělávání, kulturu, cestovní ruch a respekt k dědictví Rapa Nui.",
+    "description": "Rapa Nui Park je koncepce vytvoření plnohodnotné rekonstrukce jednoho z nejznámějších archeologických souborů světa v Polsku. Projekt propojuje vzdělávání, kulturu, cestovní ruch a respekt k dědictví Rapa Nui.",
     "imageAlt": "Moai obrácení k panoramatu Bystrzyca Kłodzka při západu slunce"
   },
   "project": {
     "kicker": "O projektu",
     "title": "Místo, kde se architektonické měřítko setkává se vzděláním, krajinou a kulturní pamětí.",
-    "body": "Ahu Tongariki Europe je koncepce vytvoření rekonstrukce Ahu Tongariki v plném měřítku v Polsku, jednoho z nejznámějších archeologických souborů světa z Rapa Nui. Plán počítá s 15 Moai v kompozici inspirované originálem, s respektem ke kulturnímu dědictví Velikonočního ostrova."
+    "body": "Rapa Nui Park je koncepce vytvoření rekonstrukce Ahu Tongariki v plném měřítku v Polsku, jednoho z nejznámějších archeologických souborů světa z Rapa Nui. Plán počítá s 15 Moai v kompozici inspirované originálem, s respektem ke kulturnímu dědictví Velikonočního ostrova."
   },
   "iorana": {
     "kicker": "Respekt ke kultuře Rapa Nui",
@@ -147,9 +147,9 @@
   },
   "location": {
     "mapAlt": "Mapa Evropy se zvýrazněným Polskem a lokalitou projektu v jihozápadní části země",
-    "mapsAria": "Otevřít lokalitu projektu Ahu Tongariki Europe v Google Maps",
+    "mapsAria": "Otevřít lokalitu projektu Rapa Nui Park v Google Maps",
     "tooltip": [
-      "Ahu Tongariki Europe",
+      "Rapa Nui Park",
       "Bystrzyca Kłodzka",
       "Dolní Slezsko, Polsko"
     ],
@@ -168,7 +168,7 @@
     "mapCode": "PL / SW",
     "video": {
       "caption": "Propagační video",
-      "playAriaLabel": "Přehrát video Ahu Tongariki Europe",
+      "playAriaLabel": "Přehrát video Rapa Nui Park",
       "posterHeading": "Haere mai, mataki i te ata",
       "playLabel": "PLAY"
     }
@@ -206,10 +206,10 @@
   },
   "night": {
     "kicker": "Zážitky po setmění",
-    "title": "NOCI AHU TONGARIKI",
+    "title": "NOCI RAPA NUI PARK",
     "subtitle": "Když kámen ožívá.",
-    "body": "Když slunce zapadá, Ahu Tongariki Europe odhaluje svou druhou tvář.\n\nMonumentální siluety Moai vystupují ze tmy díky pečlivě navrženému osvětlení a vytvářejí prostor ticha, reflexe a úžasu.\n\nVečerní světelné prezentace, noční vyhlídky, astronomická setkání a komorní kulturní akce dávají každé noci vlastní charakter.",
-    "imageAlt": "Noční iluminace patnácti Moai na platformě Ahu Tongariki Europe",
+    "body": "Když slunce zapadá, Rapa Nui Park odhaluje svou druhou tvář.\n\nMonumentální siluety Moai vystupují ze tmy díky pečlivě navrženému osvětlení a vytvářejí prostor ticha, reflexe a úžasu.\n\nVečerní světelné prezentace, noční vyhlídky, astronomická setkání a komorní kulturní akce dávají každé noci vlastní charakter.",
+    "imageAlt": "Noční iluminace patnácti Moai na platformě Rapa Nui Park",
     "panelKicker": "Architektonická iluminace",
     "panelTitle": "Světlo, které vyvolává historii z kamene.",
     "panelBody": "Osvětlení má vést pohled po rysech tváří, struktuře kamene a rytmu celé platformy a vytvářet zážitek, který je klidný, důstojný a vzdálený spektáklu zábavního parku.",
@@ -232,7 +232,7 @@
       ]
     ],
     "finalWhite": "Od prvních paprsků slunce po noc rozsvícenou hvězdami.",
-    "finalGold": "Ahu Tongariki Europe znovu odkrývá svou krásu v každé části dne."
+    "finalGold": "Rapa Nui Park znovu odkrývá svou krásu v každé části dne."
   },
   "regional": {
     "kicker": "Význam pro region",
@@ -249,8 +249,8 @@
   "experience": {
     "sectionAriaLabel": "Prostor zážitků",
     "hero": {
-      "ariaLabel": "Hlavní panorama Ahu Tongariki Europe s plošinou {count} soch Moai. Moai s pukao se nachází na pozici {position} zleva.",
-      "badge": "Ahu Tongariki Europe",
+      "ariaLabel": "Hlavní panorama Rapa Nui Park s plošinou {count} soch Moai. Moai s pukao se nachází na pozici {position} zleva.",
+      "badge": "Rapa Nui Park",
       "titleLine1": "PROSTOR",
       "titleLine2": "ZÁŽITKŮ",
       "subtitle": "ARCHITEKTURA INSPIROVANÁ KRAJINOU RAPA NUI",
@@ -368,7 +368,7 @@
       {
         "title": "Kavárna",
         "subtitle": "Terasa, káva a západ slunce",
-        "description": "Komorní odpočinková zóna s terasou, teplým světlem a výhledem na areál Ahu Tongariki Europe.",
+        "description": "Komorní odpočinková zóna s terasou, teplým světlem a výhledem na areál Rapa Nui Park.",
         "estimatedVisitTime": "30-45 min",
         "capacity": "70 míst",
         "functionLabel": "Odpočinek a vyhlídková terasa",
@@ -438,7 +438,7 @@
   "contact": {
     "kicker": "Kontakt",
     "title": "Investiční dotazy",
-    "intro": "Pokud máte zájem o spolupráci, investici nebo další informace o Ahu Tongariki Europe, kontaktujte nás prostřednictvím níže uvedeného formuláře.",
+    "intro": "Pokud máte zájem o spolupráci, investici nebo další informace o Rapa Nui Park, kontaktujte nás prostřednictvím níže uvedeného formuláře.",
     "fullName": "Jméno a příjmení",
     "organization": "Firma / Instituce (volitelné)",
     "email": "E-mailová adresa",
@@ -463,7 +463,7 @@
     }
   },
   "footer": {
-    "brand": "Ahu Tongariki Europe",
+    "brand": "Rapa Nui Park",
     "domain": "ahutongariki.pl"
   },
   "system": {
@@ -471,18 +471,18 @@
     "i18nProviderError": "useI18n musí být použito uvnitř I18nProvider."
   },
   "brand": {
-    "name": "Ahu Tongariki Europe",
+    "name": "Rapa Nui Park",
     "domain": "ahutongariki.pl",
     "iorana": "IORANA",
     "ioranaMoai": "IORANA MOAI"
   },
   "seo": {
-    "title": "Ahu Tongariki Europe | Rekonstrukce v plném měřítku v Polsku",
+    "title": "Rapa Nui Park | Rekonstrukce v plném měřítku v Polsku",
     "description": "Koncepce rekonstrukce Ahu Tongariki v plném měřítku v Evropě, v Bystrzyca Kłodzka.",
     "locale": "cs_CZ",
     "canonical": "https://ahutongariki.pl/cs",
     "image": "/ahu-tongariki-hero.png",
-    "structuredDataName": "Ahu Tongariki Europe",
+    "structuredDataName": "Rapa Nui Park",
     "structuredDataType": "TouristAttraction",
     "addressLocality": "Bystrzyca Kłodzka",
     "addressRegion": "Dolní Slezsko",
@@ -490,8 +490,8 @@
   },
   "server": {
     "investorInquiry": {
-      "subject": "Investiční dotaz – Ahu Tongariki Europe",
-      "autoReplySubject": "Děkujeme za kontakt – Ahu Tongariki Europe",
+      "subject": "Investiční dotaz – Rapa Nui Park",
+      "autoReplySubject": "Děkujeme za kontakt – Rapa Nui Park",
       "genericSendError": "Zprávu se nepodařilo odeslat. Zkuste to prosím znovu za několik minut.",
       "rateLimited": "Byl dosažen limit odesílání. Zkuste to prosím později.",
       "invalidJson": "Neplatná data formuláře.",
@@ -502,7 +502,7 @@
       "missingResendApiKey": "Na serveru chybí proměnná prostředí RESEND_API_KEY.",
       "unknownSendError": "Neznámá chyba odesílání.",
       "sent": "Zpráva byla odeslána.",
-      "defaultFromEmail": "Ahu Tongariki Europe <kontakt@ahutongariki.pl>",
+      "defaultFromEmail": "Rapa Nui Park <kontakt@ahutongariki.pl>",
       "websiteUrl": "https://www.ahutongariki.pl",
       "websiteLabel": "www.ahutongariki.pl",
       "labels": {
@@ -516,18 +516,18 @@
       "consentConfirmed": "Souhlas se zpracováním údajů byl ve formuláři potvrzen.",
       "autoReplyLines": [
         "Vážení,",
-        "děkujeme za váš zájem o Ahu Tongariki Europe a za odeslání zprávy.",
+        "děkujeme za váš zájem o Rapa Nui Park a za odeslání zprávy.",
         "Potvrzujeme přijetí vašeho dotazu.",
         "Každou zprávu posuzujeme individuálně. Ozveme se vám co nejdříve.",
         "S úctou",
         "Projektový tým",
-        "Ahu Tongariki Europe"
+        "Rapa Nui Park"
       ]
     }
   },
   "accessibility": {
     "skipToContent": "Přejít na hlavní obsah",
-    "mainContentLabel": "Hlavní obsah webu Ahu Tongariki Europe",
+    "mainContentLabel": "Hlavní obsah webu Rapa Nui Park",
     "languageWelcomeLabel": "Výběr jazyka webu",
     "languageOptionLabel": "Vybrat jazyk: {language}",
     "languageMenuTitle": "Vyberte jazyk webu",
@@ -555,7 +555,7 @@
     "kicker": "Spolupráce a rozvoj regionu",
     "title": "Samospráva otevřená výjimečné vizi",
     "paragraphs": [
-      "Projekt Ahu Tongariki Europe se setkal se zájmem samosprávy Bystrzyce Kłodzké, která vnímá jeho potenciál jako výjimečné turistické, kulturní a vzdělávací atrakce.",
+      "Projekt Rapa Nui Park se setkal se zájmem samosprávy Bystrzyce Kłodzké, která vnímá jeho potenciál jako výjimečné turistické, kulturní a vzdělávací atrakce.",
       "Starostka Bystrzyce Kłodzké Renata Surma a Městská rada Bystrzyce Kłodzké vyjádřily otevřenost k dalšímu dialogu o rozvoji projektu, propagaci regionu a opatřením, která by mohla přispět k posílení turistické atraktivity obce.",
       "Projekt počítá s vytvořením místa výjimečného charakteru, které může podpořit propagaci Kladského údolí, rozvoj místního podnikání a budování rozpoznatelnosti regionu v Polsku i mimo jeho hranice.",
       "Jedním z dlouhodobých cílů projektu zůstává rozvoj mezinárodní spolupráce a budování partnerských vztahů se zástupci Rapa Nui, založených na vzájemné úctě ke kulturnímu dědictví, vzdělávání a výměně zkušeností."

@@ -137,7 +137,7 @@ export const localizedDictionary = {
 
 export const siteContent = {
   name: "siteContent",
-  title: "Ahu Tongariki Europe – multilingual content",
+  title: "Rapa Nui Park – multilingual content",
   type: "document",
   fields: [
     { name: "title", title: "Title", type: "localizedString" },

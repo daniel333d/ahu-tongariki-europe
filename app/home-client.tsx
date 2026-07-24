@@ -287,7 +287,7 @@ function CinematicVideoSection({
 
         {/* deep navy shadow wash */}
         <div
-          className="pointer-events-none absolute inset-0 -z-20 [background:linear-gradient(200deg,rgba(4,10,20,0.1)_0%,rgba(4,10,20,0.55)_65%,rgba(4,10,20,0.78)_100%)]"
+          className="pointer-events-none absolute inset-0 -z-20 [background:linear-gradient(200deg,rgba(4,10,20,0.06)_0%,rgba(4,10,20,0.33)_65%,rgba(4,10,20,0.48)_100%)]"
           aria-hidden="true"
         />
 
@@ -298,11 +298,11 @@ function CinematicVideoSection({
         />
 
         {/* overall darken */}
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-navy/35" aria-hidden="true" />
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-navy/22" aria-hidden="true" />
 
         {/* vignette */}
         <div
-          className="pointer-events-none absolute inset-0 -z-10 [background:radial-gradient(ellipse_at_center,transparent_38%,rgba(2,7,15,0.75)_100%)]"
+          className="pointer-events-none absolute inset-0 -z-10 [background:radial-gradient(ellipse_at_center,transparent_38%,rgba(2,7,15,0.46)_100%)]"
           aria-hidden="true"
         />
 
