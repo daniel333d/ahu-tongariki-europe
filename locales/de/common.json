@@ -35,11 +35,11 @@
     "password": "Passwort",
     "confidentiality": "Ich bestätige, dass die auf dieser Website präsentierten Materialien vertraulich sind, und verpflichte mich, sie ohne schriftliche Zustimmung des Projekturhebers nicht zu kopieren, zu verbreiten oder Dritten zugänglich zu machen.",
     "rules": "Vertraulichkeitsregeln",
-    "rulesText": "Die auf dieser Website präsentierten Materialien bilden das urheberrechtliche Konzept des Projekts Ahu Tongariki Europe und sind vertraulich. Der Zugang wurde ausschließlich ausgewählten Empfängern zur Projektprüfung gewährt. Jede Kopie, Weitergabe, Veröffentlichung oder Nutzung ganz oder teilweise ohne vorherige schriftliche Zustimmung ist untersagt.",
+    "rulesText": "Die auf dieser Website präsentierten Materialien bilden das urheberrechtliche Konzept des Projekts Rapa Nui Park und sind vertraulich. Der Zugang wurde ausschließlich ausgewählten Empfängern zur Projektprüfung gewährt. Jede Kopie, Weitergabe, Veröffentlichung oder Nutzung ganz oder teilweise ohne vorherige schriftliche Zustimmung ist untersagt.",
     "confirmRequired": "Bitte bestätigen Sie die Vertraulichkeitsregeln, um Zugang zu erhalten.",
     "invalidPassword": "Falsches Passwort.",
     "enter": "EINTRETEN",
-    "footerCopyright": "© Ahu Tongariki Europe",
+    "footerCopyright": "© Rapa Nui Park",
     "passwordPlaceholder": "Zugangspasswort eingeben"
   },
   "nav": {
@@ -57,7 +57,7 @@
   },
   "hero": {
     "location": "Bystrzyca Kłodzka, Niederschlesien, Polen",
-    "title": "Ahu Tongariki Europe",
+    "title": "Rapa Nui Park",
     "subtitle": "Das weltweit erste von Ahu Tongariki inspirierte Monument in Originalgröße außerhalb der Osterinsel.",
     "ctaProject": "Projekt entdecken",
     "ctaContact": "Investorenkontakt",
@@ -86,13 +86,13 @@
     "gold1": "Rapa Nui",
     "text2": "wachen nun über",
     "gold2": "Bystrzyca Kłodzka",
-    "description": "Ahu Tongariki Europe ist ein Konzept zur Errichtung einer Rekonstruktion in Originalgröße eines der bekanntesten archäologischen Ensembles der Welt in Polen. Das Projekt verbindet Bildung, Kultur, Tourismus und Respekt vor dem Erbe von Rapa Nui.",
+    "description": "Rapa Nui Park ist ein Konzept zur Errichtung einer Rekonstruktion in Originalgröße eines der bekanntesten archäologischen Ensembles der Welt in Polen. Das Projekt verbindet Bildung, Kultur, Tourismus und Respekt vor dem Erbe von Rapa Nui.",
     "imageAlt": "Moai mit Blick auf das Panorama von Bystrzyca Kłodzka bei Sonnenuntergang"
   },
   "project": {
     "kicker": "Über das Projekt",
     "title": "Ein Ort, an dem architektonische Größe auf Bildung, Landschaft und kulturelles Gedächtnis trifft.",
-    "body": "Ahu Tongariki Europe ist ein Konzept für eine Rekonstruktion von Ahu Tongariki in Originalgröße in Polen, eines der bekanntesten archäologischen Ensembles der Welt aus Rapa Nui. Geplant sind 15 Moai in einer vom Original inspirierten Komposition, mit Respekt vor dem kulturellen Erbe der Osterinsel."
+    "body": "Rapa Nui Park ist ein Konzept für eine Rekonstruktion von Ahu Tongariki in Originalgröße in Polen, eines der bekanntesten archäologischen Ensembles der Welt aus Rapa Nui. Geplant sind 15 Moai in einer vom Original inspirierten Komposition, mit Respekt vor dem kulturellen Erbe der Osterinsel."
   },
   "iorana": {
     "kicker": "Respekt vor der Kultur Rapa Nui",
@@ -147,9 +147,9 @@
   },
   "location": {
     "mapAlt": "Europakarte mit hervorgehobenem Polen und dem Projektstandort im Südwesten des Landes",
-    "mapsAria": "Standort des Projekts Ahu Tongariki Europe in Google Maps öffnen",
+    "mapsAria": "Standort des Projekts Rapa Nui Park in Google Maps öffnen",
     "tooltip": [
-      "Ahu Tongariki Europe",
+      "Rapa Nui Park",
       "Bystrzyca Kłodzka",
       "Niederschlesien, Polen"
     ],
@@ -168,7 +168,7 @@
     "mapCode": "PL / SW",
     "video": {
       "caption": "Imagefilm",
-      "playAriaLabel": "Video von Ahu Tongariki Europe abspielen",
+      "playAriaLabel": "Video von Rapa Nui Park abspielen",
       "posterHeading": "Haere mai, mataki i te ata",
       "playLabel": "PLAY"
     }
@@ -206,10 +206,10 @@
   },
   "night": {
     "kicker": "Erlebnisse nach Einbruch der Dunkelheit",
-    "title": "NÄCHTE VON AHU TONGARIKI",
+    "title": "NÄCHTE VON RAPA NUI PARK",
     "subtitle": "Wenn Stein zum Leben erwacht.",
-    "body": "Wenn die Sonne untergeht, zeigt Ahu Tongariki Europe sein zweites Gesicht.\n\nDie monumentalen Silhouetten der Moai treten durch sorgfältig gestaltete Beleuchtung aus der Dunkelheit hervor und schaffen einen Raum der Stille, Reflexion und Ehrfurcht.\n\nAbendliche Lichtinszenierungen, nächtliche Aussichtserlebnisse, Astronomie-Begegnungen und intime Kulturveranstaltungen machen jede Nacht zu einem eigenen Erlebnis.",
-    "imageAlt": "Nachtbeleuchtung von fünfzehn Moai auf der Plattform Ahu Tongariki Europe",
+    "body": "Wenn die Sonne untergeht, zeigt Rapa Nui Park sein zweites Gesicht.\n\nDie monumentalen Silhouetten der Moai treten durch sorgfältig gestaltete Beleuchtung aus der Dunkelheit hervor und schaffen einen Raum der Stille, Reflexion und Ehrfurcht.\n\nAbendliche Lichtinszenierungen, nächtliche Aussichtserlebnisse, Astronomie-Begegnungen und intime Kulturveranstaltungen machen jede Nacht zu einem eigenen Erlebnis.",
+    "imageAlt": "Nachtbeleuchtung von fünfzehn Moai auf der Plattform Rapa Nui Park",
     "panelKicker": "Architektonische Beleuchtung",
     "panelTitle": "Licht, das Geschichte aus dem Stein hervorholt.",
     "panelBody": "Die Beleuchtung soll den Blick über Gesichtszüge, Steinstruktur und den Rhythmus der gesamten Plattform lenken und ein Erlebnis schaffen, das ruhig, würdevoll und weit entfernt von Vergnügungspark-Spektakel ist.",
@@ -232,7 +232,7 @@
       ]
     ],
     "finalWhite": "Von den ersten Sonnenstrahlen bis zur sternenerhellten Nacht.",
-    "finalGold": "Ahu Tongariki Europe offenbart seine Schönheit zu jeder Tageszeit neu."
+    "finalGold": "Rapa Nui Park offenbart seine Schönheit zu jeder Tageszeit neu."
   },
   "regional": {
     "kicker": "Bedeutung für die Region",
@@ -249,8 +249,8 @@
   "experience": {
     "sectionAriaLabel": "Raum der Erlebnisse",
     "hero": {
-      "ariaLabel": "Hauptpanorama von Ahu Tongariki Europe mit einer Plattform von {count} Moai. Der Moai mit Pukao befindet sich an Position {position} von links.",
-      "badge": "Ahu Tongariki Europe",
+      "ariaLabel": "Hauptpanorama von Rapa Nui Park mit einer Plattform von {count} Moai. Der Moai mit Pukao befindet sich an Position {position} von links.",
+      "badge": "Rapa Nui Park",
       "titleLine1": "RAUM",
       "titleLine2": "DER ERLEBNISSE",
       "subtitle": "ARCHITEKTUR INSPIRIERT VON DER LANDSCHAFT RAPA NUIS",
@@ -368,7 +368,7 @@
       {
         "title": "Café",
         "subtitle": "Terrasse, Kaffee und Sonnenuntergang",
-        "description": "Eine intime Ruhezone mit Terrasse, warmem Licht und Ausblick auf die Anlage von Ahu Tongariki Europe.",
+        "description": "Eine intime Ruhezone mit Terrasse, warmem Licht und Ausblick auf die Anlage von Rapa Nui Park.",
         "estimatedVisitTime": "30-45 Min.",
         "capacity": "70 Plätze",
         "functionLabel": "Erholung und Aussichtsterrasse",
@@ -438,7 +438,7 @@
   "contact": {
     "kicker": "Kontakt",
     "title": "Investorenanfragen",
-    "intro": "Wenn Sie an Kooperation, Investition oder weiteren Informationen zu Ahu Tongariki Europe interessiert sind, nutzen Sie bitte das folgende Formular.",
+    "intro": "Wenn Sie an Kooperation, Investition oder weiteren Informationen zu Rapa Nui Park interessiert sind, nutzen Sie bitte das folgende Formular.",
     "fullName": "Vor- und Nachname",
     "organization": "Unternehmen / Institution (optional)",
     "email": "E-Mail-Adresse",
@@ -463,7 +463,7 @@
     }
   },
   "footer": {
-    "brand": "Ahu Tongariki Europe",
+    "brand": "Rapa Nui Park",
     "domain": "ahutongariki.pl"
   },
   "system": {
@@ -471,18 +471,18 @@
     "i18nProviderError": "useI18n muss innerhalb von I18nProvider verwendet werden."
   },
   "brand": {
-    "name": "Ahu Tongariki Europe",
+    "name": "Rapa Nui Park",
     "domain": "ahutongariki.pl",
     "iorana": "IORANA",
     "ioranaMoai": "IORANA MOAI"
   },
   "seo": {
-    "title": "Ahu Tongariki Europe | Rekonstruktion in Originalgröße in Polen",
+    "title": "Rapa Nui Park | Rekonstruktion in Originalgröße in Polen",
     "description": "Konzept einer Rekonstruktion von Ahu Tongariki in Originalgröße in Europa, in Bystrzyca Kłodzka.",
     "locale": "de_DE",
     "canonical": "https://ahutongariki.pl/de",
     "image": "/ahu-tongariki-hero.png",
-    "structuredDataName": "Ahu Tongariki Europe",
+    "structuredDataName": "Rapa Nui Park",
     "structuredDataType": "TouristAttraction",
     "addressLocality": "Bystrzyca Kłodzka",
     "addressRegion": "Niederschlesien",
@@ -490,8 +490,8 @@
   },
   "server": {
     "investorInquiry": {
-      "subject": "Investorenanfrage – Ahu Tongariki Europe",
-      "autoReplySubject": "Vielen Dank für Ihre Kontaktaufnahme – Ahu Tongariki Europe",
+      "subject": "Investorenanfrage – Rapa Nui Park",
+      "autoReplySubject": "Vielen Dank für Ihre Kontaktaufnahme – Rapa Nui Park",
       "genericSendError": "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es in einigen Minuten erneut.",
       "rateLimited": "Das Sendelimit wurde erreicht. Bitte versuchen Sie es später erneut.",
       "invalidJson": "Ungültige Formulardaten.",
@@ -502,7 +502,7 @@
       "missingResendApiKey": "Die Umgebungsvariable RESEND_API_KEY fehlt auf dem Server.",
       "unknownSendError": "Unbekannter Sendefehler.",
       "sent": "Die Nachricht wurde gesendet.",
-      "defaultFromEmail": "Ahu Tongariki Europe <kontakt@ahutongariki.pl>",
+      "defaultFromEmail": "Rapa Nui Park <kontakt@ahutongariki.pl>",
       "websiteUrl": "https://www.ahutongariki.pl",
       "websiteLabel": "www.ahutongariki.pl",
       "labels": {
@@ -516,18 +516,18 @@
       "consentConfirmed": "Die Einwilligung zur Datenverarbeitung wurde im Formular bestätigt.",
       "autoReplyLines": [
         "Sehr geehrte Damen und Herren,",
-        "vielen Dank für Ihr Interesse an Ahu Tongariki Europe und für Ihre Nachricht.",
+        "vielen Dank für Ihr Interesse an Rapa Nui Park und für Ihre Nachricht.",
         "Wir bestätigen den Eingang Ihrer Anfrage.",
         "Jede Nachricht wird individuell geprüft. Wir melden uns so bald wie möglich bei Ihnen.",
         "Mit freundlichen Grüßen",
         "Projektteam",
-        "Ahu Tongariki Europe"
+        "Rapa Nui Park"
       ]
     }
   },
   "accessibility": {
     "skipToContent": "Zum Hauptinhalt springen",
-    "mainContentLabel": "Hauptinhalt der Website Ahu Tongariki Europe",
+    "mainContentLabel": "Hauptinhalt der Website Rapa Nui Park",
     "languageWelcomeLabel": "Sprachauswahl der Website",
     "languageOptionLabel": "Sprache auswählen: {language}",
     "languageMenuTitle": "Sprache der Website auswählen",
@@ -555,7 +555,7 @@
     "kicker": "Zusammenarbeit und regionale Entwicklung",
     "title": "Eine Kommune, offen für eine außergewöhnliche Vision",
     "paragraphs": [
-      "Das Projekt Ahu Tongariki Europe ist auf das Interesse der Kommunalverwaltung von Bystrzyca Kłodzka gestoßen, die sein Potenzial als außergewöhnliche touristische, kulturelle und pädagogische Attraktion erkennt.",
+      "Das Projekt Rapa Nui Park ist auf das Interesse der Kommunalverwaltung von Bystrzyca Kłodzka gestoßen, die sein Potenzial als außergewöhnliche touristische, kulturelle und pädagogische Attraktion erkennt.",
       "Die Bürgermeisterin von Bystrzyca Kłodzka, Renata Surma, sowie der Stadtrat von Bystrzyca Kłodzka zeigten sich offen für einen weiteren Dialog über die Entwicklung des Projekts, die Förderung der Region sowie Maßnahmen, die zur Stärkung der touristischen Attraktivität der Gemeinde beitragen könnten.",
       "Das Projekt sieht die Schaffung eines Ortes von außergewöhnlichem Charakter vor, der die Förderung des Kłodzko-Tals, die Entwicklung des lokalen Unternehmertums sowie den Aufbau der Bekanntheit der Region in Polen und darüber hinaus unterstützen kann.",
       "Eines der langfristigen Ziele des Projekts bleibt der Ausbau der internationalen Zusammenarbeit sowie der Aufbau partnerschaftlicher Beziehungen zu Vertretern von Rapa Nui, die auf gegenseitigem Respekt für das kulturelle Erbe, Bildung und den Erfahrungsaustausch beruhen."
