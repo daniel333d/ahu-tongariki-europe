@@ -204,6 +204,21 @@
       ]
     ]
   },
+  "scale": {
+    "kicker": "Měřítko a přítomnost",
+    "title": "Vnímejte měřítko",
+    "subtitle": "Postavte se před Ahu Tongariki a uvidíte, jak malý je člověk vedle monumentálních strážců Rapa Nui.",
+    "intro": "Čísla popisují výšku. Teprve přítomnost člověka umožní skutečně pochopit monumentálnost Ahu Tongariki.",
+    "modesLabel": "Režim porovnání měřítka",
+    "modes": { "monumental": "Monumentální pohled", "comparison": "Porovnání s člověkem", "heights": "Zobrazit výšky" },
+    "imageAlt": "Vizualizace Ahu Tongariki ukazující měřítko soch vůči návštěvníkům",
+    "visualKicker": "Zážitek z měřítka",
+    "viewLabel": "Perspektiva návštěvníka",
+    "heightLabels": { "human": "Člověk", "moai": "Moai", "tallMoai": "Vysoký Moai", "pukao": "Moai s pukao" },
+    "heightValues": { "human": "přibližně 1,8 m", "moai": "přibližně 7,2 m", "tallMoai": "přibližně 8,7 m", "pukao": "přibližně 9,5 m" },
+    "tiles": { "humanValue": "přibližně 1,8 m", "humanLabel": "Průměrná výška člověka", "moaiValue": "Mnohonásobně vyšší", "moaiLabel": "Monumentální siluety Moai", "panoramaValue": "15 figur", "panoramaLabel": "Celé panorama Ahu Tongariki" },
+    "closing": "Nebude to expozice sledovaná z dálky. Bude to místo, kde se člověk zastaví a pocítí vlastní měřítko."
+  },
   "night": {
     "kicker": "Zážitky po setmění",
     "title": "NOCI AHU TONGARIKI",

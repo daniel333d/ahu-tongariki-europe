@@ -204,6 +204,21 @@
       ]
     ]
   },
+  "scale": {
+    "kicker": "Escala y presencia",
+    "title": "Siente la escala",
+    "subtitle": "Sitúate ante Ahu Tongariki y descubre lo pequeño que parece el ser humano frente a los guardianes monumentales de Rapa Nui.",
+    "intro": "Las cifras describen la altura. Solo la presencia humana permite comprender de verdad la monumentalidad de Ahu Tongariki.",
+    "modesLabel": "Modo de comparación de escala",
+    "modes": { "monumental": "Vista monumental", "comparison": "Comparar con personas", "heights": "Mostrar alturas" },
+    "imageAlt": "Visualización de Ahu Tongariki que muestra la escala de las estatuas frente a los visitantes",
+    "visualKicker": "La experiencia de la escala",
+    "viewLabel": "Perspectiva del visitante",
+    "heightLabels": { "human": "Persona", "moai": "Moai", "tallMoai": "Moai alto", "pukao": "Moai con pukao" },
+    "heightValues": { "human": "aprox. 1,8 m", "moai": "aprox. 7,2 m", "tallMoai": "aprox. 8,7 m", "pukao": "aprox. 9,5 m" },
+    "tiles": { "humanValue": "aprox. 1,8 m", "humanLabel": "Altura media de una persona", "moaiValue": "Mucho más altos", "moaiLabel": "Siluetas monumentales de los Moai", "panoramaValue": "15 figuras", "panoramaLabel": "Panorama completo de Ahu Tongariki" },
+    "closing": "No será una exposición contemplada desde lejos. Será un lugar donde detenerse y sentir la propia escala."
+  },
   "night": {
     "kicker": "Experiencias al anochecer",
     "title": "NOCHES DE AHU TONGARIKI",

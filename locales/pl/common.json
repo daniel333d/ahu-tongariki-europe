@@ -204,6 +204,21 @@
       ]
     ]
   },
+  "scale": {
+    "kicker": "Skala i obecność",
+    "title": "Poczuj skalę",
+    "subtitle": "Stań przed Ahu Tongariki i zobacz, jak niewielki staje się człowiek wobec monumentalnych strażników Rapa Nui.",
+    "intro": "Liczby opisują wysokość. Dopiero obecność człowieka pozwala naprawdę zrozumieć monumentalność Ahu Tongariki.",
+    "modesLabel": "Tryb porównania skali",
+    "modes": { "monumental": "Widok monumentalny", "comparison": "Porównanie z człowiekiem", "heights": "Pokaż wysokości" },
+    "imageAlt": "Wizualizacja Ahu Tongariki pokazująca skalę posągów wobec zwiedzających",
+    "visualKicker": "Skala doświadczenia",
+    "viewLabel": "Perspektywa zwiedzającego",
+    "heightLabels": { "human": "Człowiek", "moai": "Moai", "tallMoai": "Moai wysoki", "pukao": "Moai z pukao" },
+    "heightValues": { "human": "około 1,8 m", "moai": "około 7,2 m", "tallMoai": "około 8,7 m", "pukao": "około 9,5 m" },
+    "tiles": { "humanValue": "około 1,8 m", "humanLabel": "Przeciętny wzrost człowieka", "moaiValue": "Wielokrotnie wyższe", "moaiLabel": "Monumentalne sylwetki Moai", "panoramaValue": "15 figur", "panoramaLabel": "Pełna panorama Ahu Tongariki" },
+    "closing": "To nie będzie ekspozycja oglądana z daleka. To będzie miejsce, przed którym człowiek zatrzyma się i poczuje własną skalę."
+  },
   "night": {
     "kicker": "Doświadczenia po zmroku",
     "title": "NOCE AHU TONGARIKI",

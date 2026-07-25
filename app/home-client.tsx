@@ -5,6 +5,7 @@ import { type CSSProperties, type FormEvent, useEffect, useState } from "react";
 import { FeatureCards } from "../components/cards/FeatureCards";
 import { HeroSection as ExperienceHeroSection } from "../components/hero/HeroSection";
 import { MasterplanSection } from "../components/masterplan/MasterplanSection";
+import { ScaleSection } from "../components/scale/ScaleSection";
 import { VideoPlayer } from "../components/video/VideoPlayer";
 import { languageOptions } from "./i18n";
 import { I18nProvider, useI18n } from "./i18n-provider";
@@ -1110,6 +1111,8 @@ function HomeContent() {
           </div>
         </div>
       </section>
+
+      <ScaleSection />
 
       <section id="lokalizacja" className="bg-white px-6 py-28 sm:py-32 lg:px-10">
         <div className="mx-auto max-w-[1400px]">

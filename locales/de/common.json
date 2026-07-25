@@ -204,6 +204,21 @@
       ]
     ]
   },
+  "scale": {
+    "kicker": "Maßstab und Präsenz",
+    "title": "Die Dimension spüren",
+    "subtitle": "Stehen Sie vor Ahu Tongariki und erleben Sie, wie klein der Mensch neben den monumentalen Wächtern von Rapa Nui erscheint.",
+    "intro": "Zahlen beschreiben Höhe. Erst die Gegenwart des Menschen macht die Monumentalität von Ahu Tongariki wirklich begreifbar.",
+    "modesLabel": "Modus für den Größenvergleich",
+    "modes": { "monumental": "Monumentale Ansicht", "comparison": "Vergleich mit Menschen", "heights": "Höhen anzeigen" },
+    "imageAlt": "Visualisierung von Ahu Tongariki, die den Maßstab der Statuen im Vergleich zu Besuchern zeigt",
+    "visualKicker": "Das Erlebnis des Maßstabs",
+    "viewLabel": "Perspektive der Besucher",
+    "heightLabels": { "human": "Mensch", "moai": "Moai", "tallMoai": "Hoher Moai", "pukao": "Moai mit pukao" },
+    "heightValues": { "human": "ca. 1,8 m", "moai": "ca. 7,2 m", "tallMoai": "ca. 8,7 m", "pukao": "ca. 9,5 m" },
+    "tiles": { "humanValue": "ca. 1,8 m", "humanLabel": "Durchschnittliche Körpergröße", "moaiValue": "Vielfach höher", "moaiLabel": "Monumentale Silhouetten der Moai", "panoramaValue": "15 Figuren", "panoramaLabel": "Das vollständige Panorama von Ahu Tongariki" },
+    "closing": "Dies wird keine Ausstellung sein, die man aus der Ferne betrachtet. Es wird ein Ort, an dem man innehält und die eigene Größe spürt."
+  },
   "night": {
     "kicker": "Erlebnisse nach Einbruch der Dunkelheit",
     "title": "NÄCHTE VON AHU TONGARIKI",
