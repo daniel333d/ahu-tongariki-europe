@@ -271,7 +271,7 @@ function CinematicVideoSection({
             aria-hidden="true"
             onError={() => setBackgroundFailed(true)}
             className="absolute inset-0 -z-30 h-full w-full object-cover object-center"
-            style={{ filter: "saturate(1.1) contrast(1.08) brightness(0.97)" }}
+            style={{ filter: "saturate(1.1) contrast(1.06) brightness(1.2)" }}
           />
         ) : (
           <div
@@ -288,7 +288,7 @@ function CinematicVideoSection({
 
         {/* deep navy shadow wash */}
         <div
-          className="pointer-events-none absolute inset-0 -z-20 [background:linear-gradient(200deg,rgba(4,10,20,0.06)_0%,rgba(4,10,20,0.33)_65%,rgba(4,10,20,0.48)_100%)]"
+          className="pointer-events-none absolute inset-0 -z-20 [background:linear-gradient(200deg,rgba(4,10,20,0.04)_0%,rgba(4,10,20,0.22)_65%,rgba(4,10,20,0.34)_100%)]"
           aria-hidden="true"
         />
 
@@ -299,11 +299,11 @@ function CinematicVideoSection({
         />
 
         {/* overall darken */}
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-navy/22" aria-hidden="true" />
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-navy/12" aria-hidden="true" />
 
         {/* vignette */}
         <div
-          className="pointer-events-none absolute inset-0 -z-10 [background:radial-gradient(ellipse_at_center,transparent_38%,rgba(2,7,15,0.46)_100%)]"
+          className="pointer-events-none absolute inset-0 -z-10 [background:radial-gradient(ellipse_at_center,transparent_38%,rgba(2,7,15,0.32)_100%)]"
           aria-hidden="true"
         />
 
@@ -977,11 +977,11 @@ function HomeContent() {
           alt={copy.slogan.imageAlt}
           fill
           priority
-          className="slogan-parallax object-cover object-[52%_center] md:object-center"
+          className="slogan-parallax object-cover object-[52%_center] brightness-150 md:object-center"
           sizes="100vw"
         />
-        <div className="bg-navy/68 absolute inset-0" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(200,164,90,0.16),transparent_34%),linear-gradient(180deg,rgba(7,20,38,0.12),rgba(7,20,38,0.78))]" />
+        <div className="bg-navy/40 absolute inset-0" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(200,164,90,0.1),transparent_34%),linear-gradient(180deg,rgba(7,20,38,0.04),rgba(7,20,38,0.46))]" />
 
         <div className="slogan-reveal relative z-10 mx-auto flex max-w-6xl flex-col items-center text-center">
           <h2 className="text-balance font-serif text-[2.65rem] font-semibold leading-[1.02] min-[430px]:text-5xl sm:text-6xl lg:text-7xl">
@@ -1029,10 +1029,10 @@ function HomeContent() {
                 alt={copy.iorana.imageAlt}
                 fill
                 loading="eager"
-                className="object-cover object-[63%_center] sm:object-center"
+                className="object-cover object-[63%_center] brightness-125 sm:object-center"
                 sizes="(min-width: 1024px) 1400px, 100vw"
               />
-              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,20,38,0.88),rgba(7,20,38,0.42)_42%,rgba(7,20,38,0.08)),linear-gradient(0deg,rgba(7,20,38,0.94),transparent_34%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,20,38,0.66),rgba(7,20,38,0.28)_42%,rgba(7,20,38,0.03)),linear-gradient(0deg,rgba(7,20,38,0.72),transparent_34%)]" />
               <div className="absolute inset-x-0 bottom-0 z-10 p-6 sm:p-8 lg:p-12">
                 <div className="max-w-2xl">
                   <p className="text-xs font-bold uppercase tracking-[0.24em] text-gold">

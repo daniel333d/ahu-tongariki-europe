@@ -78,10 +78,10 @@ export function VideoPlayer({
               <img
                 src={posterSrc}
                 alt=""
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover brightness-125"
                 onError={() => setPosterImageFailed(true)}
               />
-              <span className="absolute inset-0 bg-navy/25 transition duration-300 group-hover:bg-navy/10" />
+              <span className="absolute inset-0 bg-navy/15 transition duration-300 group-hover:bg-navy/5" />
               <span className="absolute inset-0 flex items-center justify-center">
                 <span className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-gold bg-navy/70 shadow-premium backdrop-blur-md transition duration-300 group-hover:scale-110 group-hover:border-sand sm:h-24 sm:w-24">
                   <Play className="ml-1 h-9 w-9 text-gold sm:h-10 sm:w-10" fill="currentColor" aria-hidden="true" />
