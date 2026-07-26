@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { type CSSProperties, type FormEvent, useEffect, useState } from "react";
 import { FeatureCards } from "../components/cards/FeatureCards";
+import { VisitCounter } from "../components/common/VisitCounter";
 import { HeroSection as ExperienceHeroSection } from "../components/hero/HeroSection";
 import { MasterplanSection } from "../components/masterplan/MasterplanSection";
 import { ScaleSection } from "../components/scale/ScaleSection";
@@ -1503,7 +1504,10 @@ function HomeContent() {
       <footer className="border-t border-black/10 bg-white px-6 py-8 lg:px-10">
         <div className="text-ink/62 mx-auto flex max-w-[1400px] flex-col gap-3 text-sm sm:flex-row sm:items-center sm:justify-between">
           <span className="font-semibold text-navy">{copy.footer.brand}</span>
-          <span>{copy.footer.domain}</span>
+          <div className="flex flex-col gap-1 sm:items-end">
+            <span>{copy.footer.domain}</span>
+            <VisitCounter />
+          </div>
         </div>
       </footer>
     </main>

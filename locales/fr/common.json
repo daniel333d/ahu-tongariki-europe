@@ -479,7 +479,8 @@
   },
   "footer": {
     "brand": "Rapa Nui Park",
-    "domain": "rapanuipark.com"
+    "domain": "rapanuipark.com",
+    "visitCounterLabel": "Visites"
   },
   "system": {
     "loading": "Chargement",
