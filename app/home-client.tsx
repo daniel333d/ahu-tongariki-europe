@@ -7,6 +7,7 @@ import { VisitCounter } from "../components/common/VisitCounter";
 import { HeroSection as ExperienceHeroSection } from "../components/hero/HeroSection";
 import { MasterplanSection } from "../components/masterplan/MasterplanSection";
 import { ScaleSection } from "../components/scale/ScaleSection";
+import { CoCreatorsSection } from "../components/sections/CoCreatorsSection";
 import { VideoPlayer } from "../components/video/VideoPlayer";
 import { languageOptions } from "./i18n";
 import { I18nProvider, useI18n } from "./i18n-provider";
@@ -1112,6 +1113,8 @@ function HomeContent() {
           </div>
         </div>
       </section>
+
+      <CoCreatorsSection />
 
       <ScaleSection />
 
