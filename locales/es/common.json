@@ -418,6 +418,46 @@
       }
     ]
   },
+  "coCreators": {
+    "kicker": "Fundadores • Inversores • Socios",
+    "title": "Cocreadores de Rapa Nui Park",
+    "emotionalTitle": "Quienes creyeron primero",
+    "quote": "“Las ideas monumentales nunca se construyen en solitario. Toman forma gracias a quienes tienen el valor de creer en ellas primero.”",
+    "description": "Rapa Nui Park se desarrolla como una iniciativa que une cultura, educación, turismo y crecimiento regional. Su realización requiere conocimiento, valentía y cooperación entre personas e instituciones capaces de reconocer el potencial de las ideas excepcionales.\n\nAquí presentaremos a quienes ayudan a dar forma real a esta visión.",
+    "tiers": {
+      "founding": {
+        "title": "Círculo fundador",
+        "description": "Personas y entidades que contribuyen a los fundamentos del proyecto y lo acompañan desde la idea hasta su realización.",
+        "placeholder": "Espacio del Círculo fundador"
+      },
+      "strategic": {
+        "title": "Socios estratégicos",
+        "description": "Instituciones y empresas que apoyan áreas clave en la realización de Rapa Nui Park.",
+        "placeholder": "Espacio de Socio estratégico"
+      },
+      "supporting": {
+        "title": "Colaboradores",
+        "description": "Colaboradores locales, sectoriales, tecnológicos y mediáticos que apoyan el proyecto.",
+        "placeholder": "Espacio de Colaborador"
+      }
+    },
+    "emptyState": {
+      "title": "El círculo de los primeros socios se está formando actualmente.",
+      "description": "Los nombres de las entidades se presentarán tras la firma y el anuncio oficial de los acuerdos."
+    },
+    "ctaText": "Únase al círculo de cocreadores de Rapa Nui Park.",
+    "ctaButton": "Conversación de colaboración",
+    "ctaAria": "Ir al contacto para una conversación de colaboración",
+    "partnerAria": "Abrir información sobre el socio {name} — {role}",
+    "partnerDescriptions": {
+      "default": "La descripción del papel del socio se añadirá tras la confirmación oficial de la colaboración."
+    },
+    "modal": {
+      "ariaLabel": "Información sobre el socio {name}",
+      "close": "Cerrar información del socio",
+      "visitWebsite": "Visitar sitio web del socio"
+    }
+  },
   "partnership": {
     "imageAlt": "Visualización monumental de los Moai como fondo de la sección de colaboración con Rapa Nui.",
     "title": "Colaboración con Rapa Nui",

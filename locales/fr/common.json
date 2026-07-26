@@ -418,6 +418,46 @@
       }
     ]
   },
+  "coCreators": {
+    "kicker": "Mécènes • Investisseurs • Partenaires",
+    "title": "Co-créateurs de Rapa Nui Park",
+    "emotionalTitle": "Ceux qui y ont cru les premiers",
+    "quote": "« Les idées monumentales ne naissent jamais seules. Elles prennent forme grâce à celles et ceux qui ont le courage d’y croire les premiers. »",
+    "description": "Rapa Nui Park se développe comme une initiative réunissant culture, éducation, tourisme et développement régional. Sa réalisation demande du savoir, du courage et la coopération de personnes et d’institutions capables de percevoir le potentiel des idées d’exception.\n\nC’est ici que seront présentés ceux qui contribuent à donner une forme concrète à cette vision.",
+    "tiers": {
+      "founding": {
+        "title": "Cercle fondateur",
+        "description": "Personnes et structures qui contribuent aux fondations du projet et l’accompagnent de l’idée à la réalisation.",
+        "placeholder": "Emplacement du Cercle fondateur"
+      },
+      "strategic": {
+        "title": "Partenaires stratégiques",
+        "description": "Institutions et entreprises soutenant les domaines clés de la réalisation de Rapa Nui Park.",
+        "placeholder": "Emplacement Partenaire stratégique"
+      },
+      "supporting": {
+        "title": "Partenaires de soutien",
+        "description": "Acteurs locaux, sectoriels, technologiques et médias qui accompagnent le projet.",
+        "placeholder": "Emplacement Partenaire de soutien"
+      }
+    },
+    "emptyState": {
+      "title": "Le cercle des premiers partenaires est en cours de constitution.",
+      "description": "Les noms des entités seront présentés après la conclusion et l’annonce officielle des accords."
+    },
+    "ctaText": "Rejoignez le cercle des co-créateurs de Rapa Nui Park.",
+    "ctaButton": "Échange autour d’un partenariat",
+    "ctaAria": "Accéder au contact pour un échange autour d’un partenariat",
+    "partnerAria": "Ouvrir les informations sur le partenaire {name} — {role}",
+    "partnerDescriptions": {
+      "default": "La description du rôle du partenaire sera ajoutée après confirmation officielle de la coopération."
+    },
+    "modal": {
+      "ariaLabel": "Informations sur le partenaire {name}",
+      "close": "Fermer les informations sur le partenaire",
+      "visitWebsite": "Visiter le site du partenaire"
+    }
+  },
   "partnership": {
     "imageAlt": "Visualisation monumentale des Moai en arrière-plan de la section consacrée au partenariat avec Rapa Nui.",
     "title": "Partenariat avec Rapa Nui",

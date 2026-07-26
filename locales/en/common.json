@@ -418,6 +418,46 @@
       }
     ]
   },
+  "coCreators": {
+    "kicker": "Founders • Investors • Partners",
+    "title": "Co-Creators of Rapa Nui Park",
+    "emotionalTitle": "Those Who Believed First",
+    "quote": "“Monumental ideas are never built alone. They take form through those who have the courage to believe in them first.”",
+    "description": "Rapa Nui Park is being developed as an initiative uniting culture, education, tourism and regional growth. Its realization calls for knowledge, courage and cooperation between people and institutions able to recognize the potential of exceptional ideas.\n\nThis is where we will present those who help give this vision a tangible shape.",
+    "tiers": {
+      "founding": {
+        "title": "Founding Circle",
+        "description": "Individuals and organizations helping to shape the foundation of the undertaking and guide it from idea to realization.",
+        "placeholder": "Founding Circle Place"
+      },
+      "strategic": {
+        "title": "Strategic Partners",
+        "description": "Institutions and companies supporting key areas in the delivery of Rapa Nui Park.",
+        "placeholder": "Strategic Partner Place"
+      },
+      "supporting": {
+        "title": "Supporting Partners",
+        "description": "Local, sector, technology and media contributors supporting the project.",
+        "placeholder": "Supporting Partner Place"
+      }
+    },
+    "emptyState": {
+      "title": "The circle of first partners is currently being formed.",
+      "description": "Organization names will be presented after agreements have been concluded and officially announced."
+    },
+    "ctaText": "Join the circle of co-creators of Rapa Nui Park.",
+    "ctaButton": "Partnership Conversation",
+    "ctaAria": "Go to contact for a partnership conversation",
+    "partnerAria": "Open information about partner {name} — {role}",
+    "partnerDescriptions": {
+      "default": "The partner role description will be added after the cooperation is officially confirmed."
+    },
+    "modal": {
+      "ariaLabel": "Information about partner {name}",
+      "close": "Close partner information",
+      "visitWebsite": "Visit partner website"
+    }
+  },
   "partnership": {
     "imageAlt": "A monumental Moai visual used as the background for the Rapa Nui partnership section.",
     "title": "Partnership with Rapa Nui",

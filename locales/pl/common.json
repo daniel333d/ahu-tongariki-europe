@@ -418,6 +418,46 @@
       }
     ]
   },
+  "coCreators": {
+    "kicker": "Fundatorzy • Inwestorzy • Partnerzy",
+    "title": "Współtwórcy Rapa Nui Park",
+    "emotionalTitle": "Ci, którzy uwierzyli pierwsi",
+    "quote": "„Monumentalne idee nie powstają w pojedynkę. Nabierają realnego kształtu dzięki tym, którzy mają odwagę uwierzyć w nie jako pierwsi.”",
+    "description": "Rapa Nui Park powstaje jako przedsięwzięcie łączące kulturę, edukację, turystykę i rozwój regionu. Jego realizacja wymaga wiedzy, odwagi oraz współpracy ludzi i instytucji, które dostrzegają potencjał wyjątkowych idei.\n\nW tym miejscu przedstawiamy tych, którzy pomagają nadać tej wizji realny kształt.",
+    "tiers": {
+      "founding": {
+        "title": "Krąg Założycielski",
+        "description": "Osoby i podmioty, które współtworzą fundament przedsięwzięcia i pomagają przeprowadzić projekt od idei do realizacji.",
+        "placeholder": "Miejsce Kręgu Założycielskiego"
+      },
+      "strategic": {
+        "title": "Partnerzy strategiczni",
+        "description": "Instytucje i firmy wspierające kluczowe obszary realizacji Rapa Nui Park.",
+        "placeholder": "Miejsce Partnera Strategicznego"
+      },
+      "supporting": {
+        "title": "Partnerzy wspierający",
+        "description": "Lokalni, branżowi, technologiczni i medialni współtwórcy projektu.",
+        "placeholder": "Miejsce Partnera Wspierającego"
+      }
+    },
+    "emptyState": {
+      "title": "Krąg pierwszych partnerów jest obecnie tworzony.",
+      "description": "Nazwy podmiotów zostaną przedstawione po zawarciu i oficjalnym ogłoszeniu porozumień."
+    },
+    "ctaText": "Dołącz do grona współtwórców Rapa Nui Park.",
+    "ctaButton": "Rozmowa partnerska",
+    "ctaAria": "Przejdź do kontaktu w sprawie rozmowy partnerskiej",
+    "partnerAria": "Otwórz informacje o partnerze {name} — {role}",
+    "partnerDescriptions": {
+      "default": "Opis roli partnera zostanie uzupełniony po oficjalnym potwierdzeniu współpracy."
+    },
+    "modal": {
+      "ariaLabel": "Informacje o partnerze {name}",
+      "close": "Zamknij informacje o partnerze",
+      "visitWebsite": "Odwiedź stronę partnera"
+    }
+  },
   "partnership": {
     "imageAlt": "Monumentalna wizualizacja Moai w tle sekcji partnerstwa z Rapa Nui.",
     "title": "Partnerstwo z Rapa Nui",

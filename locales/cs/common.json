@@ -418,6 +418,46 @@
       }
     ]
   },
+  "coCreators": {
+    "kicker": "Zakladatelé • Investoři • Partneři",
+    "title": "Spolutvůrci projektu Rapa Nui Park",
+    "emotionalTitle": "Ti, kteří uvěřili jako první",
+    "quote": "„Monumentální myšlenky nevznikají o samotě. Skutečný tvar získávají díky těm, kteří mají odvahu uvěřit jim jako první.“",
+    "description": "Rapa Nui Park vzniká jako projekt propojující kulturu, vzdělávání, cestovní ruch a rozvoj regionu. Jeho uskutečnění vyžaduje znalosti, odvahu a spolupráci lidí i institucí, které dokážou rozpoznat potenciál výjimečných myšlenek.\n\nNa tomto místě představíme ty, kteří pomáhají dát této vizi skutečnou podobu.",
+    "tiers": {
+      "founding": {
+        "title": "Zakladatelský kruh",
+        "description": "Osoby a subjekty, které spoluutvářejí základ projektu a pomáhají jej vést od myšlenky k realizaci.",
+        "placeholder": "Místo Zakladatelského kruhu"
+      },
+      "strategic": {
+        "title": "Strategičtí partneři",
+        "description": "Instituce a firmy podporující klíčové oblasti realizace Rapa Nui Park.",
+        "placeholder": "Místo Strategického partnera"
+      },
+      "supporting": {
+        "title": "Podporující partneři",
+        "description": "Místní, oboroví, technologičtí a mediální spolutvůrci projektu.",
+        "placeholder": "Místo Podporujícího partnera"
+      }
+    },
+    "emptyState": {
+      "title": "Kruh prvních partnerů se právě vytváří.",
+      "description": "Názvy subjektů budou představeny po uzavření a oficiálním oznámení dohod."
+    },
+    "ctaText": "Připojte se ke kruhu spolutvůrců projektu Rapa Nui Park.",
+    "ctaButton": "Partnerský rozhovor",
+    "ctaAria": "Přejít ke kontaktu pro partnerský rozhovor",
+    "partnerAria": "Otevřít informace o partnerovi {name} — {role}",
+    "partnerDescriptions": {
+      "default": "Popis role partnera bude doplněn po oficiálním potvrzení spolupráce."
+    },
+    "modal": {
+      "ariaLabel": "Informace o partnerovi {name}",
+      "close": "Zavřít informace o partnerovi",
+      "visitWebsite": "Navštívit web partnera"
+    }
+  },
   "partnership": {
     "imageAlt": "Monumentální vizualizace Moai v pozadí sekce partnerství s Rapa Nui.",
     "title": "Partnerství s Rapa Nui",
