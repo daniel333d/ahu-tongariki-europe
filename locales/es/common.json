@@ -216,6 +216,7 @@
     "viewLabel": "Perspectiva del visitante",
     "heightLabels": { "human": "Persona", "moai": "Moai", "tallMoai": "Moai alto", "pukao": "Moai con pukao" },
     "heightValues": { "human": "aprox. 1,8 m", "moai": "aprox. 7,2 m", "tallMoai": "aprox. 8,7 m", "pukao": "aprox. 9,5 m" },
+    "humanHeight": "Escala humana: aprox. 1,8 m",
     "tiles": { "humanValue": "aprox. 1,8 m", "humanLabel": "Altura media de una persona", "moaiValue": "Mucho más altos", "moaiLabel": "Siluetas monumentales de los Moai", "panoramaValue": "15 figuras", "panoramaLabel": "Panorama completo de Ahu Tongariki" },
     "closing": "No será una exposición contemplada desde lejos. Será un lugar donde detenerse y sentir la propia escala."
   },
@@ -449,6 +450,11 @@
     "ctaButton": "Conversación de colaboración",
     "ctaAria": "Ir al contacto para una conversación de colaboración",
     "partnerAria": "Abrir información sobre el socio {name} — {role}",
+    "exhibit": {
+      "title": "Memoria escrita en madera",
+      "subtitle": "Inspirado en la tradición de las tablillas talladas Rongorongo.",
+      "memoryText": "Toda gran historia conserva la memoria de quienes ayudaron a iniciarla."
+    },
     "partnerDescriptions": {
       "default": "La descripción del papel del socio se añadirá tras la confirmación oficial de la colaboración."
     },
@@ -624,5 +630,20 @@
     ],
     "cityMotto": "Ciudad real desde 1319",
     "emblemAlt": "Escudo de armas de Bystrzyca Kłodzka"
+  },
+  "access": {
+    "kicker": "RAPA NUI PARK",
+    "title": "Proyecto en preparación",
+    "description": "Este sitio está actualmente disponible solo para personas invitadas. Introduzca la contraseña para continuar.",
+    "passwordLabel": "Contraseña de acceso",
+    "passwordPlaceholder": "Introduzca la contraseña de acceso",
+    "showPassword": "Mostrar contraseña",
+    "hidePassword": "Ocultar contraseña",
+    "submit": "ENTRAR AL PROYECTO",
+    "submitting": "Comprobando...",
+    "invalidPassword": "Contraseña incorrecta. Inténtelo de nuevo.",
+    "genericError": "No se pudo verificar el acceso. Inténtelo de nuevo en un momento.",
+    "footerNote": "Materiales de trabajo. Por favor, no comparta este contenido sin el consentimiento de los autores del proyecto.",
+    "languageLabel": "Idioma"
   }
 }

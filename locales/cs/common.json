@@ -216,6 +216,7 @@
     "viewLabel": "Perspektiva návštěvníka",
     "heightLabels": { "human": "Člověk", "moai": "Moai", "tallMoai": "Vysoký Moai", "pukao": "Moai s pukao" },
     "heightValues": { "human": "přibližně 1,8 m", "moai": "přibližně 7,2 m", "tallMoai": "přibližně 8,7 m", "pukao": "přibližně 9,5 m" },
+    "humanHeight": "Měřítko člověka: přibližně 1,8 m",
     "tiles": { "humanValue": "přibližně 1,8 m", "humanLabel": "Průměrná výška člověka", "moaiValue": "Mnohonásobně vyšší", "moaiLabel": "Monumentální siluety Moai", "panoramaValue": "15 figur", "panoramaLabel": "Celé panorama Ahu Tongariki" },
     "closing": "Nebude to expozice sledovaná z dálky. Bude to místo, kde se člověk zastaví a pocítí vlastní měřítko."
   },
@@ -449,6 +450,11 @@
     "ctaButton": "Partnerský rozhovor",
     "ctaAria": "Přejít ke kontaktu pro partnerský rozhovor",
     "partnerAria": "Otevřít informace o partnerovi {name} — {role}",
+    "exhibit": {
+      "title": "Paměť zapsaná ve dřevě",
+      "subtitle": "Inspirováno tradicí rytých tabulek Rongorongo.",
+      "memoryText": "Každý velký příběh uchovává paměť těch, kteří jej pomohli začít."
+    },
     "partnerDescriptions": {
       "default": "Popis role partnera bude doplněn po oficiálním potvrzení spolupráce."
     },
@@ -624,5 +630,20 @@
     ],
     "cityMotto": "Královské město od roku 1319",
     "emblemAlt": "Znak města Bystrzyce Kłodzké"
+  },
+  "access": {
+    "kicker": "RAPA NUI PARK",
+    "title": "Projekt ve přípravě",
+    "description": "Tento web je momentálně dostupný pouze pro zvané osoby. Zadejte heslo pro pokračování.",
+    "passwordLabel": "Přístupové heslo",
+    "passwordPlaceholder": "Zadejte přístupové heslo",
+    "showPassword": "Zobrazit heslo",
+    "hidePassword": "Skrýt heslo",
+    "submit": "VSTOUPIT DO PROJEKTU",
+    "submitting": "Ověřování...",
+    "invalidPassword": "Nesprávné heslo. Zkuste to prosím znovu.",
+    "genericError": "Přístup se nepodařilo ověřit. Zkuste to prosím za chvíli znovu.",
+    "footerNote": "Pracovní materiály. Neposkytujte prosím tento obsah bez souhlasu autorů projektu.",
+    "languageLabel": "Jazyk"
   }
 }

@@ -216,6 +216,7 @@
     "viewLabel": "Perspektive der Besucher",
     "heightLabels": { "human": "Mensch", "moai": "Moai", "tallMoai": "Hoher Moai", "pukao": "Moai mit pukao" },
     "heightValues": { "human": "ca. 1,8 m", "moai": "ca. 7,2 m", "tallMoai": "ca. 8,7 m", "pukao": "ca. 9,5 m" },
+    "humanHeight": "Menschlicher Maßstab: ca. 1,8 m",
     "tiles": { "humanValue": "ca. 1,8 m", "humanLabel": "Durchschnittliche Körpergröße", "moaiValue": "Vielfach höher", "moaiLabel": "Monumentale Silhouetten der Moai", "panoramaValue": "15 Figuren", "panoramaLabel": "Das vollständige Panorama von Ahu Tongariki" },
     "closing": "Dies wird keine Ausstellung sein, die man aus der Ferne betrachtet. Es wird ein Ort, an dem man innehält und die eigene Größe spürt."
   },
@@ -449,6 +450,11 @@
     "ctaButton": "Partnerschaftsgespräch",
     "ctaAria": "Zum Kontakt für ein Partnerschaftsgespräch wechseln",
     "partnerAria": "Informationen zum Partner {name} öffnen — {role}",
+    "exhibit": {
+      "title": "Erinnerung im Holz bewahrt",
+      "subtitle": "Inspiriert von der Tradition geschnitzter Rongorongo-Tafeln.",
+      "memoryText": "Jede große Geschichte bewahrt die Erinnerung an jene, die halfen, sie zu beginnen."
+    },
     "partnerDescriptions": {
       "default": "Die Beschreibung der Partnerrolle wird nach offizieller Bestätigung der Zusammenarbeit ergänzt."
     },
@@ -624,5 +630,20 @@
     ],
     "cityMotto": "Königliche Stadt seit 1319",
     "emblemAlt": "Wappen von Bystrzyca Kłodzka"
+  },
+  "access": {
+    "kicker": "RAPA NUI PARK",
+    "title": "Projekt in Vorbereitung",
+    "description": "Diese Website steht derzeit nur eingeladenen Personen zur Verfügung. Geben Sie das Passwort ein, um fortzufahren.",
+    "passwordLabel": "Zugangspasswort",
+    "passwordPlaceholder": "Zugangspasswort eingeben",
+    "showPassword": "Passwort anzeigen",
+    "hidePassword": "Passwort verbergen",
+    "submit": "PROJEKT BETRETEN",
+    "submitting": "Wird geprüft...",
+    "invalidPassword": "Falsches Passwort. Bitte versuchen Sie es erneut.",
+    "genericError": "Der Zugriff konnte nicht überprüft werden. Bitte versuchen Sie es in Kürze erneut.",
+    "footerNote": "Arbeitsmaterialien. Bitte teilen Sie diese Inhalte nicht ohne Zustimmung der Projektautoren.",
+    "languageLabel": "Sprache"
   }
 }

@@ -216,6 +216,7 @@
     "viewLabel": "Perspektywa zwiedzającego",
     "heightLabels": { "human": "Człowiek", "moai": "Moai", "tallMoai": "Moai wysoki", "pukao": "Moai z pukao" },
     "heightValues": { "human": "około 1,8 m", "moai": "około 7,2 m", "tallMoai": "około 8,7 m", "pukao": "około 9,5 m" },
+    "humanHeight": "Człowiek: ok. 1,8 m",
     "tiles": { "humanValue": "około 1,8 m", "humanLabel": "Przeciętny wzrost człowieka", "moaiValue": "Wielokrotnie wyższe", "moaiLabel": "Monumentalne sylwetki Moai", "panoramaValue": "15 figur", "panoramaLabel": "Pełna panorama Ahu Tongariki" },
     "closing": "To nie będzie ekspozycja oglądana z daleka. To będzie miejsce, przed którym człowiek zatrzyma się i poczuje własną skalę."
   },
@@ -449,6 +450,11 @@
     "ctaButton": "Rozmowa partnerska",
     "ctaAria": "Przejdź do kontaktu w sprawie rozmowy partnerskiej",
     "partnerAria": "Otwórz informacje o partnerze {name} — {role}",
+    "exhibit": {
+      "title": "Pamięć zapisana w drewnie",
+      "subtitle": "Inspirowane tradycją rytowanych tablic Rongorongo.",
+      "memoryText": "Każda wielka historia zachowuje pamięć o tych, którzy pomogli ją rozpocząć."
+    },
     "partnerDescriptions": {
       "default": "Opis roli partnera zostanie uzupełniony po oficjalnym potwierdzeniu współpracy."
     },
@@ -624,5 +630,20 @@
     ],
     "cityMotto": "Miasto Królewskie od 1319 roku",
     "emblemAlt": "Herb Bystrzycy Kłodzkiej"
+  },
+  "access": {
+    "kicker": "RAPA NUI PARK",
+    "title": "Projekt w przygotowaniu",
+    "description": "Strona jest obecnie dostępna wyłącznie dla zaproszonych osób. Wprowadź hasło, aby przejść dalej.",
+    "passwordLabel": "Hasło dostępu",
+    "passwordPlaceholder": "Wpisz hasło dostępu",
+    "showPassword": "Pokaż hasło",
+    "hidePassword": "Ukryj hasło",
+    "submit": "WEJDŹ DO PROJEKTU",
+    "submitting": "Sprawdzanie...",
+    "invalidPassword": "Nieprawidłowe hasło. Spróbuj ponownie.",
+    "genericError": "Nie udało się zweryfikować dostępu. Spróbuj ponownie za chwilę.",
+    "footerNote": "Materiały robocze. Prosimy o nieudostępnianie treści bez zgody autorów projektu.",
+    "languageLabel": "Język"
   }
 }

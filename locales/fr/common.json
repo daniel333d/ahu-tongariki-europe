@@ -216,6 +216,7 @@
     "viewLabel": "Point de vue du visiteur",
     "heightLabels": { "human": "Être humain", "moai": "Moai", "tallMoai": "Moai élevé", "pukao": "Moai avec pukao" },
     "heightValues": { "human": "environ 1,8 m", "moai": "environ 7,2 m", "tallMoai": "environ 8,7 m", "pukao": "environ 9,5 m" },
+    "humanHeight": "Échelle humaine : env. 1,8 m",
     "tiles": { "humanValue": "environ 1,8 m", "humanLabel": "Taille moyenne d’un être humain", "moaiValue": "Bien plus hauts", "moaiLabel": "Silhouettes monumentales des Moai", "panoramaValue": "15 figures", "panoramaLabel": "La perspective complète d’Ahu Tongariki" },
     "closing": "Ce ne sera pas une exposition que l’on observe de loin. Ce sera un lieu où l’on s’arrête pour ressentir sa propre échelle."
   },
@@ -449,6 +450,11 @@
     "ctaButton": "Échange autour d’un partenariat",
     "ctaAria": "Accéder au contact pour un échange autour d’un partenariat",
     "partnerAria": "Ouvrir les informations sur le partenaire {name} — {role}",
+    "exhibit": {
+      "title": "La mémoire inscrite dans le bois",
+      "subtitle": "Inspiré de la tradition des tablettes gravées Rongorongo.",
+      "memoryText": "Toute grande histoire garde la mémoire de celles et ceux qui ont aidé à la faire naître."
+    },
     "partnerDescriptions": {
       "default": "La description du rôle du partenaire sera ajoutée après confirmation officielle de la coopération."
     },
@@ -624,5 +630,20 @@
     ],
     "cityMotto": "Ville royale depuis 1319",
     "emblemAlt": "Blason de Bystrzyca Kłodzka"
+  },
+  "access": {
+    "kicker": "RAPA NUI PARK",
+    "title": "Projet en préparation",
+    "description": "Ce site est actuellement réservé aux personnes invitées. Saisissez le mot de passe pour continuer.",
+    "passwordLabel": "Mot de passe d'accès",
+    "passwordPlaceholder": "Saisissez le mot de passe d'accès",
+    "showPassword": "Afficher le mot de passe",
+    "hidePassword": "Masquer le mot de passe",
+    "submit": "ACCÉDER AU PROJET",
+    "submitting": "Vérification...",
+    "invalidPassword": "Mot de passe incorrect. Veuillez réessayer.",
+    "genericError": "Impossible de vérifier l'accès. Veuillez réessayer dans un instant.",
+    "footerNote": "Documents de travail. Merci de ne pas partager ce contenu sans l'accord des auteurs du projet.",
+    "languageLabel": "Langue"
   }
 }

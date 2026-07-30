@@ -216,6 +216,7 @@
     "viewLabel": "Visitor perspective",
     "heightLabels": { "human": "Person", "moai": "Moai", "tallMoai": "Tall Moai", "pukao": "Moai with pukao" },
     "heightValues": { "human": "approx. 1.8 m", "moai": "approx. 7.2 m", "tallMoai": "approx. 8.7 m", "pukao": "approx. 9.5 m" },
+    "humanHeight": "Human scale: approx. 1.8 m",
     "tiles": { "humanValue": "approx. 1.8 m", "humanLabel": "Average human height", "moaiValue": "Many times taller", "moaiLabel": "Monumental Moai silhouettes", "panoramaValue": "15 figures", "panoramaLabel": "The full Ahu Tongariki panorama" },
     "closing": "This will not be an exhibition viewed from a distance. It will be a place where people stop and feel their own scale."
   },
@@ -449,6 +450,11 @@
     "ctaButton": "Partnership Conversation",
     "ctaAria": "Go to contact for a partnership conversation",
     "partnerAria": "Open information about partner {name} — {role}",
+    "exhibit": {
+      "title": "Memory preserved in wood",
+      "subtitle": "Inspired by the tradition of carved Rongorongo tablets.",
+      "memoryText": "Every great story preserves the memory of those who helped it begin."
+    },
     "partnerDescriptions": {
       "default": "The partner role description will be added after the cooperation is officially confirmed."
     },
@@ -624,5 +630,20 @@
     ],
     "cityMotto": "Royal Town since 1319",
     "emblemAlt": "Coat of arms of Bystrzyca Kłodzka"
+  },
+  "access": {
+    "kicker": "RAPA NUI PARK",
+    "title": "Project in preparation",
+    "description": "This site is currently available to invited guests only. Enter the password to continue.",
+    "passwordLabel": "Access password",
+    "passwordPlaceholder": "Enter the access password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "submit": "ENTER THE PROJECT",
+    "submitting": "Checking...",
+    "invalidPassword": "Incorrect password. Please try again.",
+    "genericError": "We couldn't verify access. Please try again shortly.",
+    "footerNote": "Working materials. Please do not share this content without the project authors' consent.",
+    "languageLabel": "Language"
   }
 }

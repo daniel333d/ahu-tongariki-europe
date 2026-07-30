@@ -30,8 +30,6 @@ import {
   UsersRound
 } from "lucide-react";
 
-const AUTH_STORAGE_KEY = "ahu-tongariki-authenticated";
-
 const functionIcons = [Landmark, GraduationCap, Building2, Utensils, Mountain, UsersRound];
 
 type ContactFormState = {
@@ -515,141 +513,6 @@ function LanguageSwitcher({
   );
 }
 
-function LoginScreen({
-  password,
-  error,
-  confidentialityAccepted,
-  confidentialityOpen,
-  onPasswordChange,
-  onConfidentialityChange,
-  onConfidentialityToggle,
-  onSubmit
-}: {
-  password: string;
-  error: string;
-  confidentialityAccepted: boolean;
-  confidentialityOpen: boolean;
-  onPasswordChange: (value: string) => void;
-  onConfidentialityChange: (value: boolean) => void;
-  onConfidentialityToggle: () => void;
-  onSubmit: () => void;
-}) {
-  const { copy } = useI18n();
-  const isSubmitDisabled = !password.trim() || !confidentialityAccepted;
-
-  return (
-    <main className="login-screen multilingual-layout relative flex min-h-screen flex-col justify-center overflow-x-hidden bg-navy px-6 py-12 text-white sm:py-16 lg:py-20">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(200,164,90,0.14),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.07),transparent_42%)]" />
-      <div className="absolute inset-0 opacity-[0.18] [background-image:linear-gradient(120deg,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(30deg,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:72px_72px]" />
-
-      <div className="relative z-10 mb-6 flex w-full justify-end sm:mb-8">
-        <LanguageSwitcher className="relative" />
-      </div>
-
-      <section className="login-panel relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center justify-center text-center">
-        <div className="w-full max-w-2xl">
-          <p className="text-xs font-bold uppercase tracking-[0.32em] text-gold">
-            {copy.brand.name.toUpperCase()}
-          </p>
-          <p className="text-white/52 mt-5 text-sm uppercase tracking-[0.22em]">{copy.login.concept}</p>
-          <h1 className="mt-10 text-balance font-serif text-4xl font-semibold leading-tight sm:text-6xl">
-            <span className="block whitespace-normal text-gold min-[430px]:whitespace-nowrap">
-              {copy.login.slogan1}
-            </span>
-            <span className="block whitespace-normal min-[430px]:whitespace-nowrap">
-              {copy.login.slogan2}
-            </span>
-            <span className="block whitespace-normal text-gold min-[430px]:whitespace-nowrap">
-              {copy.login.slogan3}
-            </span>
-          </h1>
-          <div className="mx-auto mt-10 h-px w-20 bg-gold/70" />
-          <p className="mt-10 text-xl font-semibold text-white">{copy.login.private}</p>
-          <p className="text-white/66 mx-auto mt-4 max-w-md text-base leading-7">{copy.login.access}</p>
-
-          <form
-            onSubmit={(event) => {
-              event.preventDefault();
-              onSubmit();
-            }}
-            className="mx-auto mt-10 max-w-sm"
-          >
-            <label className="block text-left">
-              <span className="text-white/72 text-sm font-semibold">{copy.login.password}</span>
-              <input
-                type="password"
-                value={password}
-                onChange={(event) => onPasswordChange(event.target.value)}
-                placeholder={copy.login.passwordPlaceholder}
-                aria-label={copy.login.password}
-                aria-required="true"
-                aria-invalid={Boolean(error)}
-                className="border-white/16 mt-3 w-full border bg-white/[0.06] px-4 py-4 text-white outline-none transition focus:border-gold"
-                autoComplete="current-password"
-                autoFocus
-              />
-            </label>
-            <label className="text-white/62 mt-5 flex items-start gap-3 text-left text-xs leading-5">
-              <input
-                type="checkbox"
-                checked={confidentialityAccepted}
-                onChange={(event) => onConfidentialityChange(event.target.checked)}
-                aria-label={copy.login.confidentiality}
-                aria-required="true"
-                className="mt-1 h-4 w-4 shrink-0 accent-gold"
-              />
-              <span>{copy.login.confidentiality}</span>
-            </label>
-            <button
-              type="button"
-              onClick={onConfidentialityToggle}
-              className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-gold transition hover:text-sand"
-              aria-expanded={confidentialityOpen}
-              aria-controls="confidentiality-rules"
-              title={copy.accessibility.confidentialityToggleTitle}
-            >
-              {copy.login.rules}
-            </button>
-            {confidentialityOpen ? (
-              <div
-                id="confidentiality-rules"
-                className="border-white/12 text-white/62 mt-4 border bg-white/[0.045] p-4 text-left text-xs leading-6"
-              >
-                {copy.login.rulesText}
-              </div>
-            ) : null}
-            {password.trim() && !confidentialityAccepted ? (
-              <p className="mt-3 text-left text-sm text-gold" role="alert">
-                {copy.login.confirmRequired}
-              </p>
-            ) : null}
-            {error ? (
-              <p className="mt-3 text-left text-sm text-gold" role="alert">
-                {error}
-              </p>
-            ) : null}
-            <button
-              type="button"
-              onClick={onSubmit}
-              disabled={isSubmitDisabled}
-              title={copy.accessibility.loginSubmitTitle}
-              className="stable-action disabled:bg-white/18 disabled:text-white/38 mt-5 w-full bg-gold px-6 py-4 text-sm font-bold uppercase tracking-[0.18em] text-navy transition hover:bg-sand disabled:cursor-not-allowed"
-            >
-              {copy.login.enter}
-            </button>
-          </form>
-        </div>
-      </section>
-
-      <footer className="text-white/52 relative z-10 mx-auto mt-[60px] max-w-3xl px-6 text-center text-xs leading-6 sm:text-sm">
-        <p>{copy.login.footerCopyright}</p>
-        <p>{copy.login.private}</p>
-        <p>{copy.login.access}</p>
-      </footer>
-    </main>
-  );
-}
-
 export default function Home() {
   return (
     <I18nProvider>
@@ -661,12 +524,6 @@ export default function Home() {
 function HomeContent() {
   const { copy, language: selectedLanguage, hasSelectedLanguage } = useI18n();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [password, setPassword] = useState("");
-  const [loginError, setLoginError] = useState("");
-  const [confidentialityAccepted, setConfidentialityAccepted] = useState(false);
-  const [confidentialityOpen, setConfidentialityOpen] = useState(false);
-  const [hasCheckedAuth, setHasCheckedAuth] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isIntroComplete, setIsIntroComplete] = useState(false);
   const [contactForm, setContactForm] = useState<ContactFormState>(initialContactForm);
   const [contactStatus, setContactStatus] = useState<"idle" | "success" | "error">("idle");
@@ -685,11 +542,6 @@ function HomeContent() {
   const nightExperiences = copy.night.cards.map(([title, detail]) => ({ title, detail }));
 
   useEffect(() => {
-    setIsAuthenticated(window.localStorage.getItem(AUTH_STORAGE_KEY) === "true");
-    setHasCheckedAuth(true);
-  }, []);
-
-  useEffect(() => {
     const introTimer = window.setTimeout(() => {
       setIsIntroComplete(true);
     }, 7400);
@@ -697,47 +549,10 @@ function HomeContent() {
     return () => window.clearTimeout(introTimer);
   }, []);
 
-  async function handleLogin() {
-    if (!confidentialityAccepted) {
-      setLoginError(copy.login.confirmRequired);
-      return;
-    }
-
-    try {
-      const response = await fetch("/api/verify-password", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ password })
-      });
-      const data = (await response.json()) as { valid?: boolean };
-
-      if (data.valid) {
-        window.localStorage.setItem(AUTH_STORAGE_KEY, "true");
-        setIsAuthenticated(true);
-        setPassword("");
-        setLoginError("");
-        setConfidentialityAccepted(false);
-        window.scrollTo(0, 0);
-        return;
-      }
-    } catch {
-      // fall through to invalid password error
-    }
-
-    setLoginError(copy.login.invalidPassword);
-  }
-
   function handleLogout() {
-    window.localStorage.removeItem(AUTH_STORAGE_KEY);
-    setIsAuthenticated(false);
-    setPassword("");
-    setLoginError("");
-    setConfidentialityAccepted(false);
-    setConfidentialityOpen(false);
-    setMobileMenuOpen(false);
-    window.scrollTo(0, 0);
+    // Clears the site-wide rapa_nui_access session (see middleware.ts) and
+    // sends the browser back to the /dostep password screen.
+    window.location.assign("/api/auth/logout");
   }
 
   function updateContactField<K extends keyof ContactFormState>(field: K, value: ContactFormState[K]) {
@@ -807,27 +622,8 @@ function HomeContent() {
     }
   }
 
-  if (!hasCheckedAuth) {
-    return <main className="min-h-screen bg-black" aria-label={copy.accessibility.loadingStatus} />;
-  }
-
   if (!hasSelectedLanguage) {
     return isIntroComplete ? <LanguageWelcome /> : <CinematicIntro />;
-  }
-
-  if (!isAuthenticated) {
-    return (
-      <LoginScreen
-        password={password}
-        error={loginError}
-        confidentialityAccepted={confidentialityAccepted}
-        confidentialityOpen={confidentialityOpen}
-        onPasswordChange={setPassword}
-        onConfidentialityChange={setConfidentialityAccepted}
-        onConfidentialityToggle={() => setConfidentialityOpen((isOpen) => !isOpen)}
-        onSubmit={handleLogin}
-      />
-    );
   }
 
   return (
