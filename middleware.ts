@@ -1,9 +1,23 @@
 import { NextRequest, NextResponse } from "next/server";
-import { RETURN_PARAM, SESSION_COOKIE_NAME, isProtectionEnabled, verifySessionToken } from "./lib/site-auth";
+import {
+  RETURN_PARAM,
+  SESSION_COOKIE_NAME,
+  isProtectionEnabled,
+  isPublicAccessWindowOpen,
+  verifySessionToken
+} from "./lib/site-auth";
 
 export async function middleware(request: NextRequest) {
   if (!isProtectionEnabled()) {
-    return NextResponse.next();
+    const response = NextResponse.next();
+    response.headers.set("X-Robots-Tag", "noindex, nofollow");
+    return response;
+  }
+
+  if (isPublicAccessWindowOpen()) {
+    const response = NextResponse.next();
+    response.headers.set("X-Robots-Tag", "noindex, nofollow");
+    return response;
   }
 
   const token = request.cookies.get(SESSION_COOKIE_NAME)?.value;

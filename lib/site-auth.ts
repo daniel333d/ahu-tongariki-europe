@@ -21,6 +21,20 @@ function isProtectionEnabled(): boolean {
   return process.env.SITE_PROTECTION_ENABLED === "true";
 }
 
+function isPublicAccessWindowOpen(now = Date.now()): boolean {
+  const rawPublicUntil = process.env.SITE_PUBLIC_UNTIL;
+  if (!rawPublicUntil) {
+    return false;
+  }
+
+  const publicUntil = Date.parse(rawPublicUntil);
+  if (!Number.isFinite(publicUntil)) {
+    return false;
+  }
+
+  return now < publicUntil;
+}
+
 function getCredentials(): { password: string; secret: string } | null {
   const password = process.env.SITE_PASSWORD;
   const secret = process.env.SITE_AUTH_SECRET;
@@ -165,4 +179,4 @@ export function sanitizeReturnPath(rawPath: string | null | undefined): string {
   return rawPath;
 }
 
-export { isProtectionEnabled };
+export { isProtectionEnabled, isPublicAccessWindowOpen };
