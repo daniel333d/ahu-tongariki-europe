@@ -210,14 +210,35 @@
     "subtitle": "Stań przed Ahu Tongariki i zobacz, jak niewielki staje się człowiek wobec monumentalnych strażników Rapa Nui.",
     "intro": "Liczby opisują wysokość. Dopiero obecność człowieka pozwala naprawdę zrozumieć monumentalność Ahu Tongariki.",
     "modesLabel": "Tryb porównania skali",
-    "modes": { "monumental": "Widok monumentalny", "comparison": "Porównanie z człowiekiem", "heights": "Pokaż wysokości" },
+    "modes": {
+      "monumental": "Widok monumentalny",
+      "comparison": "Porównanie z człowiekiem",
+      "heights": "Pokaż wysokości"
+    },
     "imageAlt": "Wizualizacja Ahu Tongariki pokazująca skalę posągów wobec zwiedzających",
     "visualKicker": "Skala doświadczenia",
     "viewLabel": "Perspektywa zwiedzającego",
-    "heightLabels": { "human": "Człowiek", "moai": "Moai", "tallMoai": "Moai wysoki", "pukao": "Moai z pukao" },
-    "heightValues": { "human": "około 1,8 m", "moai": "około 7,2 m", "tallMoai": "około 8,7 m", "pukao": "około 9,5 m" },
+    "heightLabels": {
+      "human": "Człowiek",
+      "moai": "Moai",
+      "tallMoai": "Moai wysoki",
+      "pukao": "Moai z pukao"
+    },
+    "heightValues": {
+      "human": "około 1,8 m",
+      "moai": "około 7,2 m",
+      "tallMoai": "około 8,7 m",
+      "pukao": "około 9,5 m"
+    },
     "humanHeight": "Człowiek: ok. 1,8 m",
-    "tiles": { "humanValue": "około 1,8 m", "humanLabel": "Przeciętny wzrost człowieka", "moaiValue": "Wielokrotnie wyższe", "moaiLabel": "Monumentalne sylwetki Moai", "panoramaValue": "15 figur", "panoramaLabel": "Pełna panorama Ahu Tongariki" },
+    "tiles": {
+      "humanValue": "około 1,8 m",
+      "humanLabel": "Przeciętny wzrost człowieka",
+      "moaiValue": "Wielokrotnie wyższe",
+      "moaiLabel": "Monumentalne sylwetki Moai",
+      "panoramaValue": "15 figur",
+      "panoramaLabel": "Pełna panorama Ahu Tongariki"
+    },
     "closing": "To nie będzie ekspozycja oglądana z daleka. To będzie miejsce, przed którym człowiek zatrzyma się i poczuje własną skalę."
   },
   "night": {
@@ -645,5 +666,149 @@
     "genericError": "Nie udało się zweryfikować dostępu. Spróbuj ponownie za chwilę.",
     "footerNote": "Materiały robocze. Prosimy o nieudostępnianie treści bez zgody autorów projektu.",
     "languageLabel": "Język"
+  },
+  "winter": {
+    "ariaLabel": "Rapa Nui Park zimą",
+    "assetNotice": "Informacja techniczna przeniesiona do dokumentacji assetów.",
+    "hero": {
+      "kicker": "WIZJA ZIMOWEGO DOŚWIADCZENIA",
+      "title": "Rapa Nui Park zimą",
+      "claim": "Jedyne takie miejsce na ziemi",
+      "subclaim": "Tam, gdzie śnieg spotyka strażników Pacyfiku.",
+      "disclaimer": "Koncepcja przyszłej, zimowej odsłony Rapa Nui Park.",
+      "imageAlt": "Wizja Ahu Tongariki z piętnastoma Moai w zimowym krajobrazie Rapa Nui Park."
+    },
+    "twoWorlds": {
+      "kicker": "DWA ODLEGŁE ŚWIATY",
+      "title": "Dwa odległe światy. Jedno niezwykłe spotkanie.",
+      "paragraphs": [
+        "Wyobrażenie Rapa Nui kojarzy się z oceanem, wulkaniczną ziemią i monumentalnymi sylwetkami Moai. W Rapa Nui Park ich historia otrzyma nową, europejską perspektywę.",
+        "Zimą ciemny kamień, biel śniegu, światło i cisza stworzą krajobraz, którego nie sposób pomylić z żadnym innym miejscem."
+      ],
+      "note": "Zimowa sceneria nie będzie rekonstrukcją klimatu oryginalnej wyspy. Stanie się świadomym spotkaniem dziedzictwa Rapa Nui z krajobrazem Europy Środkowej.",
+      "imageAlt": "Zimowa wizja Moai w europejskim krajobrazie Kotliny Kłodzkiej.",
+      "imageLabel": "Dziedzictwo i krajobraz"
+    },
+    "comparison": {
+      "kicker": "LATO I ZIMA",
+      "title": "Jedno miejsce. Dwa zupełnie różne doświadczenia.",
+      "body": "Latem przestrzeń otwiera się na światło, zieleń i dalekie panoramy. Zimą cisza, śnieg oraz niskie światło zmieniają jej charakter, wydobywając monumentalność Moai w zupełnie nowy sposób.",
+      "summerLabel": "Lato",
+      "winterLabel": "Zima",
+      "sliderLabel": "Porównanie letniej i zimowej wizji Rapa Nui Park",
+      "summerAlt": "Letnia wizja Rapa Nui Park z platformą Moai.",
+      "winterAlt": "Zimowa wizja Rapa Nui Park z pełnym układem Moai."
+    },
+    "story": {
+      "kicker": "TRZY ODSŁONY ZIMOWEGO PARKU",
+      "title": "Zimowy krajobraz jako część doświadczenia",
+      "items": [
+        {
+          "title": "Cisza Strażników",
+          "body": "Śnieg wygłusza przestrzeń. Zostają monumentalne sylwetki, wiatr i cisza. Zimowy poranek pozwoli doświadczyć Ahu Tongariki w jego najbardziej surowej i skupionej formie.",
+          "alt": "Poranna zimowa wizja pełnego układu piętnastu Moai.",
+          "imageLabel": "Poranek po opadach",
+          "overlay": "bg-[linear-gradient(90deg,rgba(6,16,31,0.34),rgba(6,16,31,0.06)_62%,rgba(6,16,31,0.12))]",
+          "objectPosition": "object-[48%_center]"
+        },
+        {
+          "title": "Światło po zmroku",
+          "body": "Ciepłe światło wydobędzie twarze Moai z zimowego półmroku, a śnieg odbije iluminację i powiększy wizualnie całą przestrzeń. Nocny park stanie się sceną światła, kamienia i gwiazd.",
+          "alt": "Zimowa wizja Moai z ciepłą iluminacją po zmroku.",
+          "imageLabel": "Błękitna godzina",
+          "overlay": "bg-[linear-gradient(90deg,rgba(3,8,16,0.78),rgba(6,16,31,0.28)_58%,rgba(6,16,31,0.36)),radial-gradient(circle_at_60%_62%,rgba(200,164,90,0.18),transparent_30%)]",
+          "objectPosition": "object-[67%_center]"
+        },
+        {
+          "title": "Skala zimowego krajobrazu",
+          "body": "Dopiero obecność człowieka pozwala zrozumieć rzeczywistą skalę posągów. Zimą niewielkie sylwetki odwiedzających staną się częścią rozległego, niemal filmowego krajobrazu.",
+          "alt": "Zimowa wizja Rapa Nui Park z ludźmi pokazującymi skalę Moai.",
+          "imageLabel": "Skala i człowiek",
+          "overlay": "bg-[linear-gradient(90deg,rgba(6,16,31,0.44),rgba(6,16,31,0.08)_60%,rgba(6,16,31,0.18))]",
+          "objectPosition": "object-[54%_center]"
+        }
+      ]
+    },
+    "times": {
+      "kicker": "PORY ZIMOWEGO DNIA",
+      "title": "Od pierwszego światła do zimowej nocy",
+      "body": "Ten sam krajobraz będzie zmieniał charakter wraz ze światłem, pogodą i porą dnia.",
+      "items": [
+        {
+          "id": "morning",
+          "label": "ZIMOWY PORANEK",
+          "title": "Pierwsze światło na śniegu",
+          "description": "Świeży śnieg, niskie słońce i delikatna mgła mają tworzyć jasną, skupioną odsłonę porannej wizyty.",
+          "alt": "Zimowy poranek w Rapa Nui Park.",
+          "filter": "brightness(1.2) saturate(0.92) contrast(0.98)",
+          "overlay": "bg-[linear-gradient(180deg,rgba(210,228,244,0.1),rgba(6,16,31,0.26)),linear-gradient(90deg,rgba(255,245,210,0.12),transparent_62%)]"
+        },
+        {
+          "id": "blue-hour",
+          "label": "BŁĘKITNA GODZINA",
+          "title": "Granat nieba i pierwsze światła",
+          "description": "Chłodny śnieg i pierwsza iluminacja wydobędą detale Moai bez agresywnego efektu widowiska.",
+          "alt": "Błękitna godzina w zimowej wizji Rapa Nui Park.",
+          "filter": "brightness(0.9) saturate(1.04) contrast(1.1) hue-rotate(8deg)",
+          "overlay": "bg-[linear-gradient(180deg,rgba(6,24,52,0.36),rgba(3,8,16,0.62)),radial-gradient(circle_at_58%_60%,rgba(200,164,90,0.13),transparent_26%)]"
+        },
+        {
+          "id": "night",
+          "label": "NOCNA ILUMINACJA",
+          "title": "Światło, kamień i zimowa cisza",
+          "description": "Ciepłe światło na twarzach Moai i śnieg odbijający iluminację zbudują głęboką, muzealną atmosferę.",
+          "alt": "Nocna zimowa iluminacja Moai w Rapa Nui Park.",
+          "filter": "brightness(0.66) saturate(1.1) contrast(1.18)",
+          "overlay": "bg-[linear-gradient(180deg,rgba(1,5,13,0.52),rgba(1,5,13,0.8)),radial-gradient(circle_at_62%_58%,rgba(200,164,90,0.25),transparent_31%)]"
+        }
+      ]
+    },
+    "experiences": {
+      "kicker": "ZIMOWE DOŚWIADCZENIA",
+      "title": "Zimowe doświadczenie Rapa Nui Park",
+      "intro": "Zimowy krajobraz nie ma być jedynie tłem. Ma stać się integralną częścią przyszłego doświadczenia odwiedzających.",
+      "items": [
+        {
+          "title": "Zimowa trasa widokowa",
+          "body": "Planowana trasa ma prowadzić przez najważniejsze punkty widokowe i umożliwiać spokojne odkrywanie zimowej panoramy Ahu Tongariki."
+        },
+        {
+          "title": "Zimowe Noce Ahu Tongariki",
+          "body": "Specjalna zimowa odsłona iluminacji, w której światło, śnieg i monumentalne sylwetki Moai stworzą jedno widowisko."
+        },
+        {
+          "title": "Fotografia monumentalnego krajobrazu",
+          "body": "Projektowane punkty widokowe mają umożliwiać fotografowanie Moai, panoramy regionu oraz wyjątkowego zimowego światła."
+        },
+        {
+          "title": "Ciepła przestrzeń odpoczynku",
+          "body": "Docelowa przestrzeń odpoczynku z widokiem na Ahu, gorącymi napojami i kameralną ekspozycją edukacyjną."
+        },
+        {
+          "title": "Opowieść o dwóch krajobrazach",
+          "body": "Program edukacyjny ma zestawiać kulturę Rapa Nui z europejskim otoczeniem parku, pokazując niezwykły dialog odległych miejsc."
+        }
+      ]
+    },
+    "potential": {
+      "kicker": "ATRAKCJA CAŁOROCZNA",
+      "title": "Atrakcja, która nie kończy się wraz z sezonem",
+      "paragraphs": [
+        "Zimowy krajobraz nie jest ograniczeniem projektu, lecz jedną z jego najbardziej wyjątkowych cech. Rapa Nui Park będzie mógł zmieniać charakter wraz z porami roku, oferując odwiedzającym inne doświadczenie latem, jesienią, zimą i wiosną.",
+        "Zimowa odsłona wzmacnia potencjał fotograficzny, wydarzeniowy i promocyjny przedsięwzięcia oraz pozwala budować rozpoznawalność atrakcji całorocznej."
+      ],
+      "indicators": [
+        "CAŁOROCZNA ROZPOZNAWALNOŚĆ",
+        "POTENCJAŁ WYDARZENIOWY",
+        "WYJĄTKOWY KRAJOBRAZ FOTOGRAFICZNY"
+      ]
+    },
+    "final": {
+      "kicker": "FINAŁ ZIMOWEGO ROZDZIAŁU",
+      "title": "Zimą strażnicy\nnie zasypiają.",
+      "body": "Odkrywają swoje najbardziej niezwykłe oblicze.",
+      "cta": "ODKRYJ NOCE AHU TONGARIKI",
+      "imageAlt": "Nocny zimowy kadr Rapa Nui Park prowadzący do sekcji Noce Ahu Tongariki."
+    }
   }
 }

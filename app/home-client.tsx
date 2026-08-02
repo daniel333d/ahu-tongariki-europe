@@ -8,6 +8,7 @@ import { HeroSection as ExperienceHeroSection } from "../components/hero/HeroSec
 import { MasterplanSection } from "../components/masterplan/MasterplanSection";
 import { ScaleSection } from "../components/scale/ScaleSection";
 import { CoCreatorsSection } from "../components/sections/CoCreatorsSection";
+import { WinterExperienceSection } from "../components/sections/WinterExperienceSection";
 import { VideoPlayer } from "../components/video/VideoPlayer";
 import { languageOptions } from "./i18n";
 import { I18nProvider, useI18n } from "./i18n-provider";
@@ -987,7 +988,7 @@ function HomeContent() {
         </div>
       </section>
 
-      <section className="night-section relative overflow-hidden bg-[#06101f] px-6 py-28 text-white sm:py-32 lg:px-10">
+      <section id="noce-ahu-tongariki" className="night-section relative overflow-hidden bg-[#06101f] px-6 py-28 text-white sm:py-32 lg:px-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_18%,rgba(200,164,90,0.12),transparent_24%),linear-gradient(180deg,rgba(7,20,38,0.96),rgba(6,16,31,0.98))]" />
         <div className="night-stars absolute inset-0 opacity-55" />
         <div className="relative mx-auto max-w-[1400px]">
@@ -1058,6 +1059,8 @@ function HomeContent() {
           </div>
         </div>
       </section>
+
+      <WinterExperienceSection />
 
       <section className="bg-ivory px-6 py-28 sm:py-32 lg:px-10">
         <div className="mx-auto grid max-w-[1400px] gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
