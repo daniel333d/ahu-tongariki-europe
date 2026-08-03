@@ -485,6 +485,49 @@
       "visitWebsite": "Navštívit web partnera"
     }
   },
+  "futureComplexes": {
+    "kicker": "Další kapitoly parku",
+    "title": "Ahu Akivi, Anakena a Orongo jako další prostory zážitku.",
+    "intro": "Po realizaci Ahu Tongariki se koncept Rapa Nui Park může rozšířit o další prostory inspirované dědictvím Rapa Nui: Ahu Akivi, Anakena a Orongo.",
+    "items": [
+      {
+        "label": "Sedm Moai",
+        "title": "Ahu Akivi",
+        "body": "Komornější ceremoniální uspořádání sedmi Moai se může stát místem soustředění, které představí orientaci soch a vztah mezi krajinou, nebem a kulturní pamětí Rapa Nui.",
+        "points": [
+          "7 Moai",
+          "kontemplativní expozice",
+          "vzdělávání a astronomie"
+        ],
+        "imageAlt": "Vize Ahu Akivi se sedmi Moai v krajině Rapa Nui Park."
+      },
+      {
+        "label": "Moai u pláže",
+        "title": "Anakena",
+        "body": "Anakena přináší do projektu jemnější pobřežní rozměr: Moai, písek, světlo a prostor odpočinku vytvářejí protiváhu monumentalitě Ahu Tongariki.",
+        "points": [
+          "plážová krajina",
+          "Moai a světlo",
+          "odpočinková zóna"
+        ],
+        "imageAlt": "Vize Anakena jako Moai u pláže v Rapa Nui Park."
+      },
+      {
+        "label": "Ceremoniální vesnice",
+        "title": "Orongo",
+        "body": "Orongo se může stát prostorem věnovaným ceremoniální vesnici, kráteru Rano Kau a tradici Tangata Manu, která přibližuje duchovní a symbolický rozměr kultury Rapa Nui.",
+        "points": [
+          "tradice Ptačího muže",
+          "Rano Kau a oceán",
+          "kulturní vzdělávání"
+        ],
+        "imageAlt": "Vize Orongo jako ceremoniální vesnice a příběhu tradice Tangata Manu, Ptačího muže."
+      }
+    ],
+    "note": "Tato sekce představuje možný směr rozvoje po Ahu Tongariki. Každý další komplex by měl být navržen se stejným důrazem na vzdělávání, respekt k dědictví a kvalitu expozice.",
+    "cta": "Promluvit si o rozvoji projektu",
+    "ctaAria": "Přejít na kontaktní formulář k rozvoji projektu Rapa Nui Park"
+  },
   "partnership": {
     "imageAlt": "Monumentální vizualizace Moai v pozadí sekce partnerství s Rapa Nui.",
     "title": "Partnerství s Rapa Nui",

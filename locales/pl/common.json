@@ -485,6 +485,49 @@
       "visitWebsite": "Odwiedź stronę partnera"
     }
   },
+  "futureComplexes": {
+    "kicker": "Kolejne rozdziały parku",
+    "title": "Ahu Akivi, Anakena i Orongo jako następne przestrzenie doświadczeń.",
+    "intro": "Po realizacji Ahu Tongariki koncepcja Rapa Nui Park może zostać rozwinięta o kolejne przestrzenie inspirowane dziedzictwem Rapa Nui: Ahu Akivi, Anakena oraz Orongo.",
+    "items": [
+      {
+        "label": "Siedmiu Moai",
+        "title": "Ahu Akivi",
+        "body": "Kameralny, ceremonialny układ siedmiu Moai może stać się miejscem skupienia, opowieści o orientacji posągów oraz relacji między krajobrazem, niebem i pamięcią kulturową Rapa Nui.",
+        "points": [
+          "7 Moai",
+          "spokojna ekspozycja",
+          "edukacja i astronomia"
+        ],
+        "imageAlt": "Wizja Ahu Akivi jako siedmiu Moai w krajobrazie Rapa Nui Park."
+      },
+      {
+        "label": "Moai nad plażą",
+        "title": "Anakena",
+        "body": "Anakena wprowadza do projektu łagodniejszy, nadmorski wymiar opowieści: Moai, piasek, światło i przestrzeń odpoczynku tworzą kontrapunkt dla monumentalności Ahu Tongariki.",
+        "points": [
+          "plażowy krajobraz",
+          "Moai i światło",
+          "strefa relaksu"
+        ],
+        "imageAlt": "Wizja Anakena jako Moai nad plażą w Rapa Nui Park."
+      },
+      {
+        "label": "Wioska ceremonialna",
+        "title": "Orongo",
+        "body": "Orongo może stać się przestrzenią opowieści o wiosce ceremonialnej, kraterze Rano Kau i tradycji Tangata Manu, pokazując duchowy i symboliczny wymiar kultury Rapa Nui.",
+        "points": [
+          "kult Człowieka-Ptaka",
+          "Rano Kau i ocean",
+          "edukacja kulturowa"
+        ],
+        "imageAlt": "Wizja Orongo jako wioski ceremonialnej i opowieści o kulcie Człowieka-Ptaka."
+      }
+    ],
+    "note": "Sekcja przedstawia kierunek rozwoju koncepcji po Ahu Tongariki. Każdy kolejny kompleks powinien być projektowany z tym samym naciskiem na edukację, szacunek dla dziedzictwa i jakość ekspozycji.",
+    "cta": "Porozmawiaj o rozwoju projektu",
+    "ctaAria": "Przejdź do formularza kontaktowego w sprawie rozwoju projektu Rapa Nui Park"
+  },
   "partnership": {
     "imageAlt": "Monumentalna wizualizacja Moai w tle sekcji partnerstwa z Rapa Nui.",
     "title": "Partnerstwo z Rapa Nui",

@@ -485,6 +485,49 @@
       "visitWebsite": "Visiter le site du partenaire"
     }
   },
+  "futureComplexes": {
+    "kicker": "Les prochains chapitres du parc",
+    "title": "Ahu Akivi, Anakena et Orongo comme futurs espaces d’expérience.",
+    "intro": "Après Ahu Tongariki, le concept Rapa Nui Park pourra s’enrichir de nouveaux espaces inspirés du patrimoine de Rapa Nui : Ahu Akivi, Anakena et Orongo.",
+    "items": [
+      {
+        "label": "Sept Moai",
+        "title": "Ahu Akivi",
+        "body": "Un alignement cérémoniel plus intime de sept Moai peut devenir un lieu de recueillement, consacré à l’orientation des statues et au dialogue entre paysage, ciel et mémoire culturelle de Rapa Nui.",
+        "points": [
+          "7 Moai",
+          "exposition contemplative",
+          "éducation et astronomie"
+        ],
+        "imageAlt": "Vision d’Ahu Akivi avec sept Moai dans le paysage de Rapa Nui Park."
+      },
+      {
+        "label": "Moai près de la plage",
+        "title": "Anakena",
+        "body": "Anakena apporte au projet une dimension côtière plus douce : Moai, sable, lumière et espace de repos composent un contrepoint à la monumentalité d’Ahu Tongariki.",
+        "points": [
+          "paysage de plage",
+          "Moai et lumière",
+          "espace de détente"
+        ],
+        "imageAlt": "Vision d’Anakena avec des Moai près de la plage à Rapa Nui Park."
+      },
+      {
+        "label": "Village cérémoniel",
+        "title": "Orongo",
+        "body": "Orongo peut devenir un espace consacré au village cérémoniel, au cratère Rano Kau et à la tradition Tangata Manu, révélant la dimension spirituelle et symbolique de la culture Rapa Nui.",
+        "points": [
+          "tradition de l’Homme-Oiseau",
+          "Rano Kau et l’océan",
+          "éducation culturelle"
+        ],
+        "imageAlt": "Vision d’Orongo comme village cérémoniel et récit de la tradition Tangata Manu de l’Homme-Oiseau."
+      }
+    ],
+    "note": "Cette section présente une orientation possible du développement après Ahu Tongariki. Chaque futur complexe devra conserver la même exigence d’éducation, de respect du patrimoine et de qualité d’exposition.",
+    "cta": "Échanger sur le développement du projet",
+    "ctaAria": "Accéder au formulaire de contact pour échanger sur le développement de Rapa Nui Park"
+  },
   "partnership": {
     "imageAlt": "Visualisation monumentale des Moai en arrière-plan de la section consacrée au partenariat avec Rapa Nui.",
     "title": "Partenariat avec Rapa Nui",

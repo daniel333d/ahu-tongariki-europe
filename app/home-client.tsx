@@ -8,6 +8,7 @@ import { HeroSection as ExperienceHeroSection } from "../components/hero/HeroSec
 import { MasterplanSection } from "../components/masterplan/MasterplanSection";
 import { ScaleSection } from "../components/scale/ScaleSection";
 import { CoCreatorsSection } from "../components/sections/CoCreatorsSection";
+import { FutureHeritageComplexesSection } from "../components/sections/FutureHeritageComplexesSection";
 import { WinterExperienceSection } from "../components/sections/WinterExperienceSection";
 import { VideoPlayer } from "../components/video/VideoPlayer";
 import { languageOptions } from "./i18n";
@@ -1128,6 +1129,8 @@ function HomeContent() {
       </section>
 
       <ExperienceSection />
+
+      <FutureHeritageComplexesSection />
 
       <GovernmentPartnershipSection />
 

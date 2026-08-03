@@ -485,6 +485,49 @@
       "visitWebsite": "Visit partner website"
     }
   },
+  "futureComplexes": {
+    "kicker": "Next chapters of the park",
+    "title": "Ahu Akivi, Anakena and Orongo as the next experience spaces.",
+    "intro": "After Ahu Tongariki, the Rapa Nui Park concept can expand with further spaces inspired by Rapa Nui heritage: Ahu Akivi, Anakena and Orongo.",
+    "items": [
+      {
+        "label": "Seven Moai",
+        "title": "Ahu Akivi",
+        "body": "A quiet ceremonial alignment of seven Moai can become a place of focus, introducing the orientation of the statues and the relationship between landscape, sky and the cultural memory of Rapa Nui.",
+        "points": [
+          "7 Moai",
+          "contemplative display",
+          "education and astronomy"
+        ],
+        "imageAlt": "A vision of Ahu Akivi as seven Moai in the landscape of Rapa Nui Park."
+      },
+      {
+        "label": "Moai by the beach",
+        "title": "Anakena",
+        "body": "Anakena brings a softer coastal dimension to the project: Moai, sand, light and a place of rest create a counterpoint to the monumentality of Ahu Tongariki.",
+        "points": [
+          "beach landscape",
+          "Moai and light",
+          "area for rest"
+        ],
+        "imageAlt": "A vision of Anakena as Moai by the beach in Rapa Nui Park."
+      },
+      {
+        "label": "Ceremonial village",
+        "title": "Orongo",
+        "body": "Orongo can become a space dedicated to the ceremonial village, the Rano Kau crater and the Tangata Manu tradition, revealing the spiritual and symbolic dimension of Rapa Nui culture.",
+        "points": [
+          "Birdman tradition",
+          "Rano Kau and the ocean",
+          "cultural education"
+        ],
+        "imageAlt": "A vision of Orongo as a ceremonial village and a story of the Tangata Manu Birdman tradition."
+      }
+    ],
+    "note": "This section presents a possible development direction after Ahu Tongariki. Each future complex should be designed with the same emphasis on education, respect for heritage and exhibition quality.",
+    "cta": "Discuss the project development",
+    "ctaAria": "Go to the contact form to discuss the development of Rapa Nui Park"
+  },
   "partnership": {
     "imageAlt": "A monumental Moai visual used as the background for the Rapa Nui partnership section.",
     "title": "Partnership with Rapa Nui",
