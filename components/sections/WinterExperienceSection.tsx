@@ -9,6 +9,8 @@ import { useI18n } from "../../app/i18n-provider";
 
 const WINTER_HERO_IMAGE = "/assets/winter/rapa-nui-park-winter-v2-varied-moai.png";
 const SUMMER_REFERENCE_IMAGE = "/assets/winter/rapa-nui-park-summer-v1-matched-moai.png";
+const WINTER_SECTION_BRIGHTNESS = "brightness(1.82)";
+const WINTER_FINAL_BRIGHTNESS = "brightness(2.1)";
 
 const storyIcons = [Snowflake, FlameKindling, MountainSnow];
 const experienceIcons = [Eye, Moon, Camera, FlameKindling, Landmark];
@@ -18,6 +20,10 @@ const visitorSilhouettes = [
   { height: 34, width: 8, head: 5, stance: 14, tone: "#fff8eb" },
   { height: 23, width: 6, head: 4, stance: 10, tone: "#f1eadf" }
 ];
+
+function brightenWinterImage(filter?: string) {
+  return filter ? `${WINTER_SECTION_BRIGHTNESS} ${filter}` : WINTER_SECTION_BRIGHTNESS;
+}
 
 function FadeBlock({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
@@ -58,7 +64,7 @@ function WinterImagePanel({
         fill
         className={`object-cover ${objectPosition}`}
         sizes="(min-width: 1024px) 720px, 100vw"
-        style={filter ? ({ filter } as CSSProperties) : undefined}
+        style={{ filter: brightenWinterImage(filter) } as CSSProperties}
       />
       <div className={`absolute inset-0 ${overlay}`} aria-hidden="true" />
       {showVisitors ? <WinterScaleVisitors /> : null}
@@ -147,13 +153,15 @@ function SeasonsComparison() {
             label: winter.comparison.summerLabel,
             alt: winter.comparison.summerAlt,
             src: SUMMER_REFERENCE_IMAGE,
-            className: "object-cover object-center brightness-[1.05] saturate-[1.03]"
+            className: "object-cover object-center",
+            filter: "brightness(1.05) saturate(1.03)"
           },
           {
             label: winter.comparison.winterLabel,
             alt: winter.comparison.winterAlt ?? winter.comparison.summerAlt,
             src: WINTER_HERO_IMAGE,
-            className: "object-cover object-[56%_center] brightness-[1.08] saturate-[0.96]"
+            className: "object-cover object-[56%_center]",
+            filter: "brightness(1.08) saturate(0.96)"
           }
         ].map((item) => (
           <div key={item.label} className="border-white/12 relative overflow-hidden rounded-lg border bg-navy shadow-architectural">
@@ -164,6 +172,7 @@ function SeasonsComparison() {
                 fill
                 className={item.className}
                 sizes="(min-width: 1024px) 700px, 100vw"
+                style={{ filter: brightenWinterImage(item.filter) } as CSSProperties}
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,16,31,0.1),rgba(6,16,31,0.5))]" aria-hidden="true" />
               <div className="absolute left-5 top-5 rounded border border-white/20 bg-navy/70 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-white backdrop-blur">
@@ -252,7 +261,7 @@ function WinterTimeSelector() {
               fill
               className="object-cover object-[58%_center]"
               sizes="(min-width: 1024px) 1400px, 100vw"
-              style={{ filter: active.filter } as CSSProperties}
+              style={{ filter: brightenWinterImage(active.filter) } as CSSProperties}
             />
           </motion.div>
           <SceneAtmosphere activeId={active.id} />
@@ -287,6 +296,7 @@ export function WinterExperienceSection() {
           fill
           className="object-cover object-[58%_center]"
           sizes="100vw"
+          style={{ filter: WINTER_SECTION_BRIGHTNESS } as CSSProperties}
         />
         <div
           className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,10,20,0.88)_0%,rgba(3,10,20,0.58)_34%,rgba(3,10,20,0.1)_72%),linear-gradient(180deg,rgba(3,10,20,0.14),rgba(3,10,20,0.16)_48%,rgba(3,10,20,0.86)_100%)]"
@@ -453,6 +463,7 @@ export function WinterExperienceSection() {
                   fill
                   className="object-cover object-[60%_center]"
                   sizes="(min-width: 1024px) 1400px, 100vw"
+                  style={{ filter: WINTER_FINAL_BRIGHTNESS } as CSSProperties}
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,10,20,0.9),rgba(3,10,20,0.48)_48%,rgba(3,10,20,0.16)),linear-gradient(180deg,rgba(3,10,20,0.16),rgba(3,10,20,0.72))]" />
                 <div className="absolute inset-0 flex items-center px-6 py-16 sm:px-10 lg:px-12">
