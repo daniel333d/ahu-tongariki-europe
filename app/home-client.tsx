@@ -4,6 +4,7 @@ import Image from "next/image";
 import { type CSSProperties, type FormEvent, useEffect, useState } from "react";
 import { FeatureCards } from "../components/cards/FeatureCards";
 import { VisitCounter } from "../components/common/VisitCounter";
+import { MoaiPresenceEffect } from "../components/effects/MoaiPresenceEffect";
 import { HeroSection as ExperienceHeroSection } from "../components/hero/HeroSection";
 import { MasterplanSection } from "../components/masterplan/MasterplanSection";
 import { ScaleSection } from "../components/scale/ScaleSection";
@@ -518,6 +519,7 @@ function LanguageSwitcher({
 export default function Home() {
   return (
     <I18nProvider>
+      <MoaiPresenceEffect />
       <HomeContent />
     </I18nProvider>
   );
