@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 type MoaiPresenceVariant = {
   src: string;
   label: string;
+  word: string;
 };
 
 type FragmentParticle = {
@@ -36,44 +37,39 @@ const IMAGE_REVEAL_DURATION_MS = 3_200;
 const IMAGE_HOLD_MS = 9_000;
 const IMAGE_FADE_MS = 2_800;
 const CYCLE_DURATION_MS = WORD_HOLD_MS + SHATTER_DURATION_MS + IMAGE_REVEAL_DURATION_MS + IMAGE_HOLD_MS + IMAGE_FADE_MS;
-const VARIANT_CHANGE_MS = CYCLE_DURATION_MS;
+const VARIANT_CHANGE_MS = 10_000;
 const POINTER_MOVE_THRESHOLD_PX = 12;
 
 const MOAI_PRESENCE_VARIANTS: MoaiPresenceVariant[] = [
   {
     src: "/assets/moai-presence/moai-presence-classic.png",
-    label: "Moai bez pukao"
+    label: "Moai bez pukao",
+    word: "MOAI"
   },
   {
-    src: "/assets/moai-presence/moai-presence-pukao.png",
-    label: "Moai z pukao"
+    src: "/assets/moai-presence/moai-presence-classic.png",
+    label: "Hoa Hakananai'a",
+    word: "Hoa Hakananai'a"
   },
   {
     src: "/assets/moai-presence/moai-presence-weathered.png",
-    label: "Moai zwietrzaly"
+    label: "Tukuturi",
+    word: "Tukuturi"
+  },
+  {
+    src: "/assets/moai-presence/moai-presence-pukao.png",
+    label: "Paro",
+    word: "Paro"
   },
   {
     src: "/assets/moai-presence/moai-presence-ko-te-riku.png",
-    label: "Ko Te Riku ze zrekonstruowanymi oczami"
+    label: "Ko Te Riku ze zrekonstruowanymi oczami",
+    word: "Ko Te Riku"
   }
 ];
 
-function getRandomVariantIndex() {
-  return Math.floor(Math.random() * MOAI_PRESENCE_VARIANTS.length);
-}
-
 function getNextVariantIndex(currentIndex: number) {
-  if (MOAI_PRESENCE_VARIANTS.length <= 1) {
-    return currentIndex;
-  }
-
-  let nextIndex = getRandomVariantIndex();
-
-  while (nextIndex === currentIndex) {
-    nextIndex = getRandomVariantIndex();
-  }
-
-  return nextIndex;
+  return (currentIndex + 1) % MOAI_PRESENCE_VARIANTS.length;
 }
 
 function clamp(value: number, min: number, max: number) {
@@ -155,51 +151,41 @@ function createMaskedMoai(image: HTMLImageElement, width: number, height: number
   return canvas;
 }
 
-function drawAjourMoaiWord(context: CanvasRenderingContext2D, width: number, height: number) {
-  const fontSize = Math.min(width * 0.33, height * 0.42);
-  const letters = ["M", "O", "A", "I"];
-  const letterSpacing = fontSize * 0.08;
-  const letterScaleX = 0.62;
-  const letterWidth = fontSize * letterScaleX;
-  const wordWidth = letters.length * letterWidth + (letters.length - 1) * letterSpacing;
-  const startX = width / 2 - wordWidth / 2 + letterWidth / 2;
+function drawAjourMoaiWord(context: CanvasRenderingContext2D, width: number, height: number, word: string) {
+  const isShortWord = word.length <= 5;
+  const maxTextWidth = width * (isShortWord ? 0.82 : 0.86);
+  let fontSize = Math.min(width * (isShortWord ? 0.33 : 0.12), height * (isShortWord ? 0.42 : 0.2));
   const centerY = height / 2;
+  const fontFamily = "Georgia, 'Times New Roman', serif";
 
   context.textAlign = "center";
   context.textBaseline = "middle";
-  context.font = `700 ${fontSize}px Georgia, 'Times New Roman', serif`;
+  context.font = `700 ${fontSize}px ${fontFamily}`;
+
+  while (context.measureText(word).width > maxTextWidth && fontSize > 28) {
+    fontSize *= 0.94;
+    context.font = `700 ${fontSize}px ${fontFamily}`;
+  }
+
   context.lineJoin = "round";
   context.lineWidth = Math.max(3, fontSize * 0.018);
   context.strokeStyle = "#f1cf72";
 
-  letters.forEach((letter, index) => {
-    const x = startX + index * (letterWidth + letterSpacing);
-
-    context.save();
-    context.translate(x, centerY);
-    context.scale(letterScaleX, 1.08);
-    context.strokeText(letter, 0, 0);
-    context.restore();
-  });
+  context.save();
+  context.scale(isShortWord ? 0.62 : 0.9, isShortWord ? 1.08 : 1);
+  context.strokeText(word, width / 2 / (isShortWord ? 0.62 : 0.9), centerY / (isShortWord ? 1.08 : 1));
+  context.restore();
 
   context.save();
   context.globalAlpha = 0.18;
   context.fillStyle = "#c99b32";
-
-  letters.forEach((letter, index) => {
-    const x = startX + index * (letterWidth + letterSpacing);
-
-    context.save();
-    context.translate(x, centerY);
-    context.scale(letterScaleX, 1.08);
-    context.fillText(letter, 0, 0);
-    context.restore();
-  });
+  context.scale(isShortWord ? 0.62 : 0.9, isShortWord ? 1.08 : 1);
+  context.fillText(word, width / 2 / (isShortWord ? 0.62 : 0.9), centerY / (isShortWord ? 1.08 : 1));
 
   context.restore();
 }
 
-function createWordCanvas(width: number, height: number) {
+function createWordCanvas(width: number, height: number, word: string) {
   const canvas = document.createElement("canvas");
   const context = canvas.getContext("2d");
 
@@ -211,7 +197,7 @@ function createWordCanvas(width: number, height: number) {
   }
 
   context.clearRect(0, 0, width, height);
-  drawAjourMoaiWord(context, width, height);
+  drawAjourMoaiWord(context, width, height, word);
 
   return canvas;
 }
@@ -265,7 +251,7 @@ function collectWordFragments(width: number, height: number, wordCanvas: HTMLCan
   return fragments;
 }
 
-function createParticleScene(mount: HTMLDivElement, image: HTMLImageElement, width: number, height: number) {
+function createParticleScene(mount: HTMLDivElement, image: HTMLImageElement, word: string, width: number, height: number) {
   const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.35);
   const canvas = document.createElement("canvas");
   const context = canvas.getContext("2d", { alpha: false });
@@ -282,7 +268,7 @@ function createParticleScene(mount: HTMLDivElement, image: HTMLImageElement, wid
   context.scale(pixelRatio, pixelRatio);
   mount.appendChild(canvas);
 
-  const wordCanvas = createWordCanvas(width, height);
+  const wordCanvas = createWordCanvas(width, height, word);
 
   return {
     canvas,
@@ -391,10 +377,6 @@ export function MoaiPresenceEffect() {
   const [variantIndex, setVariantIndex] = useState(0);
 
   useEffect(() => {
-    setVariantIndex(getRandomVariantIndex());
-  }, []);
-
-  useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     setPrefersReducedMotion(mediaQuery.matches);
@@ -494,6 +476,7 @@ export function MoaiPresenceEffect() {
 
     async function prepareAndAnimate() {
       const image = await createImage(MOAI_PRESENCE_VARIANTS[variantIndex].src);
+      const word = MOAI_PRESENCE_VARIANTS[variantIndex].word;
 
       if (isCancelled || !mount) {
         return;
@@ -504,6 +487,7 @@ export function MoaiPresenceEffect() {
         particleSceneRef.current = createParticleScene(
           mount,
           image,
+          word,
           Math.max(1, Math.floor(window.innerWidth)),
           Math.max(1, Math.floor(window.innerHeight))
         );
