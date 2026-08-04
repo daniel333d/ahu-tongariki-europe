@@ -2,41 +2,41 @@
 
 import { useEffect, useRef, useState } from "react";
 
-type Particle = {
-  startX: number;
-  startY: number;
-  targetX: number;
-  targetY: number;
-  x: number;
-  y: number;
-  size: number;
-  color: string;
-  delay: number;
-  drift: number;
-  alpha: number;
-  angle: number;
-  spin: number;
-  depth: number;
-};
-
 type MoaiPresenceVariant = {
   src: string;
   label: string;
 };
 
-type PointSample = {
+type FragmentParticle = {
   x: number;
   y: number;
+  endX: number;
+  endY: number;
+  size: number;
+  delay: number;
+  rotation: number;
+  spin: number;
   color: string;
 };
 
+type ParticleScene = {
+  canvas: HTMLCanvasElement;
+  context: CanvasRenderingContext2D;
+  moaiCanvas: HTMLCanvasElement;
+  wordCanvas: HTMLCanvasElement;
+  fragments: FragmentParticle[];
+  width: number;
+  height: number;
+};
+
 const ABSENCE_DELAY_MS = 30_000;
-const ASSEMBLY_DURATION_MS = 7_000;
-const MERGE_DURATION_MS = 1_800;
-const FULL_FACE_HOLD_MS = 15_000;
-const FADE_DURATION_MS = 1_800;
-const CYCLE_DURATION_MS = ASSEMBLY_DURATION_MS + MERGE_DURATION_MS + FULL_FACE_HOLD_MS + FADE_DURATION_MS;
-const VARIANT_CHANGE_MS = CYCLE_DURATION_MS + 900;
+const WORD_HOLD_MS = 1_200;
+const SHATTER_DURATION_MS = 5_200;
+const IMAGE_REVEAL_DURATION_MS = 3_200;
+const IMAGE_HOLD_MS = 9_000;
+const IMAGE_FADE_MS = 2_800;
+const CYCLE_DURATION_MS = WORD_HOLD_MS + SHATTER_DURATION_MS + IMAGE_REVEAL_DURATION_MS + IMAGE_HOLD_MS + IMAGE_FADE_MS;
+const VARIANT_CHANGE_MS = CYCLE_DURATION_MS;
 const POINTER_MOVE_THRESHOLD_PX = 12;
 
 const MOAI_PRESENCE_VARIANTS: MoaiPresenceVariant[] = [
@@ -50,7 +50,11 @@ const MOAI_PRESENCE_VARIANTS: MoaiPresenceVariant[] = [
   },
   {
     src: "/assets/moai-presence/moai-presence-weathered.png",
-    label: "Moai zwietrzały"
+    label: "Moai zwietrzaly"
+  },
+  {
+    src: "/assets/moai-presence/moai-presence-ko-te-riku.png",
+    label: "Ko Te Riku ze zrekonstruowanymi oczami"
   }
 ];
 
@@ -76,12 +80,12 @@ function clamp(value: number, min: number, max: number) {
   return Math.min(Math.max(value, min), max);
 }
 
-function easeOutCubic(value: number) {
-  return 1 - Math.pow(1 - value, 3);
-}
-
 function easeInOutCubic(value: number) {
   return value < 0.5 ? 4 * value * value * value : 1 - Math.pow(-2 * value + 2, 3) / 2;
+}
+
+function easeOutCubic(value: number) {
+  return 1 - Math.pow(1 - value, 3);
 }
 
 function createImage(src: string) {
@@ -94,30 +98,11 @@ function createImage(src: string) {
   });
 }
 
-function getParticleCount(width: number) {
-  const cores = typeof navigator === "undefined" ? 4 : navigator.hardwareConcurrency || 4;
-  const performanceFactor = cores >= 10 ? 1 : cores >= 6 ? 0.82 : 0.62;
-
-  if (width < 640) {
-    return Math.floor(10_000 * performanceFactor);
-  }
-
-  if (width < 1024) {
-    return Math.floor(16_000 * performanceFactor);
-  }
-
-  if (width < 1500) {
-    return Math.floor(22_000 * performanceFactor);
-  }
-
-  return Math.floor(30_000 * performanceFactor);
-}
-
 function getContainedImageRect(image: HTMLImageElement, width: number, height: number) {
   const imageRatio = image.naturalWidth / image.naturalHeight;
-  let targetHeight = height * (width < 640 ? 1.02 : 0.94);
+  let targetHeight = height * (width < 640 ? 0.9 : 0.82);
   let targetWidth = targetHeight * imageRatio;
-  const maxWidth = width * (width < 640 ? 1.48 : 0.88);
+  const maxWidth = width * (width < 640 ? 1.22 : 0.68);
 
   if (targetWidth > maxWidth) {
     targetWidth = maxWidth;
@@ -132,270 +117,275 @@ function getContainedImageRect(image: HTMLImageElement, width: number, height: n
   };
 }
 
-function collectFaceSamples(image: HTMLImageElement, width: number, height: number, particleCount: number) {
-  const offscreen = document.createElement("canvas");
-  const context = offscreen.getContext("2d", { willReadFrequently: true });
+function createMaskedMoai(image: HTMLImageElement, width: number, height: number) {
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d", { willReadFrequently: true });
+
+  canvas.width = width;
+  canvas.height = height;
 
   if (!context) {
-    return [];
+    return canvas;
   }
 
-  offscreen.width = width;
-  offscreen.height = height;
-
   const rect = getContainedImageRect(image, width, height);
+
   context.clearRect(0, 0, width, height);
   context.drawImage(image, rect.x, rect.y, rect.width, rect.height);
 
   const imageData = context.getImageData(0, 0, width, height);
   const data = imageData.data;
-  const step = width < 640 ? 3 : width < 1200 ? 4 : 5;
-  const candidates: PointSample[] = [];
+
+  for (let index = 0; index < data.length; index += 4) {
+    const red = data[index];
+    const green = data[index + 1];
+    const blue = data[index + 2];
+    const alpha = data[index + 3];
+    const luminance = red * 0.2126 + green * 0.7152 + blue * 0.0722;
+    const maskAlpha = clamp((luminance - 10) / 50, 0, 1);
+
+    data[index] = Math.round(red * 1.12 + 10);
+    data[index + 1] = Math.round(green * 1.08 + 8);
+    data[index + 2] = Math.round(blue * 1.02 + 4);
+    data[index + 3] = Math.round(alpha * maskAlpha);
+  }
+
+  context.putImageData(imageData, 0, 0);
+
+  return canvas;
+}
+
+function drawAjourMoaiWord(context: CanvasRenderingContext2D, width: number, height: number) {
+  const fontSize = Math.min(width * 0.33, height * 0.42);
+  const letters = ["M", "O", "A", "I"];
+  const letterSpacing = fontSize * 0.08;
+  const letterScaleX = 0.62;
+  const letterWidth = fontSize * letterScaleX;
+  const wordWidth = letters.length * letterWidth + (letters.length - 1) * letterSpacing;
+  const startX = width / 2 - wordWidth / 2 + letterWidth / 2;
+  const centerY = height / 2;
+
+  context.textAlign = "center";
+  context.textBaseline = "middle";
+  context.font = `700 ${fontSize}px Georgia, 'Times New Roman', serif`;
+  context.lineJoin = "round";
+  context.lineWidth = Math.max(3, fontSize * 0.018);
+  context.strokeStyle = "#f1cf72";
+
+  letters.forEach((letter, index) => {
+    const x = startX + index * (letterWidth + letterSpacing);
+
+    context.save();
+    context.translate(x, centerY);
+    context.scale(letterScaleX, 1.08);
+    context.strokeText(letter, 0, 0);
+    context.restore();
+  });
+
+  context.save();
+  context.globalAlpha = 0.18;
+  context.fillStyle = "#c99b32";
+
+  letters.forEach((letter, index) => {
+    const x = startX + index * (letterWidth + letterSpacing);
+
+    context.save();
+    context.translate(x, centerY);
+    context.scale(letterScaleX, 1.08);
+    context.fillText(letter, 0, 0);
+    context.restore();
+  });
+
+  context.restore();
+}
+
+function createWordCanvas(width: number, height: number) {
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d");
+
+  canvas.width = width;
+  canvas.height = height;
+
+  if (!context) {
+    return canvas;
+  }
+
+  context.clearRect(0, 0, width, height);
+  drawAjourMoaiWord(context, width, height);
+
+  return canvas;
+}
+
+function collectWordFragments(width: number, height: number, wordCanvas: HTMLCanvasElement) {
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d", { willReadFrequently: true });
+
+  canvas.width = width;
+  canvas.height = height;
+
+  if (!context) {
+    return [];
+  }
+
+  context.clearRect(0, 0, width, height);
+  context.drawImage(wordCanvas, 0, 0, width, height);
+
+  const imageData = context.getImageData(0, 0, width, height);
+  const data = imageData.data;
+  const step = width < 700 ? 4 : 3;
+  const fragments: FragmentParticle[] = [];
 
   for (let y = 0; y < height; y += step) {
     for (let x = 0; x < width; x += step) {
-      const index = (y * width + x) * 4;
-      const red = data[index];
-      const green = data[index + 1];
-      const blue = data[index + 2];
-      const alpha = data[index + 3];
-      const luminance = red * 0.2126 + green * 0.7152 + blue * 0.0722;
+      const alpha = data[(y * width + x) * 4 + 3];
 
-      if (alpha > 32 && luminance > 20) {
-        candidates.push({
-          x,
-          y,
-          color: `rgb(${red}, ${green}, ${blue})`
-        });
+      if (alpha < 44 || Math.random() < 0.22) {
+        continue;
       }
+
+      const angle = Math.atan2(y - height / 2, x - width / 2) + (Math.random() - 0.5) * 1.2;
+      const distance = Math.max(width, height) * (0.45 + Math.random() * 0.95);
+      const warm = 204 + Math.random() * 48;
+      const gold = 154 + Math.random() * 70;
+
+      fragments.push({
+        x,
+        y,
+        endX: x + Math.cos(angle) * distance,
+        endY: y + Math.sin(angle) * distance + (Math.random() - 0.5) * height * 0.34,
+        size: width < 700 ? 1.1 + Math.random() * 1.7 : 0.85 + Math.random() * 1.55,
+        delay: Math.random() * 0.34,
+        rotation: Math.random() * Math.PI,
+        spin: (Math.random() - 0.5) * 3.2,
+        color: `rgb(${Math.round(warm)}, ${Math.round(gold)}, ${Math.round(66 + Math.random() * 44)})`
+      });
     }
   }
 
-  for (let index = candidates.length - 1; index > 0; index -= 1) {
-    const randomIndex = Math.floor(Math.random() * (index + 1));
-    [candidates[index], candidates[randomIndex]] = [candidates[randomIndex], candidates[index]];
-  }
-
-  return candidates.slice(0, particleCount);
+  return fragments;
 }
 
-function createStartPosition(width: number, height: number) {
-  const side = Math.floor(Math.random() * 6);
-  const depthOffset = 220 + Math.random() * 620;
+function createParticleScene(mount: HTMLDivElement, image: HTMLImageElement, width: number, height: number) {
+  const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.35);
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d", { alpha: false });
 
-  if (side === 0) {
-    return { x: -depthOffset, y: Math.random() * height };
+  if (!context) {
+    return null;
   }
 
-  if (side === 1) {
-    return { x: width + depthOffset, y: Math.random() * height };
-  }
+  canvas.width = Math.floor(width * pixelRatio);
+  canvas.height = Math.floor(height * pixelRatio);
+  canvas.style.display = "block";
+  canvas.style.height = "100dvh";
+  canvas.style.width = "100vw";
+  context.scale(pixelRatio, pixelRatio);
+  mount.appendChild(canvas);
 
-  if (side === 2) {
-    return { x: Math.random() * width, y: -depthOffset };
-  }
-
-  if (side === 3) {
-    return { x: Math.random() * width, y: height + depthOffset };
-  }
+  const wordCanvas = createWordCanvas(width, height);
 
   return {
-    x: width * 0.5 + (Math.random() - 0.5) * width * 1.7,
-    y: height * 0.5 + (Math.random() - 0.5) * height * 1.7
+    canvas,
+    context,
+    moaiCanvas: createMaskedMoai(image, width, height),
+    wordCanvas,
+    fragments: collectWordFragments(width, height, wordCanvas),
+    width,
+    height
   };
 }
 
-function createParticles(samples: PointSample[], width: number, height: number, prefersReducedMotion: boolean): Particle[] {
-  return samples.map((sample, index) => {
-    const start = prefersReducedMotion
-      ? {
-          x: sample.x + (Math.random() - 0.5) * 60,
-          y: sample.y + (Math.random() - 0.5) * 60
-        }
-      : createStartPosition(width, height);
-
-    return {
-      startX: start.x,
-      startY: start.y,
-      targetX: sample.x,
-      targetY: sample.y,
-      x: start.x,
-      y: start.y,
-      color: sample.color,
-      size: prefersReducedMotion ? 0.75 + Math.random() * 0.9 : 0.38 + Math.random() * 0.95,
-      delay: prefersReducedMotion ? Math.random() * 0.14 : Math.random() * 0.42 + (index / samples.length) * 0.32,
-      drift: (Math.random() - 0.5) * 54,
-      alpha: 0.62 + Math.random() * 0.38,
-      angle: Math.random() * Math.PI,
-      spin: (Math.random() - 0.5) * 1.4,
-      depth: Math.random()
-    };
-  });
+function disposeParticleScene(scene: ParticleScene | null) {
+  scene?.canvas.remove();
 }
 
-function drawVolcanicBackground(context: CanvasRenderingContext2D, width: number, height: number, time: number) {
-  const gradient = context.createRadialGradient(width * 0.5, height * 0.42, height * 0.08, width * 0.5, height * 0.46, height * 0.72);
+function drawBackground(context: CanvasRenderingContext2D, width: number, height: number) {
+  const gradient = context.createRadialGradient(width / 2, height / 2, 0, width / 2, height / 2, Math.max(width, height) * 0.72);
 
-  gradient.addColorStop(0, "rgba(51, 39, 31, 0.72)");
-  gradient.addColorStop(0.45, "rgba(8, 14, 18, 0.94)");
-  gradient.addColorStop(1, "rgba(1, 5, 8, 1)");
+  gradient.addColorStop(0, "rgba(7, 16, 23, 1)");
+  gradient.addColorStop(0.58, "rgba(3, 9, 15, 1)");
+  gradient.addColorStop(1, "rgba(1, 4, 8, 1)");
 
   context.fillStyle = gradient;
   context.fillRect(0, 0, width, height);
+}
 
-  context.save();
-  context.globalAlpha = 0.12;
-  context.fillStyle = "rgba(200, 164, 90, 0.55)";
+function drawWordShatter(scene: ParticleScene, elapsed: number, prefersReducedMotion: boolean) {
+  const { context, moaiCanvas, wordCanvas, fragments, width, height } = scene;
+  const shatterStart = prefersReducedMotion ? 500 : WORD_HOLD_MS;
+  const shatterProgress = clamp((elapsed - shatterStart) / SHATTER_DURATION_MS, 0, 1);
+  const revealProgress = clamp((elapsed - WORD_HOLD_MS - SHATTER_DURATION_MS * 0.42) / IMAGE_REVEAL_DURATION_MS, 0, 1);
+  const fadeProgress = clamp((elapsed - WORD_HOLD_MS - SHATTER_DURATION_MS - IMAGE_REVEAL_DURATION_MS - IMAGE_HOLD_MS) / IMAGE_FADE_MS, 0, 1);
+  const revealOpacity = easeInOutCubic(revealProgress) * (1 - easeInOutCubic(fadeProgress));
+  const fragmentIntro = easeInOutCubic(clamp(shatterProgress / 0.1, 0, 1));
+  const fragmentOpacity = fragmentIntro * (1 - easeOutCubic(shatterProgress * 0.72)) * (1 - easeInOutCubic(fadeProgress));
 
-  for (let index = 0; index < 80; index += 1) {
-    const x = (Math.sin(index * 12.989 + time * 0.00012) * 43758.5453) % 1;
-    const y = (Math.sin(index * 78.233 + time * 0.00009) * 24634.6345) % 1;
+  drawBackground(context, width, height);
 
-    context.beginPath();
-    context.arc(Math.abs(x) * width, Math.abs(y) * height, 0.75, 0, Math.PI * 2);
-    context.fill();
+  const stableWordOpacity = (1 - easeInOutCubic(clamp(shatterProgress / 0.34, 0, 1))) * (1 - easeInOutCubic(fadeProgress));
+
+  if (stableWordOpacity > 0) {
+    context.save();
+    context.globalCompositeOperation = "lighter";
+    context.globalAlpha = stableWordOpacity;
+    context.drawImage(wordCanvas, 0, 0, width, height);
+    context.restore();
   }
 
-  context.restore();
-}
-
-function drawStoneParticle(
-  context: CanvasRenderingContext2D,
-  particle: Particle,
-  size: number,
-  faceProgress: number
-) {
-  const shimmer = 0.88 + Math.sin(faceProgress * Math.PI * 8 + particle.drift) * 0.08;
-  const radiusX = Math.max(0.22, size * (0.42 + particle.depth * 0.1) * shimmer);
-  const radiusY = Math.max(0.2, size * (0.34 + Math.abs(Math.sin(particle.drift)) * 0.08));
-
-  context.beginPath();
-  context.ellipse(
-    particle.x,
-    particle.y,
-    radiusX,
-    radiusY,
-    particle.angle + particle.spin * faceProgress * 0.35,
-    0,
-    Math.PI * 2
-  );
-  context.fill();
-}
-
-function drawParticles(
-  context: CanvasRenderingContext2D,
-  particles: Particle[],
-  width: number,
-  height: number,
-  elapsed: number,
-  prefersReducedMotion: boolean
-) {
-  const assemblyDuration = prefersReducedMotion ? ASSEMBLY_DURATION_MS * 1.2 : ASSEMBLY_DURATION_MS;
-  const faceProgress = clamp(elapsed / assemblyDuration, 0, 1);
-  const mergeProgress = clamp((elapsed - assemblyDuration) / MERGE_DURATION_MS, 0, 1);
-  const holdProgress = clamp((elapsed - assemblyDuration - MERGE_DURATION_MS) / FULL_FACE_HOLD_MS, 0, 1);
-  const fadeProgress = clamp((elapsed - assemblyDuration - MERGE_DURATION_MS - FULL_FACE_HOLD_MS) / FADE_DURATION_MS, 0, 1);
-  const globalAlpha = fadeProgress > 0 ? 1 - easeOutCubic(fadeProgress) : 1;
-  const lightX = width * (0.28 + holdProgress * 0.18);
-  const lightGradient = context.createLinearGradient(lightX - width * 0.18, 0, lightX + width * 0.14, height);
-
-  lightGradient.addColorStop(0, "rgba(255, 216, 149, 0)");
-  lightGradient.addColorStop(0.5, "rgba(255, 204, 128, 0.2)");
-  lightGradient.addColorStop(1, "rgba(255, 216, 149, 0)");
+  if (revealOpacity > 0) {
+    context.save();
+    context.globalCompositeOperation = "source-over";
+    context.globalAlpha = revealOpacity * 0.96;
+    context.drawImage(moaiCanvas, 0, 0, width, height);
+    context.restore();
+  }
 
   context.save();
-  context.globalCompositeOperation = "screen";
+  context.globalCompositeOperation = "lighter";
 
-  for (const particle of particles) {
-    const localProgress = clamp((faceProgress - particle.delay) / (1 - particle.delay), 0, 1);
-    const easedProgress = easeInOutCubic(localProgress);
-    const stormProgress = clamp(faceProgress / 0.18, 0, 1);
-    const stormFade = 1 - clamp((faceProgress - 0.18) / 0.42, 0, 1) * 0.55;
-    const arc = Math.sin(easedProgress * Math.PI) * particle.drift;
-    const depthScale = prefersReducedMotion ? 1 : 1 + (1 - easedProgress) * (0.55 + particle.depth * 0.9);
+  for (let index = 0; index < fragments.length; index += 1) {
+    const fragment = fragments[index];
+    const localProgress = clamp((shatterProgress - fragment.delay) / Math.max(0.001, 1 - fragment.delay), 0, 1);
+    const easedLocal = easeOutCubic(localProgress);
+    const turbulence = Math.sin(elapsed * 0.004 + fragment.rotation) * 32 * localProgress;
+    const x = fragment.x + (fragment.endX - fragment.x) * easedLocal + turbulence;
+    const y = fragment.y + (fragment.endY - fragment.y) * easedLocal + Math.cos(elapsed * 0.003 + fragment.rotation) * 20 * localProgress;
+    const alpha = clamp((1 - easedLocal * 0.92) * fragmentOpacity, 0, 1);
+    const size = fragment.size * (1 + easedLocal * 2.6);
 
-    particle.x = particle.startX + (particle.targetX - particle.startX) * easedProgress + arc * 0.32;
-    particle.y = particle.startY + (particle.targetY - particle.startY) * easedProgress - arc * 0.22;
-
-    const revealAlpha = clamp(localProgress * 1.5, 0, 1);
-    const stormAlpha = stormProgress * stormFade * clamp(1.05 - localProgress * 0.65, 0, 1);
-    const stableAlpha = faceProgress >= 1 ? 0.9 + Math.sin(holdProgress * Math.PI * 2 + particle.drift) * 0.04 : revealAlpha;
-    const mergeFade = mergeProgress > 0 ? 1 - easeOutCubic(mergeProgress) * 0.92 : 1;
-    const alpha = particle.alpha * Math.max(stormAlpha, stableAlpha) * globalAlpha * mergeFade;
-
-    if (alpha <= 0.01) {
-      continue;
-    }
-
+    context.save();
+    context.translate(x, y);
+    context.rotate(fragment.rotation + fragment.spin * easedLocal);
     context.globalAlpha = alpha;
-    context.fillStyle = particle.color;
-
-    const size = particle.size * depthScale;
-
-    drawStoneParticle(context, particle, size, faceProgress);
+    context.fillStyle = fragment.color;
+    context.fillRect(-size / 2, -size / 2, size, size * (0.7 + localProgress * 0.6));
+    context.restore();
   }
 
-  context.globalAlpha = 0.28 * globalAlpha;
-  context.fillStyle = lightGradient;
-  context.fillRect(0, 0, width, height);
   context.restore();
-}
 
-function drawRealisticMoaiSurface(
-  context: CanvasRenderingContext2D,
-  image: HTMLImageElement,
-  width: number,
-  height: number,
-  elapsed: number,
-  prefersReducedMotion: boolean
-) {
-  const assemblyDuration = prefersReducedMotion ? ASSEMBLY_DURATION_MS * 1.2 : ASSEMBLY_DURATION_MS;
-  const mergeProgress = clamp((elapsed - assemblyDuration) / MERGE_DURATION_MS, 0, 1);
-  const holdProgress = clamp((elapsed - assemblyDuration - MERGE_DURATION_MS) / FULL_FACE_HOLD_MS, 0, 1);
-  const fadeProgress = clamp((elapsed - assemblyDuration - MERGE_DURATION_MS - FULL_FACE_HOLD_MS) / FADE_DURATION_MS, 0, 1);
-  const surfaceAlpha = easeOutCubic(mergeProgress) * (fadeProgress > 0 ? 1 - easeOutCubic(fadeProgress) : 1);
+  if (shatterProgress > 0 && shatterProgress < 0.9) {
+    context.save();
+    context.globalCompositeOperation = "lighter";
+    context.globalAlpha = 0.18 * (1 - shatterProgress);
 
-  if (surfaceAlpha <= 0.01) {
-    return;
+    const glow = context.createRadialGradient(width / 2, height / 2, 0, width / 2, height / 2, width * 0.42);
+    glow.addColorStop(0, "rgba(226, 170, 72, 0.48)");
+    glow.addColorStop(0.42, "rgba(184, 126, 48, 0.18)");
+    glow.addColorStop(1, "rgba(184, 126, 48, 0)");
+    context.fillStyle = glow;
+    context.fillRect(0, 0, width, height);
+    context.restore();
   }
-
-  const rect = getContainedImageRect(image, width, height);
-  const parallaxX = Math.sin(holdProgress * Math.PI * 2) * width * 0.008;
-  const parallaxY = Math.cos(holdProgress * Math.PI * 2) * height * 0.006;
-  const lightX = width * (0.32 + holdProgress * 0.2);
-  const lightGradient = context.createLinearGradient(lightX - width * 0.18, 0, lightX + width * 0.1, height);
-
-  lightGradient.addColorStop(0, "rgba(255, 216, 155, 0)");
-  lightGradient.addColorStop(0.5, "rgba(255, 214, 151, 0.2)");
-  lightGradient.addColorStop(1, "rgba(255, 216, 155, 0)");
-
-  context.save();
-  context.globalAlpha = surfaceAlpha;
-  context.drawImage(image, rect.x + parallaxX, rect.y + parallaxY, rect.width, rect.height);
-  context.globalCompositeOperation = "screen";
-  context.globalAlpha = surfaceAlpha * 0.42;
-  context.fillStyle = lightGradient;
-  context.fillRect(0, 0, width, height);
-  context.globalCompositeOperation = "source-over";
-  context.globalAlpha = surfaceAlpha;
-
-  const vignette = context.createRadialGradient(width * 0.5, height * 0.48, height * 0.18, width * 0.5, height * 0.5, height * 0.7);
-  vignette.addColorStop(0, "rgba(0, 0, 0, 0)");
-  vignette.addColorStop(0.62, "rgba(0, 0, 0, 0.08)");
-  vignette.addColorStop(1, "rgba(1, 5, 8, 0.86)");
-  context.fillStyle = vignette;
-  context.fillRect(0, 0, width, height);
-  context.restore();
 }
 
 export function MoaiPresenceEffect() {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const particlesRef = useRef<Particle[]>([]);
+  const mountRef = useRef<HTMLDivElement | null>(null);
+  const particleSceneRef = useRef<ParticleScene | null>(null);
   const animationFrameRef = useRef<number | null>(null);
   const cycleStartRef = useRef(0);
   const lastActivityRef = useRef(Date.now());
   const lastPointerPositionRef = useRef<{ x: number; y: number } | null>(null);
-  const imageRef = useRef<HTMLImageElement | null>(null);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const [variantIndex, setVariantIndex] = useState(0);
@@ -485,26 +475,19 @@ export function MoaiPresenceEffect() {
         animationFrameRef.current = null;
       }
 
+      disposeParticleScene(particleSceneRef.current);
+      particleSceneRef.current = null;
       document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
       return;
     }
 
     let isCancelled = false;
-    const canvas = canvasRef.current;
+    const mount = mountRef.current;
 
-    if (!canvas) {
+    if (!mount) {
       return;
     }
-
-    const context = canvas.getContext("2d", { alpha: false });
-
-    if (!context) {
-      return;
-    }
-
-    const activeCanvas = canvas;
-    const activeContext = context;
 
     document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
@@ -512,50 +495,39 @@ export function MoaiPresenceEffect() {
     async function prepareAndAnimate() {
       const image = await createImage(MOAI_PRESENCE_VARIANTS[variantIndex].src);
 
-      if (isCancelled) {
+      if (isCancelled || !mount) {
         return;
       }
 
-      imageRef.current = image;
-
-      const resize = () => {
-        const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.15);
-        const width = Math.max(1, Math.floor(window.innerWidth * pixelRatio));
-        const height = Math.max(1, Math.floor(window.innerHeight * pixelRatio));
-
-        activeCanvas.width = width;
-        activeCanvas.height = height;
-        activeCanvas.style.width = "100vw";
-        activeCanvas.style.height = "100dvh";
-        activeContext.setTransform(1, 0, 0, 1, 0, 0);
-        activeContext.scale(pixelRatio, pixelRatio);
-
-        const logicalWidth = window.innerWidth;
-        const logicalHeight = window.innerHeight;
-        const samples = collectFaceSamples(image, Math.floor(logicalWidth), Math.floor(logicalHeight), getParticleCount(logicalWidth));
-
-        particlesRef.current = createParticles(samples, logicalWidth, logicalHeight, prefersReducedMotion);
+      const createScene = () => {
+        disposeParticleScene(particleSceneRef.current);
+        particleSceneRef.current = createParticleScene(
+          mount,
+          image,
+          Math.max(1, Math.floor(window.innerWidth)),
+          Math.max(1, Math.floor(window.innerHeight))
+        );
         cycleStartRef.current = performance.now();
       };
 
-      resize();
-      window.addEventListener("resize", resize);
+      createScene();
+      window.addEventListener("resize", createScene);
 
       const render = (time: number) => {
         if (isCancelled) {
-          window.removeEventListener("resize", resize);
+          window.removeEventListener("resize", createScene);
           return;
         }
 
-        const width = window.innerWidth;
-        const height = window.innerHeight;
-        const elapsed = (time - cycleStartRef.current) % CYCLE_DURATION_MS;
+        const particleScene = particleSceneRef.current;
 
-        activeContext.clearRect(0, 0, width, height);
-        drawVolcanicBackground(activeContext, width, height, time);
-        drawParticles(activeContext, particlesRef.current, width, height, elapsed, prefersReducedMotion);
-        drawRealisticMoaiSurface(activeContext, image, width, height, elapsed, prefersReducedMotion);
+        if (!particleScene) {
+          return;
+        }
 
+        const elapsed = Math.min(time - cycleStartRef.current, CYCLE_DURATION_MS - 1);
+
+        drawWordShatter(particleScene, elapsed, prefersReducedMotion);
         animationFrameRef.current = window.requestAnimationFrame(render);
       };
 
@@ -572,6 +544,8 @@ export function MoaiPresenceEffect() {
         animationFrameRef.current = null;
       }
 
+      disposeParticleScene(particleSceneRef.current);
+      particleSceneRef.current = null;
       document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
     };
@@ -579,13 +553,12 @@ export function MoaiPresenceEffect() {
 
   return (
     <div
+      ref={mountRef}
       aria-hidden="true"
       data-moai-screensaver={isActive ? "active" : "idle"}
       className={`pointer-events-none fixed inset-0 z-[95] h-[100dvh] w-screen overflow-hidden bg-[#02070c] transition-opacity duration-1000 ease-out ${
         isActive ? "opacity-100" : "opacity-0"
       }`}
-    >
-      <canvas ref={canvasRef} className="block h-[100dvh] w-screen" />
-    </div>
+    />
   );
 }
