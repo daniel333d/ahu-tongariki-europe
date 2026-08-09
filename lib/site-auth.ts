@@ -3,9 +3,9 @@
  * Web Crypto (HMAC-SHA-256), so this module works unmodified in both the
  * Edge middleware runtime and Node.js route handlers.
  *
- * Session payload embeds a fingerprint of the current SITE_PASSWORD. Rotating
- * SITE_PASSWORD therefore invalidates every previously issued session, even
- * though SITE_AUTH_SECRET (the signing key) stays the same.
+ * Session payload embeds a fingerprint of the current password set. Rotating
+ * SITE_PASSWORD or SITE_PASSWORDS therefore invalidates every previously issued
+ * session, even though SITE_AUTH_SECRET (the signing key) stays the same.
  */
 
 export const SESSION_COOKIE_NAME = "rapa_nui_access";
@@ -35,15 +35,38 @@ function isPublicAccessWindowOpen(now = Date.now()): boolean {
   return now < publicUntil;
 }
 
-function getCredentials(): { password: string; secret: string } | null {
+function parseAdditionalPasswords(rawPasswords: string | undefined): string[] {
+  if (!rawPasswords) {
+    return [];
+  }
+
+  return rawPasswords
+    .split(/[\n,;]+/)
+    .map((password) => password.trim())
+    .filter(Boolean);
+}
+
+function getAllowedPasswords(): string[] {
   const password = process.env.SITE_PASSWORD;
+  const additionalPasswords = parseAdditionalPasswords(process.env.SITE_PASSWORDS);
+  const namedAdditionalPasswords = [process.env.SITE_PASSWORD_ROBERT].filter(Boolean) as string[];
+
+  return [...new Set([password, ...additionalPasswords, ...namedAdditionalPasswords].filter(Boolean))] as string[];
+}
+
+function getPasswordFingerprintSource(passwords: string[]): string {
+  return passwords.slice().sort().join("\n");
+}
+
+function getCredentials(): { passwords: string[]; secret: string } | null {
+  const passwords = getAllowedPasswords();
   const secret = process.env.SITE_AUTH_SECRET;
 
-  if (!password || !secret) {
+  if (passwords.length === 0 || !secret) {
     return null;
   }
 
-  return { password, secret };
+  return { passwords, secret };
 }
 
 function textEncode(value: string): Uint8Array {
@@ -111,7 +134,7 @@ export async function createSessionToken(): Promise<string | null> {
     return null;
   }
 
-  const fingerprint = await hmacHex(credentials.secret, credentials.password);
+  const fingerprint = await hmacHex(credentials.secret, getPasswordFingerprintSource(credentials.passwords));
   const payload: SessionPayload = {
     exp: Date.now() + SESSION_MAX_AGE_SECONDS * 1000,
     fp: fingerprint
@@ -158,7 +181,7 @@ export async function verifySessionToken(token: string | undefined | null): Prom
     return false;
   }
 
-  const currentFingerprint = await hmacHex(credentials.secret, credentials.password);
+  const currentFingerprint = await hmacHex(credentials.secret, getPasswordFingerprintSource(credentials.passwords));
   return timingSafeEqual(payload.fp, currentFingerprint);
 }
 
@@ -179,4 +202,4 @@ export function sanitizeReturnPath(rawPath: string | null | undefined): string {
   return rawPath;
 }
 
-export { isProtectionEnabled, isPublicAccessWindowOpen };
+export { getAllowedPasswords, isProtectionEnabled, isPublicAccessWindowOpen };

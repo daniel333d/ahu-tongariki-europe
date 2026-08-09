@@ -3,6 +3,7 @@ import {
   SESSION_COOKIE_NAME,
   SESSION_MAX_AGE_SECONDS,
   createSessionToken,
+  getAllowedPasswords,
   sanitizeReturnPath,
   secretsMatch
 } from "../../../../lib/site-auth";
@@ -63,16 +64,18 @@ export async function POST(request: NextRequest) {
   const submitted = typeof payload.password === "string" ? payload.password : "";
   const nextPath = sanitizeReturnPath(typeof payload.next === "string" ? payload.next : null);
 
-  const expectedPassword = process.env.SITE_PASSWORD;
+  const allowedPasswords = getAllowedPasswords();
   const secret = process.env.SITE_AUTH_SECRET;
 
-  if (!expectedPassword || !secret) {
-    console.error("[site-auth] Missing SITE_PASSWORD or SITE_AUTH_SECRET environment variable.");
+  if (allowedPasswords.length === 0 || !secret) {
+    console.error("[site-auth] Missing SITE_PASSWORD/SITE_PASSWORDS or SITE_AUTH_SECRET environment variable.");
     await delay(300);
     return NextResponse.json({ ok: false }, { status: 500 });
   }
 
-  const isValid = submitted.length > 0 && (await secretsMatch(secret, submitted, expectedPassword));
+  const isValid =
+    submitted.length > 0 &&
+    (await Promise.all(allowedPasswords.map((password) => secretsMatch(secret, submitted, password)))).some(Boolean);
 
   if (!isValid) {
     await delay(400 + Math.random() * 300);
