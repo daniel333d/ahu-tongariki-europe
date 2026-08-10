@@ -1,1322 +1,725 @@
 "use client";
 
 import Image from "next/image";
-import { type CSSProperties, type FormEvent, useEffect, useState } from "react";
-import { FeatureCards } from "../components/cards/FeatureCards";
-import { VisitCounter } from "../components/common/VisitCounter";
-import { MoaiPresenceEffect } from "../components/effects/MoaiPresenceEffect";
-import { HeroSection as ExperienceHeroSection } from "../components/hero/HeroSection";
-import { MasterplanSection } from "../components/masterplan/MasterplanSection";
-import { ScaleSection } from "../components/scale/ScaleSection";
-import { CoCreatorsSection } from "../components/sections/CoCreatorsSection";
-import { FutureHeritageComplexesSection } from "../components/sections/FutureHeritageComplexesSection";
-import { WinterExperienceSection } from "../components/sections/WinterExperienceSection";
-import { VideoPlayer } from "../components/video/VideoPlayer";
-import { languageOptions } from "./i18n";
-import { I18nProvider, useI18n } from "./i18n-provider";
-import {
-  ArrowRight,
-  BriefcaseBusiness,
-  Building2,
-  ChevronDown,
-  Globe2,
-  GraduationCap,
-  Handshake,
-  Landmark,
-  Mail,
-  Megaphone,
-  Menu,
-  MapPin,
-  Mountain,
-  X,
-  Utensils,
-  UsersRound
-} from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { content, imagePath, localizedPath, routes, type SiteLanguage, type SiteRoute } from "./aeromorphism-content";
 
-const functionIcons = [Landmark, GraduationCap, Building2, Utensils, Mountain, UsersRound];
+type PageCopy = (typeof content)[SiteLanguage];
+type Work = PageCopy["works"][number];
 
-type ContactFormState = {
-  fullName: string;
-  organization: string;
-  email: string;
-  phone: string;
-  subject: string;
-  message: string;
-  consent: boolean;
-  website: string;
+type HomeClientProps = {
+  language: SiteLanguage;
+  route?: SiteRoute;
 };
 
-const initialContactForm: ContactFormState = {
-  fullName: "",
-  organization: "",
-  email: "",
-  phone: "",
-  subject: "",
-  message: "",
-  consent: false,
-  website: ""
-};
+function SectionShell({
+  id,
+  tone = "dark",
+  children
+}: {
+  id?: string;
+  tone?: "dark" | "light" | "black";
+  children: React.ReactNode;
+}) {
+  const toneClass =
+    tone === "light"
+      ? "bg-[#f0ece5] text-[#181716]"
+      : tone === "black"
+        ? "bg-[#0a0a0a] text-[#f0ece5]"
+        : "bg-[#181716] text-[#f0ece5]";
 
-const LOCATION_MAPS_URL = "https://maps.app.goo.gl/iAmH8QfGfYALpzUD6";
-
-function AhuTongarikiMiniature({ className = "" }: { className?: string }) {
   return (
-    <Image
-      src="/ahu-tongariki-single-moai.png"
-      alt=""
-      width={100}
-      height={236}
-      aria-hidden="true"
-      className={className}
-    />
+    <section id={id} className={`${toneClass} px-5 py-24 sm:px-8 sm:py-32 lg:px-12`}>
+      <div className="mx-auto max-w-[1480px]">{children}</div>
+    </section>
   );
 }
 
-function ExperienceSection() {
-  const { copy } = useI18n();
-
+function Kicker({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
   return (
-    <div id="przestrzen-doswiadczen" className="bg-[#02080d]" aria-label={copy.experience.sectionAriaLabel}>
-      <ExperienceHeroSection />
-      <FeatureCards />
-      <MasterplanSection />
+    <p
+      className={`text-[0.64rem] font-semibold uppercase tracking-[0.14em] [overflow-wrap:anywhere] sm:text-xs sm:tracking-[0.22em] ${light ? "text-[#b08a5a]" : "text-[#8d6e47]"}`}
+    >
+      {children}
+    </p>
+  );
+}
+
+function WorkCaption({ work, light = false }: { work: Work; light?: boolean }) {
+  return (
+    <div
+      className={`grid gap-1 text-[0.62rem] font-bold uppercase leading-5 tracking-[0.08em] [overflow-wrap:anywhere] sm:text-xs sm:tracking-[0.15em] ${light ? "text-[#d7d1c7]/72" : "text-[#181716]/68"}`}
+    >
+      <span className={light ? "text-[#f0ece5]" : "text-[#181716]"}>{work.title}</span>
+      <span>{work.year}</span>
+      <span>{work.author}</span>
+      <span>{work.movement}</span>
+      <span>{work.status}</span>
     </div>
   );
 }
 
-function EuropeMap() {
-  const { copy } = useI18n();
+function Header({ copy, language, activeRoute }: { copy: PageCopy; language: SiteLanguage; activeRoute: SiteRoute }) {
+  const [open, setOpen] = useState(false);
+  const languageToggle = (
+    <div className="flex items-center gap-2" aria-label="PL / EN">
+      {(["pl", "en"] as const).map((option) => (
+        <Link
+          key={option}
+          href={localizedPath(option, activeRoute)}
+          aria-current={language === option ? "page" : undefined}
+          className={`px-1.5 py-1 transition hover:text-[#b08a5a] ${
+            language === option ? "text-[#b08a5a]" : "text-[#d7d1c7]/76"
+          }`}
+        >
+          {option.toUpperCase()}
+        </Link>
+      ))}
+    </div>
+  );
 
   return (
-    <div className="border-white/12 relative overflow-hidden rounded-lg border bg-navy p-5 text-white shadow-architectural sm:p-6 md:p-9">
-      <Image
-        src="/europe-map-premium.png"
-        alt={copy.location.mapAlt}
-        fill
-        priority
-        className="opacity-86 object-cover object-[58%_center] md:object-cover"
-        sizes="(min-width: 1024px) 45vw, 100vw"
-      />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,20,38,0.82),rgba(7,20,38,0.24)_52%,rgba(7,20,38,0.12)),radial-gradient(circle_at_66%_48%,rgba(184,150,72,0.16),transparent_22%)]" />
-      <div className="group absolute left-[41.8%] top-[64.2%] z-20 -translate-x-1/2 -translate-y-1/2 lg:left-[49.6%] lg:top-[62.2%]">
-        <a
-          href={LOCATION_MAPS_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={copy.location.mapsAria}
-          title={copy.accessibility.mapsTitle}
-          aria-describedby="location-map-tooltip"
-          className="block h-9 w-4 cursor-pointer drop-shadow-[0_0_8px_rgba(184,150,72,0.42)] transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_16px_rgba(184,150,72,0.72)]"
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0a0a0a]/82 text-[#f0ece5] backdrop-blur-xl">
+      <nav className="mx-auto flex h-16 max-w-[1480px] items-center justify-between px-5 sm:px-8 lg:px-12">
+        <Link href={localizedPath(language)} className="font-serif text-lg font-semibold tracking-[0.15em]">
+          {copy.brandLabel}
+        </Link>
+        <div className="hidden items-center gap-7 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#d7d1c7]/76 lg:flex">
+          {routes.map((item) => (
+            <Link
+              key={item.key}
+              href={localizedPath(language, item.key)}
+              className={`transition hover:text-[#b08a5a] ${activeRoute === item.key ? "text-[#b08a5a]" : ""}`}
+            >
+              {copy.nav[item.key]}
+            </Link>
+          ))}
+          <div className="border-l border-white/18 pl-7">{languageToggle}</div>
+        </div>
+        <button
+          type="button"
+          onClick={() => setOpen(true)}
+          className="inline-flex h-11 w-11 items-center justify-center border border-white/18 lg:hidden"
+          aria-label={copy.nav.menu}
+          aria-expanded={open}
         >
-          <AhuTongarikiMiniature className="h-full w-full object-contain" />
-        </a>
-        <div
-          id="location-map-tooltip"
-          role="tooltip"
-          className="pointer-events-none absolute bottom-full left-1/2 mb-3 w-max -translate-x-1/2 rounded border border-gold/45 bg-navy px-4 py-3 text-center text-xs font-semibold leading-5 text-white opacity-0 shadow-[0_12px_30px_rgba(0,0,0,0.32)] transition duration-300 group-hover:opacity-100"
-        >
-          {copy.location.tooltip.map((line, index) => (
-            <span key={line}>
-              {index === 1 ? (
-                <>
-                  <br />
-                  <br />
-                </>
-              ) : null}
-              {index > 1 ? <br /> : null}
-              {line}
-            </span>
+          <Menu size={20} aria-hidden="true" />
+        </button>
+      </nav>
+      {open ? (
+        <div className="fixed inset-0 z-50 min-h-screen bg-[#0a0a0a] px-5 py-5 text-[#f0ece5] lg:hidden">
+          <div className="flex items-center justify-between">
+            <span className="font-serif text-lg tracking-[0.15em]">{copy.brandLabel}</span>
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              className="inline-flex h-11 w-11 items-center justify-center border border-white/18"
+              aria-label={copy.nav.close}
+            >
+              <X size={20} aria-hidden="true" />
+            </button>
+          </div>
+          <div className="mt-16 grid gap-7 text-3xl font-semibold">
+            {routes.map((item) => (
+              <Link key={item.key} href={localizedPath(language, item.key)} onClick={() => setOpen(false)}>
+                {copy.nav[item.key]}
+              </Link>
+            ))}
+            <div className="mt-4 flex gap-5 border-t border-white/12 pt-8 text-2xl">{languageToggle}</div>
+          </div>
+        </div>
+      ) : null}
+    </header>
+  );
+}
+
+function Hero({ copy, language }: { copy: PageCopy; language: SiteLanguage }) {
+  return (
+    <section className="relative isolate min-h-screen overflow-hidden bg-[#0a0a0a] px-5 pb-16 pt-24 text-[#f0ece5] sm:px-8 lg:px-12">
+      <div className="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_at_74%_42%,rgba(176,138,90,0.20),transparent_36%),linear-gradient(120deg,#0a0a0a_0%,#181716_48%,#2a2622_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(10,10,10,0.94),rgba(10,10,10,0.60)_42%,rgba(10,10,10,0.16)_100%)]" />
+      <div className="mx-auto grid max-w-[1480px] gap-10 lg:min-h-[calc(100vh-10rem)] lg:grid-cols-[minmax(0,1.18fr)_minmax(0,0.82fr)] lg:items-center">
+        <div className="relative z-10 max-w-4xl">
+          <Kicker light>{copy.creatorLine}</Kicker>
+          <h1 className="mt-7 overflow-visible text-balance font-serif text-[clamp(1.82rem,7vw,2.35rem)] font-semibold leading-[1.04] sm:text-[clamp(4.2rem,8.4vw,9rem)] sm:leading-[0.92]">
+            {copy.hero.title}
+          </h1>
+          <p className="mt-8 max-w-3xl text-balance text-base font-semibold uppercase leading-snug tracking-[0.03em] text-[#d7d1c7] [overflow-wrap:anywhere] sm:text-4xl sm:leading-tight sm:tracking-[0.08em]">
+            {copy.hero.subtitle}
+          </p>
+          <div className="mt-8 space-y-2 text-xl leading-8 text-[#d7d1c7]/74 sm:text-2xl">
+            {copy.hero.lines.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
+          </div>
+          <div className="mt-12 flex flex-wrap gap-4">
+            <Link
+              href={localizedPath(language, "works")}
+              className="border border-[#b08a5a] px-6 py-4 text-xs font-bold uppercase tracking-[0.18em] text-[#f0ece5] transition hover:bg-[#b08a5a] hover:text-[#0a0a0a]"
+            >
+              {copy.hero.secondary}
+            </Link>
+            <Link
+              href={localizedPath(language, "manifest")}
+              className="border border-white/18 px-6 py-4 text-xs font-bold uppercase tracking-[0.18em] text-[#f0ece5]/78 transition hover:border-[#d7d1c7] hover:text-[#f0ece5]"
+            >
+              {copy.hero.primary}
+            </Link>
+          </div>
+        </div>
+        <figure className="relative min-h-[500px] overflow-hidden lg:min-h-[calc(100vh-8rem)]">
+          <Image
+            src={imagePath}
+            alt={copy.hero.imageAlt}
+            fill
+            priority
+            sizes="(min-width: 1024px) 56vw, 100vw"
+            className="aero-hero-image object-contain object-bottom lg:object-center"
+          />
+          <figcaption className="absolute bottom-0 left-0 right-0 border-l border-[#b08a5a] bg-[#0a0a0a]/62 px-5 py-4 text-[0.58rem] uppercase leading-5 tracking-[0.08em] text-[#d7d1c7]/74 [overflow-wrap:anywhere] backdrop-blur sm:text-[0.65rem] sm:tracking-[0.12em]">
+            {copy.hero.imageCaption.split(" / ").map((part, index, parts) => (
+              <span key={part} className="block sm:inline">
+                {part}
+                {index < parts.length - 1 ? <span className="hidden sm:inline"> / </span> : null}
+              </span>
+            ))}
+          </figcaption>
+        </figure>
+      </div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#181716] to-transparent" />
+    </section>
+  );
+}
+
+function Definition({ copy }: { copy: PageCopy }) {
+  return (
+    <SectionShell>
+      <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
+        <Kicker light>{copy.definition.heading}</Kicker>
+        <div>
+          <blockquote className="text-balance font-serif text-3xl font-semibold leading-tight text-[#f0ece5] sm:text-5xl">
+            {copy.definition.quote}
+          </blockquote>
+          <p className="mt-10 border-l border-[#b08a5a] pl-6 text-xl leading-9 text-[#d7d1c7]/78">
+            {copy.definition.principle}
+          </p>
+        </div>
+      </div>
+    </SectionShell>
+  );
+}
+
+function Origins({ copy }: { copy: PageCopy }) {
+  return (
+    <SectionShell id="origins" tone="black">
+      <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr]">
+        <div>
+          <Kicker light>{copy.origins.kicker}</Kicker>
+          <h2 className="mt-5 text-balance font-serif text-5xl font-semibold leading-[0.95] sm:text-7xl">
+            {copy.origins.title}
+          </h2>
+          <p className="mt-8 text-2xl leading-tight text-[#b08a5a] sm:text-4xl">{copy.origins.intro}</p>
+        </div>
+        <div>
+          <div className="space-y-6 text-lg leading-9 text-[#d7d1c7]/76 sm:text-xl">
+            {copy.origins.body.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+          <blockquote className="mt-10 border-y border-[#b08a5a]/42 py-8 font-serif text-3xl font-semibold leading-tight text-[#f0ece5] sm:text-5xl">
+            {copy.origins.quote}
+          </blockquote>
+          <p className="mt-8 text-xl leading-9 text-[#d7d1c7]/78">{copy.origins.question}</p>
+        </div>
+      </div>
+    </SectionShell>
+  );
+}
+
+function PrincipleSection({ copy, index }: { copy: PageCopy; index: number }) {
+  const item = copy.principles[index];
+  const light = index % 2 === 1;
+
+  return (
+    <SectionShell id={item.id} tone={light ? "light" : "dark"}>
+      <div className="grid gap-10 lg:grid-cols-[0.65fr_1.35fr]">
+        <span className={`font-serif text-5xl ${light ? "text-[#8d6e47]" : "text-[#b08a5a]"}`}>
+          {String(index + 1).padStart(2, "0")}
+        </span>
+        <div>
+          <h2 className={`text-balance font-serif text-5xl font-semibold leading-tight sm:text-7xl ${light ? "text-[#181716]" : "text-[#f0ece5]"}`}>
+            {item.title}
+          </h2>
+          <p className={`mt-8 max-w-4xl text-xl leading-9 ${light ? "text-[#181716]/74" : "text-[#d7d1c7]/74"}`}>
+            {item.body}
+          </p>
+          <p className={`mt-10 max-w-4xl border-l border-[#b08a5a] pl-6 font-serif text-3xl font-semibold leading-tight sm:text-5xl ${light ? "text-[#181716]" : "text-[#f0ece5]"}`}>
+            {item.quote}
+          </p>
+        </div>
+      </div>
+    </SectionShell>
+  );
+}
+
+function ArchetypeI({ copy }: { copy: PageCopy }) {
+  return (
+    <SectionShell id="archetypes" tone="light">
+      <div className="grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
+        <figure className="relative min-h-[620px] overflow-hidden bg-[#181716]">
+          <Image
+            src={imagePath}
+            alt={copy.hero.imageAlt}
+            fill
+            sizes="(min-width: 1024px) 52vw, 100vw"
+            className="object-contain object-center p-3 sm:p-8"
+          />
+        </figure>
+        <div>
+          <Kicker>{copy.archetype.kicker}</Kicker>
+          <h2 className="mt-5 font-serif text-6xl font-semibold leading-none sm:text-8xl">{copy.archetype.title}</h2>
+          <p className="mt-8 text-xl leading-9 text-[#181716]/76">{copy.archetype.body}</p>
+          <div className="mt-9 border-l border-[#b08a5a] pl-6">
+            <WorkCaption work={copy.works[0]} />
+          </div>
+        </div>
+      </div>
+    </SectionShell>
+  );
+}
+
+function ArchetypeMap({ copy }: { copy: PageCopy }) {
+  return (
+    <SectionShell tone="black">
+      <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr]">
+        <div>
+          <h2 className="text-balance font-serif text-5xl font-semibold leading-tight text-[#f0ece5] sm:text-7xl">
+            {copy.archetypesLead}
+          </h2>
+          <p className="mt-8 text-xl leading-9 text-[#d7d1c7]/74">{copy.archetypesIntro}</p>
+        </div>
+        <div className="divide-y divide-white/12 border-y border-white/12">
+          {copy.archetypeGroups.map((group, index) => (
+            <article key={group.id} className="py-8">
+              <span className="font-serif text-3xl text-[#b08a5a]">{String(index + 1).padStart(2, "0")}</span>
+              <h3 className="mt-5 font-serif text-3xl font-semibold text-[#f0ece5]">{group.title}</h3>
+              <p className="mt-4 text-lg leading-8 text-[#d7d1c7]/70">{group.description}</p>
+            </article>
           ))}
         </div>
       </div>
-      <div className="border-white/12 text-white/58 relative z-10 flex items-center justify-between border-b pb-5 text-xs uppercase tracking-[0.2em]">
-        <span>{copy.location.mapKicker}</span>
-        <span>{copy.location.mapCode}</span>
-      </div>
-      <div className="relative z-10 mt-8 min-h-[360px] sm:mt-12 md:mt-16 md:min-h-[320px]">
-        <div className="absolute left-0 top-0 hidden max-w-[280px] md:block">
-          <p className="text-2xl font-semibold leading-tight text-white">{copy.location.mapTitle}</p>
-          <p className="text-white/68 mt-4 text-sm leading-6">{copy.location.mapBody}</p>
-        </div>
-      </div>
-      <div className="border-white/12 relative z-10 border-t pt-5 md:hidden">
-        <p className="text-xl font-semibold leading-tight text-white">{copy.location.mapTitle}</p>
-        <p className="text-white/68 mt-3 text-sm leading-6">{copy.location.mapBody}</p>
-      </div>
-      <div className="bg-white/12 relative z-10 mt-7 grid grid-cols-2 gap-px text-sm">
-        <div className="bg-navy/80 p-4">
-          <span className="text-white/48 block">{copy.location.orientationLabel}</span>
-          <strong className="mt-1 block font-medium">{copy.location.orientationValue}</strong>
-        </div>
-        <div className="bg-navy/80 p-4">
-          <span className="text-white/48 block">{copy.location.contextLabel}</span>
-          <strong className="mt-1 block font-medium">{copy.location.contextValue}</strong>
-        </div>
-      </div>
-    </div>
+    </SectionShell>
   );
 }
 
-function GovernmentPartnershipSection() {
-  const { copy } = useI18n();
-  const gp = copy.governmentPartnership;
-  const [emblemFailed, setEmblemFailed] = useState(false);
-  const cardIcons = [Megaphone, Handshake, Globe2];
+function HomeGallery({ copy, language }: { copy: PageCopy; language: SiteLanguage }) {
+  const primaryWork = copy.works[0];
+  const featuredWorks = copy.works.filter((work) => work.featured && work.id !== primaryWork.id);
 
   return (
-    <section className="relative overflow-hidden bg-navy px-6 py-28 text-white sm:py-32 lg:px-10">
-      <div className="mx-auto max-w-[1400px]">
-        <div className="grid gap-14 lg:grid-cols-2 lg:items-stretch lg:gap-16">
-          <div className="relative flex min-h-[420px] flex-col items-center justify-center overflow-hidden rounded-lg border border-gold/45 bg-[#02080d] px-8 py-14 shadow-premium lg:min-h-[520px] lg:px-10">
-            <div
-              className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(184,150,72,0.14),transparent_50%),radial-gradient(ellipse_at_50%_100%,rgba(184,150,72,0.1),transparent_55%)]"
-              aria-hidden="true"
-            />
-            <div
-              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(2,8,13,0.6)_100%)]"
-              aria-hidden="true"
-            />
-            <div
-              className="pointer-events-none absolute inset-0 bg-[linear-gradient(160deg,rgba(255,255,255,0.05)_0%,transparent_32%)]"
-              aria-hidden="true"
-            />
-
-            <div className="relative z-10 flex w-full flex-1 flex-col items-center justify-center">
-              <div className="flex h-full max-h-[400px] w-full items-center justify-center py-2">
-                {!emblemFailed ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src="/assets/government/bystrzyca-klodzka-herb.webp"
-                    alt={gp.emblemAlt}
-                    className="max-h-full max-w-[78%] object-contain"
-                    onError={() => setEmblemFailed(true)}
-                  />
-                ) : (
-                  <div className="flex aspect-[4/5] max-h-full items-center justify-center rounded border border-gold/25 px-6 text-center">
-                    <p className="font-serif text-lg text-gold/70">{gp.emblemAlt}</p>
-                  </div>
-                )}
+    <SectionShell id="works">
+      <div className="mb-14 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+        <div>
+          <Kicker light>{copy.gallery.title}</Kicker>
+          <h2 className="mt-5 max-w-4xl text-balance font-serif text-5xl font-semibold leading-tight sm:text-7xl">
+            {copy.gallery.note}
+          </h2>
+        </div>
+        <Link
+          href={localizedPath(language, "works")}
+          className="w-fit border border-[#b08a5a] px-6 py-4 text-xs font-bold uppercase tracking-[0.18em] text-[#f0ece5] transition hover:bg-[#b08a5a] hover:text-[#0a0a0a]"
+        >
+          {copy.gallery.cta}
+        </Link>
+      </div>
+      <article className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
+        <figure className="relative min-h-[680px] overflow-hidden bg-[#0a0a0a]">
+          <Image
+            src={primaryWork.image}
+            alt={primaryWork.alt}
+            fill
+            sizes="(min-width: 1024px) 58vw, 100vw"
+            className="object-contain p-4 sm:p-8"
+          />
+        </figure>
+        <div className="border-t border-[#b08a5a]/45 pt-8">
+          <Kicker light>{primaryWork.archetype}</Kicker>
+          <h3 className="mt-5 font-serif text-4xl font-semibold text-[#f0ece5] sm:text-6xl">{primaryWork.title}</h3>
+          <div className="mt-8">
+            <WorkCaption work={primaryWork} light />
+          </div>
+        </div>
+      </article>
+      <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+        {featuredWorks.map((work) => (
+          <article key={work.id} className="group border-t border-[#b08a5a]/36 pt-6">
+            <figure className="relative min-h-[440px] overflow-hidden bg-[#0a0a0a] sm:min-h-[520px]">
+              <Image
+                src={work.image}
+                alt={work.alt}
+                fill
+                sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
+                className="object-contain p-4 transition duration-700 group-hover:scale-[1.025]"
+              />
+            </figure>
+            <div className="mt-6">
+              <Kicker light>{work.archetype}</Kicker>
+              <h3 className="mt-3 font-serif text-2xl font-semibold leading-tight text-[#f0ece5]">{work.title}</h3>
+              <div className="mt-5">
+                <WorkCaption work={work} light />
               </div>
             </div>
+          </article>
+        ))}
+      </div>
+    </SectionShell>
+  );
+}
 
-            <div className="relative z-10 mt-8 h-px w-16 bg-gold/70" aria-hidden="true" />
-            <p className="relative z-10 mt-6 text-center font-serif text-3xl font-bold text-gold sm:text-4xl">
-              Bystrzyca Kłodzka
-            </p>
-            <p className="relative z-10 mt-2 text-center text-xs font-semibold uppercase tracking-[0.28em] text-gold/80">
-              {gp.cityMotto}
-            </p>
-          </div>
+function WorksPage({ copy }: { copy: PageCopy }) {
+  return (
+    <SectionShell id="works">
+      <div className="mb-16 max-w-5xl">
+        <Kicker light>{copy.gallery.title}</Kicker>
+        <h2 className="mt-5 text-balance font-serif text-5xl font-semibold leading-tight text-[#f0ece5] sm:text-7xl">
+          {copy.gallery.worksIntro}
+        </h2>
+        <p className="mt-8 text-lg leading-8 text-[#d7d1c7]/70">{copy.gallery.missingImages}</p>
+      </div>
+      <div className="space-y-20">
+        {copy.archetypeGroups.map((group) => {
+          const works = group.works
+            .map((workId) => copy.works.find((work) => work.id === workId))
+            .filter((work): work is Work => Boolean(work));
 
-          <div className="min-w-0">
-            <h2 className="text-balance font-serif text-[2.5rem] font-semibold leading-[1.1] text-white sm:text-5xl lg:text-[3.25rem]">
-              {gp.title}
-            </h2>
-            <div className="mt-7 flex items-center gap-3" aria-hidden="true">
-              <span className="h-px w-14 bg-gold/70" />
-              <span className="h-1.5 w-1.5 rotate-45 border border-gold/70" />
-              <span className="h-px w-14 bg-gold/70" />
+          return (
+            <section key={group.id} id={group.id} className="border-t border-white/12 pt-10">
+              <div className="mb-9 grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+                <h3 className="font-serif text-4xl font-semibold leading-tight text-[#f0ece5]">{group.title}</h3>
+                <p className="text-lg leading-8 text-[#d7d1c7]/70">{group.description}</p>
+              </div>
+              {works.length > 0 ? (
+                <div className="grid gap-8 lg:grid-cols-2">
+                  {works.map((work) => (
+                    <article key={work.id} className="grid gap-6">
+                      <figure className="relative min-h-[620px] overflow-hidden bg-[#0a0a0a]">
+                        <Image src={work.image} alt={work.alt} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-contain p-4 sm:p-8" />
+                      </figure>
+                      <WorkCaption work={work} light />
+                    </article>
+                  ))}
+                </div>
+              ) : null}
+            </section>
+          );
+        })}
+      </div>
+    </SectionShell>
+  );
+}
+
+function Manifest({ copy }: { copy: PageCopy }) {
+  return (
+    <SectionShell id="manifest" tone="black">
+      <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
+        <div>
+          <Kicker light>{copy.manifesto.subtitle}</Kicker>
+          <h2 className="mt-5 text-balance font-serif text-5xl font-semibold leading-tight sm:text-7xl">
+            {copy.manifesto.title}
+          </h2>
+          <p className="mt-8 text-lg leading-8 text-[#d7d1c7]/70">{copy.manifesto.intro}</p>
+        </div>
+        <div className="divide-y divide-white/12 border-y border-white/12">
+          {copy.manifesto.items.map((item, index) => (
+            <div key={item} className="grid gap-5 py-7 sm:grid-cols-[86px_1fr]">
+              <span className="font-serif text-3xl text-[#b08a5a]">{String(index + 1).padStart(2, "0")}</span>
+              <p className="text-2xl font-semibold uppercase leading-tight tracking-[0.04em] text-[#f0ece5] sm:text-3xl">
+                {item}
+              </p>
             </div>
-            <div className="mt-9 space-y-7">
-              {gp.paragraphs.map((paragraph, index) => (
-                <p key={index} className="text-white/76 text-base leading-8 sm:text-lg">
-                  {paragraph}
-                </p>
+          ))}
+          <p className="py-8 text-sm font-bold uppercase tracking-[0.18em] text-[#b08a5a]">{copy.manifesto.sign}</p>
+        </div>
+      </div>
+    </SectionShell>
+  );
+}
+
+function Author({ copy }: { copy: PageCopy }) {
+  return (
+    <SectionShell id="author" tone="light">
+      <div className="grid gap-12 lg:grid-cols-[0.84fr_1.16fr] lg:items-start">
+        <div>
+          <Kicker>{copy.authorBlock.kicker}</Kicker>
+          <h2 className="mt-5 font-serif text-5xl font-semibold leading-none sm:text-7xl">{copy.authorBlock.title}</h2>
+          <p className="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-[#8d6e47]">{copy.authorBlock.subtitle}</p>
+        </div>
+        <div className="max-w-3xl">
+          {copy.authorBlock.body.map((paragraph) => (
+            <p key={paragraph} className="mb-7 text-lg leading-9 text-[#181716]/76 sm:text-xl">
+              {paragraph}
+            </p>
+          ))}
+          <p className="mt-8 border-t border-black/12 pt-7 text-sm font-bold uppercase leading-6 tracking-[0.18em] text-[#181716]">
+            {copy.authorBlock.sign.join(" / ")}
+          </p>
+        </div>
+      </div>
+    </SectionShell>
+  );
+}
+
+function ObservationTower({ copy }: { copy: PageCopy }) {
+  const [isBoardOpen, setIsBoardOpen] = useState(false);
+  const architecture = copy.architecture;
+
+  return (
+    <section id="moai-observation-tower" className="bg-[#0a0a0a] px-5 py-24 text-[#f0ece5] sm:px-8 sm:py-32 lg:px-12">
+      <div className="mx-auto max-w-[1480px]">
+        <div className="mb-14 max-w-5xl">
+          <Kicker light>{architecture.kicker}</Kicker>
+          <h2 className="mt-6 text-balance font-serif text-5xl font-semibold leading-[0.92] sm:text-7xl lg:text-8xl">
+            {architecture.title}
+          </h2>
+          <p className="mt-5 text-xl font-semibold uppercase tracking-[0.16em] text-[#b08a5a] sm:text-2xl">
+            {architecture.subtitle}
+          </p>
+        </div>
+
+        <figure className="relative min-h-[460px] overflow-hidden bg-[#181716] sm:min-h-[620px] lg:min-h-[820px]">
+          <Image
+            src={architecture.dayImage}
+            alt={architecture.dayAlt}
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <figcaption className="absolute bottom-0 left-0 max-w-xl border-l border-[#b08a5a] bg-[#0a0a0a]/68 px-5 py-4 text-xs font-bold uppercase leading-5 tracking-[0.15em] text-[#d7d1c7]/78 backdrop-blur">
+            {architecture.subtitle} / Rapa Nui Park / Concept / Design visualization
+          </figcaption>
+        </figure>
+
+        <div className="mt-16 grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
+          <div className="border-t border-[#b08a5a]/45 pt-8">
+            <div className="grid gap-5">
+              {architecture.credits.map(([label, value]) => (
+                <div key={label}>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#d7d1c7]/48">{label}</p>
+                  <p className="mt-2 text-sm font-bold uppercase tracking-[0.16em] text-[#f0ece5]">{value}</p>
+                </div>
               ))}
             </div>
           </div>
+          <div className="space-y-7 text-lg leading-9 text-[#d7d1c7]/76 sm:text-xl">
+            {architecture.body.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+            <p className="whitespace-pre-line border-l border-[#b08a5a] pl-6 font-serif text-3xl font-semibold leading-tight text-[#f0ece5] sm:text-5xl">
+              {architecture.quote}
+            </p>
+            <p className="text-[#f0ece5]">{architecture.philosophy}</p>
+          </div>
         </div>
+      </div>
 
-        <div className="mt-16 grid gap-5 sm:grid-cols-3 lg:mt-20 lg:gap-6">
-          {gp.cards.map((cardTitle, index) => {
-            const Icon = cardIcons[index];
-            return (
-              <div
-                key={cardTitle}
-                className="border-white/12 bg-white/[0.03] flex items-center gap-4 rounded-lg border px-6 py-5 backdrop-blur-sm transition-colors duration-300 hover:border-gold/45"
-              >
-                <Icon className="text-gold shrink-0" size={24} aria-hidden="true" />
-                <p className="font-serif text-base font-semibold leading-snug text-white sm:text-lg">{cardTitle}</p>
-              </div>
-            );
-          })}
+      <div className="mx-[calc(50%-50vw)] mt-24 bg-[#f0ece5] px-5 py-20 text-[#181716] sm:px-8 lg:px-12">
+        <div className="mx-auto grid max-w-[1480px] gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+          <button
+            type="button"
+            onClick={() => setIsBoardOpen(true)}
+            className="group relative min-h-[520px] overflow-hidden border border-black/12 bg-white shadow-[0_32px_90px_rgba(10,10,10,0.18)] sm:min-h-[760px]"
+            aria-label={architecture.enlarge}
+          >
+            <Image
+              src={architecture.modularImage}
+              alt={architecture.modularAlt}
+              fill
+              sizes="(min-width: 1024px) 58vw, 100vw"
+              className="object-contain p-2 transition duration-700 group-hover:scale-[1.012] sm:p-4"
+            />
+            <span className="absolute bottom-4 right-4 border border-black/20 bg-[#f0ece5]/92 px-4 py-3 text-xs font-bold uppercase tracking-[0.16em] text-[#181716] backdrop-blur">
+              {architecture.enlarge}
+            </span>
+          </button>
+          <div>
+            <Kicker>{architecture.subtitle}</Kicker>
+            <h3 className="mt-5 text-balance font-serif text-4xl font-semibold leading-tight sm:text-6xl">
+              Modular Segmentation Proposal
+            </h3>
+            <p className="mt-8 text-xl leading-9 text-[#181716]/74">{architecture.technicalText}</p>
+          </div>
         </div>
+      </div>
+
+      <div className="mx-auto mt-24 max-w-[1480px]">
+        <figure className="relative min-h-[440px] overflow-hidden bg-[#181716] sm:min-h-[620px] lg:min-h-[760px]">
+          <Image
+            src={architecture.eveningImage}
+            alt={architecture.eveningAlt}
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+        </figure>
+        <div className="mt-12 border-l border-[#b08a5a] pl-6">
+          {architecture.ending.map((line) => (
+            <p key={line} className="font-serif text-3xl font-semibold uppercase leading-tight text-[#f0ece5] sm:text-5xl">
+              {line}
+            </p>
+          ))}
+        </div>
+      </div>
+
+      {isBoardOpen ? (
+        <div
+          className="fixed inset-0 z-[90] flex items-center justify-center bg-[#0a0a0a]/92 p-4 backdrop-blur"
+          role="dialog"
+          aria-modal="true"
+          aria-label={architecture.enlarge}
+          onClick={() => setIsBoardOpen(false)}
+        >
+          <button
+            type="button"
+            onClick={() => setIsBoardOpen(false)}
+            className="absolute right-4 top-4 z-10 inline-flex h-12 w-12 items-center justify-center border border-white/24 bg-[#0a0a0a]/72 text-[#f0ece5]"
+            aria-label={architecture.close}
+          >
+            <X size={22} aria-hidden="true" />
+          </button>
+          <div className="relative h-[88vh] w-full max-w-[1500px] bg-[#f0ece5]" onClick={(event) => event.stopPropagation()}>
+            <Image
+              src={architecture.modularImage}
+              alt={architecture.modularAlt}
+              fill
+              sizes="100vw"
+              className="object-contain p-2 sm:p-5"
+            />
+          </div>
+        </div>
+      ) : null}
+    </section>
+  );
+}
+
+function RapaNuiPark({ copy }: { copy: PageCopy }) {
+  return (
+    <SectionShell tone="light">
+      <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
+        <h2 className="font-serif text-5xl font-semibold leading-tight sm:text-7xl">{copy.rapaNuiPark.title}</h2>
+        <div>
+          <p className="text-lg leading-9 text-[#181716]/76 sm:text-xl">{copy.rapaNuiPark.body}</p>
+          <a
+            href="https://ahutongariki.pl"
+            className="mt-8 inline-block border border-[#181716] px-6 py-4 text-xs font-bold uppercase tracking-[0.18em] transition hover:border-[#b08a5a] hover:text-[#8d6e47]"
+          >
+            {copy.rapaNuiPark.link}
+          </a>
+        </div>
+      </div>
+    </SectionShell>
+  );
+}
+
+function Footer({ copy, language }: { copy: PageCopy; language: SiteLanguage }) {
+  return (
+    <footer className="bg-[#0a0a0a] px-5 py-12 text-[#d7d1c7] sm:px-8 lg:px-12">
+      <div className="mx-auto flex max-w-[1480px] flex-col gap-8 border-t border-white/12 pt-8 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p className="font-serif text-2xl font-semibold tracking-[0.14em] text-[#f0ece5]">{copy.brand}</p>
+          <p className="mt-3 text-sm text-[#d7d1c7]/68">{copy.footer.line}</p>
+          <p className="mt-2 text-xs uppercase tracking-[0.16em] text-[#b08a5a]">{copy.footer.creator}</p>
+        </div>
+        <div className="text-sm text-[#d7d1c7]/68 lg:text-right">
+          <p>{copy.footer.copyright}</p>
+          <div className="mt-3 flex gap-4 lg:justify-end">
+            <Link href={localizedPath(language)}>{language.toUpperCase()}</Link>
+            <a href="https://ahutongariki.pl">Rapa Nui Park ↗</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function PageIntro({ copy, route }: { copy: PageCopy; route: SiteRoute }) {
+  if (route === "home") {
+    return null;
+  }
+
+  const titles: Record<SiteRoute, string> = {
+    home: copy.title,
+    manifest: copy.manifesto.title,
+    origins: copy.origins.title,
+    archetypes: copy.nav.archetypes,
+    works: copy.nav.works,
+    author: copy.authorBlock.title
+  };
+
+  return (
+    <section className="bg-[#0a0a0a] px-5 pb-16 pt-32 text-[#f0ece5] sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-[1480px]">
+        <Kicker light>{copy.creatorLine}</Kicker>
+        <h1 className="mt-7 text-balance font-serif text-[clamp(3.5rem,10vw,9rem)] font-semibold leading-[0.88]">
+          {titles[route]}
+        </h1>
       </div>
     </section>
   );
 }
 
-function CinematicVideoSection({
-  caption,
-  videoSrc,
-  posterSrc,
-  playAriaLabel,
-  posterHeading,
-  playLabel
-}: {
-  caption: string;
-  videoSrc: string;
-  posterSrc: string;
-  playAriaLabel: string;
-  posterHeading: string;
-  playLabel: string;
-}) {
-  const [backgroundFailed, setBackgroundFailed] = useState(false);
+export default function HomeClient({ language, route = "home" }: HomeClientProps) {
+  const copy = content[language];
 
   return (
-    <div className="relative mx-[calc(50%-50vw)] mt-20 w-screen overflow-hidden sm:mt-24">
-      <div className="relative isolate flex min-h-[640px] flex-col items-center justify-center px-6 py-24 sm:min-h-[820px] sm:py-32 lg:min-h-screen lg:px-10">
-        {!backgroundFailed ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src="/assets/video/bystrzyca-cinematic-background.webp"
-            alt=""
-            aria-hidden="true"
-            onError={() => setBackgroundFailed(true)}
-            className="absolute inset-0 -z-30 h-full w-full object-cover object-center"
-            style={{ filter: "saturate(1.1) contrast(1.06) brightness(1.2)" }}
-          />
-        ) : (
-          <div
-            className="absolute inset-0 -z-30 bg-[linear-gradient(160deg,#0c1f38_0%,#071426_55%,#04101f_100%)]"
-            aria-hidden="true"
-          />
-        )}
+    <main className="min-h-screen bg-[#0a0a0a]">
+      <Header copy={copy} language={language} activeRoute={route} />
+      {route === "home" ? <Hero copy={copy} language={language} /> : <PageIntro copy={copy} route={route} />}
 
-        {/* golden sunset wash */}
-        <div
-          className="pointer-events-none absolute inset-0 -z-20 opacity-70 mix-blend-overlay [background:radial-gradient(ellipse_at_28%_18%,rgba(184,150,72,0.55),transparent_55%)]"
-          aria-hidden="true"
-        />
-
-        {/* deep navy shadow wash */}
-        <div
-          className="pointer-events-none absolute inset-0 -z-20 [background:linear-gradient(200deg,rgba(4,10,20,0.04)_0%,rgba(4,10,20,0.22)_65%,rgba(4,10,20,0.34)_100%)]"
-          aria-hidden="true"
-        />
-
-        {/* soft mist over the valley */}
-        <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-1/3 opacity-60 blur-2xl [background:linear-gradient(to_top,rgba(216,199,162,0.28),transparent)]"
-          aria-hidden="true"
-        />
-
-        {/* overall darken */}
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-navy/12" aria-hidden="true" />
-
-        {/* vignette */}
-        <div
-          className="pointer-events-none absolute inset-0 -z-10 [background:radial-gradient(ellipse_at_center,transparent_38%,rgba(2,7,15,0.32)_100%)]"
-          aria-hidden="true"
-        />
-
-        {/* top / bottom gradients for legible text */}
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-navy/90 to-transparent sm:h-56"
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-navy/90 to-transparent sm:h-56"
-          aria-hidden="true"
-        />
-
-        <div className="relative z-10 mx-auto flex w-full max-w-[1400px] flex-col items-center">
-          <p className="section-kicker text-center">{caption}</p>
-          <div className="mt-8 drop-shadow-[0_45px_90px_rgba(2,7,15,0.65)]">
-            <VideoPlayer
-              videoSrc={videoSrc}
-              posterSrc={posterSrc}
-              orientation="portrait"
-              playAriaLabel={playAriaLabel}
-              posterHeading={posterHeading}
-              playLabel={playLabel}
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function SectionHeading({
-  kicker,
-  title,
-  intro,
-  light = false
-}: {
-  kicker: string;
-  title: string;
-  intro?: string;
-  light?: boolean;
-}) {
-  return (
-    <div className="max-w-3xl">
-      <p className="section-kicker">{kicker}</p>
-      <h2
-        className={`mt-5 text-balance font-serif text-[2.35rem] font-semibold leading-tight sm:text-5xl ${light ? "text-white" : "text-navy"}`}
-      >
-        {title}
-      </h2>
-      {intro ? (
-        <p className={`mt-6 text-[1.05rem] leading-8 sm:text-lg ${light ? "text-white/70" : "text-ink/72"}`}>
-          {intro}
-        </p>
+      {route === "home" ? (
+        <>
+          <Definition copy={copy} />
+          <Origins copy={copy} />
+          <PrincipleSection copy={copy} index={0} />
+          <ArchetypeI copy={copy} />
+          <PrincipleSection copy={copy} index={1} />
+          <PrincipleSection copy={copy} index={2} />
+          <PrincipleSection copy={copy} index={3} />
+          <PrincipleSection copy={copy} index={4} />
+          <PrincipleSection copy={copy} index={5} />
+          <ArchetypeMap copy={copy} />
+          <HomeGallery copy={copy} language={language} />
+          <Manifest copy={copy} />
+          <Author copy={copy} />
+          <ObservationTower copy={copy} />
+          <RapaNuiPark copy={copy} />
+        </>
       ) : null}
-    </div>
-  );
-}
 
-function CinematicIntro() {
-  const { copy } = useI18n();
-
-  return (
-    <main className="cinematic-intro fixed inset-0 z-[80] overflow-hidden bg-black text-white">
-      <Image
-        src="/iorana-intro-sunrise.png"
-        alt=""
-        fill
-        priority
-        aria-hidden="true"
-        className="cinematic-intro-image object-cover object-center"
-        sizes="100vw"
-      />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.5)_0%,rgba(2,8,16,0.32)_36%,rgba(4,13,25,0.22)_100%),radial-gradient(circle_at_50%_56%,rgba(200,164,90,0.18),transparent_30%)]" />
-      <div className="cinematic-dust absolute inset-0 opacity-45" />
-      <section className="relative z-10 flex min-h-screen items-center justify-center px-6 text-center">
-        <div className="cinematic-title-wrap">
-          <h1 className="cinematic-title font-polynesian text-5xl font-semibold tracking-[0.22em] text-gold min-[430px]:text-7xl sm:text-8xl">
-            {copy.brand.iorana}
-          </h1>
-          <p className="cinematic-subtitle mt-6 text-sm uppercase tracking-[0.28em] text-white/70 sm:text-base">
-            {copy.intro.subtitle}
-          </p>
-        </div>
-      </section>
-    </main>
-  );
-}
-
-function LanguageWelcome() {
-  const { copy, selectLanguage } = useI18n();
-
-  return (
-    <main
-      className="language-welcome multilingual-layout relative min-h-screen overflow-hidden bg-black px-6 py-10 text-white sm:py-14 lg:px-10"
-      aria-label={copy.accessibility.languageWelcomeLabel}
-    >
-      <Image
-        src="/iorana-intro-sunrise.png"
-        alt={copy.intro.imageAlt}
-        fill
-        priority
-        className="language-welcome-image object-cover object-center"
-        sizes="100vw"
-      />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,9,18,0.42),rgba(3,9,18,0.55)),linear-gradient(90deg,rgba(3,9,18,0.55),rgba(3,9,18,0.2)_52%,rgba(3,9,18,0.5))]" />
-      <div className="cinematic-dust absolute inset-0 opacity-35" />
-      <section className="relative z-10 mx-auto flex min-h-[calc(100vh-5rem)] max-w-6xl flex-col items-center justify-center text-center">
-        <p className="text-xs font-bold uppercase tracking-[0.32em] text-gold">{copy.brand.name}</p>
-        <h1 className="mt-8 font-polynesian text-5xl font-semibold leading-none tracking-[0.16em] text-gold min-[430px]:text-8xl sm:text-9xl">
-          {copy.brand.iorana}
-        </h1>
-        <p className="text-white/62 mt-6 max-w-xl text-sm uppercase tracking-[0.24em] sm:text-base">
-          {copy.intro.welcomeWords}
-        </p>
-        <div className="mx-auto mt-10 h-px w-24 bg-gold/70" />
-        <p className="mt-8 font-serif text-2xl font-semibold text-white sm:text-4xl">{copy.intro.tagline}</p>
-        <p className="text-white/68 mt-4 max-w-2xl text-base leading-8 sm:text-lg">{copy.intro.motto}</p>
-
-        <div className="mt-12 text-center">
-          <p className="font-serif text-2xl font-semibold leading-tight text-white sm:text-3xl">
-            {copy.language.choose1}
-          </p>
-          <p className="text-gold/86 mt-2 text-sm uppercase tracking-[0.2em]">{copy.language.choose2}</p>
-          <p className="text-white/58 mt-2 text-sm">{copy.language.choose3}</p>
-        </div>
-
-        <div className="mt-8 grid w-full max-w-4xl gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {languageOptions.map((language) => (
-            <button
-              key={language.code}
-              type="button"
-              onClick={() => selectLanguage(language.code)}
-              aria-label={copy.accessibility.languageOptionLabel.replace(
-                "{language}",
-                copy.language.names[language.code]
-              )}
-              title={copy.accessibility.languageOptionLabel.replace(
-                "{language}",
-                copy.language.names[language.code]
-              )}
-              className="language-option border-white/16 group border bg-white/[0.055] px-5 py-5 text-center shadow-[0_20px_60px_rgba(0,0,0,0.2)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-gold/75 hover:bg-gold/10"
-            >
-              <span className="text-lg font-semibold text-white transition group-hover:text-gold">
-                {copy.language.names[language.code]}
-              </span>
-            </button>
-          ))}
-        </div>
-      </section>
-    </main>
-  );
-}
-
-function LanguageSwitcher({
-  className = "fixed right-4 top-16 z-50 sm:right-6 sm:top-20"
-}: {
-  className?: string;
-}) {
-  const { copy, language: selectedLanguage, selectLanguage } = useI18n();
-  const [isOpen, setIsOpen] = useState(false);
-  const activeLanguage =
-    languageOptions.find((language) => language.code === selectedLanguage) ?? languageOptions[0];
-
-  return (
-    <div className={className}>
-      <button
-        type="button"
-        onClick={() => setIsOpen((open) => !open)}
-        className="stable-action bg-navy/72 text-white/78 inline-flex min-h-11 items-center gap-2 border border-white/20 px-3 py-2 text-xs font-bold uppercase tracking-[0.14em] backdrop-blur transition hover:border-gold hover:text-gold"
-        aria-label={copy.language.aria}
-        aria-expanded={isOpen}
-        aria-controls="language-switcher-menu"
-        title={copy.accessibility.languageMenuTitle}
-      >
-        <Globe2 size={15} />
-        {activeLanguage.code.toUpperCase()}
-      </button>
-      {isOpen ? (
-        <div
-          id="language-switcher-menu"
-          className="border-white/14 bg-navy/94 mt-2 w-44 border p-2 text-white shadow-[0_24px_70px_rgba(0,0,0,0.32)] backdrop-blur"
-          aria-label={copy.accessibility.languageMenuLabel}
-        >
-          {languageOptions.map((language) => (
-            <button
-              key={language.code}
-              type="button"
-              aria-current={language.code === selectedLanguage ? "true" : undefined}
-              aria-label={`${copy.accessibility.languageOptionLabel.replace("{language}", copy.language.names[language.code])}${language.code === selectedLanguage ? `. ${copy.accessibility.currentLanguage}` : ""}`}
-              title={copy.accessibility.languageOptionLabel.replace(
-                "{language}",
-                copy.language.names[language.code]
-              )}
-              onClick={() => {
-                selectLanguage(language.code);
-                setIsOpen(false);
-              }}
-              className="hover:bg-gold/12 flex w-full items-center gap-3 px-3 py-2 text-left text-sm transition hover:text-gold"
-            >
-              <span>{copy.language.names[language.code]}</span>
-            </button>
-          ))}
-        </div>
+      {route === "manifest" ? <Manifest copy={copy} /> : null}
+      {route === "origins" ? (
+        <>
+          <Origins copy={copy} />
+          <Definition copy={copy} />
+          <PrincipleSection copy={copy} index={0} />
+        </>
       ) : null}
-    </div>
-  );
-}
-
-export default function Home() {
-  return (
-    <I18nProvider>
-      <MoaiPresenceEffect />
-      <HomeContent />
-    </I18nProvider>
-  );
-}
-
-function HomeContent() {
-  const { copy, language: selectedLanguage, hasSelectedLanguage } = useI18n();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isIntroComplete, setIsIntroComplete] = useState(false);
-  const [contactForm, setContactForm] = useState<ContactFormState>(initialContactForm);
-  const [contactStatus, setContactStatus] = useState<"idle" | "success" | "error">("idle");
-  const [contactMessage, setContactMessage] = useState("");
-  const [isContactSubmitting, setIsContactSubmitting] = useState(false);
-  const [contactFormStartedAt, setContactFormStartedAt] = useState(() => Date.now());
-  const statueFacts = copy.statues.facts;
-  const functions = copy.functions.items.map(([title, detail], index) => ({
-    title,
-    detail,
-    icon: functionIcons[index]
-  }));
-  const regionalValue = copy.regional.items;
-  const technicalData = copy.technical.rows;
-  const ioranaThemes = copy.iorana.themes.map(([title, detail]) => ({ title, detail }));
-  const nightExperiences = copy.night.cards.map(([title, detail]) => ({ title, detail }));
-
-  useEffect(() => {
-    const introTimer = window.setTimeout(() => {
-      setIsIntroComplete(true);
-    }, 7400);
-
-    return () => window.clearTimeout(introTimer);
-  }, []);
-
-  function handleLogout() {
-    // Clears the site-wide rapa_nui_access session (see middleware.ts) and
-    // sends the browser back to the /dostep password screen.
-    window.location.assign("/api/auth/logout");
-  }
-
-  function updateContactField<K extends keyof ContactFormState>(field: K, value: ContactFormState[K]) {
-    setContactForm((currentForm) => ({
-      ...currentForm,
-      [field]: value
-    }));
-  }
-
-  async function handleContactSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setContactStatus("idle");
-    setContactMessage("");
-
-    if (
-      !contactForm.fullName.trim() ||
-      !contactForm.email.trim() ||
-      !contactForm.subject.trim() ||
-      !contactForm.message.trim()
-    ) {
-      setContactStatus("error");
-      setContactMessage(copy.contact.required);
-      return;
-    }
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactForm.email.trim())) {
-      setContactStatus("error");
-      setContactMessage(copy.contact.invalidEmail);
-      return;
-    }
-
-    if (!contactForm.consent) {
-      setContactStatus("error");
-      setContactMessage(copy.contact.consentRequired);
-      return;
-    }
-
-    setIsContactSubmitting(true);
-
-    try {
-      const response = await fetch("/api/investor-inquiry", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          ...contactForm,
-          language: selectedLanguage,
-          formStartedAt: contactFormStartedAt
-        })
-      });
-      await response.json();
-
-      if (!response.ok) {
-        throw new Error(copy.contact.sendError);
-      }
-
-      setContactForm(initialContactForm);
-      setContactFormStartedAt(Date.now());
-      setContactStatus("success");
-      setContactMessage(copy.contact.success);
-    } catch {
-      setContactStatus("error");
-      setContactMessage(copy.contact.sendError);
-    } finally {
-      setIsContactSubmitting(false);
-    }
-  }
-
-  if (!hasSelectedLanguage) {
-    return isIntroComplete ? <LanguageWelcome /> : <CinematicIntro />;
-  }
-
-  return (
-    <main
-      key={selectedLanguage}
-      className="page-language-fade multilingual-layout overflow-hidden bg-ivory text-ink"
-    >
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[90] focus:bg-gold focus:px-4 focus:py-3 focus:text-sm focus:font-bold focus:text-navy"
-      >
-        {copy.accessibility.skipToContent}
-      </a>
-      <div className="fixed right-4 top-24 z-50 flex flex-wrap items-center justify-end gap-3 sm:right-6 sm:top-28">
-        <LanguageSwitcher className="relative" />
-        <button
-          type="button"
-          onClick={handleLogout}
-          title={copy.accessibility.logoutTitle}
-          aria-label={copy.accessibility.logoutTitle}
-          className="bg-navy/72 text-white/74 border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] backdrop-blur transition hover:border-gold hover:text-gold"
-        >
-          {copy.nav.logout}
-        </button>
-      </div>
-      <section className="relative min-h-screen bg-navy text-white">
-        <Image
-          src="/ahu-tongariki-hero.png"
-          alt={copy.hero.imageAlt}
-          fill
-          priority
-          className="object-cover object-[58%_center] md:object-center"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#071426_0%,rgba(7,20,38,0.9)_32%,rgba(7,20,38,0.43)_66%,rgba(7,20,38,0.18)_100%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-navy to-transparent" />
-
-        <nav
-          className="relative z-10 mx-auto flex max-w-[1500px] items-center justify-between px-6 py-7 lg:px-10"
-          aria-label={copy.accessibility.navigationLabel}
-        >
-          <a href="#" className="font-serif text-2xl font-semibold tracking-wide">
-            {copy.brand.name}
-          </a>
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(true)}
-            className="border-white/22 text-white/88 inline-flex h-12 w-12 items-center justify-center border transition hover:border-gold hover:text-gold md:hidden"
-            aria-label={copy.nav.open}
-            aria-expanded={mobileMenuOpen}
-            title={copy.accessibility.openMenuTitle}
-          >
-            <Menu size={22} />
-          </button>
-          <a
-            href="#kontakt"
-            title={copy.accessibility.investorContactTitle}
-            className="stable-action border-white/22 text-white/88 hidden items-center gap-3 border px-5 py-3 text-sm font-semibold transition hover:border-gold hover:text-gold md:flex"
-          >
-            <Mail size={16} />
-            {copy.nav.contact}
-          </a>
-        </nav>
-
-        {mobileMenuOpen ? (
-          <div
-            className="bg-navy/96 fixed inset-0 z-50 px-6 py-7 text-white backdrop-blur md:hidden"
-            role="dialog"
-            aria-modal="true"
-            aria-label={copy.accessibility.mobileMenuLabel}
-          >
-            <div className="flex items-center justify-between">
-              <span className="font-serif text-2xl font-semibold tracking-wide">{copy.brand.name}</span>
-              <button
-                type="button"
-                onClick={() => setMobileMenuOpen(false)}
-                className="border-white/22 text-white/88 inline-flex h-12 w-12 items-center justify-center border"
-                aria-label={copy.nav.close}
-                title={copy.accessibility.closeMenuTitle}
-              >
-                <X size={22} />
-              </button>
-            </div>
-            <div className="mt-16 grid gap-5 text-2xl font-semibold">
-              {["#projekt", "#iorana-moai", "#uklad-posagow", "#lokalizacja", "#kontakt"]
-                .map((href, index) => [copy.nav.items[index], href] as const)
-                .map(([label, href]) => (
-                  <a
-                    key={label}
-                    href={href}
-                    title={label}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="border-white/12 border-b pb-5 font-serif text-white transition hover:text-gold"
-                  >
-                    {label}
-                  </a>
-                ))}
-            </div>
-          </div>
-        ) : null}
-
-        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-96px)] max-w-[1500px] items-end px-6 pb-10 pt-16 sm:pb-14 lg:px-10 lg:pb-20">
-          <div className="w-full">
-            <div className="max-w-4xl">
-              <p className="section-kicker mb-5 max-w-[18rem] sm:mb-6 sm:max-w-none">{copy.hero.location}</p>
-              <h1 className="hero-title text-balance font-serif text-[3.35rem] font-semibold leading-[0.92] min-[430px]:text-[3.85rem] sm:text-7xl lg:text-[7.5rem]">
-                {copy.brand.name}
-              </h1>
-              <p className="mt-6 max-w-xl text-lg leading-7 text-white/80 sm:mt-8 sm:max-w-2xl sm:text-2xl sm:leading-8">
-                {copy.hero.subtitle}
-              </p>
-              <div className="mt-9 flex flex-col gap-3 sm:mt-11 sm:flex-row sm:gap-4">
-                <a
-                  href="#projekt"
-                  title={copy.accessibility.projectCtaTitle}
-                  className="stable-action inline-flex w-full flex-wrap items-center justify-center gap-3 bg-gold px-6 py-4 text-center text-sm font-bold uppercase tracking-[0.14em] text-navy transition hover:bg-sand sm:w-auto sm:px-7 sm:tracking-[0.16em]"
-                >
-                  {copy.hero.ctaProject}
-                  <ArrowRight size={18} />
-                </a>
-                <a
-                  href="#kontakt"
-                  title={copy.accessibility.investorContactTitle}
-                  className="stable-action border-white/28 inline-flex w-full flex-wrap items-center justify-center gap-3 border px-6 py-4 text-center text-sm font-bold uppercase tracking-[0.14em] text-white transition hover:border-gold hover:text-gold sm:w-auto sm:px-7 sm:tracking-[0.16em]"
-                >
-                  {copy.hero.ctaContact}
-                </a>
-              </div>
-            </div>
-
-            <div className="border-white/16 mt-10 grid grid-cols-2 border-y sm:mt-16 md:grid-cols-4">
-              {copy.hero.stats.map(([label, value]) => (
-                <div
-                  key={label}
-                  className="border-white/16 py-4 odd:border-r odd:pr-4 even:pl-4 md:border-r md:px-6 md:py-5 first:md:pl-0 last:md:border-r-0"
-                >
-                  <span className="text-white/42 block text-xs uppercase tracking-[0.22em]">{label}</span>
-                  <strong className="mt-2 block text-lg font-semibold text-white">{value}</strong>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="slogan-section relative flex min-h-screen items-center justify-center overflow-hidden bg-navy px-6 py-24 text-white">
-        <Image
-          src="/slogan-sunset.png"
-          alt={copy.slogan.imageAlt}
-          fill
-          priority
-          className="slogan-parallax object-cover object-[52%_center] brightness-150 md:object-center"
-          sizes="100vw"
-        />
-        <div className="bg-navy/40 absolute inset-0" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(200,164,90,0.1),transparent_34%),linear-gradient(180deg,rgba(7,20,38,0.04),rgba(7,20,38,0.46))]" />
-
-        <div className="slogan-reveal relative z-10 mx-auto flex max-w-6xl flex-col items-center text-center">
-          <h2 className="text-balance font-serif text-[2.65rem] font-semibold leading-[1.02] min-[430px]:text-5xl sm:text-6xl lg:text-7xl">
-            {copy.slogan.text1} <span className="text-[#C8A45A]">{copy.slogan.gold1}</span>{" "}
-            {copy.slogan.text2} <span className="text-[#C8A45A]">{copy.slogan.gold2}</span>.
-          </h2>
-          <p className="text-white/78 mt-8 max-w-3xl text-base leading-8 sm:mt-10 sm:text-xl sm:leading-9">
-            {copy.slogan.description}
-          </p>
-        </div>
-
-        <div className="scroll-indicator absolute bottom-9 left-1/2 z-10 -translate-x-1/2 text-white/70">
-          <ChevronDown size={30} strokeWidth={1.5} />
-        </div>
-      </section>
-
-      <section id="projekt" className="bg-navy px-6 py-28 text-white sm:py-32 lg:px-10">
-        <div id="main-content" className="sr-only" aria-label={copy.accessibility.mainContentLabel} />
-        <div className="mx-auto grid max-w-[1400px] gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-          <SectionHeading kicker={copy.project.kicker} title={copy.project.title} light />
-          <div className="text-white/74 border-l border-gold/45 pl-6 text-lg leading-9 sm:pl-7 sm:text-xl">
-            {copy.project.body}
-          </div>
-        </div>
-      </section>
-
-      <section id="iorana-moai" className="bg-[#071426] px-6 py-28 text-white sm:py-32 lg:px-10">
-        <div className="mx-auto max-w-[1400px]">
-          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
-            <div>
-              <p className="section-kicker">{copy.iorana.kicker}</p>
-              <h2 className="mt-5 text-balance font-serif text-[2.8rem] font-semibold leading-[0.98] sm:text-6xl lg:text-7xl">
-                {copy.brand.ioranaMoai}
-              </h2>
-            </div>
-            <p className="text-white/74 max-w-3xl border-l border-gold/55 pl-6 text-lg leading-9 sm:pl-7 sm:text-xl">
-              {copy.iorana.intro}
-            </p>
-          </div>
-
-          <div className="border-white/12 mt-14 overflow-hidden border bg-navy shadow-architectural sm:mt-16">
-            <div className="relative min-h-[620px] lg:min-h-[760px]">
-              <Image
-                src="/iorana-moai-rano-raraku.png"
-                alt={copy.iorana.imageAlt}
-                fill
-                loading="eager"
-                className="object-cover object-[63%_center] brightness-125 sm:object-center"
-                sizes="(min-width: 1024px) 1400px, 100vw"
-              />
-              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,20,38,0.66),rgba(7,20,38,0.28)_42%,rgba(7,20,38,0.03)),linear-gradient(0deg,rgba(7,20,38,0.72),transparent_34%)]" />
-              <div className="absolute inset-x-0 bottom-0 z-10 p-6 sm:p-8 lg:p-12">
-                <div className="max-w-2xl">
-                  <p className="text-xs font-bold uppercase tracking-[0.24em] text-gold">
-                    {copy.iorana.imageKicker}
-                  </p>
-                  <h3 className="mt-4 text-balance font-serif text-3xl font-semibold leading-tight sm:text-5xl">
-                    {copy.iorana.imageTitle}
-                  </h3>
-                  <p className="text-white/72 mt-6 text-base leading-8 sm:text-lg sm:leading-9">
-                    {copy.iorana.imageBody}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {ioranaThemes.map((theme) => (
-              <article
-                key={theme.title}
-                className="border-white/12 border bg-white/[0.035] p-6 transition duration-300 hover:-translate-y-1 hover:border-gold/45 hover:bg-white/[0.055] sm:p-8"
-              >
-                <div className="h-px w-12 bg-gold" />
-                <h3 className="mt-6 font-serif text-2xl font-semibold text-white">{theme.title}</h3>
-                <p className="text-white/66 mt-4 text-sm leading-7 sm:text-base">{theme.detail}</p>
-              </article>
-            ))}
-          </div>
-
-          <div className="border-white/12 mt-10 grid gap-6 border-t pt-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-center">
-            <p className="section-kicker">{copy.iorana.dialogueKicker}</p>
-            <p className="text-white/72 text-lg leading-9 sm:text-xl">{copy.iorana.dialogueBody}</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="uklad-posagow" className="bg-ivory px-6 py-28 sm:py-32 lg:px-10">
-        <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch">
-          <div className="relative -mx-6 min-h-[430px] overflow-hidden bg-navy sm:mx-0 sm:min-h-[480px]">
-            <Image
-              src="/ahu-tongariki-hero.png"
-              alt={copy.statues.imageAlt}
-              fill
-              className="object-cover object-[57%_center] sm:object-center"
-              sizes="(min-width: 1024px) 58vw, 100vw"
-            />
-            <div className="from-navy/82 via-navy/16 absolute inset-0 bg-gradient-to-t to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 text-white md:p-10">
-              <span className="text-sm font-bold uppercase tracking-[0.22em] text-gold">
-                {copy.statues.imageKicker}
-              </span>
-              <p className="mt-3 max-w-2xl text-xl font-semibold leading-snug sm:text-2xl">
-                {copy.statues.imageCaption}
-              </p>
-            </div>
-          </div>
-          <div className="bg-white p-6 shadow-architectural sm:p-7 md:p-10">
-            <SectionHeading
-              kicker={copy.statues.kicker}
-              title={copy.statues.title}
-              intro={copy.statues.intro}
-            />
-            <div className="mt-9 grid gap-4 border-0 sm:mt-10 sm:divide-y sm:divide-black/10 sm:border-y sm:border-black/10">
-              {statueFacts.map(([value, label]) => (
-                <div
-                  key={label}
-                  className="border border-black/10 bg-ivory/70 p-5 sm:grid sm:grid-cols-[minmax(92px,0.45fr)_1fr] sm:gap-5 sm:border-0 sm:bg-transparent sm:p-0 sm:py-5"
-                >
-                  <strong className="min-w-0 break-words font-serif text-3xl font-semibold leading-tight text-navy sm:block">
-                    {value}
-                  </strong>
-                  <span className="text-ink/72 min-w-0 self-center text-base leading-7">{label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <CoCreatorsSection />
-
-      <ScaleSection />
-
-      <section id="lokalizacja" className="bg-white px-6 py-28 sm:py-32 lg:px-10">
-        <div className="mx-auto max-w-[1400px]">
-          <div className="grid gap-16 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
-            <EuropeMap />
-            <div className="lg:pl-8">
-              <SectionHeading
-                kicker={copy.location.kicker}
-                title={copy.location.title}
-                intro={copy.location.intro}
-              />
-              <div className="mt-12 border-l border-gold pl-7">
-                <p className="text-xl font-semibold leading-snug text-navy sm:text-2xl">
-                  {copy.location.quote}
-                </p>
-              </div>
-              <div className="mt-8 flex items-center gap-3 text-sm font-bold uppercase tracking-[0.2em] text-navy">
-                <MapPin className="text-gold" size={18} />
-                {copy.location.mapTitle}
-              </div>
-              <a
-                href={LOCATION_MAPS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={copy.location.mapsAria}
-                title={copy.accessibility.mapsTitle}
-                className="mt-12 flex flex-col items-start justify-between gap-5 rounded border border-gold/65 bg-white px-6 py-5 text-navy shadow-[0_18px_45px_rgba(7,20,38,0.08)] transition duration-300 hover:-translate-y-1 hover:border-gold hover:shadow-[0_24px_65px_rgba(7,20,38,0.13)] sm:flex-row sm:items-center sm:gap-6"
-              >
-                <span className="shrink-0 drop-shadow-[0_0_10px_rgba(184,150,72,0.3)]">
-                  <AhuTongarikiMiniature className="h-16 w-7 object-contain" />
-                </span>
-                <span className="min-w-0 flex-1 whitespace-pre-line text-lg font-bold leading-snug">
-                  {copy.location.openMap}
-                </span>
-                <ArrowRight className="shrink-0 text-gold" size={26} />
-              </a>
-            </div>
-          </div>
-
-          <CinematicVideoSection
-            caption={copy.location.video.caption}
-            videoSrc="/assets/video/ahu-tongariki-europe-film.mp4"
-            posterSrc="/assets/video/ahu-tongariki-europe-poster.webp"
-            playAriaLabel={copy.location.video.playAriaLabel}
-            posterHeading={copy.location.video.posterHeading}
-            playLabel={copy.location.video.playLabel}
-          />
-        </div>
-      </section>
-
-      <section className="bg-navy px-6 py-28 text-white sm:py-32 lg:px-10">
-        <div className="mx-auto max-w-[1400px]">
-          <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr]">
-            <SectionHeading
-              kicker={copy.functions.kicker}
-              title={copy.functions.title}
-              intro={copy.functions.intro}
-              light
-            />
-            <div className="divide-white/12 border-white/12 divide-y border-y">
-              {functions.map(({ title, detail, icon: Icon }) => (
-                <article key={title} className="grid gap-4 py-7 sm:grid-cols-[44px_1fr]">
-                  <Icon className="text-gold" size={28} />
-                  <div>
-                    <h3 className="text-xl font-semibold text-white sm:text-2xl">{title}</h3>
-                    <p className="text-white/62 mt-2 max-w-2xl text-base leading-7">{detail}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="noce-ahu-tongariki" className="night-section relative overflow-hidden bg-[#06101f] px-6 py-28 text-white sm:py-32 lg:px-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_18%,rgba(200,164,90,0.12),transparent_24%),linear-gradient(180deg,rgba(7,20,38,0.96),rgba(6,16,31,0.98))]" />
-        <div className="night-stars absolute inset-0 opacity-55" />
-        <div className="relative mx-auto max-w-[1400px]">
-          <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-end">
-            <div>
-              <p className="section-kicker">{copy.night.kicker}</p>
-              <h2 className="mt-5 text-balance font-serif text-[2.75rem] font-semibold leading-[0.98] sm:text-6xl lg:text-7xl">
-                {copy.night.title}
-              </h2>
-              <p className="mt-5 font-serif text-2xl italic leading-tight text-gold sm:text-3xl">
-                {copy.night.subtitle}
-              </p>
-            </div>
-            <div className="text-white/72 whitespace-pre-line border-l border-gold/55 pl-6 text-lg leading-9 sm:pl-7 sm:text-xl">
-              {copy.night.body}
-            </div>
-          </div>
-
-          <div className="night-hero border-white/12 mt-14 overflow-hidden border bg-navy shadow-architectural sm:mt-16">
-            <div className="relative min-h-[560px] sm:min-h-[680px] lg:min-h-[760px]">
-              <Image
-                src="/ahu-tongariki-night.png"
-                alt={copy.night.imageAlt}
-                fill
-                loading="eager"
-                className="night-hero-image object-cover object-[52%_center] sm:object-center"
-                sizes="(min-width: 1024px) 1400px, 100vw"
-              />
-              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,16,31,0.88),rgba(6,16,31,0.38)_42%,rgba(6,16,31,0.1)_76%),linear-gradient(180deg,rgba(6,16,31,0.52),rgba(6,16,31,0.08)_46%,rgba(6,16,31,0.42))]" />
-              <div className="night-mist absolute inset-x-0 bottom-0 h-48 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.17),transparent_62%)] opacity-40 blur-xl" />
-              <div className="night-light absolute inset-x-[12%] bottom-[18%] h-24 bg-[radial-gradient(ellipse_at_center,rgba(200,164,90,0.36),transparent_66%)] opacity-0 blur-2xl" />
-              <div className="absolute left-0 right-0 top-0 z-10 p-6 pt-8 sm:p-8 sm:pt-10 lg:p-12">
-                <div className="max-w-2xl">
-                  <p className="text-xs font-bold uppercase tracking-[0.24em] text-gold">
-                    {copy.night.panelKicker}
-                  </p>
-                  <h3 className="mt-4 text-balance font-serif text-3xl font-semibold leading-tight sm:text-5xl">
-                    {copy.night.panelTitle}
-                  </h3>
-                  <p className="text-white/72 mt-6 text-base leading-8 sm:text-lg sm:leading-9">
-                    {copy.night.panelBody}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {nightExperiences.map((experience, index) => (
-              <article
-                key={experience.title}
-                className="night-card border-white/12 border bg-white/[0.035] p-6 transition duration-300 hover:-translate-y-1 hover:border-gold/45 hover:bg-white/[0.055] sm:p-8"
-                style={{ "--night-card-delay": `${index * 90}ms` } as CSSProperties}
-              >
-                <span className="font-serif text-3xl text-gold">{String(index + 1).padStart(2, "0")}</span>
-                <h3 className="mt-6 font-serif text-2xl font-semibold leading-tight text-white">
-                  {experience.title}
-                </h3>
-                <p className="text-white/66 mt-4 text-sm leading-7 sm:text-base">{experience.detail}</p>
-              </article>
-            ))}
-          </div>
-
-          <div className="border-white/12 mt-12 border-t pt-10 sm:mt-14 sm:pt-12">
-            <p className="max-w-5xl text-balance font-serif text-3xl font-semibold leading-tight text-white sm:text-5xl">
-              {copy.night.finalWhite} <span className="text-gold">{copy.night.finalGold}</span>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <WinterExperienceSection />
-
-      <section className="bg-ivory px-6 py-28 sm:py-32 lg:px-10">
-        <div className="mx-auto grid max-w-[1400px] gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-          <SectionHeading
-            kicker={copy.regional.kicker}
-            title={copy.regional.title}
-            intro={copy.regional.intro}
-          />
-          <div className="grid gap-px bg-black/10">
-            {regionalValue.map((item, index) => (
-              <div key={item} className="grid grid-cols-[88px_1fr] bg-white">
-                <span className="border-r border-black/10 p-5 font-serif text-3xl text-gold">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <p className="p-5 text-lg font-semibold leading-8 text-navy sm:text-xl">{item}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="relative bg-navy px-6 py-28 text-white sm:py-32 lg:px-10">
-        <div className="opacity-24 absolute inset-0">
-          <Image
-            src="/ahu-tongariki-hero.png"
-            alt={copy.partnership.imageAlt}
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-        </div>
-        <div className="bg-navy/88 absolute inset-0" />
-        <div className="relative mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-[1fr_0.85fr] lg:items-center">
-          <div className="border-l border-gold pl-7">
-            <Handshake className="text-gold" size={34} />
-            <h2 className="mt-8 max-w-3xl text-balance font-serif text-4xl font-semibold leading-tight sm:text-6xl">
-              {copy.partnership.title}
-            </h2>
-          </div>
-          <p className="text-white/72 text-lg leading-9 sm:text-xl">{copy.partnership.body}</p>
-        </div>
-      </section>
-
-      <section className="bg-white px-6 py-28 sm:py-32 lg:px-10">
-        <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-          <SectionHeading
-            kicker={copy.technical.kicker}
-            title={copy.technical.title}
-            intro={copy.technical.intro}
-          />
-          <div className="grid gap-4 border-0 sm:block sm:border sm:border-black/10">
-            {technicalData.map(([label, value]) => (
-              <div
-                key={label}
-                className="grid gap-3 border border-black/10 bg-ivory/70 px-5 py-5 sm:grid-cols-[1fr_auto] sm:gap-5 sm:border-0 sm:border-b sm:bg-transparent sm:px-8 sm:py-6 sm:last:border-b-0"
-              >
-                <span className="text-sm uppercase tracking-[0.18em] text-stone">{label}</span>
-                <span className="font-serif text-3xl font-semibold text-navy sm:text-right sm:text-2xl">
-                  {value}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <ExperienceSection />
-
-      <FutureHeritageComplexesSection />
-
-      <GovernmentPartnershipSection />
-
-      <section id="kontakt" className="bg-ivory px-6 py-28 sm:py-32 lg:px-10">
-        <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[0.75fr_1.25fr]">
-          <div>
-            <SectionHeading
-              kicker={copy.contact.kicker}
-              title={copy.contact.title}
-              intro={copy.contact.intro}
-            />
-            <div className="mt-10 flex items-center gap-3 border-t border-black/10 pt-6 text-navy">
-              <BriefcaseBusiness className="text-gold" />
-              <span className="font-semibold">{copy.footer.domain}</span>
-            </div>
-          </div>
-          <form
-            onSubmit={handleContactSubmit}
-            noValidate
-            aria-label={copy.accessibility.contactFormLabel}
-            className="bg-navy p-6 text-white shadow-architectural sm:p-9"
-          >
-            <input
-              type="text"
-              name="website"
-              value={contactForm.website}
-              onChange={(event) => updateContactField("website", event.target.value)}
-              className="hidden"
-              tabIndex={-1}
-              autoComplete="off"
-              aria-hidden="true"
-            />
-            <div className="grid gap-5 sm:grid-cols-2">
-              <label className="block">
-                <span className="text-white/72 text-sm font-semibold">{copy.contact.fullName}</span>
-                <input
-                  required
-                  name="fullName"
-                  value={contactForm.fullName}
-                  onChange={(event) => updateContactField("fullName", event.target.value)}
-                  placeholder={copy.contact.placeholders.fullName}
-                  aria-label={copy.contact.fullName}
-                  aria-required="true"
-                  aria-invalid={contactStatus === "error" && !contactForm.fullName.trim()}
-                  title={copy.accessibility.requiredFieldHint}
-                  className="border-white/14 hover:border-white/24 mt-2 w-full border bg-white/[0.06] px-4 py-3 text-white outline-none transition focus:border-gold"
-                />
-              </label>
-              <label className="block">
-                <span className="text-white/72 text-sm font-semibold">{copy.contact.organization}</span>
-                <input
-                  name="organization"
-                  value={contactForm.organization}
-                  onChange={(event) => updateContactField("organization", event.target.value)}
-                  placeholder={copy.contact.placeholders.organization}
-                  aria-label={copy.contact.organization}
-                  title={copy.accessibility.optionalFieldHint}
-                  className="border-white/14 hover:border-white/24 mt-2 w-full border bg-white/[0.06] px-4 py-3 text-white outline-none transition focus:border-gold"
-                />
-              </label>
-            </div>
-            <div className="mt-5 grid gap-5 sm:grid-cols-2">
-              <label className="block">
-                <span className="text-white/72 text-sm font-semibold">{copy.contact.email}</span>
-                <input
-                  required
-                  type="email"
-                  name="email"
-                  value={contactForm.email}
-                  onChange={(event) => updateContactField("email", event.target.value)}
-                  placeholder={copy.contact.placeholders.email}
-                  aria-label={copy.contact.email}
-                  aria-required="true"
-                  aria-invalid={
-                    contactStatus === "error" &&
-                    (!contactForm.email.trim() ||
-                      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactForm.email.trim()))
-                  }
-                  title={copy.accessibility.requiredFieldHint}
-                  className="border-white/14 hover:border-white/24 mt-2 w-full border bg-white/[0.06] px-4 py-3 text-white outline-none transition focus:border-gold"
-                />
-              </label>
-              <label className="block">
-                <span className="text-white/72 text-sm font-semibold">{copy.contact.phone}</span>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={contactForm.phone}
-                  onChange={(event) => updateContactField("phone", event.target.value)}
-                  placeholder={copy.contact.placeholders.phone}
-                  aria-label={copy.contact.phone}
-                  title={copy.accessibility.optionalFieldHint}
-                  className="border-white/14 hover:border-white/24 mt-2 w-full border bg-white/[0.06] px-4 py-3 text-white outline-none transition focus:border-gold"
-                />
-              </label>
-            </div>
-            <label className="mt-5 block">
-              <span className="text-white/72 text-sm font-semibold">{copy.contact.subject}</span>
-              <input
-                required
-                name="subject"
-                value={contactForm.subject}
-                onChange={(event) => updateContactField("subject", event.target.value)}
-                placeholder={copy.contact.placeholders.subject}
-                aria-label={copy.contact.subject}
-                aria-required="true"
-                aria-invalid={contactStatus === "error" && !contactForm.subject.trim()}
-                title={copy.accessibility.requiredFieldHint}
-                className="border-white/14 hover:border-white/24 mt-2 w-full border bg-white/[0.06] px-4 py-3 text-white outline-none transition focus:border-gold"
-              />
-            </label>
-            <label className="mt-5 block">
-              <span className="text-white/72 text-sm font-semibold">{copy.contact.message}</span>
-              <textarea
-                required
-                rows={6}
-                name="message"
-                value={contactForm.message}
-                onChange={(event) => updateContactField("message", event.target.value)}
-                placeholder={copy.contact.placeholders.message}
-                aria-label={copy.contact.message}
-                aria-required="true"
-                aria-invalid={contactStatus === "error" && !contactForm.message.trim()}
-                title={copy.accessibility.requiredFieldHint}
-                className="border-white/14 hover:border-white/24 mt-2 w-full resize-none border bg-white/[0.06] px-4 py-3 text-white outline-none transition focus:border-gold"
-              />
-            </label>
-            <label className="border-white/12 text-white/72 mt-6 flex gap-4 border bg-white/[0.035] p-4 text-sm leading-6">
-              <input
-                required
-                type="checkbox"
-                checked={contactForm.consent}
-                onChange={(event) => updateContactField("consent", event.target.checked)}
-                aria-label={copy.contact.consent}
-                aria-required="true"
-                aria-invalid={contactStatus === "error" && !contactForm.consent}
-                className="mt-1 h-4 w-4 shrink-0 accent-gold"
-              />
-              <span>{copy.contact.consent}</span>
-            </label>
-            {contactMessage ? (
-              <div
-                className={`mt-6 whitespace-pre-line border px-5 py-4 text-sm leading-6 ${contactStatus === "success" ? "border-gold/55 bg-gold/10 text-white" : "border-red-300/35 bg-red-500/10 text-red-100"}`}
-                role={contactStatus === "success" ? "status" : "alert"}
-                aria-label={
-                  contactStatus === "success"
-                    ? copy.accessibility.contactStatusSuccess
-                    : copy.accessibility.contactStatusError
-                }
-              >
-                {contactMessage}
-              </div>
-            ) : null}
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <button
-                type="submit"
-                disabled={isContactSubmitting}
-                aria-busy={isContactSubmitting}
-                title={copy.accessibility.submitInquiryTitle}
-                className="stable-action inline-flex flex-wrap items-center justify-center gap-3 bg-gold px-6 py-4 text-center text-sm font-bold uppercase tracking-[0.13em] text-navy transition hover:bg-sand disabled:cursor-not-allowed disabled:opacity-60"
-              >
-                {isContactSubmitting ? (
-                  <span
-                    className="h-4 w-4 animate-spin border-2 border-navy/30 border-t-navy"
-                    aria-hidden="true"
-                  />
-                ) : null}
-                {isContactSubmitting ? copy.contact.sending : copy.contact.submit}
-                <ArrowRight size={17} />
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
-
-      <footer className="border-t border-black/10 bg-white px-6 py-8 lg:px-10">
-        <div className="text-ink/62 mx-auto flex max-w-[1400px] flex-col gap-3 text-sm sm:flex-row sm:items-center sm:justify-between">
-          <span className="font-semibold text-navy">{copy.footer.brand}</span>
-          <div className="flex flex-col gap-1 sm:items-end">
-            <span>{copy.footer.domain}</span>
-            <VisitCounter />
-          </div>
-        </div>
-      </footer>
+      {route === "archetypes" ? (
+        <>
+          <ArchetypeI copy={copy} />
+          <ArchetypeMap copy={copy} />
+        </>
+      ) : null}
+      {route === "works" ? <WorksPage copy={copy} /> : null}
+      {route === "author" ? (
+        <>
+          <Author copy={copy} />
+          <ObservationTower copy={copy} />
+          <RapaNuiPark copy={copy} />
+        </>
+      ) : null}
+      <Footer copy={copy} language={language} />
     </main>
   );
 }

@@ -10,6 +10,7 @@ import { getConfirmedPartners, partnerTierOrder, type Partner, type PartnerTier 
 
 type CoCreatorsSectionProps = {
   layoutDemo?: boolean;
+  showMuseumExhibit?: boolean;
 };
 
 const tierGridClasses: Record<PartnerTier, string> = {
@@ -67,6 +68,77 @@ function WoodPanel({ children }: { children: ReactNode }) {
         {children}
       </div>
     </div>
+  );
+}
+
+function WoodenMemoryExhibit() {
+  const { copy } = useI18n();
+
+  return (
+    <figure className="mt-10 max-w-2xl lg:mt-12">
+      <div className="relative mx-auto aspect-[3.45/1] max-w-[38rem] overflow-visible">
+        <div
+          className="absolute -inset-x-10 -top-12 h-24 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,219,148,0.24),transparent_70%)] blur-2xl"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-x-12 bottom-[-18%] h-10 rounded-full bg-black/70 blur-xl"
+          aria-hidden="true"
+        />
+        <div className="relative h-full rotate-[-2.5deg] rounded-[48%_52%_45%_55%/22%_24%_20%_24%] border border-gold/20 bg-[#140905] p-[2px] shadow-[0_34px_95px_rgba(0,0,0,0.58)] [transform-style:preserve-3d]">
+          <div
+            className="absolute inset-0 rounded-[48%_52%_45%_55%/22%_24%_20%_24%] bg-[linear-gradient(100deg,rgba(255,219,150,0.18),transparent_14%,transparent_86%,rgba(200,164,90,0.14)),radial-gradient(ellipse_at_24%_24%,rgba(255,196,104,0.17),transparent_34%),radial-gradient(ellipse_at_72%_78%,rgba(255,221,165,0.08),transparent_26%),linear-gradient(90deg,#180b05_0%,#3c1e0d_18%,#251107_42%,#4a2510_66%,#190c06_100%)]"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute inset-0 rounded-[48%_52%_45%_55%/22%_24%_20%_24%] opacity-70 [background:repeating-linear-gradient(1deg,rgba(255,229,174,0.065)_0_1px,transparent_1px_9px),repeating-linear-gradient(93deg,rgba(0,0,0,0.22)_0_2px,transparent_2px_42px)]"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute inset-x-[5%] top-[13%] h-[16%] rounded-full bg-[linear-gradient(180deg,rgba(255,236,184,0.16),transparent)] blur-sm"
+            aria-hidden="true"
+          />
+          <div className="relative flex h-full flex-col justify-center gap-[9%] rounded-[48%_52%_45%_55%/22%_24%_20%_24%] border border-white/8 px-[8%] py-[5.5%]">
+            <div
+              className="pointer-events-none absolute inset-x-[7%] top-[17%] h-px bg-gradient-to-r from-transparent via-[#f1c878]/38 to-transparent"
+              aria-hidden="true"
+            />
+            {Array.from({ length: 4 }).map((_, rowIndex) => (
+              <div key={rowIndex} className="flex items-center justify-center gap-[1.9%]" aria-hidden="true">
+                {Array.from({ length: 18 }).map((__, itemIndex) => {
+                  const variant = (rowIndex * 5 + itemIndex) % 6;
+                  return (
+                    <span
+                      key={`${rowIndex}-${itemIndex}`}
+                      className="block border border-black/45 bg-[#0c0502]/35 shadow-[inset_0_1px_2px_rgba(0,0,0,0.78),0_1px_0_rgba(255,224,154,0.12)]"
+                      style={{
+                        width: `${8 + variant * 2}px`,
+                        height: `${variant === 0 ? 5 : variant === 1 ? 10 : variant === 2 ? 7 : variant === 3 ? 13 : variant === 4 ? 8 : 11}px`,
+                        borderRadius: variant === 2 || variant === 5 ? "55% 45% 50% 50%" : "999px",
+                        transform: `rotate(${variant * 8 - 16}deg) skewX(${variant % 2 === 0 ? -4 : 3}deg)`
+                      }}
+                    />
+                  );
+                })}
+              </div>
+            ))}
+            <div
+              className="pointer-events-none absolute inset-x-[8%] bottom-[16%] h-px bg-gradient-to-r from-transparent via-[#f1c878]/26 to-transparent"
+              aria-hidden="true"
+            />
+          </div>
+        </div>
+      </div>
+      <figcaption className="mx-auto mt-8 max-w-xl border-l border-gold/45 pl-5">
+        <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold">
+          {copy.coCreators.exhibit.title}
+        </p>
+        <p className="mt-3 font-serif text-2xl font-semibold leading-tight text-white sm:text-3xl">
+          {copy.coCreators.exhibit.subtitle}
+        </p>
+        <p className="mt-4 text-sm leading-7 text-white/64 sm:text-base">{copy.coCreators.exhibit.memoryText}</p>
+      </figcaption>
+    </figure>
   );
 }
 
@@ -247,7 +319,7 @@ function PartnerModal({ partner, onClose }: { partner: Partner | null; onClose: 
   );
 }
 
-export function CoCreatorsSection({ layoutDemo = false }: CoCreatorsSectionProps) {
+export function CoCreatorsSection({ layoutDemo = false, showMuseumExhibit = false }: CoCreatorsSectionProps) {
   const { copy } = useI18n();
   const [activePartner, setActivePartner] = useState<Partner | null>(null);
   const [shouldReduceMotion, setShouldReduceMotion] = useState(false);
@@ -324,9 +396,12 @@ export function CoCreatorsSection({ layoutDemo = false }: CoCreatorsSectionProps
         </div>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-14">
-          <p className="text-white/68 whitespace-pre-line text-base leading-8 sm:text-lg">
-            {copy.coCreators.description}
-          </p>
+          <div>
+            <p className="text-white/68 whitespace-pre-line text-base leading-8 sm:text-lg">
+              {copy.coCreators.description}
+            </p>
+            {showMuseumExhibit ? <WoodenMemoryExhibit /> : null}
+          </div>
           <WoodPanel>
             <div className="space-y-10">
               {partnerTierOrder.map((tier) => (

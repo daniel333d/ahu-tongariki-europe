@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
-  --page-bg: #f4efe5;
+  color-scheme: dark;
+  --page-bg: #0a0a0a;
 }
 
 * {
@@ -21,7 +21,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background: var(--page-bg);
-  color: #102033;
+  color: #f0ece5;
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
   overflow-x: hidden;
@@ -29,6 +29,22 @@ body {
 
 ::selection {
   background: rgba(184, 150, 72, 0.32);
+}
+
+.aero-hero-image {
+  transform: scale(1.02);
+  animation: aeroHeroBreath 14s ease-in-out infinite alternate;
+}
+
+@keyframes aeroHeroBreath {
+  from {
+    transform: scale(1.01) translateY(0);
+    filter: saturate(0.98) contrast(1.02);
+  }
+  to {
+    transform: scale(1.045) translateY(-0.8%);
+    filter: saturate(1.08) contrast(1.07);
+  }
 }
 
 .text-balance {
@@ -553,6 +569,11 @@ a {
   .hero-title {
     animation: none;
     opacity: 1;
+    transform: none;
+  }
+
+  .aero-hero-image {
+    animation: none;
     transform: none;
   }
 }
