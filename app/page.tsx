@@ -12,7 +12,7 @@ export default function Page() {
         suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getStructuredData("pl")) }}
       />
-      <HomeClient language="pl" />
+      <HomeClient />
     </>
   );
 }

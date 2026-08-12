@@ -7,30 +7,15 @@ import {
   verifySessionToken
 } from "./lib/site-auth";
 
-function requestHeadersWithLanguage(request: NextRequest) {
-  const requestHeaders = new Headers(request.headers);
-  const firstSegment = request.nextUrl.pathname.split("/").filter(Boolean)[0];
-  requestHeaders.set("x-site-language", firstSegment === "en" ? "en" : "pl");
-  return requestHeaders;
-}
-
 export async function middleware(request: NextRequest) {
   if (!isProtectionEnabled()) {
-    const response = NextResponse.next({
-      request: {
-        headers: requestHeadersWithLanguage(request)
-      }
-    });
+    const response = NextResponse.next();
     response.headers.set("X-Robots-Tag", "noindex, nofollow");
     return response;
   }
 
   if (isPublicAccessWindowOpen()) {
-    const response = NextResponse.next({
-      request: {
-        headers: requestHeadersWithLanguage(request)
-      }
-    });
+    const response = NextResponse.next();
     response.headers.set("X-Robots-Tag", "noindex, nofollow");
     return response;
   }
@@ -39,11 +24,7 @@ export async function middleware(request: NextRequest) {
   const isValid = await verifySessionToken(token);
 
   if (isValid) {
-    return NextResponse.next({
-      request: {
-        headers: requestHeadersWithLanguage(request)
-      }
-    });
+    return NextResponse.next();
   }
 
   const accessUrl = request.nextUrl.clone();

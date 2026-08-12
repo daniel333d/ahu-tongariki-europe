@@ -1,23 +1,22 @@
 import type { MetadataRoute } from "next";
-import { localizedPath, type SiteLanguage } from "./aeromorphism-content";
-import { absoluteUrl, sitemapRoutes } from "./seo";
+import { dictionaries, type LanguageCode } from "./i18n";
+import { absoluteUrl, languageAlternates, languagePaths } from "./seo";
 
-const languages: SiteLanguage[] = ["pl", "en"];
+const languages = Object.keys(languagePaths) as LanguageCode[];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return sitemapRoutes.flatMap((route) =>
-    languages.map((language) => ({
-      url: absoluteUrl(localizedPath(language, route)),
-      lastModified: new Date(),
-      changeFrequency: "weekly" as const,
-      priority: route === "home" && language === "pl" ? 1 : 0.82,
-      alternates: {
-        languages: {
-          pl: absoluteUrl(localizedPath("pl", route)),
-          en: absoluteUrl(localizedPath("en", route)),
-          "x-default": absoluteUrl(localizedPath("pl", route))
-        }
-      }
-    }))
-  );
+  const alternates = {
+    languages: Object.fromEntries(
+      Object.entries(languageAlternates).map(([language, path]) => [language, absoluteUrl(path)])
+    )
+  };
+
+  return languages.map((language) => ({
+    url: absoluteUrl(languagePaths[language]),
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: language === "pl" ? 1 : 0.9,
+    alternates,
+    images: [absoluteUrl(dictionaries[language].seo.image)]
+  }));
 }
