@@ -1,0 +1,41 @@
+name: Content guard
+
+# Catches the 2026-08-10 incident class: content from the AEROMORFIZM
+# project (a separate site sharing similar file names/scaffold) getting
+# committed here by mistake and silently going to production.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Block Aeromorfizm content in this repo
+        run: |
+          set -e
+
+          if grep -rIliE "aeromorf" app components lib 2>/dev/null | grep -q .; then
+            echo "::error::Found 'aeromorf*' content in this repo (Ahu Tongariki Europe / Rapa Nui Park)."
+            echo "This looks like content from the AEROMORFIZM project committed here by mistake."
+            grep -rIliE "aeromorf" app components lib
+            exit 1
+          fi
+
+          if find app components lib -iname "*aeromorph*" 2>/dev/null | grep -q .; then
+            echo "::error::Found file(s) named *aeromorph* in this repo — wrong-project content."
+            find app components lib -iname "*aeromorph*"
+            exit 1
+          fi
+
+          if ! grep -rIliE "Ahu Tongariki" app 2>/dev/null | grep -q .; then
+            echo "::error::Expected 'Ahu Tongariki' content is missing from app/ — homepage may have been overwritten."
+            exit 1
+          fi
+
+          echo "Content guard passed."
