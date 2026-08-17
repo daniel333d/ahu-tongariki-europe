@@ -9,6 +9,11 @@ import { useI18n } from "../../app/i18n-provider";
 
 const WINTER_HERO_IMAGE = "/assets/winter/rapa-nui-park-winter-v2-varied-moai.png";
 const SUMMER_REFERENCE_IMAGE = "/assets/winter/rapa-nui-park-summer-v1-matched-moai.png";
+const WINTER_STORY_IMAGES = [
+  "/assets/winter/winter-landscape-morning-after-snow.png",
+  "/assets/winter/winter-landscape-blue-hour.png",
+  "/assets/winter/winter-landscape-first-light-snow.png"
+] as const;
 const WINTER_SECTION_BRIGHTNESS = "brightness(1.82)";
 const WINTER_FINAL_BRIGHTNESS = "brightness(2.1)";
 
@@ -46,7 +51,8 @@ function WinterImagePanel({
   overlay = "bg-[linear-gradient(90deg,rgba(6,16,31,0.78),rgba(6,16,31,0.12)_58%,rgba(6,16,31,0.16))]",
   objectPosition = "object-[58%_center]",
   filter,
-  showVisitors = false
+  showVisitors = false,
+  src = WINTER_HERO_IMAGE
 }: {
   alt: string;
   label?: string;
@@ -55,11 +61,12 @@ function WinterImagePanel({
   objectPosition?: string;
   filter?: string;
   showVisitors?: boolean;
+  src?: string;
 }) {
   return (
     <div className={`border-white/12 relative overflow-hidden rounded-lg border bg-navy shadow-architectural ${className}`}>
       <AssetImage
-        src={WINTER_HERO_IMAGE}
+        src={src}
         alt={alt}
         fill
         className={`object-cover ${objectPosition}`}
@@ -369,6 +376,7 @@ export function WinterExperienceSection() {
             {winter.story.items.map((item, index) => {
               const Icon = storyIcons[index] ?? Snowflake;
               const isReversed = index % 2 === 1;
+              const storyImage = WINTER_STORY_IMAGES[index] ?? WINTER_HERO_IMAGE;
 
               return (
                 <FadeBlock
@@ -376,13 +384,13 @@ export function WinterExperienceSection() {
                   className={`grid gap-8 lg:grid-cols-2 lg:items-center ${isReversed ? "lg:[&>*:first-child]:order-2" : ""}`}
                 >
                   <WinterImagePanel
+                    src={storyImage}
                     alt={item.alt}
                     label={item.imageLabel}
                     className="min-h-[440px] sm:min-h-[540px]"
                     overlay={item.overlay}
                     objectPosition={item.objectPosition}
-                    filter={index === 0 ? "brightness(1.12) saturate(0.88) contrast(0.98)" : index === 1 ? "brightness(0.74) saturate(1.08) contrast(1.16)" : "brightness(1.02) saturate(0.95) contrast(1.02)"}
-                    showVisitors={index === 2}
+                    filter={index === 0 ? "brightness(1.02) saturate(0.98) contrast(1.02)" : index === 1 ? "brightness(1.04) saturate(1.08) contrast(1.08)" : "brightness(1.06) saturate(0.98) contrast(1.02)"}
                   />
                   <div className="border-white/12 rounded-lg border bg-white/[0.035] p-7 sm:p-10">
                     <Icon className="text-gold" size={32} aria-hidden="true" />

@@ -763,10 +763,10 @@
           "objectPosition": "object-[67%_center]"
         },
         {
-          "title": "The scale of the winter landscape",
-          "body": "Only the presence of people makes the real scale of the statues clear. In winter, small visitor silhouettes become part of a vast, cinematic landscape.",
-          "alt": "Winter vision of Rapa Nui Park with people showing the scale of the Moai.",
-          "imageLabel": "Scale and people",
+          "title": "První světlo na sněhu",
+          "body": "První zimní ráno odhaluje strukturu kamene i ticho krajiny. Sníh odráží teplé světlo a Moai se objevují jako klidné siluety vystupující z bílé scenérie.",
+          "alt": "První světlo zimního rána na zasněžených Moai.",
+          "imageLabel": "První světlo na sněhu",
           "overlay": "bg-[linear-gradient(90deg,rgba(6,16,31,0.44),rgba(6,16,31,0.08)_60%,rgba(6,16,31,0.18))]",
           "objectPosition": "object-[54%_center]"
         }

@@ -763,10 +763,10 @@
           "objectPosition": "object-[67%_center]"
         },
         {
-          "title": "Skala zimowego krajobrazu",
-          "body": "Dopiero obecność człowieka pozwala zrozumieć rzeczywistą skalę posągów. Zimą niewielkie sylwetki odwiedzających staną się częścią rozległego, niemal filmowego krajobrazu.",
-          "alt": "Zimowa wizja Rapa Nui Park z ludźmi pokazującymi skalę Moai.",
-          "imageLabel": "Skala i człowiek",
+          "title": "Pierwsze światło na śniegu",
+          "body": "Pierwszy zimowy poranek wydobywa fakturę kamienia i ciszę krajobrazu. Śnieg odbija ciepłe światło, dzięki czemu Moai pojawiają się jak spokojne sylwetki wyłaniające się z bieli.",
+          "alt": "Pierwsze światło zimowego poranka na ośnieżonych Moai.",
+          "imageLabel": "Pierwsze światło na śniegu",
           "overlay": "bg-[linear-gradient(90deg,rgba(6,16,31,0.44),rgba(6,16,31,0.08)_60%,rgba(6,16,31,0.18))]",
           "objectPosition": "object-[54%_center]"
         }
