@@ -59,9 +59,9 @@ jobs:
             fi
           done
 
-          if grep -rIliE "maison.?beaut" --exclude-dir=node_modules --exclude-dir=.next --exclude-dir=.git . 2>/dev/null | grep -q .; then
+          if grep -rIliE "maison.?beaut" --exclude-dir=node_modules --exclude-dir=.next --exclude-dir=.git --exclude-dir=.github . 2>/dev/null | grep -q .; then
             echo "::error::Found 'La Maison Beauté' content in this repo — an unrelated client project was previously committed here by mistake (see 2026-08-19 audit)."
-            grep -rIliE "maison.?beaut" --exclude-dir=node_modules --exclude-dir=.next --exclude-dir=.git .
+            grep -rIliE "maison.?beaut" --exclude-dir=node_modules --exclude-dir=.next --exclude-dir=.git --exclude-dir=.github .
             exit 1
           fi
 
