@@ -10,6 +10,7 @@ import { MasterplanSection } from "../components/masterplan/MasterplanSection";
 import { ScaleSection } from "../components/scale/ScaleSection";
 import { CoCreatorsSection } from "../components/sections/CoCreatorsSection";
 import { FutureHeritageComplexesSection } from "../components/sections/FutureHeritageComplexesSection";
+import { QrMoaiSection } from "../components/sections/QrMoaiSection";
 import { WinterExperienceSection } from "../components/sections/WinterExperienceSection";
 import { VideoPlayer } from "../components/video/VideoPlayer";
 import { languageOptions } from "./i18n";
@@ -917,6 +918,8 @@ function HomeContent() {
       <CoCreatorsSection />
 
       <ScaleSection />
+
+      <QrMoaiSection />
 
       <section id="lokalizacja" className="bg-white px-6 py-28 sm:py-32 lg:px-10">
         <div className="mx-auto max-w-[1400px]">
