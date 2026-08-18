@@ -30,7 +30,6 @@ const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000;
 const RATE_LIMIT_MAX_REQUESTS = 5;
 const MIN_FORM_TIME_MS = 3000;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const DEFAULT_RECIPIENT_EMAIL = Buffer.from("YWJpa3NAd3AucGw=", "base64").toString("utf8");
 const defaultServerCopy = dictionaries.pl.server.investorInquiry;
 
 function clean(value: unknown, maxLength: number) {
@@ -185,9 +184,20 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const recipient = DEFAULT_RECIPIENT_EMAIL;
+  const recipient = process.env.CONTACT_TO_EMAIL;
   const resendApiKey = process.env.RESEND_API_KEY;
   const fromEmail = process.env.CONTACT_FROM_EMAIL || serverCopy.defaultFromEmail;
+
+  if (!recipient) {
+    logMailError("MISSING_CONTACT_TO_EMAIL", "CONTACT_TO_EMAIL is not configured");
+    return NextResponse.json(
+      {
+        code: "MISSING_CONTACT_TO_EMAIL",
+        message: serverCopy.genericSendError
+      },
+      { status: 503 }
+    );
+  }
 
   if (!resendApiKey) {
     logMailError("MISSING_RESEND_API_KEY", serverCopy.missingResendApiKey);
