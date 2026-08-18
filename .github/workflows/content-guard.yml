@@ -1,8 +1,13 @@
 name: Content guard
 
-# Catches the 2026-08-10 incident class: content from the AEROMORFIZM
-# project (a separate site sharing similar file names/scaffold) getting
-# committed here by mistake and silently going to production.
+# Catches two incident classes:
+# 1. (2026-08-10) content from the AEROMORFIZM project (a separate site
+#    sharing similar file names/scaffold) getting committed here by
+#    mistake and silently going to production.
+# 2. (found in 2026-08-19 audit) an entirely unrelated client project
+#    ("La Maison Beauté AM", a static HTML site) got committed at the
+#    repo root on 2026-07-08 and sat there undetected for weeks because
+#    the original guard only scanned app/components/lib.
 
 on:
   push:
@@ -39,3 +44,25 @@ jobs:
           fi
 
           echo "Content guard passed."
+
+      - name: Block stray/unrelated projects committed at the repo root
+        run: |
+          set -e
+
+          # This is a Next.js app: index.html/script.js/styles.css have no
+          # legitimate reason to exist at the repo root (the real homepage
+          # lives under app/, styles under styles/).
+          for f in index.html script.js styles.css; do
+            if [ -f "$f" ]; then
+              echo "::error::Found stray root-level '$f' — this is a Next.js app, static HTML/JS/CSS shouldn't live at the repo root. Likely an unrelated project committed by mistake."
+              exit 1
+            fi
+          done
+
+          if grep -rIliE "maison.?beaut" --exclude-dir=node_modules --exclude-dir=.next --exclude-dir=.git --exclude-dir=.github . 2>/dev/null | grep -q .; then
+            echo "::error::Found 'La Maison Beauté' content in this repo — an unrelated client project was previously committed here by mistake (see 2026-08-19 audit)."
+            grep -rIliE "maison.?beaut" --exclude-dir=node_modules --exclude-dir=.next --exclude-dir=.git --exclude-dir=.github .
+            exit 1
+          fi
+
+          echo "Root content guard passed."

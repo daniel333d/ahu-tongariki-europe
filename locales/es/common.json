@@ -713,144 +713,136 @@
   "winter": {
     "ariaLabel": "Rapa Nui Park en invierno",
     "hero": {
-      "kicker": "A VISION OF WINTER EXPERIENCE",
+      "kicker": "UNA VISIÓN DE LA EXPERIENCIA INVERNAL",
       "title": "Rapa Nui Park en invierno",
-      "claim": "A place unlike any other on Earth",
+      "claim": "Un lugar único en el mundo",
       "subclaim": "Donde la nieve se encuentra con los guardianes del Pacífico.",
-      "disclaimer": "A concept for the future winter chapter of Rapa Nui Park.",
-      "imageAlt": "A vision of Ahu Tongariki with fifteen Moai in the winter landscape of Rapa Nui Park."
+      "disclaimer": "Un concepto para el futuro capítulo invernal de Rapa Nui Park.",
+      "imageAlt": "Una visión de Ahu Tongariki con quince Moai en el paisaje invernal de Rapa Nui Park."
     },
     "twoWorlds": {
-      "kicker": "TWO DISTANT WORLDS",
-      "title": "Two distant worlds. One extraordinary encounter.",
+      "kicker": "DOS MUNDOS LEJANOS",
+      "title": "Dos mundos lejanos. Un encuentro extraordinario.",
       "paragraphs": [
-        "Rapa Nui evokes the ocean, volcanic earth and the monumental silhouettes of the Moai. At Rapa Nui Park, that history gains a new European perspective.",
-        "In winter, dark stone, white snow, light and silence create a landscape that cannot be mistaken for anywhere else."
+        "Rapa Nui evoca el océano, la tierra volcánica y las siluetas monumentales de los Moai. En Rapa Nui Park, esa historia adquiere una nueva perspectiva europea.",
+        "En invierno, la piedra oscura, la nieve blanca, la luz y el silencio crean un paisaje que no puede confundirse con ningún otro lugar."
       ],
-      "note": "The winter setting is not an attempt to recreate the climate of the original island. It is a deliberate meeting of Rapa Nui heritage with the landscape of Central Europe.",
-      "imageAlt": "A winter vision of Moai in the European landscape of the Kłodzko Valley.",
-      "imageLabel": "Heritage and landscape"
+      "note": "El escenario invernal no pretende recrear el clima de la isla original. Es un encuentro deliberado entre el patrimonio de Rapa Nui y el paisaje de Europa Central.",
+      "imageAlt": "Una visión invernal de los Moai en el paisaje europeo del valle de Kłodzko.",
+      "imageLabel": "Patrimonio y paisaje"
     },
     "comparison": {
       "kicker": "VERANO E INVIERNO",
-      "title": "One place. Two completely different experiences.",
-      "body": "In summer, the space opens to light, greenery and distant panoramas. In winter, silence, snow and low light transform its character, revealing the monumentality of the Moai in a new way.",
+      "title": "Un mismo lugar. Dos experiencias completamente distintas.",
+      "body": "En verano, el espacio se abre a la luz, el verdor y los panoramas lejanos. En invierno, el silencio, la nieve y la luz rasante transforman su carácter, revelando la monumentalidad de los Moai de una forma nueva.",
       "summerLabel": "Verano",
       "winterLabel": "Invierno",
-      "sliderLabel": "A comparison of the summer and winter vision of Rapa Nui Park",
-      "summerAlt": "Summer vision of Rapa Nui Park with the Moai platform.",
-      "winterAlt": "Winter vision of Rapa Nui Park with the full Moai alignment."
+      "sliderLabel": "Comparación de la visión estival e invernal de Rapa Nui Park",
+      "summerAlt": "Visión estival de Rapa Nui Park con la plataforma de los Moai.",
+      "winterAlt": "Visión invernal de Rapa Nui Park con el alineamiento completo de los Moai."
     },
     "story": {
-      "kicker": "THREE WINTER FACES OF THE PARK",
-      "title": "The winter landscape as part of the experience",
+      "kicker": "TRES ROSTROS INVERNALES DEL PARQUE",
+      "title": "El paisaje invernal como parte de la experiencia",
       "items": [
         {
-          "title": "The Silence of the Guardians",
-          "body": "Snow softens the space. Monumental silhouettes, wind and silence remain. A winter morning will reveal Ahu Tongariki in its most austere and contemplative form.",
-          "alt": "Morning winter vision of the full fifteen-Moai alignment.",
-          "imageLabel": "Morning after snowfall",
+          "title": "El Silencio de los Guardianes",
+          "body": "La nieve suaviza el espacio. Quedan las siluetas monumentales, el viento y el silencio. Una mañana de invierno revelará Ahu Tongariki en su forma más austera y contemplativa.",
+          "alt": "Visión invernal matutina del alineamiento completo de los quince Moai.",
+          "imageLabel": "Mañana tras la nevada",
           "overlay": "bg-[linear-gradient(90deg,rgba(6,16,31,0.34),rgba(6,16,31,0.06)_62%,rgba(6,16,31,0.12))]",
           "objectPosition": "object-[48%_center]"
         },
         {
-          "title": "Light after dusk",
-          "body": "Warm light will bring the faces of the Moai out of the winter half-darkness, while snow reflects the illumination and visually expands the entire space.",
-          "alt": "Winter vision of Moai with warm illumination after dusk.",
-          "imageLabel": "Blue hour",
+          "title": "Luz tras el ocaso",
+          "body": "Una luz cálida sacará los rostros de los Moai de la penumbra invernal, mientras la nieve refleja la iluminación y amplía visualmente todo el espacio.",
+          "alt": "Visión invernal de los Moai con una iluminación cálida tras el ocaso.",
+          "imageLabel": "Hora azul",
           "overlay": "bg-[linear-gradient(90deg,rgba(3,8,16,0.78),rgba(6,16,31,0.28)_58%,rgba(6,16,31,0.36)),radial-gradient(circle_at_60%_62%,rgba(200,164,90,0.18),transparent_30%)]",
           "objectPosition": "object-[67%_center]"
-        },
-        {
-          "title": "Primera luz sobre la nieve",
-          "body": "La primera mañana de invierno revela la textura de la piedra y el silencio del paisaje. La nieve refleja la luz cálida y los Moai aparecen como siluetas serenas que emergen del blanco.",
-          "alt": "Primera luz de una mañana de invierno sobre Moai cubiertos de nieve.",
-          "imageLabel": "Primera luz sobre la nieve",
-          "overlay": "bg-[linear-gradient(90deg,rgba(6,16,31,0.44),rgba(6,16,31,0.08)_60%,rgba(6,16,31,0.18))]",
-          "objectPosition": "object-[54%_center]"
         }
       ]
     },
     "times": {
-      "kicker": "WINTER TIMES OF DAY",
-      "title": "From first light to winter night",
-      "body": "The same landscape changes its character with light, weather and time of day.",
+      "kicker": "MOMENTOS DEL DÍA INVERNAL",
+      "title": "De la primera luz a la noche invernal",
+      "body": "El mismo paisaje cambia de carácter con la luz, el clima y la hora del día.",
       "items": [
         {
           "id": "morning",
-          "label": "WINTER MORNING",
-          "title": "First light on snow",
-          "description": "Fresh snow, low sun and delicate mist create a bright, focused opening to the morning visit.",
-          "alt": "Winter morning at Rapa Nui Park.",
+          "label": "MAÑANA DE INVIERNO",
+          "title": "Primera luz sobre la nieve",
+          "description": "La nieve fresca, el sol bajo y una niebla delicada crean una apertura luminosa y serena para la visita matutina.",
+          "alt": "Mañana de invierno en Rapa Nui Park.",
           "filter": "brightness(1.2) saturate(0.92) contrast(0.98)",
           "overlay": "bg-[linear-gradient(180deg,rgba(210,228,244,0.1),rgba(6,16,31,0.26)),linear-gradient(90deg,rgba(255,245,210,0.12),transparent_62%)]"
         },
         {
           "id": "blue-hour",
-          "label": "BLUE HOUR",
-          "title": "Deep sky and first lights",
-          "description": "Cool snow and the first illumination reveal details of the Moai without turning the scene into spectacle.",
-          "alt": "Blue hour in the winter vision of Rapa Nui Park.",
+          "label": "HORA AZUL",
+          "title": "Cielo profundo y primeras luces",
+          "description": "La nieve fría y la primera iluminación revelan los detalles de los Moai sin convertir la escena en espectáculo.",
+          "alt": "Hora azul en la visión invernal de Rapa Nui Park.",
           "filter": "brightness(0.9) saturate(1.04) contrast(1.1) hue-rotate(8deg)",
           "overlay": "bg-[linear-gradient(180deg,rgba(6,24,52,0.36),rgba(3,8,16,0.62)),radial-gradient(circle_at_58%_60%,rgba(200,164,90,0.13),transparent_26%)]"
         },
         {
           "id": "night",
-          "label": "NIGHT ILLUMINATION",
-          "title": "Light, stone and winter silence",
-          "description": "Warm light on Moai faces and snow reflecting the illumination create a deep, museum-like atmosphere.",
-          "alt": "Night winter illumination of Moai at Rapa Nui Park.",
+          "label": "ILUMINACIÓN NOCTURNA",
+          "title": "Luz, piedra y silencio invernal",
+          "description": "La luz cálida sobre los rostros de los Moai y la nieve que refleja la iluminación crean una atmósfera profunda, casi de museo.",
+          "alt": "Iluminación nocturna invernal de los Moai en Rapa Nui Park.",
           "filter": "brightness(0.66) saturate(1.1) contrast(1.18)",
           "overlay": "bg-[linear-gradient(180deg,rgba(1,5,13,0.52),rgba(1,5,13,0.8)),radial-gradient(circle_at_62%_58%,rgba(200,164,90,0.25),transparent_31%)]"
         }
       ]
     },
     "experiences": {
-      "kicker": "WINTER EXPERIENCES",
-      "title": "The winter experience of Rapa Nui Park",
-      "intro": "The winter landscape is not merely a backdrop. It becomes an integral part of the future visitor experience.",
+      "kicker": "EXPERIENCIAS INVERNALES",
+      "title": "La experiencia invernal de Rapa Nui Park",
+      "intro": "El paisaje invernal no es solo un telón de fondo. Se convertirá en parte integral de la futura experiencia de los visitantes.",
       "items": [
         {
-          "title": "Winter viewing route",
-          "body": "A planned route through key viewpoints for quiet discovery of the winter panorama of Ahu Tongariki."
+          "title": "Ruta de contemplación invernal",
+          "body": "Una ruta planificada por los puntos de observación clave para descubrir con calma el panorama invernal de Ahu Tongariki."
         },
         {
-          "title": "Winter Nights of Ahu Tongariki",
-          "body": "A special winter edition of illumination where light, snow and monumental Moai silhouettes form one calm spectacle."
+          "title": "Noches de Invierno de Ahu Tongariki",
+          "body": "Una edición invernal especial de la iluminación en la que luz, nieve y las siluetas monumentales de los Moai forman un espectáculo sereno."
         },
         {
-          "title": "Monumental landscape photography",
-          "body": "Designed viewpoints will support photography of the Moai, the regional panorama and the distinctive winter light."
+          "title": "Fotografía de paisaje monumental",
+          "body": "Los puntos de observación diseñados favorecerán la fotografía de los Moai, del panorama regional y de la luz invernal tan característica."
         },
         {
-          "title": "Warm resting space",
-          "body": "A future rest area with views of the Ahu, hot drinks and an intimate educational display."
+          "title": "Espacio de descanso acogedor",
+          "body": "Un futuro espacio de descanso con vistas al Ahu, bebidas calientes y una exposición educativa íntima."
         },
         {
-          "title": "A story of two landscapes",
-          "body": "An educational programme connecting Rapa Nui culture with the European setting of the park."
+          "title": "Una historia de dos paisajes",
+          "body": "Un programa educativo que conecta la cultura de Rapa Nui con el entorno europeo del parque."
         }
       ]
     },
     "potential": {
-      "kicker": "A YEAR-ROUND ATTRACTION",
-      "title": "An attraction that does not end with the season",
+      "kicker": "UNA ATRACCIÓN TODO EL AÑO",
+      "title": "Una atracción que no termina con la temporada",
       "paragraphs": [
-        "The winter landscape is not a limitation of the project, but one of its most distinctive strengths. Rapa Nui Park can change with the seasons, offering visitors a different experience in summer, autumn, winter and spring.",
-        "The winter chapter strengthens the photographic, event and promotional potential of the project and helps build recognition as a year-round destination."
+        "El paisaje invernal no es una limitación del proyecto, sino una de sus cualidades más distintivas. Rapa Nui Park podrá cambiar con las estaciones, ofreciendo a los visitantes una experiencia distinta en verano, otoño, invierno y primavera.",
+        "El capítulo invernal refuerza el potencial fotográfico, de eventos y promocional del proyecto, y ayuda a construir su reconocimiento como destino de todo el año."
       ],
       "indicators": [
-        "YEAR-ROUND RECOGNITION",
-        "EVENT POTENTIAL",
-        "A DISTINCTIVE PHOTOGRAPHIC LANDSCAPE"
+        "RECONOCIMIENTO TODO EL AÑO",
+        "POTENCIAL DE EVENTOS",
+        "UN PAISAJE FOTOGRÁFICO DISTINTIVO"
       ]
     },
     "final": {
-      "kicker": "FINAL WINTER CHAPTER",
-      "title": "In winter, the guardians\ndo not fall asleep.",
-      "body": "They reveal their most extraordinary face.",
-      "cta": "DISCOVER THE NIGHTS OF AHU TONGARIKI",
-      "imageAlt": "Night winter scene of Rapa Nui Park leading to the Nights of Ahu Tongariki section."
+      "kicker": "CAPÍTULO INVERNAL FINAL",
+      "title": "En invierno, los guardianes\nno se duermen.",
+      "body": "Revelan su rostro más extraordinario.",
+      "cta": "DESCUBRE LAS NOCHES DE AHU TONGARIKI",
+      "imageAlt": "Escena invernal nocturna de Rapa Nui Park que conduce a la sección Noches de Ahu Tongariki."
     }
   }
 }
