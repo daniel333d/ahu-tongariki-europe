@@ -2,80 +2,32 @@
 
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
 import { useI18n } from "../../app/i18n-provider";
 
 type ScaleMode = "monumental" | "comparison" | "heights";
 
-const visitorSilhouettes = [
-  { height: 28, width: 7, head: 5, stance: 14 },
-  { height: 31, width: 8, head: 5, stance: 15 },
-  { height: 22, width: 6, head: 4, stance: 12 },
-  { height: 33, width: 8, head: 5, stance: 16 },
-  { height: 27, width: 7, head: 5, stance: 14 },
-  { height: 30, width: 8, head: 5, stance: 15 },
-  { height: 18, width: 5, head: 4, stance: 10 },
-  { height: 29, width: 7, head: 5, stance: 14 }
-];
-
-function ScaleVisitor({
-  visitor,
-  className = "",
-  style
-}: {
-  visitor: (typeof visitorSilhouettes)[number];
-  className?: string;
-  style?: CSSProperties;
-}) {
-  return (
-    <div
-      data-scale-visitor
-      aria-hidden="true"
-      className={`relative shrink-0 drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)] ${className}`}
-      style={{
-        height: `${visitor.height + visitor.head + 3}px`,
-        width: `${visitor.stance}px`,
-        ...style
-      }}
-    >
-      <span
-        className="absolute left-1/2 top-0 -translate-x-1/2 rounded-full bg-[#f7efdc] ring-[0.5px] ring-black/50"
-        style={{ height: `${visitor.head}px`, width: `${visitor.head}px` }}
-      />
-      <span
-        className="absolute left-1/2 top-[6px] -translate-x-1/2 rounded-t-[42%] bg-[#f2e7cf] ring-[0.5px] ring-black/45"
-        style={{ height: `${Math.round(visitor.height * 0.62)}px`, width: `${visitor.width}px` }}
-      />
-      <span
-        className="absolute left-1/2 top-[12px] h-px -translate-x-1/2 bg-[#f2e7cf]"
-        style={{ width: `${visitor.stance}px` }}
-      />
-      <span
-        className="absolute bottom-0 rounded-b-full bg-[#f2e7cf] ring-[0.5px] ring-black/45"
-        style={{
-          height: `${Math.round(visitor.height * 0.36)}px`,
-          width: `${Math.max(2, Math.round(visitor.width * 0.36))}px`,
-          left: `calc(50% - ${Math.max(3, Math.round(visitor.width * 0.44))}px)`
-        }}
-      />
-      <span
-        className="absolute bottom-0 rounded-b-full bg-[#f2e7cf] ring-[0.5px] ring-black/45"
-        style={{
-          height: `${Math.round(visitor.height * 0.36)}px`,
-          width: `${Math.max(2, Math.round(visitor.width * 0.36))}px`,
-          left: `calc(50% + ${Math.max(1, Math.round(visitor.width * 0.12))}px)`
-        }}
-      />
-    </div>
-  );
-}
+const scaleImages: Record<ScaleMode, { src: string; className: string }> = {
+  monumental: {
+    src: "/assets/scale/scale-monumental-moai.jpeg",
+    className: "object-cover object-[52%_78%] brightness-[0.92] contrast-[1.08] saturate-[0.9]"
+  },
+  comparison: {
+    src: "/assets/scale/scale-human-comparison.jpeg",
+    className: "object-cover object-[50%_82%] brightness-[0.94] contrast-[1.06] saturate-[0.92]"
+  },
+  heights: {
+    src: "/assets/scale/scale-landscape-context.jpeg",
+    className: "object-cover object-[50%_58%] brightness-[0.9] contrast-[1.08] saturate-[0.86]"
+  }
+};
 
 export function ScaleSection() {
   const { copy } = useI18n();
   const [mode, setMode] = useState<ScaleMode>("monumental");
   const [reduceMotion, setReduceMotion] = useState(false);
   const scale = copy.scale;
+  const activeImage = scaleImages[mode];
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -125,13 +77,14 @@ export function ScaleSection() {
           {/* Final photography can replace this shared panorama without changing the section structure. */}
           <div className="relative min-h-[520px] sm:min-h-[650px] lg:min-h-[720px]">
             <Image
-              src="/assets/hero/scale-hero-clean.webp"
+              key={activeImage.src}
+              src={activeImage.src}
               alt={scale.imageAlt}
               fill
-              className="object-cover object-[54%_center] brightness-[1.35] contrast-[1.03] saturate-[1.08] sm:object-center"
+              className={activeImage.className}
               sizes="(min-width: 1024px) 1400px, 100vw"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,8,13,0.16)_0%,rgba(2,8,13,0)_42%,rgba(2,8,13,0.2)_100%),linear-gradient(90deg,rgba(2,8,13,0.12),transparent_55%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,8,13,0.18)_0%,rgba(2,8,13,0)_44%,rgba(2,8,13,0.24)_100%),linear-gradient(90deg,rgba(2,8,13,0.2),transparent_58%)]" />
 
             <div className="absolute left-6 right-6 top-6 z-10 flex items-center justify-between gap-4 sm:left-10 sm:right-10 sm:top-10">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#5f4318] drop-shadow-[0_1px_1px_rgba(255,255,255,0.28)]">
@@ -162,35 +115,6 @@ export function ScaleSection() {
             </AnimatePresence>
 
             <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-7 sm:px-10 sm:pb-10">
-              <div className="relative flex items-end justify-center gap-2 sm:gap-4">
-                <AnimatePresence>
-                  {mode === "comparison" ? (
-                    <>
-                      <motion.div
-                        aria-hidden="true"
-                        initial={reduceMotion ? false : { opacity: 0, scaleY: 0.92 }}
-                        animate={{ opacity: 0.72, scaleY: 1 }}
-                        exit={reduceMotion ? undefined : { opacity: 0, scaleY: 0.92 }}
-                        transition={{ duration: reduceMotion ? 0 : 0.32 }}
-                        className="absolute bottom-0 left-1/2 hidden h-[180px] w-px origin-bottom -translate-x-[190px] bg-gold sm:block"
-                      />
-                      {visitorSilhouettes.map((visitor, index) => (
-                        <motion.div
-                          key={index}
-                          aria-hidden="true"
-                          initial={reduceMotion ? false : { opacity: 0, y: 14 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={reduceMotion ? undefined : { opacity: 0, y: 10 }}
-                          transition={{ duration: reduceMotion ? 0 : 0.32, delay: reduceMotion ? 0 : index * 0.035 }}
-                          className="relative shrink-0"
-                        >
-                          <ScaleVisitor visitor={visitor} />
-                        </motion.div>
-                      ))}
-                    </>
-                  ) : null}
-                </AnimatePresence>
-              </div>
               <motion.div
                 aria-hidden="true"
                 initial={reduceMotion ? false : { opacity: 0, scaleX: 0.94 }}
