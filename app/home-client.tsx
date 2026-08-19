@@ -683,14 +683,23 @@ function HomeContent() {
           >
             <Menu size={22} />
           </button>
-          <a
-            href="#kontakt"
-            title={copy.accessibility.investorContactTitle}
-            className="stable-action border-white/22 text-white/88 hidden items-center gap-3 border px-5 py-3 text-sm font-semibold transition hover:border-gold hover:text-gold md:flex"
-          >
-            <Mail size={16} />
-            {copy.nav.contact}
-          </a>
+          <div className="hidden items-center gap-3 md:flex">
+            <a
+              href="#qr-moai"
+              title="QR Moai"
+              className="stable-action border-white/22 text-white/88 inline-flex items-center gap-3 border px-5 py-3 text-sm font-semibold transition hover:border-gold hover:text-gold"
+            >
+              QR Moai
+            </a>
+            <a
+              href="#kontakt"
+              title={copy.accessibility.investorContactTitle}
+              className="stable-action border-white/22 text-white/88 inline-flex items-center gap-3 border px-5 py-3 text-sm font-semibold transition hover:border-gold hover:text-gold"
+            >
+              <Mail size={16} />
+              {copy.nav.contact}
+            </a>
+          </div>
         </nav>
 
         {mobileMenuOpen ? (
@@ -713,8 +722,14 @@ function HomeContent() {
               </button>
             </div>
             <div className="mt-16 grid gap-5 text-2xl font-semibold">
-              {["#projekt", "#iorana-moai", "#uklad-posagow", "#lokalizacja", "#kontakt"]
-                .map((href, index) => [copy.nav.items[index], href] as const)
+              {[
+                [copy.nav.items[0], "#projekt"],
+                [copy.nav.items[1], "#iorana-moai"],
+                [copy.nav.items[2], "#uklad-posagow"],
+                ["QR Moai", "#qr-moai"],
+                [copy.nav.items[3], "#lokalizacja"],
+                [copy.nav.items[4], "#kontakt"]
+              ]
                 .map(([label, href]) => (
                   <a
                     key={label}
