@@ -10,6 +10,7 @@ import { MasterplanSection } from "../components/masterplan/MasterplanSection";
 import { ScaleSection } from "../components/scale/ScaleSection";
 import { CoCreatorsSection } from "../components/sections/CoCreatorsSection";
 import { FutureHeritageComplexesSection } from "../components/sections/FutureHeritageComplexesSection";
+import { QrMoaiSection } from "../components/sections/QrMoaiSection";
 import { WinterExperienceSection } from "../components/sections/WinterExperienceSection";
 import { VideoPlayer } from "../components/video/VideoPlayer";
 import { languageOptions } from "./i18n";
@@ -90,10 +91,9 @@ function EuropeMap() {
   return (
     <div className="border-white/12 relative overflow-hidden rounded-lg border bg-navy p-5 text-white shadow-architectural sm:p-6 md:p-9">
       <Image
-        src="/europe-map-premium.png"
+        src="/europe-map-premium-optimized.webp"
         alt={copy.location.mapAlt}
         fill
-        priority
         className="opacity-86 object-cover object-[58%_center] md:object-cover"
         sizes="(min-width: 1024px) 45vw, 100vw"
       />
@@ -372,7 +372,7 @@ function CinematicIntro() {
   return (
     <main className="cinematic-intro fixed inset-0 z-[80] overflow-hidden bg-black text-white">
       <Image
-        src="/iorana-intro-sunrise.png"
+        src="/iorana-intro-sunrise-optimized.webp"
         alt=""
         fill
         priority
@@ -405,7 +405,7 @@ function LanguageWelcome() {
       aria-label={copy.accessibility.languageWelcomeLabel}
     >
       <Image
-        src="/iorana-intro-sunrise.png"
+        src="/iorana-intro-sunrise-optimized.webp"
         alt={copy.intro.imageAlt}
         fill
         priority
@@ -655,7 +655,7 @@ function HomeContent() {
       </div>
       <section className="relative min-h-screen bg-navy text-white">
         <Image
-          src="/ahu-tongariki-hero.png"
+          src="/ahu-tongariki-hero-optimized.webp"
           alt={copy.hero.imageAlt}
           fill
           priority
@@ -682,14 +682,23 @@ function HomeContent() {
           >
             <Menu size={22} />
           </button>
-          <a
-            href="#kontakt"
-            title={copy.accessibility.investorContactTitle}
-            className="stable-action border-white/22 text-white/88 hidden items-center gap-3 border px-5 py-3 text-sm font-semibold transition hover:border-gold hover:text-gold md:flex"
-          >
-            <Mail size={16} />
-            {copy.nav.contact}
-          </a>
+          <div className="hidden items-center gap-3 md:flex">
+            <a
+              href="#qr-moai"
+              title="QR Moai"
+              className="stable-action border-white/22 text-white/88 inline-flex items-center gap-3 border px-5 py-3 text-sm font-semibold transition hover:border-gold hover:text-gold"
+            >
+              QR Moai
+            </a>
+            <a
+              href="#kontakt"
+              title={copy.accessibility.investorContactTitle}
+              className="stable-action border-white/22 text-white/88 inline-flex items-center gap-3 border px-5 py-3 text-sm font-semibold transition hover:border-gold hover:text-gold"
+            >
+              <Mail size={16} />
+              {copy.nav.contact}
+            </a>
+          </div>
         </nav>
 
         {mobileMenuOpen ? (
@@ -712,8 +721,14 @@ function HomeContent() {
               </button>
             </div>
             <div className="mt-16 grid gap-5 text-2xl font-semibold">
-              {["#projekt", "#iorana-moai", "#uklad-posagow", "#lokalizacja", "#kontakt"]
-                .map((href, index) => [copy.nav.items[index], href] as const)
+              {[
+                [copy.nav.items[0], "#projekt"],
+                [copy.nav.items[1], "#iorana-moai"],
+                [copy.nav.items[2], "#uklad-posagow"],
+                ["QR Moai", "#qr-moai"],
+                [copy.nav.items[3], "#lokalizacja"],
+                [copy.nav.items[4], "#kontakt"]
+              ]
                 .map(([label, href]) => (
                   <a
                     key={label}
@@ -775,10 +790,9 @@ function HomeContent() {
 
       <section className="slogan-section relative flex min-h-screen items-center justify-center overflow-hidden bg-navy px-6 py-24 text-white">
         <Image
-          src="/slogan-sunset.png"
+          src="/slogan-sunset-optimized.webp"
           alt={copy.slogan.imageAlt}
           fill
-          priority
           className="slogan-parallax object-cover object-[52%_center] brightness-150 md:object-center"
           sizes="100vw"
         />
@@ -827,10 +841,9 @@ function HomeContent() {
           <div className="border-white/12 mt-14 overflow-hidden border bg-navy shadow-architectural sm:mt-16">
             <div className="relative min-h-[620px] lg:min-h-[760px]">
               <Image
-                src="/iorana-moai-rano-raraku.png"
+                src="/iorana-moai-rano-raraku-optimized.webp"
                 alt={copy.iorana.imageAlt}
                 fill
-                loading="eager"
                 className="object-cover object-[63%_center] brightness-125 sm:object-center"
                 sizes="(min-width: 1024px) 1400px, 100vw"
               />
@@ -875,7 +888,7 @@ function HomeContent() {
         <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch">
           <div className="relative -mx-6 min-h-[430px] overflow-hidden bg-navy sm:mx-0 sm:min-h-[480px]">
             <Image
-              src="/ahu-tongariki-hero.png"
+              src="/ahu-tongariki-hero-optimized.webp"
               alt={copy.statues.imageAlt}
               fill
               className="object-cover object-[57%_center] sm:object-center"
@@ -917,6 +930,8 @@ function HomeContent() {
       <CoCreatorsSection />
 
       <ScaleSection />
+
+      <QrMoaiSection />
 
       <section id="lokalizacja" className="bg-white px-6 py-28 sm:py-32 lg:px-10">
         <div className="mx-auto max-w-[1400px]">
@@ -1013,10 +1028,9 @@ function HomeContent() {
           <div className="night-hero border-white/12 mt-14 overflow-hidden border bg-navy shadow-architectural sm:mt-16">
             <div className="relative min-h-[560px] sm:min-h-[680px] lg:min-h-[760px]">
               <Image
-                src="/ahu-tongariki-night.png"
+                src="/ahu-tongariki-night-optimized.webp"
                 alt={copy.night.imageAlt}
                 fill
-                loading="eager"
                 className="night-hero-image object-cover object-[52%_center] sm:object-center"
                 sizes="(min-width: 1024px) 1400px, 100vw"
               />
@@ -1088,7 +1102,7 @@ function HomeContent() {
       <section className="relative bg-navy px-6 py-28 text-white sm:py-32 lg:px-10">
         <div className="opacity-24 absolute inset-0">
           <Image
-            src="/ahu-tongariki-hero.png"
+            src="/ahu-tongariki-hero-optimized.webp"
             alt={copy.partnership.imageAlt}
             fill
             className="object-cover"
