@@ -844,5 +844,156 @@
       "cta": "DIE NÄCHTE VON AHU TONGARIKI ENTDECKEN",
       "imageAlt": "Nächtliche Winterszene des Rapa Nui Park, die zum Abschnitt Nächte von Ahu Tongariki führt."
     }
+  },
+  "awakening": {
+    "kicker": "EIN AUSSERGEWÖHNLICHER TAG IM RAPANUIPARK",
+    "title": "Das Erwachen der Moai",
+    "subtitle": "Der Tag, an dem die Wächter ihre Augen öffnen.",
+    "lead": "Ein seltenes Sonderereignis, bei dem Licht, Erzählung und der Blick der Moai den Rhythmus des ganzen Parks verändern.",
+    "rareLine": "Es ist niemals ein gewöhnlicher Tag.",
+    "started": "ERWACHEN BEGONNEN",
+    "scrollCue": "Sehen Sie, was geschieht, wenn die Moai blicken.",
+    "scrollAria": "Scroll to the Awakening of the Moai manifesto",
+    "heroAlt": "Monumental RapaNuiPark Moai with a subtle eye-opening animation.",
+    "manifest": {
+      "kicker": "UNGEWÖHNLICHER TAG",
+      "title": "Wenn die Moai blicken, ändert RapaNuiPark seine Regeln.",
+      "body": "Das Erwachen der Moai ist kein gewöhnlicher Besuchstag. Es ist ein besonderes Ereignis, bei dem sich der Park mit Erzählungen, Licht, Symbolen und Erlebnissen füllt, die nur während des Erwachens verfügbar sind.",
+      "freeRule": "Am Tag des Erwachens sind ausgewählte Attraktionen, Verkostungen und Aktivitäten kostenlos verfügbar — solange der Vorrat reicht und gemäß dem Veranstaltungsprogramm."
+    },
+    "moments": {
+      "kicker": "ERWACHEN",
+      "title": "Der Park beginnt zu antworten.",
+      "body": "Im Laufe des Tages verändern sich Licht, Klang und Rhythmus des Ortes mehrmals. Die Moai öffnen erneut ihre Augen, ausgewählte Bereiche des Parks werden beleuchtet, und jedes Ereignis beginnt ein neues Kapitel des Erwachens.",
+      "guardians": {
+        "title": "BLICK DER WÄCHTER",
+        "description": "Ein sehr dezentes Wiederaufleuchten der Moai-Augen eröffnet die nächsten Momente des Tages."
+      },
+      "voice": {
+        "title": "STIMME DES PARKS",
+        "description": "Ein kurzer erzählerischer Impuls kann das nächste Ereignis ankündigen, ohne automatisch Ton abzuspielen."
+      },
+      "ahuLight": {
+        "title": "LICHT DES AHU",
+        "description": "Warmes Licht verändert die Atmosphäre eines ausgewählten Ortes ohne grellen Showeffekt."
+      },
+      "sign": {
+        "title": "ZEICHEN DES ERWACHENS",
+        "description": "Ein dezentes Symbol führt die Teilnehmenden zum nächsten Fragment der Erzählung."
+      }
+    },
+    "activities": {
+      "kicker": "NUR WÄHREND DES ERWACHENS",
+      "title": "Nur während des Erwachens",
+      "ceremony": {
+        "title": "Zeremonie des Erwachens",
+        "description": "Der Moment, in dem alles beginnt. Licht umhüllt nach und nach die monumentalen Silhouetten, und die Augen der Moai erscheinen eins nach dem anderen. Von da an folgt RapaNuiPark den Regeln eines außergewöhnlichen Tages."
+      },
+      "trail": {
+        "title": "Pfad der Offenen Augen",
+        "description": "Eine besondere Route führt durch verborgene Symbole, Orte und Aufgaben, die nur während des Erwachens verfügbar sind. Jedes Zeichen enthüllt ein weiteres Stück der Geschichte."
+      },
+      "stories": {
+        "title": "Erzählungen der Wächter",
+        "description": "Kurze Begegnungen in verschiedenen Teilen des Parks eröffnen die Geschichte der Moai, Ahu, Rapa Nui und die Bedeutung des Blicks der steinernen Wächter."
+      },
+      "feast": {
+        "title": "Festmahl der Wächter",
+        "description": "Limitierte Verkostungen, inspiriert vom Pazifik und Rapa Nui, erscheinen an ausgewählten Orten des Parks, kostenlos solange die vorbereiteten Portionen reichen."
+      },
+      "photos": {
+        "title": "Bilder der Offenen Augen",
+        "description": "Nur an diesem Tag entstehen Fotografien von RapaNuiPark, die bei einem normalen Besuch unmöglich sind: Die Moai gewinnen ihren Blick zurück und der Park bereitet besondere Fotopunkte vor."
+      },
+      "symbols": {
+        "title": "Zeichen des Erwachens",
+        "description": "Workshops für Familien und Erwachsene ermöglichen eigene Zeichen, Stempel und Muster, inspiriert von der Ästhetik Rapa Nuis."
+      },
+      "mystery": {
+        "title": "Geheimnis des Erwachens",
+        "description": "Im Park verborgene Zeichen führen zum finalen Symbol. Dieses Erlebnis ist nur an diesem Tag verfügbar."
+      },
+      "light": {
+        "title": "Abend des Lichts",
+        "description": "Die Dämmerung eröffnet das letzte Kapitel des Erwachens. Warmes Licht umhüllt die Moai, ihre Augen bleiben geöffnet, und der Ahu wird zu einer monumentalen Szene aus Stein, Licht und Nacht."
+      }
+    },
+    "timeline": {
+      "kicker": "ABLAUF",
+      "title": "Ein Tag. Fünf Kapitel.",
+      "dawn": {
+        "time": "MORGENRÖTE",
+        "title": "Erwachen",
+        "description": "Das erste Öffnen der Moai-Augen."
+      },
+      "noon": {
+        "time": "MITTAG",
+        "title": "Entdecken",
+        "description": "Erzählungen, Wege und besondere Aktivitäten."
+      },
+      "afternoon": {
+        "time": "NACHMITTAG",
+        "title": "Gastfreundschaft",
+        "description": "Verkostungen, Workshops und Ereignisse."
+      },
+      "dusk": {
+        "time": "DÄMMERUNG",
+        "title": "Blick",
+        "description": "Die beste Zeit für außergewöhnliche Fotografien."
+      },
+      "night": {
+        "time": "NACHT",
+        "title": "Licht",
+        "description": "Das finale Erwachen und die Illumination."
+      }
+    },
+    "final": {
+      "kicker": "FINALE",
+      "title": "Die Wächter blicken wieder.",
+      "subtitle": "Niemand weiß, wann es wieder geschieht.",
+      "eventPending": "Der Termin des nächsten Erwachens wird bekannt gegeben.",
+      "announcedFallback": "Das nächste Erwachen wurde angekündigt.",
+      "cta": "DAS NÄCHSTE ERWACHEN VERFOLGEN"
+    },
+    "assetReview": {
+      "kicker": "VISUELLE PREVIEW-EBENE",
+      "title": "Ausgewählte Bilder für die Richtung."
+    },
+    "assets": {
+      "templeWideAlt": "Oczy Moai w mrocznej, kamiennej przestrzeni.",
+      "templeCloseAlt": "Bliski kadr oczu Moai w monumentalnej scenerii.",
+      "templeHorizontalAlt": "Poziomy kadr oczu Moai z monumentalnymi posągami w tle.",
+      "referenceEyesAlt": "Referencyjny kadr tradycyjnych oczu Moai.",
+      "ahuDayAlt": "Ahu Tongariki w świetle dnia.",
+      "pavilionAlt": "Pawilon RapaNuiPark jako przestrzeń gościnności.",
+      "blackGoldAlt": "Oczy Moai na ciemnym krajobrazie z ciepłym światłem.",
+      "stormLandscapeAlt": "Oczy Moai w pochmurnym krajobrazie.",
+      "hillsAlt": "Moai na zielonym zboczu pod błękitnym niebem.",
+      "oceanCliffAlt": "Oczy Moai nad wzburzonym oceanem i klifem.",
+      "stormNightAlt": "Oczy Moai przed nocną scenerią burzy i strażników.",
+      "stormAnimatedAlt": "Animowany kadr oczu Moai w nocnej atmosferze.",
+      "fiveOceanAlt": "Fünf Moai mit geöffneten Augen vor Ozean und hellem Himmel.",
+      "closeDayAlt": "Naher Tagesblick auf Moai mit geöffneten Augen.",
+      "purpleAnimatedAlt": "Animierter Blick auf Moai-Augen in violetter Dämmerungsatmosphäre."
+    },
+    "activityDetails": {
+      "light": "Licht",
+      "sequence": "Sequenz",
+      "ceremony": "Zeremonie",
+      "path": "Route",
+      "symbols": "Symbole",
+      "narration": "Erzählung",
+      "education": "Bildung",
+      "hosting": "Gastfreundschaft",
+      "daylight": "Tageslicht",
+      "photo": "Fotografie",
+      "goldHour": "goldene Stunde",
+      "workshop": "Workshop",
+      "sign": "Zeichen",
+      "clue": "Hinweis",
+      "family": "Familie",
+      "night": "Nacht",
+      "finalLight": "Lichtfinale"
+    }
   }
 }
