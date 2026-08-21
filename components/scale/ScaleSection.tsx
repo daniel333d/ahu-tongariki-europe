@@ -9,15 +9,15 @@ type ScaleMode = "monumental" | "comparison" | "heights";
 
 const scaleImages: Record<ScaleMode, { src: string; className: string }> = {
   monumental: {
-    src: "/assets/scale/scale-monumental-moai.jpeg",
+    src: "/assets/scale/scale-monumental-moai-optimized.webp",
     className: "object-cover object-[52%_78%] brightness-[0.92] contrast-[1.08] saturate-[0.9]"
   },
   comparison: {
-    src: "/assets/scale/scale-human-comparison.jpeg",
+    src: "/assets/scale/scale-human-comparison-optimized.webp",
     className: "object-cover object-[50%_82%] brightness-[0.94] contrast-[1.06] saturate-[0.92]"
   },
   heights: {
-    src: "/assets/scale/scale-landscape-context.jpeg",
+    src: "/assets/scale/scale-landscape-context-optimized.webp",
     className: "object-cover object-[50%_58%] brightness-[0.9] contrast-[1.08] saturate-[0.86]"
   }
 };

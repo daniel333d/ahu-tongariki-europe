@@ -33,22 +33,22 @@ const qrMoaiCopy: Record<LanguageCode, QrMoaiCopy> = {
     heroAlt: "Niewielkie Moai w krajobrazie trawy i błękitnego nieba jako inspiracja dla punktów QR Moai.",
     gallery: [
       {
-        src: "/assets/qr-moai/qr-moai-path-marker.png",
+        src: "/assets/qr-moai/qr-moai-path-marker-optimized.webp",
         alt: "Moai ustawione w trawiastym krajobrazie pod błękitnym niebem.",
         label: "Nawigacja w terenie"
       },
       {
-        src: "/assets/qr-moai/qr-moai-close-sky.png",
+        src: "/assets/qr-moai/qr-moai-close-sky-optimized.webp",
         alt: "Zbliżenie na twarze Moai z otwartym niebem w tle.",
         label: "Bliski kontakt"
       },
       {
-        src: "/assets/qr-moai/qr-moai-sunset-field.png",
+        src: "/assets/qr-moai/qr-moai-sunset-field-optimized.webp",
         alt: "Moai w ciepłym świetle zachodu słońca.",
         label: "Punkt fotograficzny"
       },
       {
-        src: "/assets/qr-moai/qr-moai-family.png",
+        src: "/assets/qr-moai/qr-moai-family-optimized.webp",
         alt: "Zestaw małych figur Moai pokazujących różne warianty obiektów.",
         label: "Rodzina małych strażników"
       }
@@ -84,22 +84,22 @@ const qrMoaiCopy: Record<LanguageCode, QrMoaiCopy> = {
     heroAlt: "Small Moai in a grassy landscape beneath a blue sky as inspiration for QR Moai points.",
     gallery: [
       {
-        src: "/assets/qr-moai/qr-moai-path-marker.png",
+        src: "/assets/qr-moai/qr-moai-path-marker-optimized.webp",
         alt: "Moai in a grassy landscape under blue sky.",
         label: "Wayfinding"
       },
       {
-        src: "/assets/qr-moai/qr-moai-close-sky.png",
+        src: "/assets/qr-moai/qr-moai-close-sky-optimized.webp",
         alt: "Close view of Moai faces against open sky.",
         label: "Close contact"
       },
       {
-        src: "/assets/qr-moai/qr-moai-sunset-field.png",
+        src: "/assets/qr-moai/qr-moai-sunset-field-optimized.webp",
         alt: "Moai in warm sunset light.",
         label: "Photo point"
       },
       {
-        src: "/assets/qr-moai/qr-moai-family.png",
+        src: "/assets/qr-moai/qr-moai-family-optimized.webp",
         alt: "Set of small Moai figures showing object variants.",
         label: "Small guardians"
       }
@@ -135,21 +135,21 @@ const qrMoaiCopy: Record<LanguageCode, QrMoaiCopy> = {
     heroAlt: "Petits Moai dans un paysage d'herbe et de ciel bleu.",
     gallery: [
       {
-        src: "/assets/qr-moai/qr-moai-path-marker.png",
+        src: "/assets/qr-moai/qr-moai-path-marker-optimized.webp",
         alt: "Moai dans un paysage d'herbe.",
         label: "Reperage"
       },
       {
-        src: "/assets/qr-moai/qr-moai-close-sky.png",
+        src: "/assets/qr-moai/qr-moai-close-sky-optimized.webp",
         alt: "Visages Moai en gros plan.",
         label: "Contact proche"
       },
       {
-        src: "/assets/qr-moai/qr-moai-sunset-field.png",
+        src: "/assets/qr-moai/qr-moai-sunset-field-optimized.webp",
         alt: "Moai dans la lumiere du soir.",
         label: "Point photo"
       },
-      { src: "/assets/qr-moai/qr-moai-family.png", alt: "Petites figures Moai.", label: "Petits gardiens" }
+      { src: "/assets/qr-moai/qr-moai-family-optimized.webp", alt: "Petites figures Moai.", label: "Petits gardiens" }
     ],
     cards: [
       {
@@ -181,22 +181,22 @@ const qrMoaiCopy: Record<LanguageCode, QrMoaiCopy> = {
     heroAlt: "Pequenos Moai en paisaje verde bajo cielo azul.",
     gallery: [
       {
-        src: "/assets/qr-moai/qr-moai-path-marker.png",
+        src: "/assets/qr-moai/qr-moai-path-marker-optimized.webp",
         alt: "Moai en paisaje de hierba.",
         label: "Orientacion"
       },
       {
-        src: "/assets/qr-moai/qr-moai-close-sky.png",
+        src: "/assets/qr-moai/qr-moai-close-sky-optimized.webp",
         alt: "Rostros Moai de cerca.",
         label: "Contacto cercano"
       },
       {
-        src: "/assets/qr-moai/qr-moai-sunset-field.png",
+        src: "/assets/qr-moai/qr-moai-sunset-field-optimized.webp",
         alt: "Moai al atardecer.",
         label: "Punto fotografico"
       },
       {
-        src: "/assets/qr-moai/qr-moai-family.png",
+        src: "/assets/qr-moai/qr-moai-family-optimized.webp",
         alt: "Pequenas figuras Moai.",
         label: "Pequenos guardianes"
       }
@@ -232,17 +232,17 @@ const qrMoaiCopy: Record<LanguageCode, QrMoaiCopy> = {
     heroAlt: "Kleine Moai in Graslandschaft unter blauem Himmel.",
     gallery: [
       {
-        src: "/assets/qr-moai/qr-moai-path-marker.png",
+        src: "/assets/qr-moai/qr-moai-path-marker-optimized.webp",
         alt: "Moai in Graslandschaft.",
         label: "Orientierung"
       },
       {
-        src: "/assets/qr-moai/qr-moai-close-sky.png",
+        src: "/assets/qr-moai/qr-moai-close-sky-optimized.webp",
         alt: "Moai Gesichter aus der Naehe.",
         label: "Naher Kontakt"
       },
-      { src: "/assets/qr-moai/qr-moai-sunset-field.png", alt: "Moai im Abendlicht.", label: "Fotopunkt" },
-      { src: "/assets/qr-moai/qr-moai-family.png", alt: "Kleine Moai Figuren.", label: "Kleine Waechter" }
+      { src: "/assets/qr-moai/qr-moai-sunset-field-optimized.webp", alt: "Moai im Abendlicht.", label: "Fotopunkt" },
+      { src: "/assets/qr-moai/qr-moai-family-optimized.webp", alt: "Kleine Moai Figuren.", label: "Kleine Waechter" }
     ],
     cards: [
       {
@@ -273,14 +273,14 @@ const qrMoaiCopy: Record<LanguageCode, QrMoaiCopy> = {
       "QR Moai je sit malych kamennych strazcu rozmistenych po celem arealu. Kazdy pomaha s orientaci, laka k fotografii a po naskenovani muze otevrit pribeh nebo prekvapeni.",
     heroAlt: "Male Moai v travnate krajine pod modrou oblohou.",
     gallery: [
-      { src: "/assets/qr-moai/qr-moai-path-marker.png", alt: "Moai v travnate krajine.", label: "Orientace" },
-      { src: "/assets/qr-moai/qr-moai-close-sky.png", alt: "Detail tvari Moai.", label: "Blizky kontakt" },
+      { src: "/assets/qr-moai/qr-moai-path-marker-optimized.webp", alt: "Moai v travnate krajine.", label: "Orientace" },
+      { src: "/assets/qr-moai/qr-moai-close-sky-optimized.webp", alt: "Detail tvari Moai.", label: "Blizky kontakt" },
       {
-        src: "/assets/qr-moai/qr-moai-sunset-field.png",
+        src: "/assets/qr-moai/qr-moai-sunset-field-optimized.webp",
         alt: "Moai v zapadovem svetle.",
         label: "Fotopoint"
       },
-      { src: "/assets/qr-moai/qr-moai-family.png", alt: "Male figury Moai.", label: "Mali strazci" }
+      { src: "/assets/qr-moai/qr-moai-family-optimized.webp", alt: "Male figury Moai.", label: "Mali strazci" }
     ],
     cards: [
       {

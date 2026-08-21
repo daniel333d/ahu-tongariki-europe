@@ -7,12 +7,12 @@ import { type CSSProperties, useState } from "react";
 import { AssetImage } from "../common/AssetImage";
 import { useI18n } from "../../app/i18n-provider";
 
-const WINTER_HERO_IMAGE = "/assets/winter/rapa-nui-park-winter-v2-varied-moai.png";
-const SUMMER_REFERENCE_IMAGE = "/assets/winter/rapa-nui-park-summer-v1-matched-moai.png";
+const WINTER_HERO_IMAGE = "/assets/winter/rapa-nui-park-winter-v2-varied-moai-optimized.webp";
+const SUMMER_REFERENCE_IMAGE = "/assets/winter/rapa-nui-park-summer-v1-matched-moai-optimized.webp";
 const WINTER_STORY_IMAGES = [
-  "/assets/winter/winter-landscape-morning-after-snow.png",
-  "/assets/winter/winter-landscape-blue-hour.png",
-  "/assets/winter/winter-landscape-first-light-snow.png"
+  "/assets/winter/winter-landscape-morning-after-snow-optimized.webp",
+  "/assets/winter/winter-landscape-blue-hour-optimized.webp",
+  "/assets/winter/winter-landscape-first-light-snow-optimized.webp"
 ] as const;
 const WINTER_SECTION_BRIGHTNESS = "brightness(1.82)";
 const WINTER_FINAL_BRIGHTNESS = "brightness(2.1)";
@@ -70,7 +70,7 @@ function WinterImagePanel({
         alt={alt}
         fill
         className={`object-cover ${objectPosition}`}
-        sizes="(min-width: 1024px) 720px, 100vw"
+        sizes="(min-width: 1024px) 820px, 100vw"
         style={{ filter: brightenWinterImage(filter) } as CSSProperties}
       />
       <div className={`absolute inset-0 ${overlay}`} aria-hidden="true" />
