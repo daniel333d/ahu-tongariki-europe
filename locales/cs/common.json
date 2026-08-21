@@ -844,5 +844,156 @@
       "cta": "OBJEVTE NOCI AHU TONGARIKI",
       "imageAlt": "Noční zimní scéna Rapa Nui Park vedoucí k sekci Noci Ahu Tongariki."
     }
+  },
+  "awakening": {
+    "kicker": "VÝJIMEČNÝ DEN RAPANUIPARK",
+    "title": "Probuzení Moai",
+    "subtitle": "Den, kdy strážci otevírají oči.",
+    "lead": "Vzácná speciální událost, kdy světlo, příběh a pohled Moai mění rytmus celého Parku.",
+    "rareLine": "Nikdy to není obyčejný den.",
+    "started": "PROBUZENÍ ZAČALO",
+    "scrollCue": "Podívejte se, co se stane, když se Moai dívají.",
+    "scrollAria": "Scroll to the Awakening of the Moai manifesto",
+    "heroAlt": "Monumental RapaNuiPark Moai with a subtle eye-opening animation.",
+    "manifest": {
+      "kicker": "NEOBYČEJNÝ DEN",
+      "title": "Když se Moai dívají, RapaNuiPark mění svá pravidla.",
+      "body": "Probuzení Moai není obyčejný den návštěvy. Je to speciální událost, během níž se Park naplní příběhy, světlem, symboly a zážitky dostupnými pouze při Probuzení.",
+      "freeRule": "V den Probuzení jsou vybrané atrakce, ochutnávky a aktivity dostupné zdarma — do vyčerpání zásob a podle programu události."
+    },
+    "moments": {
+      "kicker": "PROBUZENÍ",
+      "title": "Park začíná odpovídat.",
+      "body": "Během dne se několikrát mění světlo, zvuk i rytmus prostoru. Moai znovu otevírají oči, vybraná místa Parku se rozzáří a další události zahajují novou kapitolu Probuzení.",
+      "guardians": {
+        "title": "POHLED STRÁŽCŮ",
+        "description": "Jemné znovurozzáření očí Moai otevírá další okamžiky dne."
+      },
+      "voice": {
+        "title": "HLAS PARKU",
+        "description": "Krátký narativní signál může oznámit další událost bez automatického zvuku."
+      },
+      "ahuLight": {
+        "title": "SVĚTLO AHU",
+        "description": "Teplé nasvícení mění atmosféru vybraného prostoru bez přehnaného efektu."
+      },
+      "sign": {
+        "title": "ZNAMENÍ PROBUZENÍ",
+        "description": "Nenápadný symbol vede účastníky k dalšímu fragmentu příběhu."
+      }
+    },
+    "activities": {
+      "kicker": "POUZE BĚHEM PROBUZENÍ",
+      "title": "Pouze během Probuzení",
+      "ceremony": {
+        "title": "Ceremonie Probuzení",
+        "description": "Okamžik, kdy všechno začíná. Světlo postupně obejme monumentální siluety a oči Moai se objevují jedna po druhé. Od této chvíle RapaNuiPark funguje podle pravidel výjimečného dne."
+      },
+      "trail": {
+        "title": "Stezka otevřených očí",
+        "description": "Speciální trasa vede skrytými symboly, místy a úkoly dostupnými pouze během Probuzení. Každé další znamení odhaluje část příběhu."
+      },
+      "stories": {
+        "title": "Příběhy strážců",
+        "description": "Krátká setkání v různých částech Parku odkrývají historii Moai, Ahu, Rapa Nui a význam pohledu kamenných strážců."
+      },
+      "feast": {
+        "title": "Hostina strážců",
+        "description": "Limitované ochutnávky inspirované Pacifikem a Rapa Nui se objeví na vybraných místech Parku, zdarma do vyčerpání připravených porcí."
+      },
+      "photos": {
+        "title": "Záběry otevřených očí",
+        "description": "Jen tento den vznikají fotografie RapaNuiPark, které při běžné návštěvě nelze pořídit: Moai získávají pohled a Park připravuje speciální foto místa."
+      },
+      "symbols": {
+        "title": "Znaky Probuzení",
+        "description": "Workshopy pro rodiny i dospělé umožňují tvořit vlastní znaky, pečetě a vzory inspirované estetikou Rapa Nui."
+      },
+      "mystery": {
+        "title": "Tajemství Probuzení",
+        "description": "V Parku jsou ukryta znamení vedoucí k finálnímu symbolu. Tento zážitek je dostupný pouze tento den."
+      },
+      "light": {
+        "title": "Večer světla",
+        "description": "Soumrak zahajuje poslední kapitolu Probuzení. Teplé světlo objímá Moai, jejich oči zůstávají otevřené a prostor Ahu se mění v monumentální scénu kamene, světla a noci."
+      }
+    },
+    "timeline": {
+      "kicker": "PROGRAM",
+      "title": "Jeden den. Pět kapitol.",
+      "dawn": {
+        "time": "ÚSVIT",
+        "title": "Probuzení",
+        "description": "První otevření očí Moai."
+      },
+      "noon": {
+        "time": "POLEDNE",
+        "title": "Objevování",
+        "description": "Příběhy, stezky a speciální aktivity."
+      },
+      "afternoon": {
+        "time": "ODPOLEDNE",
+        "title": "Pohostinnost",
+        "description": "Ochutnávky, workshopy a události."
+      },
+      "dusk": {
+        "time": "SOUMRAK",
+        "title": "Pohled",
+        "description": "Nejlepší čas na výjimečné fotografie."
+      },
+      "night": {
+        "time": "NOC",
+        "title": "Světlo",
+        "description": "Finální Probuzení a iluminace."
+      }
+    },
+    "final": {
+      "kicker": "FINÁLE",
+      "title": "Strážci se znovu dívají.",
+      "subtitle": "Není známo, kdy se to stane znovu.",
+      "eventPending": "Termín dalšího Probuzení bude oznámen.",
+      "announcedFallback": "Další Probuzení bylo oznámeno.",
+      "cta": "SLEDOVAT NEJBLIŽŠÍ PROBUZENÍ"
+    },
+    "assetReview": {
+      "kicker": "VIZUÁLNÍ VRSTVA PREVIEW",
+      "title": "Vybrané obrazy pro směr."
+    },
+    "assets": {
+      "templeWideAlt": "Oczy Moai w mrocznej, kamiennej przestrzeni.",
+      "templeCloseAlt": "Bliski kadr oczu Moai w monumentalnej scenerii.",
+      "templeHorizontalAlt": "Poziomy kadr oczu Moai z monumentalnymi posągami w tle.",
+      "referenceEyesAlt": "Referencyjny kadr tradycyjnych oczu Moai.",
+      "ahuDayAlt": "Ahu Tongariki w świetle dnia.",
+      "pavilionAlt": "Pawilon RapaNuiPark jako przestrzeń gościnności.",
+      "blackGoldAlt": "Oczy Moai na ciemnym krajobrazie z ciepłym światłem.",
+      "stormLandscapeAlt": "Oczy Moai w pochmurnym krajobrazie.",
+      "hillsAlt": "Moai na zielonym zboczu pod błękitnym niebem.",
+      "oceanCliffAlt": "Oczy Moai nad wzburzonym oceanem i klifem.",
+      "stormNightAlt": "Oczy Moai przed nocną scenerią burzy i strażników.",
+      "stormAnimatedAlt": "Animowany kadr oczu Moai w nocnej atmosferze.",
+      "fiveOceanAlt": "Pět Moai s otevřenýma očima před oceánem a jasnou oblohou.",
+      "closeDayAlt": "Blízký denní záběr Moai s otevřenýma očima.",
+      "purpleAnimatedAlt": "Animovaný záběr očí Moai ve fialové atmosféře soumraku."
+    },
+    "activityDetails": {
+      "light": "světlo",
+      "sequence": "sekvence",
+      "ceremony": "ceremonie",
+      "path": "trasa",
+      "symbols": "symboly",
+      "narration": "příběh",
+      "education": "edukace",
+      "hosting": "pohostinnost",
+      "daylight": "den",
+      "photo": "fotografie",
+      "goldHour": "zlatá hodina",
+      "workshop": "workshop",
+      "sign": "znak",
+      "clue": "stopa",
+      "family": "rodina",
+      "night": "noc",
+      "finalLight": "finále světla"
+    }
   }
 }

@@ -852,5 +852,156 @@
       "cta": "DISCOVER THE NIGHTS OF AHU TONGARIKI",
       "imageAlt": "Night winter scene of Rapa Nui Park leading to the Nights of Ahu Tongariki section."
     }
+  },
+  "awakening": {
+    "kicker": "A RARE DAY AT RAPANUIPARK",
+    "title": "The Awakening of the Moai",
+    "subtitle": "The day the guardians open their eyes.",
+    "lead": "A rare special event where light, story and the gaze of the Moai change the rhythm of the entire Park.",
+    "rareLine": "It is never an ordinary day.",
+    "started": "AWAKENING BEGUN",
+    "scrollCue": "See what happens when the Moai look.",
+    "scrollAria": "Scroll to the Awakening of the Moai manifesto",
+    "heroAlt": "Monumental RapaNuiPark Moai with a subtle eye-opening animation.",
+    "manifest": {
+      "kicker": "AN UNUSUAL DAY",
+      "title": "When the Moai look, RapaNuiPark changes its rules.",
+      "body": "The Awakening of the Moai is not an ordinary visit. It is a special event in which the Park fills with stories, light, symbols and experiences available only during the Awakening.",
+      "freeRule": "On the day of the Awakening, selected attractions, tastings and activities are available free of charge — while supplies last and according to the event programme."
+    },
+    "moments": {
+      "kicker": "AWAKENING",
+      "title": "The Park begins to answer.",
+      "body": "Throughout the day, light, sound and the rhythm of the place shift several times. The Moai open their eyes again, selected areas of the Park are illuminated, and each event begins a new chapter of the Awakening.",
+      "guardians": {
+        "title": "THE GUARDIANS’ GAZE",
+        "description": "A subtle renewed glow in the eyes of the Moai begins the next moments of the day."
+      },
+      "voice": {
+        "title": "THE VOICE OF THE PARK",
+        "description": "A short narrative signal may announce the next event without automatic audio."
+      },
+      "ahuLight": {
+        "title": "LIGHT OF THE AHU",
+        "description": "Warm illumination changes the mood of a selected place without turning it into a spectacle."
+      },
+      "sign": {
+        "title": "SIGN OF AWAKENING",
+        "description": "A discreet symbol leads participants toward the next fragment of the story."
+      }
+    },
+    "activities": {
+      "kicker": "ONLY DURING THE AWAKENING",
+      "title": "Only During the Awakening",
+      "ceremony": {
+        "title": "Awakening Ceremony",
+        "description": "The moment everything begins. Light gradually reaches the monumental silhouettes, and the eyes of the Moai appear one after another. From then on, RapaNuiPark follows the rules of an exceptional day."
+      },
+      "trail": {
+        "title": "Trail of Open Eyes",
+        "description": "A special route leads through hidden symbols, places and tasks available only during the Awakening. Each sign reveals another fragment of the story."
+      },
+      "stories": {
+        "title": "Stories of the Guardians",
+        "description": "Short encounters in different parts of the Park reveal the history of the Moai, Ahu, Rapa Nui and the meaning of the gaze of stone guardians."
+      },
+      "feast": {
+        "title": "Feast of the Guardians",
+        "description": "Limited tastings inspired by the Pacific and Rapa Nui appear in selected places in the Park, available free while prepared portions last."
+      },
+      "photos": {
+        "title": "Frames of Open Eyes",
+        "description": "Only on this day can guests create RapaNuiPark photographs impossible during a regular visit: the Moai regain their gaze and the Park prepares special photo points."
+      },
+      "symbols": {
+        "title": "Signs of Awakening",
+        "description": "Workshops for families and adults invite guests to create signs, seals and patterns inspired by the aesthetics of Rapa Nui."
+      },
+      "mystery": {
+        "title": "Mystery of Awakening",
+        "description": "Hidden signs across the Park lead toward the final symbol. This experience is available only on this day."
+      },
+      "light": {
+        "title": "Evening of Light",
+        "description": "Dusk begins the last chapter of the Awakening. Warm light embraces the Moai, their eyes remain open, and the Ahu becomes a monumental scene of stone, light and night."
+      }
+    },
+    "timeline": {
+      "kicker": "SCHEDULE",
+      "title": "One day. Five chapters.",
+      "dawn": {
+        "time": "DAWN",
+        "title": "Awakening",
+        "description": "The first opening of the Moai eyes."
+      },
+      "noon": {
+        "time": "NOON",
+        "title": "Discovery",
+        "description": "Stories, trails and special activities."
+      },
+      "afternoon": {
+        "time": "AFTERNOON",
+        "title": "Hospitality",
+        "description": "Tastings, workshops and events."
+      },
+      "dusk": {
+        "time": "DUSK",
+        "title": "Gaze",
+        "description": "The best time for rare photographs."
+      },
+      "night": {
+        "time": "NIGHT",
+        "title": "Light",
+        "description": "The final Awakening and illumination."
+      }
+    },
+    "final": {
+      "kicker": "FINALE",
+      "title": "The guardians look again.",
+      "subtitle": "No one knows when it will happen again.",
+      "eventPending": "The date of the next Awakening will be announced.",
+      "announcedFallback": "The next Awakening has been announced.",
+      "cta": "FOLLOW THE NEXT AWAKENING"
+    },
+    "assetReview": {
+      "kicker": "PREVIEW VISUAL LAYER",
+      "title": "Selected images for the direction."
+    },
+    "assets": {
+      "templeWideAlt": "Oczy Moai w mrocznej, kamiennej przestrzeni.",
+      "templeCloseAlt": "Bliski kadr oczu Moai w monumentalnej scenerii.",
+      "templeHorizontalAlt": "Poziomy kadr oczu Moai z monumentalnymi posągami w tle.",
+      "referenceEyesAlt": "Referencyjny kadr tradycyjnych oczu Moai.",
+      "ahuDayAlt": "Ahu Tongariki w świetle dnia.",
+      "pavilionAlt": "Pawilon RapaNuiPark jako przestrzeń gościnności.",
+      "blackGoldAlt": "Oczy Moai na ciemnym krajobrazie z ciepłym światłem.",
+      "stormLandscapeAlt": "Oczy Moai w pochmurnym krajobrazie.",
+      "hillsAlt": "Moai na zielonym zboczu pod błękitnym niebem.",
+      "oceanCliffAlt": "Oczy Moai nad wzburzonym oceanem i klifem.",
+      "stormNightAlt": "Oczy Moai przed nocną scenerią burzy i strażników.",
+      "stormAnimatedAlt": "Animowany kadr oczu Moai w nocnej atmosferze.",
+      "fiveOceanAlt": "Five Moai with open eyes against the ocean and bright sky.",
+      "closeDayAlt": "Close daytime view of Moai with open eyes.",
+      "purpleAnimatedAlt": "Animated view of Moai eyes in a purple dusk atmosphere."
+    },
+    "activityDetails": {
+      "light": "light",
+      "sequence": "sequence",
+      "ceremony": "ceremony",
+      "path": "route",
+      "symbols": "symbols",
+      "narration": "story",
+      "education": "education",
+      "hosting": "hospitality",
+      "daylight": "daylight",
+      "photo": "photography",
+      "goldHour": "golden hour",
+      "workshop": "workshop",
+      "sign": "sign",
+      "clue": "clue",
+      "family": "family",
+      "night": "night",
+      "finalLight": "light finale"
+    }
   }
 }

@@ -844,5 +844,156 @@
       "cta": "DESCUBRE LAS NOCHES DE AHU TONGARIKI",
       "imageAlt": "Escena invernal nocturna de Rapa Nui Park que conduce a la sección Noches de Ahu Tongariki."
     }
+  },
+  "awakening": {
+    "kicker": "DÍA EXCEPCIONAL RAPANUIPARK",
+    "title": "El Despertar de los Moai",
+    "subtitle": "El día en que los guardianes abren los ojos.",
+    "lead": "Un evento especial y poco común en el que la luz, el relato y la mirada de los Moai cambian el ritmo de todo el Parque.",
+    "rareLine": "Nunca es un día cualquiera.",
+    "started": "DESPERTAR INICIADO",
+    "scrollCue": "Mira qué ocurre cuando los Moai observan.",
+    "scrollAria": "Scroll to the Awakening of the Moai manifesto",
+    "heroAlt": "Monumental RapaNuiPark Moai with a subtle eye-opening animation.",
+    "manifest": {
+      "kicker": "DÍA INUSUAL",
+      "title": "Cuando los Moai miran, RapaNuiPark cambia sus reglas.",
+      "body": "El Despertar de los Moai no es un día de visita corriente. Es un evento especial en el que el Parque se llena de relatos, luz, símbolos y experiencias disponibles solo durante el Despertar.",
+      "freeRule": "El día del Despertar, determinadas atracciones, degustaciones y actividades están disponibles gratuitamente — hasta agotar existencias y según el programa del evento."
+    },
+    "moments": {
+      "kicker": "DESPERTAR",
+      "title": "El Parque empieza a responder.",
+      "body": "A lo largo del día, la luz, el sonido y el ritmo del espacio cambian varias veces. Los Moai vuelven a abrir los ojos, algunos lugares del Parque se iluminan y cada evento inicia un nuevo capítulo del Despertar.",
+      "guardians": {
+        "title": "LA MIRADA DE LOS GUARDIANES",
+        "description": "Un resplandor sutil vuelve a los ojos de los Moai e inicia los siguientes momentos del día."
+      },
+      "voice": {
+        "title": "LA VOZ DEL PARQUE",
+        "description": "Una breve señal narrativa puede anunciar el siguiente evento sin audio automático."
+      },
+      "ahuLight": {
+        "title": "LUZ DEL AHU",
+        "description": "Una iluminación cálida cambia la atmósfera de un espacio sin convertirlo en espectáculo."
+      },
+      "sign": {
+        "title": "SEÑAL DEL DESPERTAR",
+        "description": "Un símbolo discreto guía a los participantes hacia el siguiente fragmento del relato."
+      }
+    },
+    "activities": {
+      "kicker": "SOLO DURANTE EL DESPERTAR",
+      "title": "Solo durante el Despertar",
+      "ceremony": {
+        "title": "Ceremonia del Despertar",
+        "description": "El momento en que todo empieza. La luz envuelve gradualmente las siluetas monumentales y los ojos de los Moai aparecen uno tras otro. Desde entonces, RapaNuiPark funciona bajo las reglas de un día excepcional."
+      },
+      "trail": {
+        "title": "Sendero de los Ojos Abiertos",
+        "description": "Una ruta especial conduce por símbolos, lugares y tareas ocultas disponibles solo durante el Despertar. Cada señal revela un fragmento del relato."
+      },
+      "stories": {
+        "title": "Relatos de los Guardianes",
+        "description": "Breves encuentros en distintas partes del Parque revelan la historia de los Moai, los Ahu, Rapa Nui y el significado de la mirada de los guardianes de piedra."
+      },
+      "feast": {
+        "title": "Banquete de los Guardianes",
+        "description": "Degustaciones limitadas inspiradas en el Pacífico y Rapa Nui aparecen en lugares seleccionados del Parque, disponibles gratuitamente hasta agotar las porciones preparadas."
+      },
+      "photos": {
+        "title": "Imágenes de los Ojos Abiertos",
+        "description": "Solo ese día nacen fotografías de RapaNuiPark imposibles en una visita normal: los Moai recuperan la mirada y el Parque prepara puntos fotográficos especiales."
+      },
+      "symbols": {
+        "title": "Signos del Despertar",
+        "description": "Talleres para familias y adultos permiten crear signos, sellos y patrones inspirados en la estética de Rapa Nui."
+      },
+      "mystery": {
+        "title": "Misterio del Despertar",
+        "description": "Se ocultan señales en el Parque que conducen al símbolo final. Esta experiencia existe solo ese día."
+      },
+      "light": {
+        "title": "Noche de Luz",
+        "description": "El crepúsculo inicia el último capítulo del Despertar. Una luz cálida abraza a los Moai, sus ojos permanecen abiertos y el Ahu se transforma en una escena monumental de piedra, luz y noche."
+      }
+    },
+    "timeline": {
+      "kicker": "PROGRAMA",
+      "title": "Un día. Cinco capítulos.",
+      "dawn": {
+        "time": "AMANECER",
+        "title": "Despertar",
+        "description": "La primera apertura de los ojos de los Moai."
+      },
+      "noon": {
+        "time": "MEDIODÍA",
+        "title": "Descubrimiento",
+        "description": "Relatos, recorridos y actividades especiales."
+      },
+      "afternoon": {
+        "time": "TARDE",
+        "title": "Hospitalidad",
+        "description": "Degustaciones, talleres y eventos."
+      },
+      "dusk": {
+        "time": "CREPÚSCULO",
+        "title": "Mirada",
+        "description": "El mejor momento para fotografías excepcionales."
+      },
+      "night": {
+        "time": "NOCHE",
+        "title": "Luz",
+        "description": "El Despertar final y la iluminación."
+      }
+    },
+    "final": {
+      "kicker": "FINAL",
+      "title": "Los guardianes vuelven a mirar.",
+      "subtitle": "No se sabe cuándo volverá a ocurrir.",
+      "eventPending": "La fecha del próximo Despertar será anunciada.",
+      "announcedFallback": "El próximo Despertar ha sido anunciado.",
+      "cta": "SEGUIR EL PRÓXIMO DESPERTAR"
+    },
+    "assetReview": {
+      "kicker": "CAPA VISUAL DEL PREVIEW",
+      "title": "Imágenes seleccionadas para la dirección."
+    },
+    "assets": {
+      "templeWideAlt": "Oczy Moai w mrocznej, kamiennej przestrzeni.",
+      "templeCloseAlt": "Bliski kadr oczu Moai w monumentalnej scenerii.",
+      "templeHorizontalAlt": "Poziomy kadr oczu Moai z monumentalnymi posągami w tle.",
+      "referenceEyesAlt": "Referencyjny kadr tradycyjnych oczu Moai.",
+      "ahuDayAlt": "Ahu Tongariki w świetle dnia.",
+      "pavilionAlt": "Pawilon RapaNuiPark jako przestrzeń gościnności.",
+      "blackGoldAlt": "Oczy Moai na ciemnym krajobrazie z ciepłym światłem.",
+      "stormLandscapeAlt": "Oczy Moai w pochmurnym krajobrazie.",
+      "hillsAlt": "Moai na zielonym zboczu pod błękitnym niebem.",
+      "oceanCliffAlt": "Oczy Moai nad wzburzonym oceanem i klifem.",
+      "stormNightAlt": "Oczy Moai przed nocną scenerią burzy i strażników.",
+      "stormAnimatedAlt": "Animowany kadr oczu Moai w nocnej atmosferze.",
+      "fiveOceanAlt": "Cinco Moai con ojos abiertos frente al océano y cielo claro.",
+      "closeDayAlt": "Primer plano diurno de Moai con ojos abiertos.",
+      "purpleAnimatedAlt": "Vista animada de ojos Moai en una atmósfera púrpura de atardecer."
+    },
+    "activityDetails": {
+      "light": "luz",
+      "sequence": "secuencia",
+      "ceremony": "ceremonia",
+      "path": "ruta",
+      "symbols": "símbolos",
+      "narration": "relato",
+      "education": "educación",
+      "hosting": "hospitalidad",
+      "daylight": "día",
+      "photo": "fotografía",
+      "goldHour": "hora dorada",
+      "workshop": "taller",
+      "sign": "señal",
+      "clue": "pista",
+      "family": "familia",
+      "night": "noche",
+      "finalLight": "final de luz"
+    }
   }
 }
