@@ -1,0 +1,7 @@
+preview/
+.preview-*/
+.codex-local/
+logs/
+*.log
+*.err
+*.tsbuildinfo

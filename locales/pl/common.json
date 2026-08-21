@@ -854,114 +854,114 @@
     }
   },
   "awakening": {
-    "kicker": "WYJĄTKOWY DZIEŃ RAPANUIPARK",
+    "kicker": "OPOWIEŚĆ O SPOJRZENIU",
     "title": "Przebudzenie Moai",
-    "subtitle": "Dzień, w którym strażnicy otwierają oczy.",
-    "lead": "Rzadkie wydarzenie specjalne, w którym światło, opowieść i spojrzenie Moai zmieniają rytm całego Parku.",
-    "rareLine": "Nigdy nie jest to zwykły dzień.",
+    "subtitle": "Dzień, w którym kamień odzyskuje pamięć.",
+    "lead": "Przebudzenie Moai to narracyjna warstwa RapaNuiPark: światło, cisza, ślady i opowieść prowadzą odwiedzających przez znaczenie strażników, a nie przez zwykły program atrakcji.",
+    "rareLine": "To moment skupienia, nie pokaz.",
     "started": "PRZEBUDZENIE ROZPOCZĘTE",
-    "scrollCue": "Zobacz, co dzieje się, gdy Moai patrzą.",
-    "scrollAria": "Przewiń do manifestu Przebudzenia Moai",
+    "scrollCue": "Wejdź w opowieść Przebudzenia",
+    "scrollAria": "Przewiń do opowieści Przebudzenia Moai",
     "heroAlt": "Monumentalne Moai RapaNuiPark z subtelną animacją otwierania oczu.",
     "manifest": {
-      "kicker": "NIECODZIENNY DZIEŃ",
-      "title": "Kiedy Moai patrzą, RapaNuiPark zmienia swoje zasady.",
-      "body": "Przebudzenie Moai nie jest zwykłym dniem zwiedzania. To specjalne wydarzenie, podczas którego Park wypełnia się opowieściami, światłem, symbolami i doświadczeniami dostępnymi tylko podczas Przebudzenia.",
-      "freeRule": "W dniu Przebudzenia wybrane atrakcje, degustacje i aktywności są dostępne bezpłatnie — do wyczerpania zapasów i zgodnie z programem wydarzenia."
+      "kicker": "MIEJSCE, KTÓRE PAMIĘTA",
+      "title": "Gdy oczy Moai są otwarte, Park przestaje być tylko przestrzenią zwiedzania.",
+      "body": "Ta sekcja opowiada o symbolicznym momencie, w którym spojrzenie strażników porządkuje całą przestrzeń. Każdy fragment Parku może wtedy stać się częścią większej historii: o kamieniu, oceanie, pamięci, wędrówce i odpowiedzialności wobec dziedzictwa Rapa Nui.",
+      "freeRule": "Przebudzenie nie potrzebuje nadmiaru efektów. Jego siła leży w rytmie przejścia: od pierwszego spojrzenia, przez ślady w terenie, aż po wieczorne światło."
     },
     "moments": {
-      "kicker": "PRZEBUDZENIE",
-      "title": "Park zaczyna odpowiadać.",
-      "body": "W ciągu dnia światło, dźwięk i rytm przestrzeni zmieniają się kilkukrotnie. Moai ponownie otwierają oczy, wybrane miejsca Parku zostają podświetlone, a kolejne wydarzenia rozpoczynają nowy rozdział Przebudzenia.",
+      "kicker": "RYTM MIEJSCA",
+      "title": "Park opowiada przez małe znaki.",
+      "body": "Zamiast mnożyć aktywności, sekcja buduje rytm: światło, pauza, znak, krótka opowieść, przejście dalej. To spokojna dramaturgia miejsca, w której każda scena ma sens i nie musi być głośna.",
       "guardians": {
         "title": "SPOJRZENIE STRAŻNIKÓW",
-        "description": "Subtelne ponowne rozświetlenie oczu Moai rozpoczyna kolejne momenty dnia."
+        "description": "Subtelne otwarcie oczu uruchamia pytanie: kto tu patrzy, kto pamięta i komu powierzono opiekę nad miejscem."
       },
       "voice": {
-        "title": "GŁOS PARKU",
-        "description": "Krótki sygnał narracyjny może zapowiadać nowe wydarzenie bez automatycznego dźwięku."
+        "title": "GŁOS OPOWIEŚCI",
+        "description": "Krótka narracja może wyjaśniać znaczenie Moai, Ahu i pukao bez zamieniania przestrzeni w spektakl."
       },
       "ahuLight": {
-        "title": "ŚWIATŁO AHU",
-        "description": "Ciepła iluminacja wybranej przestrzeni zmienia atmosferę bez efektu widowiska."
+        "title": "ŚWIATŁO PRZY AHU",
+        "description": "Ciepła iluminacja nie reklamuje atrakcji, lecz pozwala zobaczyć fakturę kamienia, proporcję i powagę ustawienia."
       },
       "sign": {
-        "title": "ZNAK PRZEBUDZENIA",
-        "description": "Dyskretny symbol prowadzi uczestników do następnego fragmentu opowieści."
+        "title": "ZNAK W TERENIE",
+        "description": "Dyskretny symbol prowadzi dalej i sprawia, że przejście przez Park staje się czytaniem krajobrazu."
       }
     },
     "activities": {
-      "kicker": "TYLKO PODCZAS PRZEBUDZENIA",
-      "title": "Tylko podczas Przebudzenia",
+      "kicker": "ROZDZIAŁY PRZEBUDZENIA",
+      "title": "Osiem fragmentów jednej historii",
       "ceremony": {
-        "title": "Ceremonia Przebudzenia",
-        "description": "Moment, od którego wszystko się zaczyna. Światło stopniowo obejmuje monumentalne sylwetki, a oczy Moai pojawiają się jeden po drugim. Od tej chwili RapaNuiPark działa według zasad wyjątkowego dnia."
+        "title": "Otwarcie Spojrzenia",
+        "description": "Pierwszy rozdział nie zaczyna się od hałasu, lecz od światła. Twarze powoli wynurzają się z półmroku, a oczy Moai stają się punktem, wokół którego porządkuje się cała opowieść."
       },
       "trail": {
-        "title": "Ścieżka Otwartych Oczu",
-        "description": "Specjalna trasa prowadzi przez ukryte symbole, miejsca i zadania dostępne tylko podczas Przebudzenia. Każdy kolejny znak odsłania fragment opowieści."
+        "title": "Ścieżka Znaków",
+        "description": "Przejście przez Park prowadzi przez małe ślady: symbole, fragmenty tekstu, kamienne punkty i miejsca zatrzymania. To trasa bardziej do odkrywania niż do zaliczania."
       },
       "stories": {
-        "title": "Opowieści Strażników",
-        "description": "Krótkie spotkania prowadzone w różnych częściach Parku odkrywają historię Moai, Ahu, Rapa Nui oraz znaczenie spojrzenia kamiennych strażników."
+        "title": "Opowieści Ahu",
+        "description": "Każde Ahu może mieć własny głos: o ustawieniu posągów, relacji z krajobrazem, pamięci przodków i sensie patrzenia w stronę wspólnoty."
       },
       "feast": {
-        "title": "Uczta Strażników",
-        "description": "Limitowane degustacje inspirowane smakami Pacyfiku i Rapa Nui pojawiają się w wybranych miejscach Parku. Dostępne bezpłatnie do wyczerpania przygotowanych porcji."
+        "title": "Gościnność Miejsca",
+        "description": "Jeśli pojawia się jedzenie, jest częścią opowieści o spotkaniu, nie głównym produktem. Ma budować ciepło, odpoczynek i szacunek dla wspólnego czasu."
       },
       "photos": {
-        "title": "Kadry Otwartych Oczu",
-        "description": "Tylko tego dnia powstają fotografie RapaNuiPark, których nie można zrobić podczas zwykłej wizyty — Moai odzyskują spojrzenie, a Park przygotowuje specjalne punkty fotograficzne."
+        "title": "Kadry Pamięci",
+        "description": "Fotografia nie jest tu promocją, lecz próbą uchwycenia momentu: spojrzenia, faktury kamienia, światła i skali, która zostaje z odwiedzającym po wyjściu z Parku."
       },
       "symbols": {
-        "title": "Znaki Przebudzenia",
-        "description": "Warsztaty dla rodzin i dorosłych pozwalają tworzyć własne znaki, pieczęcie i wzory inspirowane estetyką Rapa Nui."
+        "title": "Znaki i Pieczęcie",
+        "description": "Warsztat może być spokojnym gestem: odbiciem symbolu, wykonaniem znaku, zostawieniem śladu w pamięci. Ważniejsze od pamiątki jest zrozumienie motywu."
       },
       "mystery": {
-        "title": "Tajemnica Przebudzenia",
-        "description": "Na terenie Parku ukryte zostają znaki prowadzące do finałowego symbolu. To doświadczenie dostępne tylko tego dnia."
+        "title": "Ukryta Opowieść",
+        "description": "W terenie mogą pojawiać się fragmenty większej historii. Nie prowadzą do nagrody, lecz do finałowego sensu: dlaczego strażnicy patrzą i czego pilnują."
       },
       "light": {
-        "title": "Wieczór Światła",
-        "description": "Zmierzch rozpoczyna ostatni rozdział Przebudzenia. Ciepłe światło obejmuje Moai, oczy pozostają otwarte, a przestrzeń Ahu zmienia się w monumentalną scenę kamienia, światła i nocy."
+        "title": "Cisza Wieczoru",
+        "description": "Ostatni rozdział powinien wyciszać. Światło obejmuje twarze, oczy pozostają otwarte, a Park zamienia się w krajobraz pamięci, kamienia i nocnego skupienia."
       }
     },
     "timeline": {
-      "kicker": "HARMONOGRAM",
-      "title": "Jeden dzień. Pięć rozdziałów.",
+      "kicker": "NARRACJA DNIA",
+      "title": "Jeden dzień. Pięć stanów miejsca.",
       "dawn": {
         "time": "ŚWIT",
-        "title": "Przebudzenie",
-        "description": "Pierwsze otwarcie oczu Moai."
+        "title": "Pierwsze spojrzenie",
+        "description": "Początek opowieści i powolne otwarcie oczu."
       },
       "noon": {
         "time": "POŁUDNIE",
-        "title": "Odkrywanie",
-        "description": "Opowieści, ścieżki i specjalne aktywności."
+        "title": "Czytanie znaków",
+        "description": "Ścieżki, symbole i krótkie historie prowadzą przez teren."
       },
       "afternoon": {
         "time": "POPOŁUDNIE",
-        "title": "Gościnność",
-        "description": "Degustacje, warsztaty i wydarzenia."
+        "title": "Pamięć i spotkanie",
+        "description": "Opowieści o Ahu, Moai, ludziach i krajobrazie."
       },
       "dusk": {
         "time": "ZMIERZCH",
-        "title": "Spojrzenie",
-        "description": "Najlepszy czas na wyjątkowe fotografie."
+        "title": "Światło kamienia",
+        "description": "Twarze i faktury wydobyte spokojną iluminacją."
       },
       "night": {
         "time": "NOC",
-        "title": "Światło",
-        "description": "Finałowe Przebudzenie i iluminacja."
+        "title": "Cisza strażników",
+        "description": "Finał pozostawia obraz otwartych oczu."
       }
     },
     "final": {
-      "kicker": "FINAŁ",
-      "title": "Strażnicy znów patrzą.",
-      "subtitle": "Nie wiadomo, kiedy wydarzy się to ponownie.",
-      "eventPending": "Termin kolejnego Przebudzenia zostanie ogłoszony.",
-      "announcedFallback": "Następne Przebudzenie zostało ogłoszone.",
-      "cta": "ŚLEDŹ NAJBLIŻSZE PRZEBUDZENIE"
+      "kicker": "DOMKNIĘCIE",
+      "title": "Strażnicy patrzą dalej.",
+      "subtitle": "Opowieść nie kończy się wraz ze zmierzchem.",
+      "eventPending": "Kolejny rozdział Przebudzenia powinien wynikać z rytmu Parku i dojrzałości całej narracji.",
+      "announcedFallback": "Następny rozdział Przebudzenia został zapowiedziany.",
+      "cta": "Wróć do opowieści"
     },
     "assetReview": {
       "kicker": "WARSTWA WIZUALNA PREVIEW",
@@ -1002,6 +1002,29 @@
       "family": "rodzinnie",
       "night": "noc",
       "finalLight": "finał światła"
+    },
+    "story": {
+      "kicker": "CZTERY WARSTWY OPOWIEŚCI",
+      "title": "Nie chodzi o wydarzenie. Chodzi o to, co zaczyna mówić miejsce.",
+      "body": "Przebudzenie Moai powinno prowadzić odwiedzającego spokojnie: najpierw przez obraz, potem przez znak, następnie przez historię, a na końcu przez osobiste spotkanie z monumentalną ciszą posągów."
+    },
+    "storyChapters": {
+      "firstLook": {
+        "title": "Pierwsze spojrzenie",
+        "body": "Oczy Moai nie są efektem specjalnym. Są znakiem, że strażnicy zostali zauważeni na nowo. Od tego momentu odwiedzający nie tylko patrzy na posągi, ale czuje, że sam jest przez nie obserwowany."
+      },
+      "memory": {
+        "title": "Pamięć zaklęta w kamieniu",
+        "body": "Opowieść wraca do Rapa Nui: do pracy rąk, do ciężaru transportu, do Ahu, do społeczności, które nadawały posągom sens. Przebudzenie ma przypominać, że Moai nie są dekoracją, lecz nośnikiem pamięci."
+      },
+      "path": {
+        "title": "Ślady prowadzą przez Park",
+        "body": "Zamiast nachalnych atrakcji pojawiają się dyskretne ślady: symbol na kamieniu, światło przy ścieżce, głos przewodnika, krótka historia zapisana przy punkcie widokowym. Każdy krok odsłania kolejny fragment narracji."
+      },
+      "evening": {
+        "title": "Wieczór domyka opowieść",
+        "body": "Gdy zapada zmierzch, Przebudzenie przechodzi w ciszę. Światło nie buduje widowiska, ale wydobywa twarze, profile i spojrzenia. Finał ma zostawić w pamięci obraz strażników, którzy nadal patrzą."
+      }
     }
   }
 }

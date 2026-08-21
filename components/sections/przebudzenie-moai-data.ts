@@ -32,6 +32,12 @@ export type AwakeningMoment = {
   descriptionKey: string;
 };
 
+export type AwakeningStoryChapter = {
+  id: string;
+  titleKey: string;
+  bodyKey: string;
+};
+
 export type AwakeningTimelineItem = {
   id: string;
   timeKey: string;
@@ -68,6 +74,29 @@ export const awakeningMoments: AwakeningMoment[] = [
     id: "sign",
     titleKey: "awakening.moments.sign.title",
     descriptionKey: "awakening.moments.sign.description"
+  }
+];
+
+export const awakeningStoryChapters: AwakeningStoryChapter[] = [
+  {
+    id: "firstLook",
+    titleKey: "awakening.storyChapters.firstLook.title",
+    bodyKey: "awakening.storyChapters.firstLook.body"
+  },
+  {
+    id: "memory",
+    titleKey: "awakening.storyChapters.memory.title",
+    bodyKey: "awakening.storyChapters.memory.body"
+  },
+  {
+    id: "path",
+    titleKey: "awakening.storyChapters.path.title",
+    bodyKey: "awakening.storyChapters.path.body"
+  },
+  {
+    id: "evening",
+    titleKey: "awakening.storyChapters.evening.title",
+    bodyKey: "awakening.storyChapters.evening.body"
   }
 ];
 

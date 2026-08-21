@@ -9,9 +9,9 @@ import { HeroSection as ExperienceHeroSection } from "../components/hero/HeroSec
 import { MasterplanSection } from "../components/masterplan/MasterplanSection";
 import { ScaleSection } from "../components/scale/ScaleSection";
 import { CoCreatorsSection } from "../components/sections/CoCreatorsSection";
-import { FutureHeritageComplexesSection } from "../components/sections/FutureHeritageComplexesSection";
 import { PrzebudzenieMoaiSection } from "../components/sections/PrzebudzenieMoaiSection";
 import { QrMoaiSection } from "../components/sections/QrMoaiSection";
+import { RealizationStagesSection } from "../components/sections/RealizationStagesSection";
 import { WinterExperienceSection } from "../components/sections/WinterExperienceSection";
 import { VideoPlayer } from "../components/video/VideoPlayer";
 import { languageOptions } from "./i18n";
@@ -1147,7 +1147,7 @@ function HomeContent() {
 
       <ExperienceSection />
 
-      <FutureHeritageComplexesSection />
+      <RealizationStagesSection />
 
       <PrzebudzenieMoaiSection />
 

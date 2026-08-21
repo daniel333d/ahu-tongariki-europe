@@ -846,118 +846,118 @@
     }
   },
   "awakening": {
-    "kicker": "DÍA EXCEPCIONAL RAPANUIPARK",
-    "title": "El Despertar de los Moai",
-    "subtitle": "El día en que los guardianes abren los ojos.",
-    "lead": "Un evento especial y poco común en el que la luz, el relato y la mirada de los Moai cambian el ritmo de todo el Parque.",
-    "rareLine": "Nunca es un día cualquiera.",
-    "started": "DESPERTAR INICIADO",
-    "scrollCue": "Mira qué ocurre cuando los Moai observan.",
-    "scrollAria": "Scroll to the Awakening of the Moai manifesto",
-    "heroAlt": "Monumental RapaNuiPark Moai with a subtle eye-opening animation.",
+    "kicker": "OPOWIEŚĆ O SPOJRZENIU",
+    "title": "Przebudzenie Moai",
+    "subtitle": "Dzień, w którym kamień odzyskuje pamięć.",
+    "lead": "Przebudzenie Moai to narracyjna warstwa RapaNuiPark: światło, cisza, ślady i opowieść prowadzą odwiedzających przez znaczenie strażników, a nie przez zwykły program atrakcji.",
+    "rareLine": "To moment skupienia, nie pokaz.",
+    "started": "PRZEBUDZENIE ROZPOCZĘTE",
+    "scrollCue": "Wejdź w opowieść Przebudzenia",
+    "scrollAria": "Przewiń do opowieści Przebudzenia Moai",
+    "heroAlt": "Monumentalne Moai RapaNuiPark z subtelną animacją otwierania oczu.",
     "manifest": {
-      "kicker": "DÍA INUSUAL",
-      "title": "Cuando los Moai miran, RapaNuiPark cambia sus reglas.",
-      "body": "El Despertar de los Moai no es un día de visita corriente. Es un evento especial en el que el Parque se llena de relatos, luz, símbolos y experiencias disponibles solo durante el Despertar.",
-      "freeRule": "El día del Despertar, determinadas atracciones, degustaciones y actividades están disponibles gratuitamente — hasta agotar existencias y según el programa del evento."
+      "kicker": "MIEJSCE, KTÓRE PAMIĘTA",
+      "title": "Gdy oczy Moai są otwarte, Park przestaje być tylko przestrzenią zwiedzania.",
+      "body": "Ta sekcja opowiada o symbolicznym momencie, w którym spojrzenie strażników porządkuje całą przestrzeń. Każdy fragment Parku może wtedy stać się częścią większej historii: o kamieniu, oceanie, pamięci, wędrówce i odpowiedzialności wobec dziedzictwa Rapa Nui.",
+      "freeRule": "Przebudzenie nie potrzebuje nadmiaru efektów. Jego siła leży w rytmie przejścia: od pierwszego spojrzenia, przez ślady w terenie, aż po wieczorne światło."
     },
     "moments": {
-      "kicker": "DESPERTAR",
-      "title": "El Parque empieza a responder.",
-      "body": "A lo largo del día, la luz, el sonido y el ritmo del espacio cambian varias veces. Los Moai vuelven a abrir los ojos, algunos lugares del Parque se iluminan y cada evento inicia un nuevo capítulo del Despertar.",
+      "kicker": "RYTM MIEJSCA",
+      "title": "Park opowiada przez małe znaki.",
+      "body": "Zamiast mnożyć aktywności, sekcja buduje rytm: światło, pauza, znak, krótka opowieść, przejście dalej. To spokojna dramaturgia miejsca, w której każda scena ma sens i nie musi być głośna.",
       "guardians": {
-        "title": "LA MIRADA DE LOS GUARDIANES",
-        "description": "Un resplandor sutil vuelve a los ojos de los Moai e inicia los siguientes momentos del día."
+        "title": "SPOJRZENIE STRAŻNIKÓW",
+        "description": "Subtelne otwarcie oczu uruchamia pytanie: kto tu patrzy, kto pamięta i komu powierzono opiekę nad miejscem."
       },
       "voice": {
-        "title": "LA VOZ DEL PARQUE",
-        "description": "Una breve señal narrativa puede anunciar el siguiente evento sin audio automático."
+        "title": "GŁOS OPOWIEŚCI",
+        "description": "Krótka narracja może wyjaśniać znaczenie Moai, Ahu i pukao bez zamieniania przestrzeni w spektakl."
       },
       "ahuLight": {
-        "title": "LUZ DEL AHU",
-        "description": "Una iluminación cálida cambia la atmósfera de un espacio sin convertirlo en espectáculo."
+        "title": "ŚWIATŁO PRZY AHU",
+        "description": "Ciepła iluminacja nie reklamuje atrakcji, lecz pozwala zobaczyć fakturę kamienia, proporcję i powagę ustawienia."
       },
       "sign": {
-        "title": "SEÑAL DEL DESPERTAR",
-        "description": "Un símbolo discreto guía a los participantes hacia el siguiente fragmento del relato."
+        "title": "ZNAK W TERENIE",
+        "description": "Dyskretny symbol prowadzi dalej i sprawia, że przejście przez Park staje się czytaniem krajobrazu."
       }
     },
     "activities": {
-      "kicker": "SOLO DURANTE EL DESPERTAR",
-      "title": "Solo durante el Despertar",
+      "kicker": "ROZDZIAŁY PRZEBUDZENIA",
+      "title": "Osiem fragmentów jednej historii",
       "ceremony": {
-        "title": "Ceremonia del Despertar",
-        "description": "El momento en que todo empieza. La luz envuelve gradualmente las siluetas monumentales y los ojos de los Moai aparecen uno tras otro. Desde entonces, RapaNuiPark funciona bajo las reglas de un día excepcional."
+        "title": "Otwarcie Spojrzenia",
+        "description": "Pierwszy rozdział nie zaczyna się od hałasu, lecz od światła. Twarze powoli wynurzają się z półmroku, a oczy Moai stają się punktem, wokół którego porządkuje się cała opowieść."
       },
       "trail": {
-        "title": "Sendero de los Ojos Abiertos",
-        "description": "Una ruta especial conduce por símbolos, lugares y tareas ocultas disponibles solo durante el Despertar. Cada señal revela un fragmento del relato."
+        "title": "Ścieżka Znaków",
+        "description": "Przejście przez Park prowadzi przez małe ślady: symbole, fragmenty tekstu, kamienne punkty i miejsca zatrzymania. To trasa bardziej do odkrywania niż do zaliczania."
       },
       "stories": {
-        "title": "Relatos de los Guardianes",
-        "description": "Breves encuentros en distintas partes del Parque revelan la historia de los Moai, los Ahu, Rapa Nui y el significado de la mirada de los guardianes de piedra."
+        "title": "Opowieści Ahu",
+        "description": "Każde Ahu może mieć własny głos: o ustawieniu posągów, relacji z krajobrazem, pamięci przodków i sensie patrzenia w stronę wspólnoty."
       },
       "feast": {
-        "title": "Banquete de los Guardianes",
-        "description": "Degustaciones limitadas inspiradas en el Pacífico y Rapa Nui aparecen en lugares seleccionados del Parque, disponibles gratuitamente hasta agotar las porciones preparadas."
+        "title": "Gościnność Miejsca",
+        "description": "Jeśli pojawia się jedzenie, jest częścią opowieści o spotkaniu, nie głównym produktem. Ma budować ciepło, odpoczynek i szacunek dla wspólnego czasu."
       },
       "photos": {
-        "title": "Imágenes de los Ojos Abiertos",
-        "description": "Solo ese día nacen fotografías de RapaNuiPark imposibles en una visita normal: los Moai recuperan la mirada y el Parque prepara puntos fotográficos especiales."
+        "title": "Kadry Pamięci",
+        "description": "Fotografia nie jest tu promocją, lecz próbą uchwycenia momentu: spojrzenia, faktury kamienia, światła i skali, która zostaje z odwiedzającym po wyjściu z Parku."
       },
       "symbols": {
-        "title": "Signos del Despertar",
-        "description": "Talleres para familias y adultos permiten crear signos, sellos y patrones inspirados en la estética de Rapa Nui."
+        "title": "Znaki i Pieczęcie",
+        "description": "Warsztat może być spokojnym gestem: odbiciem symbolu, wykonaniem znaku, zostawieniem śladu w pamięci. Ważniejsze od pamiątki jest zrozumienie motywu."
       },
       "mystery": {
-        "title": "Misterio del Despertar",
-        "description": "Se ocultan señales en el Parque que conducen al símbolo final. Esta experiencia existe solo ese día."
+        "title": "Ukryta Opowieść",
+        "description": "W terenie mogą pojawiać się fragmenty większej historii. Nie prowadzą do nagrody, lecz do finałowego sensu: dlaczego strażnicy patrzą i czego pilnują."
       },
       "light": {
-        "title": "Noche de Luz",
-        "description": "El crepúsculo inicia el último capítulo del Despertar. Una luz cálida abraza a los Moai, sus ojos permanecen abiertos y el Ahu se transforma en una escena monumental de piedra, luz y noche."
+        "title": "Cisza Wieczoru",
+        "description": "Ostatni rozdział powinien wyciszać. Światło obejmuje twarze, oczy pozostają otwarte, a Park zamienia się w krajobraz pamięci, kamienia i nocnego skupienia."
       }
     },
     "timeline": {
-      "kicker": "PROGRAMA",
-      "title": "Un día. Cinco capítulos.",
+      "kicker": "NARRACJA DNIA",
+      "title": "Jeden dzień. Pięć stanów miejsca.",
       "dawn": {
-        "time": "AMANECER",
-        "title": "Despertar",
-        "description": "La primera apertura de los ojos de los Moai."
+        "time": "ŚWIT",
+        "title": "Pierwsze spojrzenie",
+        "description": "Początek opowieści i powolne otwarcie oczu."
       },
       "noon": {
-        "time": "MEDIODÍA",
-        "title": "Descubrimiento",
-        "description": "Relatos, recorridos y actividades especiales."
+        "time": "POŁUDNIE",
+        "title": "Czytanie znaków",
+        "description": "Ścieżki, symbole i krótkie historie prowadzą przez teren."
       },
       "afternoon": {
-        "time": "TARDE",
-        "title": "Hospitalidad",
-        "description": "Degustaciones, talleres y eventos."
+        "time": "POPOŁUDNIE",
+        "title": "Pamięć i spotkanie",
+        "description": "Opowieści o Ahu, Moai, ludziach i krajobrazie."
       },
       "dusk": {
-        "time": "CREPÚSCULO",
-        "title": "Mirada",
-        "description": "El mejor momento para fotografías excepcionales."
+        "time": "ZMIERZCH",
+        "title": "Światło kamienia",
+        "description": "Twarze i faktury wydobyte spokojną iluminacją."
       },
       "night": {
-        "time": "NOCHE",
-        "title": "Luz",
-        "description": "El Despertar final y la iluminación."
+        "time": "NOC",
+        "title": "Cisza strażników",
+        "description": "Finał pozostawia obraz otwartych oczu."
       }
     },
     "final": {
-      "kicker": "FINAL",
-      "title": "Los guardianes vuelven a mirar.",
-      "subtitle": "No se sabe cuándo volverá a ocurrir.",
-      "eventPending": "La fecha del próximo Despertar será anunciada.",
-      "announcedFallback": "El próximo Despertar ha sido anunciado.",
-      "cta": "SEGUIR EL PRÓXIMO DESPERTAR"
+      "kicker": "DOMKNIĘCIE",
+      "title": "Strażnicy patrzą dalej.",
+      "subtitle": "Opowieść nie kończy się wraz ze zmierzchem.",
+      "eventPending": "Kolejny rozdział Przebudzenia powinien wynikać z rytmu Parku i dojrzałości całej narracji.",
+      "announcedFallback": "Następny rozdział Przebudzenia został zapowiedziany.",
+      "cta": "Wróć do opowieści"
     },
     "assetReview": {
-      "kicker": "CAPA VISUAL DEL PREVIEW",
-      "title": "Imágenes seleccionadas para la dirección."
+      "kicker": "WARSTWA WIZUALNA PREVIEW",
+      "title": "Wybrane obrazy kierunku."
     },
     "assets": {
       "templeWideAlt": "Oczy Moai w mrocznej, kamiennej przestrzeni.",
@@ -972,28 +972,51 @@
       "oceanCliffAlt": "Oczy Moai nad wzburzonym oceanem i klifem.",
       "stormNightAlt": "Oczy Moai przed nocną scenerią burzy i strażników.",
       "stormAnimatedAlt": "Animowany kadr oczu Moai w nocnej atmosferze.",
-      "fiveOceanAlt": "Cinco Moai con ojos abiertos frente al océano y cielo claro.",
-      "closeDayAlt": "Primer plano diurno de Moai con ojos abiertos.",
-      "purpleAnimatedAlt": "Vista animada de ojos Moai en una atmósfera púrpura de atardecer."
+      "fiveOceanAlt": "Pięć Moai z otwartymi oczami na tle oceanu i jasnego nieba.",
+      "closeDayAlt": "Bliski dzienny kadr Moai z otwartymi oczami.",
+      "purpleAnimatedAlt": "Animowany kadr oczu Moai w purpurowej atmosferze zmierzchu."
     },
     "activityDetails": {
-      "light": "luz",
-      "sequence": "secuencia",
+      "light": "światło",
+      "sequence": "sekwencja",
       "ceremony": "ceremonia",
-      "path": "ruta",
-      "symbols": "símbolos",
-      "narration": "relato",
-      "education": "educación",
-      "hosting": "hospitalidad",
-      "daylight": "día",
-      "photo": "fotografía",
-      "goldHour": "hora dorada",
-      "workshop": "taller",
-      "sign": "señal",
-      "clue": "pista",
-      "family": "familia",
-      "night": "noche",
-      "finalLight": "final de luz"
+      "path": "trasa",
+      "symbols": "symbole",
+      "narration": "opowieść",
+      "education": "edukacja",
+      "hosting": "gościnność",
+      "daylight": "dzień",
+      "photo": "fotografia",
+      "goldHour": "złota godzina",
+      "workshop": "warsztat",
+      "sign": "znak",
+      "clue": "trop",
+      "family": "rodzinnie",
+      "night": "noc",
+      "finalLight": "finał światła"
+    },
+    "story": {
+      "kicker": "CZTERY WARSTWY OPOWIEŚCI",
+      "title": "Nie chodzi o wydarzenie. Chodzi o to, co zaczyna mówić miejsce.",
+      "body": "Przebudzenie Moai powinno prowadzić odwiedzającego spokojnie: najpierw przez obraz, potem przez znak, następnie przez historię, a na końcu przez osobiste spotkanie z monumentalną ciszą posągów."
+    },
+    "storyChapters": {
+      "firstLook": {
+        "title": "Pierwsze spojrzenie",
+        "body": "Oczy Moai nie są efektem specjalnym. Są znakiem, że strażnicy zostali zauważeni na nowo. Od tego momentu odwiedzający nie tylko patrzy na posągi, ale czuje, że sam jest przez nie obserwowany."
+      },
+      "memory": {
+        "title": "Pamięć zaklęta w kamieniu",
+        "body": "Opowieść wraca do Rapa Nui: do pracy rąk, do ciężaru transportu, do Ahu, do społeczności, które nadawały posągom sens. Przebudzenie ma przypominać, że Moai nie są dekoracją, lecz nośnikiem pamięci."
+      },
+      "path": {
+        "title": "Ślady prowadzą przez Park",
+        "body": "Zamiast nachalnych atrakcji pojawiają się dyskretne ślady: symbol na kamieniu, światło przy ścieżce, głos przewodnika, krótka historia zapisana przy punkcie widokowym. Każdy krok odsłania kolejny fragment narracji."
+      },
+      "evening": {
+        "title": "Wieczór domyka opowieść",
+        "body": "Gdy zapada zmierzch, Przebudzenie przechodzi w ciszę. Światło nie buduje widowiska, ale wydobywa twarze, profile i spojrzenia. Finał ma zostawić w pamięci obraz strażników, którzy nadal patrzą."
+      }
     }
   }
 }

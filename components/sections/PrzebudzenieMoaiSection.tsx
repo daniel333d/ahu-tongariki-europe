@@ -3,13 +3,13 @@
 /* eslint-disable @next/next/no-img-element */
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { useI18n } from "../../app/i18n-provider";
 import {
   awakeningActivities,
   awakeningEvent,
   awakeningMoments,
+  awakeningStoryChapters,
   awakeningTimeline,
   heroEyePositions,
   type EyePosition
@@ -88,7 +88,7 @@ function Hero() {
             {text("awakening.rareLine")}
           </p>
         </div>
-        <div className="mt-14 flex flex-col gap-5 sm:flex-row sm:items-center">
+        <div className="mt-14">
           <a
             href="#przebudzenie-manifest"
             className="inline-flex min-h-12 items-center justify-center border border-gold/70 px-6 py-3 text-sm font-bold uppercase tracking-[0.18em] text-gold transition hover:bg-gold hover:text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
@@ -96,9 +96,6 @@ function Hero() {
           >
             {text("awakening.scrollCue")}
           </a>
-          <span className="awakening-status text-sm font-bold uppercase tracking-[0.18em] text-white/72">
-            {text("awakening.started")}
-          </span>
         </div>
       </div>
     </section>
@@ -124,6 +121,41 @@ function Manifest() {
           </p>
         </div>
       </Reveal>
+    </section>
+  );
+}
+
+function StoryChapters() {
+  const { text } = useI18n();
+
+  return (
+    <section className="bg-[#02080d] px-6 py-24 text-white sm:px-10 sm:py-32">
+      <div className="mx-auto max-w-7xl">
+        <Reveal className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+          <div className="lg:sticky lg:top-16">
+            <SectionKicker>{text("awakening.story.kicker")}</SectionKicker>
+            <h2 className="mt-5 max-w-3xl text-balance font-serif text-[clamp(2.55rem,5.2vw,4.9rem)] font-semibold leading-[1.02]">
+              {text("awakening.story.title")}
+            </h2>
+            <p className="mt-7 text-lg leading-8 text-white/70 sm:text-xl">{text("awakening.story.body")}</p>
+          </div>
+          <div className="divide-y divide-white/12 border-y border-white/12">
+            {awakeningStoryChapters.map((chapter, index) => (
+              <article key={chapter.id} className="grid gap-5 py-8 sm:grid-cols-[76px_1fr] sm:py-10">
+                <span className="font-serif text-4xl font-semibold text-gold/78">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h3 className="font-serif text-3xl font-semibold leading-tight text-white sm:text-4xl">
+                    {text(chapter.titleKey)}
+                  </h3>
+                  <p className="mt-5 text-lg leading-8 text-white/70">{text(chapter.bodyKey)}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </Reveal>
+      </div>
     </section>
   );
 }
@@ -209,18 +241,6 @@ function ActivityGrid() {
                       </h3>
                       <p className="mt-6 text-lg leading-8 text-white/72">{text(activity.descriptionKey)}</p>
                     </div>
-                    {activity.details ? (
-                      <div className="mt-8 flex flex-wrap gap-2 border-t border-white/10 pt-5">
-                        {activity.details.map((detail) => (
-                          <span
-                            key={detail}
-                            className="border border-gold/30 bg-gold/5 px-3 py-2 text-[0.66rem] font-bold uppercase tracking-[0.16em] text-gold/86"
-                          >
-                            {text(detail)}
-                          </span>
-                        ))}
-                      </div>
-                    ) : null}
                   </div>
                 </Reveal>
               );
@@ -290,12 +310,6 @@ function Finale() {
           {text("awakening.final.subtitle")}
         </p>
         <p className="mt-5 text-lg leading-8 text-white/72 sm:text-xl">{eventLabel}</p>
-        <Link
-          href="/#kontakt"
-          className="mt-10 inline-flex min-h-12 w-fit items-center justify-center border border-gold/70 px-6 py-3 text-sm font-bold uppercase tracking-[0.18em] text-gold transition hover:bg-gold hover:text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
-        >
-          {text("awakening.final.cta")}
-        </Link>
         {/* TODO: connect to event notifications */}
       </Reveal>
     </section>
@@ -448,6 +462,7 @@ export function PrzebudzenieMoaiSection({ showAssetPreview = false }: { showAsse
       `}</style>
       <Hero />
       <Manifest />
+      <StoryChapters />
       <ParkAwakens />
       <ActivityGrid />
       <Timeline />
