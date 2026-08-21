@@ -2,11 +2,8 @@
 
 import Image from "next/image";
 import { type CSSProperties, type FormEvent, useEffect, useState } from "react";
-import { FeatureCards } from "../components/cards/FeatureCards";
 import { VisitCounter } from "../components/common/VisitCounter";
 import { MoaiPresenceEffect } from "../components/effects/MoaiPresenceEffect";
-import { HeroSection as ExperienceHeroSection } from "../components/hero/HeroSection";
-import { MasterplanSection } from "../components/masterplan/MasterplanSection";
 import { ScaleSection } from "../components/scale/ScaleSection";
 import { CoCreatorsSection } from "../components/sections/CoCreatorsSection";
 import { QrMoaiSection } from "../components/sections/QrMoaiSection";
@@ -70,18 +67,6 @@ function AhuTongarikiMiniature({ className = "" }: { className?: string }) {
       aria-hidden="true"
       className={className}
     />
-  );
-}
-
-function ExperienceSection() {
-  const { copy } = useI18n();
-
-  return (
-    <div id="przestrzen-doswiadczen" className="bg-[#02080d]" aria-label={copy.experience.sectionAriaLabel}>
-      <ExperienceHeroSection />
-      <FeatureCards />
-      <MasterplanSection />
-    </div>
   );
 }
 
@@ -1143,8 +1128,6 @@ function HomeContent() {
           </div>
         </div>
       </section>
-
-      <ExperienceSection />
 
       <RealizationStagesSection />
 
