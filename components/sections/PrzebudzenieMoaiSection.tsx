@@ -1,7 +1,5 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
-
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useI18n } from "../../app/i18n-provider";
@@ -229,7 +227,6 @@ function ActivityGrid() {
                         activity.visualMode === "cover" ? "object-cover" : "object-contain p-4"
                       }`}
                       loading="eager"
-                      unoptimized={activity.image.endsWith(".gif")}
                     />
                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,8,13,0.02),rgba(2,8,13,0.12)),radial-gradient(circle_at_50%_96%,rgba(184,150,72,0.12),transparent_42%)]" />
                   </div>
@@ -298,7 +295,6 @@ function Finale() {
         sizes="100vw"
         className="object-cover object-center opacity-72"
         loading="eager"
-        unoptimized
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,7,12,0.92),rgba(2,7,12,0.52)_52%,rgba(2,7,12,0.78)),radial-gradient(circle_at_50%_28%,rgba(184,150,72,0.16),transparent_32%)]" />
       <Reveal className="relative z-10 mx-auto flex min-h-[72svh] max-w-7xl flex-col justify-end">
@@ -310,55 +306,12 @@ function Finale() {
           {text("awakening.final.subtitle")}
         </p>
         <p className="mt-5 text-lg leading-8 text-white/72 sm:text-xl">{eventLabel}</p>
-        {/* TODO: connect to event notifications */}
       </Reveal>
     </section>
   );
 }
 
-function AssetPreview() {
-  const { text } = useI18n();
-  const assets = [
-    {
-      src: "/assets/przebudzenie-moai/owner-eyes-temple-wide.png",
-      alt: "awakening.assets.templeWideAlt"
-    },
-    {
-      src: "/assets/przebudzenie-moai/owner-eyes-temple-close.png",
-      alt: "awakening.assets.templeCloseAlt"
-    },
-    {
-      src: "/assets/przebudzenie-moai/owner-eyes-purple-animated.gif",
-      alt: "awakening.assets.purpleAnimatedAlt",
-      animated: true
-    }
-  ];
-
-  return (
-    <section id="warstwa-wizualna" className="bg-[#071018] px-6 py-20 text-white sm:px-10">
-      <div className="mx-auto max-w-7xl">
-        <SectionKicker>{text("awakening.assetReview.kicker")}</SectionKicker>
-        <h2 className="mt-4 max-w-3xl font-serif text-4xl font-semibold leading-tight sm:text-5xl">
-          {text("awakening.assetReview.title")}
-        </h2>
-        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {assets.map((asset) => (
-            <div key={asset.src} className="relative overflow-hidden border border-white/12 bg-[#02080d]">
-              <img
-                src={asset.src}
-                alt={text(asset.alt)}
-                className="h-80 w-full bg-[#02080d] object-contain p-2"
-                loading="eager"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function PrzebudzenieMoaiSection({ showAssetPreview = false }: { showAssetPreview?: boolean }) {
+export function PrzebudzenieMoaiSection() {
   return (
     <div id="przebudzenie-moai" className="awakening-section multilingual-layout bg-[#02080d] text-white">
       <style jsx global>{`
@@ -467,7 +420,6 @@ export function PrzebudzenieMoaiSection({ showAssetPreview = false }: { showAsse
       <ActivityGrid />
       <Timeline />
       <Finale />
-      {showAssetPreview ? <AssetPreview /> : null}
     </div>
   );
 }
