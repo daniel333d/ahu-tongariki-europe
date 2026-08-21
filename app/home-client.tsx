@@ -6,6 +6,7 @@ import { VisitCounter } from "../components/common/VisitCounter";
 import { MoaiPresenceEffect } from "../components/effects/MoaiPresenceEffect";
 import { ScaleSection } from "../components/scale/ScaleSection";
 import { CoCreatorsSection } from "../components/sections/CoCreatorsSection";
+import { PrzebudzenieMoaiSection } from "../components/sections/PrzebudzenieMoaiSection";
 import { QrMoaiSection } from "../components/sections/QrMoaiSection";
 import { RealizationStagesSection } from "../components/sections/RealizationStagesSection";
 import { WinterExperienceSection } from "../components/sections/WinterExperienceSection";
@@ -1130,6 +1131,8 @@ function HomeContent() {
       </section>
 
       <RealizationStagesSection />
+
+      <PrzebudzenieMoaiSection />
 
       <GovernmentPartnershipSection />
 
