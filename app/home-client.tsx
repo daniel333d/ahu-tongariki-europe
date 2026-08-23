@@ -57,6 +57,11 @@ const initialContactForm: ContactFormState = {
 };
 
 const LOCATION_MAPS_URL = "https://maps.app.goo.gl/iAmH8QfGfYALpzUD6";
+const NIGHT_HERO_IMAGE = "/assets/night/night-hero-owner.webp";
+const NIGHT_GALLERY_IMAGES = [
+  "/assets/night/night-sunset-single-moai.webp",
+  "/assets/night/night-seven-moai.webp"
+] as const;
 
 function AhuTongarikiMiniature({ className = "" }: { className?: string }) {
   return (
@@ -530,6 +535,11 @@ function HomeContent() {
   const technicalData = copy.technical.rows;
   const ioranaThemes = copy.iorana.themes.map(([title, detail]) => ({ title, detail }));
   const nightExperiences = copy.night.cards.map(([title, detail]) => ({ title, detail }));
+  const nightVisuals = NIGHT_GALLERY_IMAGES.map((src, index) => ({
+    src,
+    title: nightExperiences[index]?.title ?? copy.night.panelKicker,
+    detail: nightExperiences[index]?.detail ?? copy.night.panelBody
+  }));
 
   useEffect(() => {
     const introTimer = window.setTimeout(() => {
@@ -1014,7 +1024,7 @@ function HomeContent() {
           <div className="night-hero border-white/12 mt-14 overflow-hidden border bg-navy shadow-architectural sm:mt-16">
             <div className="relative min-h-[560px] sm:min-h-[680px] lg:min-h-[760px]">
               <Image
-                src="/ahu-tongariki-night-optimized.webp"
+                src={NIGHT_HERO_IMAGE}
                 alt={copy.night.imageAlt}
                 fill
                 className="night-hero-image object-cover object-[52%_center] sm:object-center"
@@ -1037,6 +1047,31 @@ function HomeContent() {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="mt-8 grid gap-5 lg:grid-cols-2">
+            {nightVisuals.map((visual) => (
+              <article
+                key={visual.src}
+                className="border-white/12 relative min-h-[420px] overflow-hidden border bg-navy shadow-architectural sm:min-h-[520px]"
+              >
+                <Image
+                  src={visual.src}
+                  alt={visual.title}
+                  fill
+                  className="object-cover object-center"
+                  sizes="(min-width: 1024px) 680px, 100vw"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,16,31,0.04),rgba(6,16,31,0.18)_45%,rgba(6,16,31,0.84))]" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold">{copy.night.panelKicker}</p>
+                  <h3 className="mt-3 font-serif text-3xl font-semibold leading-tight text-white sm:text-4xl">
+                    {visual.title}
+                  </h3>
+                  <p className="text-white/72 mt-4 max-w-2xl text-sm leading-7 sm:text-base">{visual.detail}</p>
+                </div>
+              </article>
+            ))}
           </div>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
