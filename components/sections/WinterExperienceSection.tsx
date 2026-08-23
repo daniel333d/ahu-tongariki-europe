@@ -3,19 +3,19 @@
 import { motion } from "framer-motion";
 import { Aperture, ArrowRight, Camera, Eye, FlameKindling, Landmark, Moon, MountainSnow, Snowflake, Sparkles, Telescope } from "lucide-react";
 import Link from "next/link";
-import { type CSSProperties, useState } from "react";
+import { type CSSProperties } from "react";
 import { AssetImage } from "../common/AssetImage";
 import { useI18n } from "../../app/i18n-provider";
 
-const WINTER_HERO_IMAGE = "/assets/winter/rapa-nui-park-winter-v2-varied-moai-optimized.webp";
-const SUMMER_REFERENCE_IMAGE = "/assets/winter/rapa-nui-park-summer-v1-matched-moai-optimized.webp";
+const WINTER_HERO_IMAGE = "/assets/winter/winter-hero-snow-moai-row.webp";
+const WINTER_CONTEXT_IMAGE = "/assets/winter/winter-two-worlds-five-moai.webp";
+const WINTER_FINAL_IMAGE = "/assets/winter/winter-guardians-side-snow.jpg";
 const WINTER_STORY_IMAGES = [
-  "/assets/winter/winter-landscape-morning-after-snow-optimized.webp",
-  "/assets/winter/winter-landscape-blue-hour-optimized.webp",
-  "/assets/winter/winter-landscape-first-light-snow-optimized.webp"
+  "/assets/winter/winter-landscape-first-light-snow-optimized.webp",
+  "/assets/winter/winter-blue-hour-koteriku.jpeg",
+  "/assets/winter/winter-first-light-gateway.webp"
 ] as const;
-const WINTER_SECTION_BRIGHTNESS = "brightness(1.82)";
-const WINTER_FINAL_BRIGHTNESS = "brightness(2.1)";
+const WINTER_SECTION_BRIGHTNESS = "brightness(1.08)";
 
 const storyIcons = [Snowflake, FlameKindling, MountainSnow];
 const experienceIcons = [Eye, Moon, Camera, FlameKindling, Landmark];
@@ -50,6 +50,7 @@ function WinterImagePanel({
   className = "",
   overlay = "bg-[linear-gradient(90deg,rgba(6,16,31,0.78),rgba(6,16,31,0.12)_58%,rgba(6,16,31,0.16))]",
   objectPosition = "object-[58%_center]",
+  imageFit = "object-cover",
   filter,
   showVisitors = false,
   src = WINTER_HERO_IMAGE
@@ -59,6 +60,7 @@ function WinterImagePanel({
   className?: string;
   overlay?: string;
   objectPosition?: string;
+  imageFit?: string;
   filter?: string;
   showVisitors?: boolean;
   src?: string;
@@ -69,7 +71,7 @@ function WinterImagePanel({
         src={src}
         alt={alt}
         fill
-        className={`object-cover ${objectPosition}`}
+        className={`${imageFit} ${objectPosition}`}
         sizes="(min-width: 1024px) 820px, 100vw"
         style={{ filter: brightenWinterImage(filter) } as CSSProperties}
       />
@@ -136,12 +138,12 @@ function WinterScaleVisitors() {
   );
 }
 
-function SeasonsComparison() {
+function WinterSeasonShift() {
   const { copy } = useI18n();
   const winter = copy.winter;
 
   return (
-    <FadeBlock className="mt-14">
+    <FadeBlock className="mt-20">
       <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
         <div>
           <p className="section-kicker">{winter.comparison.kicker}</p>
@@ -154,70 +156,26 @@ function SeasonsComparison() {
         </p>
       </div>
 
-      <div className="mt-8 grid gap-5 lg:grid-cols-2">
-        {[
-          {
-            label: winter.comparison.summerLabel,
-            alt: winter.comparison.summerAlt,
-            src: SUMMER_REFERENCE_IMAGE,
-            className: "object-cover object-center",
-            filter: "brightness(1.05) saturate(1.03)"
-          },
-          {
-            label: winter.comparison.winterLabel,
-            alt: winter.comparison.winterAlt ?? winter.comparison.summerAlt,
-            src: WINTER_HERO_IMAGE,
-            className: "object-cover object-[56%_center]",
-            filter: "brightness(1.08) saturate(0.96)"
-          }
-        ].map((item) => (
-          <div key={item.label} className="border-white/12 relative overflow-hidden rounded-lg border bg-navy shadow-architectural">
-            <div className="relative h-[420px] sm:h-[520px]">
-              <AssetImage
-                src={item.src}
-                alt={item.alt}
-                fill
-                className={item.className}
-                sizes="(min-width: 1024px) 700px, 100vw"
-                style={{ filter: brightenWinterImage(item.filter) } as CSSProperties}
-              />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,16,31,0.1),rgba(6,16,31,0.5))]" aria-hidden="true" />
-              <div className="absolute left-5 top-5 rounded border border-white/20 bg-navy/70 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-white backdrop-blur">
-                {item.label}
-              </div>
-            </div>
-          </div>
-        ))}
+      <div className="mt-8 grid gap-5 md:grid-cols-2">
+        <div className="border-white/12 rounded-lg border bg-white/[0.035] p-7 sm:p-9">
+          <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold">{winter.comparison.summerLabel}</p>
+          <p className="mt-5 font-serif text-3xl font-semibold leading-tight text-white">{winter.comparison.summerAlt}</p>
+        </div>
+        <div className="border-gold/35 rounded-lg border bg-gold/[0.08] p-7 sm:p-9">
+          <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold">{winter.comparison.winterLabel}</p>
+          <p className="mt-5 font-serif text-3xl font-semibold leading-tight text-white">{winter.comparison.winterAlt}</p>
+        </div>
       </div>
     </FadeBlock>
   );
 }
 
-function SceneAtmosphere({ activeId }: { activeId: string }) {
-  if (activeId === "night") {
-    return (
-      <div
-        className="pointer-events-none absolute inset-0 opacity-55 [background-image:radial-gradient(circle_at_20%_18%,rgba(255,255,255,0.72)_0_1px,transparent_1px),radial-gradient(circle_at_68%_24%,rgba(255,255,255,0.52)_0_1px,transparent_1px)] [background-size:110px_110px,150px_150px]"
-        aria-hidden="true"
-      />
-    );
-  }
-
-  if (activeId === "blue-hour") {
-    return <div className="pointer-events-none absolute inset-0 bg-blue-950/18 mix-blend-color" aria-hidden="true" />;
-  }
-
-  return <div className="pointer-events-none absolute inset-0 bg-white/8 mix-blend-soft-light" aria-hidden="true" />;
-}
-
-function WinterTimeSelector() {
+function WinterDayRhythm() {
   const { copy } = useI18n();
   const winter = copy.winter;
-  const [activeId, setActiveId] = useState(winter.times.items[0]?.id ?? "morning");
-  const active = winter.times.items.find((item) => item.id === activeId) ?? winter.times.items[0];
 
   return (
-    <FadeBlock className="mt-24">
+    <FadeBlock className="mt-24 rounded-lg border border-white/12 bg-white/[0.035] p-7 sm:p-10 lg:p-12">
       <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
         <div>
           <p className="section-kicker">{winter.times.kicker}</p>
@@ -228,59 +186,17 @@ function WinterTimeSelector() {
         <p className="text-white/72 border-l border-gold/55 pl-6 text-lg leading-8">{winter.times.body}</p>
       </div>
 
-      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+      <div className="mt-10 grid gap-4 md:grid-cols-3 xl:grid-cols-5">
         {winter.times.items.map((item) => (
-          <button
+          <article
             key={item.id}
-            type="button"
-            aria-pressed={activeId === item.id}
-            onClick={() => setActiveId(item.id)}
-            onPointerUp={() => setActiveId(item.id)}
-            onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                setActiveId(item.id);
-              }
-            }}
-            className={`stable-action min-h-12 border px-5 py-3 text-sm font-bold uppercase tracking-[0.16em] transition duration-300 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-navy ${
-              activeId === item.id
-                ? "border-gold bg-gold text-navy"
-                : "border-white/16 bg-white/[0.035] text-white/76 hover:border-gold/65 hover:text-gold"
-            }`}
+            className="border-white/12 min-h-[230px] rounded-lg border bg-navy/55 p-6"
           >
-            {item.label}
-          </button>
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold">{item.label}</p>
+            <h4 className="mt-5 font-serif text-2xl font-semibold leading-tight text-white">{item.title}</h4>
+            <p className="mt-5 text-sm leading-7 text-white/66">{item.description}</p>
+          </article>
         ))}
-      </div>
-
-      <div className="border-white/12 relative mt-8 overflow-hidden rounded-lg border bg-navy shadow-architectural">
-        <div className="relative h-[520px] sm:h-[620px]">
-          <motion.div
-            key={active.id}
-            className="absolute inset-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.45 }}
-          >
-            <AssetImage
-              src={WINTER_HERO_IMAGE}
-              alt={active.alt}
-              fill
-              className="object-cover object-[58%_center]"
-              sizes="(min-width: 1024px) 1400px, 100vw"
-              style={{ filter: brightenWinterImage(active.filter) } as CSSProperties}
-            />
-          </motion.div>
-          <SceneAtmosphere activeId={active.id} />
-          <div className={`absolute inset-0 ${active.overlay}`} aria-hidden="true" />
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-navy via-navy/72 to-transparent p-6 pt-28 sm:p-10 sm:pt-32">
-            <p className="text-xs font-bold uppercase tracking-[0.24em] text-gold">{active.label}</p>
-            <h4 className="mt-4 max-w-4xl font-serif text-[clamp(2rem,4.2vw,3.9rem)] font-semibold leading-[1.05] text-white">
-              {active.title}
-            </h4>
-            <p className="text-white/72 mt-5 max-w-3xl text-base leading-8 sm:text-lg">{active.description}</p>
-          </div>
-        </div>
       </div>
     </FadeBlock>
   );
@@ -303,7 +219,6 @@ export function WinterExperienceSection() {
           fill
           className="object-cover object-[58%_center]"
           sizes="100vw"
-          style={{ filter: WINTER_SECTION_BRIGHTNESS } as CSSProperties}
         />
         <div
           className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,10,20,0.88)_0%,rgba(3,10,20,0.58)_34%,rgba(3,10,20,0.1)_72%),linear-gradient(180deg,rgba(3,10,20,0.14),rgba(3,10,20,0.16)_48%,rgba(3,10,20,0.86)_100%)]"
@@ -357,13 +272,14 @@ export function WinterExperienceSection() {
                 alt={winter.twoWorlds.imageAlt}
                 label={winter.twoWorlds.imageLabel}
                 className="min-h-[520px]"
-                objectPosition="object-[68%_center]"
-                filter="brightness(0.95) saturate(0.92) contrast(1.05)"
+                objectPosition="object-center"
+                filter="brightness(0.92) saturate(0.9) contrast(1.03)"
+                src={WINTER_CONTEXT_IMAGE}
               />
             </FadeBlock>
           </div>
 
-          <SeasonsComparison />
+          <WinterSeasonShift />
 
           <div className="mt-24 space-y-14">
             <FadeBlock>
@@ -376,7 +292,8 @@ export function WinterExperienceSection() {
             {winter.story.items.map((item, index) => {
               const Icon = storyIcons[index] ?? Snowflake;
               const isReversed = index % 2 === 1;
-              const storyImage = WINTER_STORY_IMAGES[index] ?? WINTER_HERO_IMAGE;
+              const storyImage = WINTER_STORY_IMAGES[index] ?? WINTER_CONTEXT_IMAGE;
+              const storyImageFit = index > 0 ? "object-contain" : "object-cover";
 
               return (
                 <FadeBlock
@@ -387,14 +304,15 @@ export function WinterExperienceSection() {
                     src={storyImage}
                     alt={item.alt}
                     label={item.imageLabel}
-                    className="min-h-[440px] sm:min-h-[540px]"
-                    overlay={item.overlay}
-                    objectPosition={item.objectPosition}
-                    filter={index === 0 ? "brightness(1.02) saturate(0.98) contrast(1.02)" : index === 1 ? "brightness(1.04) saturate(1.08) contrast(1.08)" : "brightness(1.06) saturate(0.98) contrast(1.02)"}
+                    className="min-h-[440px] bg-[linear-gradient(180deg,rgba(244,239,229,0.08),rgba(6,16,31,0.72))] sm:min-h-[540px]"
+                    overlay={index > 0 ? "bg-[linear-gradient(180deg,rgba(6,16,31,0.02),rgba(6,16,31,0.22))]" : item.overlay}
+                    objectPosition={index === 1 ? "object-center" : index === 2 ? "object-center" : item.objectPosition}
+                    imageFit={storyImageFit}
+                    filter={index === 0 ? "brightness(0.94) saturate(0.92) contrast(1.03)" : index === 1 ? "brightness(0.9) saturate(0.88) contrast(1.05)" : "brightness(0.92) saturate(0.9) contrast(1.03)"}
                   />
-                  <div className="border-white/12 rounded-lg border bg-white/[0.035] p-7 sm:p-10">
+                  <div className="border-white/12 rounded-lg border bg-white/[0.035] p-7 sm:p-10 lg:p-12">
                     <Icon className="text-gold" size={32} aria-hidden="true" />
-                    <h4 className="mt-7 font-serif text-[clamp(2rem,3.8vw,3.35rem)] font-semibold leading-[1.05] text-white [hyphens:none] [overflow-wrap:normal] [word-break:normal]">
+                    <h4 className="mt-6 font-serif text-[clamp(2rem,3.8vw,3.35rem)] font-semibold leading-[1.05] text-white [hyphens:none] [overflow-wrap:normal] [word-break:normal]">
                       {item.title}
                     </h4>
                     <p className="text-white/72 mt-6 text-lg leading-9">{item.body}</p>
@@ -404,7 +322,7 @@ export function WinterExperienceSection() {
             })}
           </div>
 
-          <WinterTimeSelector />
+          <WinterDayRhythm />
 
           <FadeBlock className="mt-24">
             <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
@@ -464,31 +382,34 @@ export function WinterExperienceSection() {
 
           <FadeBlock className="mt-24">
             <div className="relative overflow-hidden rounded-lg border border-white/12 bg-navy shadow-architectural">
-              <div className="relative min-h-[520px] sm:min-h-[620px]">
-                <AssetImage
-                  src={WINTER_HERO_IMAGE}
-                  alt={winter.final.imageAlt}
-                  fill
-                  className="object-cover object-[60%_center]"
-                  sizes="(min-width: 1024px) 1400px, 100vw"
-                  style={{ filter: WINTER_FINAL_BRIGHTNESS } as CSSProperties}
-                />
-                <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,10,20,0.9),rgba(3,10,20,0.48)_48%,rgba(3,10,20,0.16)),linear-gradient(180deg,rgba(3,10,20,0.16),rgba(3,10,20,0.72))]" />
-                <div className="absolute inset-0 flex items-center px-6 py-16 sm:px-10 lg:px-12">
-                  <div className="max-w-3xl">
-                    <p className="section-kicker">{winter.final.kicker}</p>
-                    <h3 className="mt-5 whitespace-pre-line font-serif text-[clamp(2.4rem,5vw,4.6rem)] font-semibold leading-[1.02] text-white [hyphens:none] [overflow-wrap:normal] [word-break:normal]">
-                      {winter.final.title}
-                    </h3>
-                    <p className="text-white/78 mt-6 text-xl leading-9">{winter.final.body}</p>
-                    <Link
-                      href="/#noce-ahu-tongariki"
-                      className="stable-action mt-10 inline-flex min-h-12 items-center gap-3 border border-gold bg-gold px-6 py-4 text-sm font-bold uppercase tracking-[0.14em] text-navy transition hover:bg-sand focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-navy"
-                    >
-                      {winter.final.cta}
-                      <ArrowRight size={18} aria-hidden="true" />
-                    </Link>
-                  </div>
+              <div className="grid lg:min-h-[620px] lg:grid-cols-[0.9fr_1.1fr]">
+                <div className="relative z-10 flex flex-col justify-center bg-[linear-gradient(135deg,rgba(3,10,20,0.98),rgba(3,10,20,0.9)_58%,rgba(15,31,53,0.84))] p-7 sm:p-10 lg:p-12">
+                  <p className="section-kicker">{winter.final.kicker}</p>
+                  <h3 className="mt-5 whitespace-pre-line font-serif text-[clamp(2.4rem,5vw,4.6rem)] font-semibold leading-[1.02] text-white [hyphens:none] [overflow-wrap:normal] [word-break:normal]">
+                    {winter.final.title}
+                  </h3>
+                  <p className="text-white/78 mt-6 text-xl leading-9">{winter.final.body}</p>
+                  <Link
+                    href="/#noce-ahu-tongariki"
+                    className="stable-action mt-10 inline-flex min-h-12 items-center gap-3 border border-gold bg-gold px-6 py-4 text-sm font-bold uppercase tracking-[0.14em] text-navy transition hover:bg-sand focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-navy"
+                  >
+                    {winter.final.cta}
+                    <ArrowRight size={18} aria-hidden="true" />
+                  </Link>
+                </div>
+                <div className="relative min-h-[560px] bg-[radial-gradient(circle_at_50%_32%,rgba(255,255,255,0.08),transparent_34%),linear-gradient(180deg,rgba(8,17,30,1),rgba(3,10,20,1))] lg:min-h-full">
+                  <AssetImage
+                    src={WINTER_FINAL_IMAGE}
+                    alt={winter.final.imageAlt}
+                    fill
+                    className="object-contain object-center"
+                    sizes="(min-width: 1024px) 780px, 100vw"
+                    style={{ filter: "brightness(0.9) saturate(0.9) contrast(1.04)" } as CSSProperties}
+                  />
+                  <div
+                    className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,10,20,0.38),rgba(3,10,20,0.02)_48%,rgba(3,10,20,0.16)),linear-gradient(180deg,rgba(3,10,20,0.03),rgba(3,10,20,0.28))]"
+                    aria-hidden="true"
+                  />
                 </div>
               </div>
             </div>
