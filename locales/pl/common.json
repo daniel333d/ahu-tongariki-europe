@@ -690,6 +690,51 @@
         "description": "Dyskretny symbol prowadzi dalej i sprawia, że przejście przez Park staje się czytaniem krajobrazu."
       }
     },
+    "transformation": {
+      "kicker": "NOCNY ROZDZIAŁ PRZEBUDZENIA",
+      "title": "Noc Przebudzenia Moai.",
+      "lead": "Ta część opowiada wyłącznie o nocnym momencie Przebudzenia: świetle oczu, ciemności, kamieniu i ciszy. Dzień oraz zmierzch pozostają opisane w innych fragmentach sekcji.",
+      "visualAlt": "Nocne Moai z podświetlonymi oczami.",
+      "switcherAria": "Wybór rozdziału Przebudzenia Moai",
+      "nightToneAria": "Wybór nocnego obrazu Moai",
+      "nightTones": {
+        "rowBlue": "Rząd błękitny",
+        "rowEmerald": "Rząd szmaragdowy",
+        "closeBlue": "Zbliżenie",
+        "winterBlue": "Zimowa noc",
+        "singleEmerald": "Samotny strażnik",
+        "gateBlue": "Brama nocy"
+      },
+      "states": {
+        "day": {
+          "label": "Dzień",
+          "name": "DZIEŃ — SPOJRZENIE",
+          "headline": "Za dnia patrzą.",
+          "body": "Przebudzenie zaczyna się za dnia.\n\nTego dnia Moai RapaNuiPark odzyskują oczy. Jasne, kontrastujące z ciemnym kamieniem spojrzenie zmienia sposób, w jaki odbieramy monumentalne postacie.\n\nPo raz pierwszy nie tylko patrzymy na Strażników.\n\nMamy wrażenie, że oni patrzą na nas.",
+          "detail": "Oczy pozostają naturalne i spokojne. Nie świecą. Ich siła wynika właśnie z tego, jak niewielka zmiana potrafi całkowicie odmienić kamienną twarz.",
+          "quote": "„Czy naprawdę to widziałem?”"
+        },
+        "dusk": {
+          "label": "Zmierzch",
+          "name": "ZMIERZCH — PRZEMIANA",
+          "headline": "Spojrzenie zaczyna się zmieniać.",
+          "body": "A potem przychodzi zmierzch.\n\nWraz z ostatnim światłem dnia zmienia się również Przebudzenie. Iluminacja zaczyna wydobywać z półmroku monumentalne sylwetki, rysy twarzy i fakturę kamienia.\n\nOczy, które za dnia były jasne i naturalne, zaczynają odbijać światło otoczenia.",
+          "detail": "Granica pomiędzy naturalnym spojrzeniem a nocnym doświadczeniem powoli zanika. To jeszcze nie pełne świecenie oczu, lecz cichy moment przejścia."
+        },
+        "night": {
+          "label": "Noc",
+          "name": "NOC — ŚWIATŁO OCZU",
+          "headline": "Nocą ich spojrzenie staje się światłem.",
+          "body": "Po zmroku Przebudzenie osiąga swój finał.\n\nWybrane oczy Moai zaczynają świecić chłodnym błękitem lub głęboką, szmaragdową zielenią. Nie wszystkie jednocześnie.\n\nNajpierw jedno spojrzenie. Potem następne. Aż monumentalny rząd Strażników staje się częścią nocnego spektaklu światła, kamienia i ciszy.",
+          "detail": "Błękit jest głęboki i księżycowy, a szmaragd ciemny i mineralny. Światło pozostaje subtelne: bez neonów, bez horroru, bez jarmarcznego rytmu."
+        }
+      },
+      "summary": {
+        "day": "Za dnia patrzą.",
+        "night": "Nocą ich spojrzenie staje się światłem.",
+        "body": "Przebudzenie Moai trwa od pierwszego spojrzenia aż do nocnego finału."
+      }
+    },
     "activities": {
       "kicker": "ROZDZIAŁY PRZEBUDZENIA",
       "title": "Osiem fragmentów jednej historii",
@@ -723,7 +768,7 @@
       },
       "light": {
         "title": "Cisza Wieczoru",
-        "description": "Ostatni rozdział powinien wyciszać. Światło obejmuje twarze, oczy pozostają otwarte, a Park zamienia się w krajobraz pamięci, kamienia i nocnego skupienia."
+        "description": "Ostatni rozdział powinien wyciszać. Światło obejmuje twarze, oczy pozostają otwarte, a Park zamienia się w krajobraz pamięci, kamienia i nocnego skupienia. Podczas finału Przebudzenia oczy Strażników stają się częścią iluminacji. Błękitne i szmaragdowe spojrzenia pojawiają się pomiędzy światłem Ahu i ciemnością nocy."
       }
     },
     "timeline": {
@@ -762,6 +807,11 @@
       "eventPending": "Kolejny rozdział Przebudzenia powinien wynikać z rytmu Parku i dojrzałości całej narracji.",
       "announcedFallback": "Następny rozdział Przebudzenia został zapowiedziany.",
       "cta": "Wróć do opowieści"
+    },
+    "lastLook": {
+      "kicker": "OSTATNIE SPOJRZENIE",
+      "title": "Kiedy zapada noc, Strażnicy nie zamykają oczu.",
+      "body": "To właśnie wtedy Przebudzenie osiąga swoją najbardziej niezwykłą formę. Światło pozostaje w oczach Moai jeszcze przez chwilę, zanim wyjątkowy dzień dobiegnie końca."
     },
     "assets": {
       "templeWideAlt": "Oczy Moai w mrocznej, kamiennej przestrzeni.",

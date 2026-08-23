@@ -45,6 +45,20 @@ export type AwakeningTimelineItem = {
   descriptionKey: string;
 };
 
+export type AwakeningTransformationState = {
+  id: "day" | "dusk" | "night";
+  labelKey: string;
+  nameKey: string;
+  headlineKey: string;
+  bodyKey: string;
+  detailKey: string;
+  quoteKey?: string;
+  visualImage: string;
+  visualPosition: string;
+};
+
+export type NightVisualTone = "closeBlue" | "rowBlue" | "rowEmerald" | "winterBlue" | "singleEmerald" | "gateBlue";
+
 export const awakeningEvent: AwakeningEvent = {
   announced: false
 };
@@ -99,6 +113,49 @@ export const awakeningStoryChapters: AwakeningStoryChapter[] = [
     bodyKey: "awakening.storyChapters.evening.body"
   }
 ];
+
+export const awakeningTransformationStates: AwakeningTransformationState[] = [
+  {
+    id: "day",
+    labelKey: "awakening.transformation.states.day.label",
+    nameKey: "awakening.transformation.states.day.name",
+    headlineKey: "awakening.transformation.states.day.headline",
+    bodyKey: "awakening.transformation.states.day.body",
+    detailKey: "awakening.transformation.states.day.detail",
+    quoteKey: "awakening.transformation.states.day.quote",
+    visualImage: "/assets/przebudzenie-moai/owner-ahu-tongariki-day.png",
+    visualPosition: "50% 72%"
+  },
+  {
+    id: "dusk",
+    labelKey: "awakening.transformation.states.dusk.label",
+    nameKey: "awakening.transformation.states.dusk.name",
+    headlineKey: "awakening.transformation.states.dusk.headline",
+    bodyKey: "awakening.transformation.states.dusk.body",
+    detailKey: "awakening.transformation.states.dusk.detail",
+    visualImage: "/assets/przebudzenie-moai/owner-ahu-tongariki-day.png",
+    visualPosition: "50% 72%"
+  },
+  {
+    id: "night",
+    labelKey: "awakening.transformation.states.night.label",
+    nameKey: "awakening.transformation.states.night.name",
+    headlineKey: "awakening.transformation.states.night.headline",
+    bodyKey: "awakening.transformation.states.night.body",
+    detailKey: "awakening.transformation.states.night.detail",
+    visualImage: "/assets/przebudzenie-moai/owner-awakening-eyes-row-blue.jpeg",
+    visualPosition: "50% 50%"
+  }
+];
+
+export const transformationNightImages: Record<NightVisualTone, string> = {
+  closeBlue: "/assets/przebudzenie-moai/owner-awakening-eyes-close-blue.jpeg",
+  rowBlue: "/assets/przebudzenie-moai/owner-awakening-eyes-row-blue.jpeg",
+  rowEmerald: "/assets/przebudzenie-moai/owner-awakening-eyes-row-emerald.jpeg",
+  winterBlue: "/assets/przebudzenie-moai/owner-awakening-eyes-winter-blue.jpeg",
+  singleEmerald: "/assets/przebudzenie-moai/owner-awakening-eyes-single-emerald.png",
+  gateBlue: "/assets/przebudzenie-moai/owner-awakening-eyes-gate-blue.png"
+};
 
 export const awakeningActivities: AwakeningActivity[] = [
   {

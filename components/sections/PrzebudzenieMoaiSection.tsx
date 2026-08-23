@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { useI18n } from "../../app/i18n-provider";
 import {
   awakeningActivities,
@@ -9,8 +10,11 @@ import {
   awakeningMoments,
   awakeningStoryChapters,
   awakeningTimeline,
+  awakeningTransformationStates,
   heroEyePositions,
-  type EyePosition
+  transformationNightImages,
+  type EyePosition,
+  type NightVisualTone
 } from "./przebudzenie-moai-data";
 
 function SectionKicker({ children }: { children: string }) {
@@ -185,6 +189,115 @@ function ParkAwakens() {
   );
 }
 
+function getInitialNightTone(): NightVisualTone {
+  if (typeof window === "undefined") {
+    return "rowBlue";
+  }
+
+  const tone = new URLSearchParams(window.location.search).get("nightTone");
+  if (
+    tone === "closeBlue" ||
+    tone === "rowEmerald" ||
+    tone === "winterBlue" ||
+    tone === "singleEmerald" ||
+    tone === "gateBlue"
+  ) {
+    return tone;
+  }
+
+  return "rowBlue";
+}
+
+function TransformationChapter() {
+  const { text } = useI18n();
+  const [nightTone, setNightTone] = useState<NightVisualTone>(getInitialNightTone);
+  const activeState =
+    awakeningTransformationStates.find((state) => state.id === "night") ?? awakeningTransformationStates[0];
+  const visualImage = transformationNightImages[nightTone];
+
+  return (
+    <section
+      id="przebudzenie-transformacja"
+      className="awakening-transformation bg-[#071018] px-6 py-24 text-white sm:px-10 sm:py-32"
+      data-state="night"
+      data-night-tone={nightTone}
+    >
+      <div className="mx-auto max-w-7xl">
+        <Reveal className="max-w-5xl">
+          <SectionKicker>{text("awakening.transformation.kicker")}</SectionKicker>
+          <h2 className="mt-5 max-w-4xl text-balance font-serif text-[clamp(2.55rem,5.2vw,5rem)] font-semibold leading-[1]">
+            {text("awakening.transformation.title")}
+          </h2>
+          <p className="mt-7 max-w-4xl text-lg leading-8 text-white/74 sm:text-xl">
+            {text("awakening.transformation.lead")}
+          </p>
+        </Reveal>
+
+        <Reveal className="mt-14 grid gap-8 xl:grid-cols-[1.12fr_0.88fr] xl:items-stretch">
+          <div className="relative min-h-[420px] overflow-hidden border border-white/14 bg-[#02080d] shadow-[0_28px_80px_rgba(0,0,0,0.38)] sm:min-h-[560px]">
+            <Image
+              key={nightTone}
+              src={visualImage}
+              alt={text("awakening.transformation.visualAlt")}
+              fill
+              sizes="(min-width: 1280px) 58vw, 100vw"
+              className="transformation-base object-cover"
+              style={{ objectPosition: "50% 50%" }}
+              loading="eager"
+            />
+            <div className="absolute left-5 top-5 z-30 border border-gold/60 bg-[#02080d]/76 px-4 py-3 text-xs font-bold uppercase tracking-[0.22em] text-gold backdrop-blur sm:left-7 sm:top-7">
+              {text(activeState.labelKey)}
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-between border border-white/14 bg-[#02080d] p-7 shadow-[0_28px_80px_rgba(0,0,0,0.3)] sm:p-9 lg:p-10">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold">{text(activeState.nameKey)}</p>
+              <h3 className="mt-4 text-balance font-serif text-[clamp(2.35rem,4.2vw,4.5rem)] font-semibold leading-[1.02]">
+                {text(activeState.headlineKey)}
+              </h3>
+              <p className="mt-7 whitespace-pre-line text-lg leading-8 text-white/74">{text(activeState.bodyKey)}</p>
+              <p className="mt-7 border-l border-gold/55 pl-5 text-base leading-7 text-[#f7e6bd]/86 sm:text-lg">
+                {text(activeState.detailKey)}
+              </p>
+
+              {activeState.quoteKey ? (
+                <p className="mt-8 font-serif text-3xl font-semibold leading-tight text-white">
+                  {text(activeState.quoteKey)}
+                </p>
+              ) : null}
+
+              <div className="mt-8 flex flex-wrap gap-3" aria-label={text("awakening.transformation.nightToneAria")}>
+                {(["rowBlue", "rowEmerald", "closeBlue", "winterBlue", "singleEmerald", "gateBlue"] as const).map((tone) => (
+                  <button
+                    key={tone}
+                    type="button"
+                    onClick={() => setNightTone(tone)}
+                    className={`min-h-11 border px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold ${
+                      nightTone === tone
+                        ? "border-gold bg-gold text-navy"
+                        : "border-white/16 text-white/64 hover:border-gold/60 hover:text-gold"
+                    }`}
+                  >
+                    {text(`awakening.transformation.nightTones.${tone}`)}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-10 border-t border-white/12 pt-8">
+              <p className="font-serif text-3xl font-semibold leading-tight text-gold">
+                {text("awakening.transformation.summary.night")}
+              </p>
+              <p className="mt-5 text-lg leading-8 text-white/68">{text("awakening.transformation.summary.body")}</p>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
 function ActivityGrid() {
   const { text } = useI18n();
 
@@ -311,6 +424,26 @@ function Finale() {
   );
 }
 
+function LastLook() {
+  const { text } = useI18n();
+
+  return (
+    <section className="bg-[#071018] px-6 py-24 text-white sm:px-10 sm:py-32">
+      <Reveal className="mx-auto grid max-w-7xl gap-10 border-y border-white/12 py-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+        <div>
+          <SectionKicker>{text("awakening.lastLook.kicker")}</SectionKicker>
+          <h2 className="mt-5 max-w-4xl text-balance font-serif text-[clamp(2.45rem,5vw,4.8rem)] font-semibold leading-[1.02]">
+            {text("awakening.lastLook.title")}
+          </h2>
+        </div>
+        <p className="border-l border-gold/55 pl-6 text-lg leading-8 text-white/74 sm:text-xl">
+          {text("awakening.lastLook.body")}
+        </p>
+      </Reveal>
+    </section>
+  );
+}
+
 export function PrzebudzenieMoaiSection() {
   return (
     <div id="przebudzenie-moai" className="awakening-section multilingual-layout bg-[#02080d] text-white">
@@ -417,8 +550,10 @@ export function PrzebudzenieMoaiSection() {
       <Manifest />
       <StoryChapters />
       <ParkAwakens />
+      <TransformationChapter />
       <ActivityGrid />
       <Timeline />
+      <LastLook />
       <Finale />
     </div>
   );

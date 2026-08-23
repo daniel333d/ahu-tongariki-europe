@@ -682,6 +682,51 @@
         "description": "A discreet symbol leads onward and turns the passage through the Park into a reading of the landscape."
       }
     },
+    "transformation": {
+      "kicker": "EL CAPITULO NOCTURNO DEL DESPERTAR",
+      "title": "La noche del Despertar Moai.",
+      "lead": "Esta parte se centra solo en el momento nocturno del Despertar: la luz de los ojos, la oscuridad, la piedra y el silencio. El dia y el crepusculo quedan descritos en otros fragmentos de la seccion.",
+      "visualAlt": "Moai nocturnos con ojos iluminados.",
+      "switcherAria": "Elegir un capitulo del Despertar Moai",
+      "nightToneAria": "Elegir una imagen nocturna de Moai",
+      "nightTones": {
+        "rowBlue": "Fila azul",
+        "rowEmerald": "Fila esmeralda",
+        "closeBlue": "Vista cercana",
+        "winterBlue": "Noche invernal",
+        "singleEmerald": "Guardian solitario",
+        "gateBlue": "Puerta nocturna"
+      },
+      "states": {
+        "day": {
+          "label": "Dia",
+          "name": "DIA — MIRADA",
+          "headline": "De dia, miran.",
+          "body": "El Despertar comienza de dia.\n\nEse dia, los Moai de RapaNuiPark recuperan sus ojos. Una mirada clara, en contraste con la piedra oscura, cambia la forma en que percibimos las figuras monumentales.\n\nPor primera vez, no solo miramos a los Guardianes.\n\nTenemos la impresion de que ellos nos miran.",
+          "detail": "Los ojos siguen siendo naturales y serenos. No brillan. Su fuerza nace precisamente de como un pequeno cambio puede transformar por completo un rostro de piedra.",
+          "quote": "\"¿De verdad acabo de verlo?\""
+        },
+        "dusk": {
+          "label": "Crepusculo",
+          "name": "CREPUSCULO — TRANSFORMACION",
+          "headline": "La mirada empieza a cambiar.",
+          "body": "Luego llega el crepusculo.\n\nCon la ultima luz del dia, tambien cambia el Despertar. La iluminacion comienza a sacar de la penumbra las siluetas monumentales, los rasgos de los rostros y la textura de la piedra.\n\nLos ojos, claros y naturales durante el dia, empiezan a reflejar la luz del entorno.",
+          "detail": "La frontera entre la mirada natural y la experiencia nocturna se desvanece lentamente. Aun no es el brillo completo de los ojos, sino un momento silencioso de transicion."
+        },
+        "night": {
+          "label": "Noche",
+          "name": "NOCHE — LUZ DE LOS OJOS",
+          "headline": "De noche, su mirada se convierte en luz.",
+          "body": "Despues del anochecer, el Despertar alcanza su final.\n\nAlgunos ojos Moai empiezan a brillar con azul frio o verde esmeralda profundo. No todos a la vez.\n\nPrimero una mirada. Luego otra. Hasta que la fila monumental de Guardianes se convierte en una escena nocturna de luz, piedra y silencio.",
+          "detail": "El azul es profundo y lunar; el esmeralda, oscuro y mineral. La luz se mantiene sutil: sin neon, sin terror, sin ritmo de feria."
+        }
+      },
+      "summary": {
+        "day": "De dia, miran.",
+        "night": "De noche, su mirada se convierte en luz.",
+        "body": "El Despertar Moai dura desde la primera mirada hasta el final nocturno."
+      }
+    },
     "activities": {
       "kicker": "CHAPTERS OF AWAKENING",
       "title": "Eight fragments of one story",
@@ -715,7 +760,7 @@
       },
       "light": {
         "title": "Evening Silence",
-        "description": "The last chapter should quiet the place. Light embraces the faces, the eyes remain open, and the Park becomes a landscape of memory, stone and night focus."
+        "description": "The last chapter should quiet the place. Light embraces the faces, the eyes remain open, and the Park becomes a landscape of memory, stone and night focus. Durante el final del Despertar, los ojos de los Guardianes se convierten en parte de la iluminacion. Miradas azules y esmeralda aparecen entre la luz del Ahu y la oscuridad de la noche."
       }
     },
     "timeline": {
@@ -754,6 +799,11 @@
       "eventPending": "The next chapter of the Awakening should grow from the rhythm of the Park and the maturity of the whole narrative.",
       "announcedFallback": "The next chapter of the Awakening has been announced.",
       "cta": "Return to the story"
+    },
+    "lastLook": {
+      "kicker": "ULTIMA MIRADA",
+      "title": "Cuando cae la noche, los Guardianes no cierran los ojos.",
+      "body": "Es entonces cuando el Despertar alcanza su forma mas extraordinaria. La luz permanece un momento mas en los ojos de los Moai, antes de que termine ese dia excepcional."
     },
     "assets": {
       "templeWideAlt": "Moai eyes in a dark stone space.",
