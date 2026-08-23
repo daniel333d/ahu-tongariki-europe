@@ -682,6 +682,51 @@
         "description": "A discreet symbol leads onward and turns the passage through the Park into a reading of the landscape."
       }
     },
+    "transformation": {
+      "kicker": "LE CHAPITRE NOCTURNE DE L'EVEIL",
+      "title": "La nuit de l'Eveil des Moai.",
+      "lead": "Cette partie se concentre uniquement sur le moment nocturne de l'Eveil : la lumiere des yeux, l'obscurite, la pierre et le silence. Le jour et le crepuscule restent decrits ailleurs dans la section.",
+      "visualAlt": "Moai nocturnes aux yeux illumines.",
+      "switcherAria": "Choisir un chapitre de l'Eveil des Moai",
+      "nightToneAria": "Choisir une image nocturne des Moai",
+      "nightTones": {
+        "rowBlue": "Rangee bleue",
+        "rowEmerald": "Rangee emeraude",
+        "closeBlue": "Vue rapprochee",
+        "winterBlue": "Nuit d'hiver",
+        "singleEmerald": "Gardien solitaire",
+        "gateBlue": "Porte nocturne"
+      },
+      "states": {
+        "day": {
+          "label": "Jour",
+          "name": "JOUR — REGARD",
+          "headline": "Le jour, ils regardent.",
+          "body": "L'Eveil commence en plein jour.\n\nCe jour-la, les Moai de RapaNuiPark retrouvent leurs yeux. Un regard clair, contraste avec la pierre sombre, change notre maniere de percevoir les figures monumentales.\n\nPour la premiere fois, nous ne regardons pas seulement les Gardiens.\n\nNous avons l'impression qu'ils nous regardent.",
+          "detail": "Les yeux restent naturels et calmes. Ils ne brillent pas. Leur force vient justement du fait qu'un changement minime peut transformer tout un visage de pierre.",
+          "quote": "\"Ai-je vraiment vu cela ?\""
+        },
+        "dusk": {
+          "label": "Crepuscule",
+          "name": "CREPUSCULE — TRANSFORMATION",
+          "headline": "Le regard commence a changer.",
+          "body": "Puis vient le crepuscule.\n\nAvec la derniere lumiere du jour, l'Eveil change lui aussi. L'illumination commence a faire surgir de la penombre les silhouettes monumentales, les traits des visages et la texture de la pierre.\n\nLes yeux, clairs et naturels pendant le jour, commencent a reflechir la lumiere qui les entoure.",
+          "detail": "La limite entre le regard naturel et l'experience nocturne disparait peu a peu. Ce n'est pas encore la pleine lumiere des yeux, mais un passage silencieux."
+        },
+        "night": {
+          "label": "Nuit",
+          "name": "NUIT — LUMIERE DES YEUX",
+          "headline": "La nuit, leur regard devient lumiere.",
+          "body": "Apres la tombee de la nuit, l'Eveil atteint son final.\n\nCertains yeux de Moai commencent a luire d'un bleu froid ou d'un vert emeraude profond. Jamais tous en meme temps.\n\nD'abord un regard. Puis un autre. Jusqu'a ce que la rangee monumentale des Gardiens devienne une scene nocturne de lumiere, de pierre et de silence.",
+          "detail": "Le bleu est profond et lunaire, l'emeraude sombre et minerale. La lumiere reste subtile : pas de neon, pas d'horreur, pas de rythme forain."
+        }
+      },
+      "summary": {
+        "day": "Le jour, ils regardent.",
+        "night": "La nuit, leur regard devient lumiere.",
+        "body": "L'Eveil des Moai dure du premier regard jusqu'au final nocturne."
+      }
+    },
     "activities": {
       "kicker": "CHAPTERS OF AWAKENING",
       "title": "Eight fragments of one story",
@@ -715,7 +760,7 @@
       },
       "light": {
         "title": "Evening Silence",
-        "description": "The last chapter should quiet the place. Light embraces the faces, the eyes remain open, and the Park becomes a landscape of memory, stone and night focus."
+        "description": "The last chapter should quiet the place. Light embraces the faces, the eyes remain open, and the Park becomes a landscape of memory, stone and night focus. Pendant le final de l'Eveil, les yeux des Gardiens deviennent une partie de l'illumination. Des regards bleus et emeraude apparaissent entre la lumiere de l'Ahu et l'obscurite de la nuit."
       }
     },
     "timeline": {
@@ -754,6 +799,11 @@
       "eventPending": "The next chapter of the Awakening should grow from the rhythm of the Park and the maturity of the whole narrative.",
       "announcedFallback": "The next chapter of the Awakening has been announced.",
       "cta": "Return to the story"
+    },
+    "lastLook": {
+      "kicker": "DERNIER REGARD",
+      "title": "Quand la nuit tombe, les Gardiens ne ferment pas les yeux.",
+      "body": "C'est alors que l'Eveil atteint sa forme la plus etonnante. La lumiere demeure encore un instant dans les yeux des Moai, avant que ce jour exceptionnel ne s'acheve."
     },
     "assets": {
       "templeWideAlt": "Moai eyes in a dark stone space.",

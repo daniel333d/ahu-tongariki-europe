@@ -690,6 +690,51 @@
         "description": "A discreet symbol leads onward and turns the passage through the Park into a reading of the landscape."
       }
     },
+    "transformation": {
+      "kicker": "THE NIGHT CHAPTER OF THE AWAKENING",
+      "title": "The Night of the Moai Awakening.",
+      "lead": "This part focuses only on the night moment of the Awakening: the light of the eyes, darkness, stone and silence. Day and dusk remain described elsewhere in the section.",
+      "visualAlt": "Night Moai with illuminated eyes.",
+      "switcherAria": "Choose a chapter of the Moai Awakening",
+      "nightToneAria": "Choose a night Moai image",
+      "nightTones": {
+        "rowBlue": "Blue row",
+        "rowEmerald": "Emerald row",
+        "closeBlue": "Close view",
+        "winterBlue": "Winter night",
+        "singleEmerald": "Lone guardian",
+        "gateBlue": "Night gate"
+      },
+      "states": {
+        "day": {
+          "label": "Day",
+          "name": "DAY — GAZE",
+          "headline": "By day, they watch.",
+          "body": "The Awakening begins in daylight.\n\nOn that day, the Moai of RapaNuiPark regain their eyes. A bright gaze contrasting with dark stone changes how we perceive the monumental figures.\n\nFor the first time, we do not only look at the Guardians.\n\nWe feel that they are looking at us.",
+          "detail": "The eyes remain natural and calm. They do not glow. Their strength comes from how a small change can transform a stone face completely.",
+          "quote": "\"Did I really see that?\""
+        },
+        "dusk": {
+          "label": "Dusk",
+          "name": "DUSK — TRANSFORMATION",
+          "headline": "The gaze begins to change.",
+          "body": "Then dusk arrives.\n\nWith the last light of day, the Awakening changes as well. Illumination begins to draw monumental silhouettes, facial lines and stone texture out of the half-dark.\n\nThe eyes that were bright and natural by day begin to reflect the light around them.",
+          "detail": "The boundary between natural gaze and night experience slowly disappears. This is not full eye light yet, but a quiet passage."
+        },
+        "night": {
+          "label": "Night",
+          "name": "NIGHT — LIGHT OF THE EYES",
+          "headline": "At night, their gaze becomes light.",
+          "body": "After dark, the Awakening reaches its finale.\n\nSelected Moai eyes begin to glow with cool blue or deep emerald green. Not all at once.\n\nFirst one gaze. Then another. Until the monumental row of Guardians becomes part of a night composition of light, stone and silence.",
+          "detail": "The blue is deep and moonlit; the emerald is dark and mineral. The light stays subtle: no neon, no horror, no fairground rhythm."
+        }
+      },
+      "summary": {
+        "day": "By day, they watch.",
+        "night": "At night, their gaze becomes light.",
+        "body": "Moai Awakening lasts from the first gaze to the night finale."
+      }
+    },
     "activities": {
       "kicker": "CHAPTERS OF AWAKENING",
       "title": "Eight fragments of one story",
@@ -723,7 +768,7 @@
       },
       "light": {
         "title": "Evening Silence",
-        "description": "The last chapter should quiet the place. Light embraces the faces, the eyes remain open, and the Park becomes a landscape of memory, stone and night focus."
+        "description": "The last chapter should quiet the place. Light embraces the faces, the eyes remain open, and the Park becomes a landscape of memory, stone and night focus. During the finale of the Awakening, the Guardians' eyes become part of the illumination. Blue and emerald gazes appear between the light of the Ahu and the darkness of night."
       }
     },
     "timeline": {
@@ -762,6 +807,11 @@
       "eventPending": "The next chapter of the Awakening should grow from the rhythm of the Park and the maturity of the whole narrative.",
       "announcedFallback": "The next chapter of the Awakening has been announced.",
       "cta": "Return to the story"
+    },
+    "lastLook": {
+      "kicker": "LAST GAZE",
+      "title": "When night falls, the Guardians do not close their eyes.",
+      "body": "This is when the Awakening reaches its most extraordinary form. Light remains in the eyes of the Moai for a moment longer, before the exceptional day comes to an end."
     },
     "assets": {
       "templeWideAlt": "Moai eyes in a dark stone space.",

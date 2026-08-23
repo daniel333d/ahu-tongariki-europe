@@ -682,6 +682,51 @@
         "description": "A discreet symbol leads onward and turns the passage through the Park into a reading of the landscape."
       }
     },
+    "transformation": {
+      "kicker": "DAS NACHTKAPITEL DES ERWACHENS",
+      "title": "Die Nacht des Moai-Erwachens.",
+      "lead": "Dieser Teil konzentriert sich nur auf den naechtlichen Moment des Erwachens: das Licht der Augen, Dunkelheit, Stein und Stille. Tag und Daemmerung bleiben an anderer Stelle der Sektion beschrieben.",
+      "visualAlt": "Naechtliche Moai mit leuchtenden Augen.",
+      "switcherAria": "Kapitel des Moai-Erwachens waehlen",
+      "nightToneAria": "Naechtliches Moai-Bild waehlen",
+      "nightTones": {
+        "rowBlue": "Blaue Reihe",
+        "rowEmerald": "Smaragd-Reihe",
+        "closeBlue": "Nahansicht",
+        "winterBlue": "Winternacht",
+        "singleEmerald": "Einsamer Waechter",
+        "gateBlue": "Nachttor"
+      },
+      "states": {
+        "day": {
+          "label": "Tag",
+          "name": "TAG — BLICK",
+          "headline": "Am Tag schauen sie.",
+          "body": "Das Erwachen beginnt am Tag.\n\nAn diesem Tag erhalten die Moai von RapaNuiPark ihre Augen zurueck. Ein heller Blick, im Kontrast zum dunklen Stein, veraendert die Wahrnehmung der monumentalen Figuren.\n\nZum ersten Mal schauen wir nicht nur auf die Waechter.\n\nWir haben das Gefuehl, dass sie uns ansehen.",
+          "detail": "Die Augen bleiben natuerlich und ruhig. Sie leuchten nicht. Ihre Kraft entsteht gerade daraus, dass eine kleine Veraenderung ein steinernes Gesicht vollkommen verwandeln kann.",
+          "quote": "\"Habe ich das wirklich gesehen?\""
+        },
+        "dusk": {
+          "label": "Daemmerung",
+          "name": "DAEMMERUNG — VERWANDLUNG",
+          "headline": "Der Blick beginnt sich zu veraendern.",
+          "body": "Dann kommt die Daemmerung.\n\nMit dem letzten Tageslicht veraendert sich auch das Erwachen. Die Illumination hebt monumentale Silhouetten, Gesichtszuege und die Textur des Steins aus dem Halbdunkel hervor.\n\nDie Augen, die am Tag hell und natuerlich waren, beginnen das Umgebungslicht zu spiegeln.",
+          "detail": "Die Grenze zwischen natuerlichem Blick und naechtlichem Erlebnis verschwindet langsam. Noch ist es kein volles Leuchten der Augen, sondern ein stiller Uebergang."
+        },
+        "night": {
+          "label": "Nacht",
+          "name": "NACHT — LICHT DER AUGEN",
+          "headline": "Nachts wird ihr Blick zu Licht.",
+          "body": "Nach Einbruch der Dunkelheit erreicht das Erwachen sein Finale.\n\nAusgewaehlte Moai-Augen beginnen in kuehlem Blau oder tiefem Smaragdgruen zu leuchten. Nie alle gleichzeitig.\n\nZuerst ein Blick. Dann der naechste. Bis die monumentale Reihe der Waechter Teil einer naechtlichen Komposition aus Licht, Stein und Stille wird.",
+          "detail": "Das Blau ist tief und mondhaft, der Smaragd dunkel und mineralisch. Das Licht bleibt subtil: kein Neon, kein Horror, kein Jahrmarktrhythmus."
+        }
+      },
+      "summary": {
+        "day": "Am Tag schauen sie.",
+        "night": "Nachts wird ihr Blick zu Licht.",
+        "body": "Das Moai-Erwachen dauert vom ersten Blick bis zum naechtlichen Finale."
+      }
+    },
     "activities": {
       "kicker": "CHAPTERS OF AWAKENING",
       "title": "Eight fragments of one story",
@@ -715,7 +760,7 @@
       },
       "light": {
         "title": "Evening Silence",
-        "description": "The last chapter should quiet the place. Light embraces the faces, the eyes remain open, and the Park becomes a landscape of memory, stone and night focus."
+        "description": "The last chapter should quiet the place. Light embraces the faces, the eyes remain open, and the Park becomes a landscape of memory, stone and night focus. Im Finale des Erwachens werden die Augen der Waechter Teil der Illumination. Blaue und smaragdgruene Blicke erscheinen zwischen dem Licht des Ahu und der Dunkelheit der Nacht."
       }
     },
     "timeline": {
@@ -754,6 +799,11 @@
       "eventPending": "The next chapter of the Awakening should grow from the rhythm of the Park and the maturity of the whole narrative.",
       "announcedFallback": "The next chapter of the Awakening has been announced.",
       "cta": "Return to the story"
+    },
+    "lastLook": {
+      "kicker": "LETZTER BLICK",
+      "title": "Wenn die Nacht faellt, schliessen die Waechter ihre Augen nicht.",
+      "body": "Dann erreicht das Erwachen seine aussergewoehnlichste Form. Das Licht bleibt noch einen Moment in den Augen der Moai, bevor dieser besondere Tag zu Ende geht."
     },
     "assets": {
       "templeWideAlt": "Moai eyes in a dark stone space.",

@@ -682,6 +682,51 @@
         "description": "A discreet symbol leads onward and turns the passage through the Park into a reading of the landscape."
       }
     },
+    "transformation": {
+      "kicker": "NOCNI KAPITOLA PROBUZENI",
+      "title": "Noc Probuzeni Moai.",
+      "lead": "Tato cast se soustredi pouze na nocni okamzik Probuzeni: svetlo oci, tmu, kamen a ticho. Den a soumrak zustavaji popsane jinde v sekci.",
+      "visualAlt": "Nocni Moai s osvetlenyma ocima.",
+      "switcherAria": "Vybrat kapitolu Probuzeni Moai",
+      "nightToneAria": "Vybrat nocni obraz Moai",
+      "nightTones": {
+        "rowBlue": "Modra rada",
+        "rowEmerald": "Smaragdova rada",
+        "closeBlue": "Detail",
+        "winterBlue": "Zimni noc",
+        "singleEmerald": "Osamely strazce",
+        "gateBlue": "Nocni brana"
+      },
+      "states": {
+        "day": {
+          "label": "Den",
+          "name": "DEN — POHLED",
+          "headline": "Ve dne se divaji.",
+          "body": "Probuzeni zacina za dne.\n\nV tento den Moai v RapaNuiPark ziskavaji zpet sve oci. Svetly pohled v kontrastu s tmavym kamenem meni zpusob, jak vnimame monumentalni postavy.\n\nPoprve se nedivame jen na Strazce.\n\nMame pocit, ze oni se divaji na nas.",
+          "detail": "Oci zustavaji prirozene a klidne. Nesviti. Jejich sila je prave v tom, jak mala zmena dokaze zcela promenit kamennou tvar.",
+          "quote": "\"Opravdu jsem to videl?\""
+        },
+        "dusk": {
+          "label": "Soumrak",
+          "name": "SOUMRAK — PROMENA",
+          "headline": "Pohled se zacina menit.",
+          "body": "A potom prichazi soumrak.\n\nS poslednim svetlem dne se meni i Probuzeni. Iluminace zacina z polostinu vytahovat monumentalni siluety, rysy tvari a strukturu kamene.\n\nOci, ktere byly ve dne jasne a prirozene, zacinaji odrazet svetlo okoli.",
+          "detail": "Hranice mezi prirozenym pohledem a nocnim zazitkem se pomalu ztraci. Jeste to neni plne svetlo oci, ale tichy okamzik prechodu."
+        },
+        "night": {
+          "label": "Noc",
+          "name": "NOC — SVETLO OCI",
+          "headline": "V noci se jejich pohled stava svetlem.",
+          "body": "Po setmeni dosahuje Probuzeni sveho finale.\n\nVybrane oci Moai zacinaji zarit chladnou modri nebo hlubokou smaragdovou zeleni. Nikdy vsechny naraz.\n\nNejdrive jeden pohled. Potom dalsi. Az se monumentalni rada Strazcu stane soucasti nocni sceny svetla, kamene a ticha.",
+          "detail": "Modra je hluboka a mesicni, smaragdova tmava a mineralni. Svetlo zustava jemne: zadny neon, zadny horor, zadny pouťovy rytmus."
+        }
+      },
+      "summary": {
+        "day": "Ve dne se divaji.",
+        "night": "V noci se jejich pohled stava svetlem.",
+        "body": "Probuzeni Moai trva od prvniho pohledu az po nocni finale."
+      }
+    },
     "activities": {
       "kicker": "CHAPTERS OF AWAKENING",
       "title": "Eight fragments of one story",
@@ -715,7 +760,7 @@
       },
       "light": {
         "title": "Evening Silence",
-        "description": "The last chapter should quiet the place. Light embraces the faces, the eyes remain open, and the Park becomes a landscape of memory, stone and night focus."
+        "description": "The last chapter should quiet the place. Light embraces the faces, the eyes remain open, and the Park becomes a landscape of memory, stone and night focus. Behem finale Probuzeni se oci Strazcu stavaji soucasti iluminace. Modre a smaragdove pohledy se objevuji mezi svetlem Ahu a temnotou noci."
       }
     },
     "timeline": {
@@ -754,6 +799,11 @@
       "eventPending": "The next chapter of the Awakening should grow from the rhythm of the Park and the maturity of the whole narrative.",
       "announcedFallback": "The next chapter of the Awakening has been announced.",
       "cta": "Return to the story"
+    },
+    "lastLook": {
+      "kicker": "POSLEDNI POHLED",
+      "title": "Kdyz prijde noc, Strazci nezaviraji oci.",
+      "body": "Prave tehdy Probuzeni dosahuje sve nejneobycejnejsi podoby. Svetlo zustava v ocich Moai jeste malou chvili, nez vyjimecny den skonci."
     },
     "assets": {
       "templeWideAlt": "Moai eyes in a dark stone space.",
