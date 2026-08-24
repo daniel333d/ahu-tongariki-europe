@@ -10,9 +10,7 @@ import {
   awakeningStoryChapters,
   awakeningTimeline,
   awakeningTransformationStates,
-  heroEyePositions,
   transformationNightImages,
-  type EyePosition,
   type NightVisualTone
 } from "./przebudzenie-moai-data";
 
@@ -34,30 +32,6 @@ function Reveal({ children, className = "" }: { children: React.ReactNode; class
   );
 }
 
-function MoaiEyesOverlay({ eyes }: { eyes: EyePosition[] }) {
-  return (
-    <div className="pointer-events-none absolute inset-0 z-20" aria-hidden="true">
-      {eyes.map((eye) => (
-        <span
-          key={eye.id}
-          className="awakening-eye absolute block aspect-[2.25/1] rounded-[50%] border border-ivory/15 bg-ivory/18 shadow-[0_0_22px_rgba(244,239,229,0.14)]"
-          style={
-            {
-              left: `${eye.x}%`,
-              top: `${eye.y}%`,
-              width: `${eye.width}%`,
-              "--eye-delay": `${eye.delay ?? 0}s`,
-              transform: `translate(-50%, -50%) rotate(${eye.rotation ?? 0}deg)`
-            } as React.CSSProperties
-          }
-        >
-          <span className="absolute left-[58%] top-[34%] block aspect-square w-[13%] rounded-full bg-white/35 blur-[1px]" />
-        </span>
-      ))}
-    </div>
-  );
-}
-
 function Hero() {
   const { text } = useI18n();
 
@@ -74,7 +48,6 @@ function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,7,12,0.96),rgba(2,7,12,0.76)_34%,rgba(2,7,12,0.32)_68%,rgba(2,7,12,0.58)),radial-gradient(circle_at_62%_48%,rgba(184,150,72,0.13),transparent_36%)]" />
       <div className="awakening-light absolute inset-0 opacity-65" aria-hidden="true" />
       <div className="awakening-fog absolute inset-x-0 bottom-0 h-1/2 opacity-70" aria-hidden="true" />
-      <MoaiEyesOverlay eyes={heroEyePositions} />
       <div className="relative z-30 mx-auto flex min-h-[92svh] max-w-7xl flex-col justify-center px-6 py-28 sm:px-10">
         <div className="max-w-4xl">
           <SectionKicker>{text("awakening.kicker")}</SectionKicker>
@@ -491,41 +464,9 @@ export function PrzebudzenieMoaiSection() {
           animation: awakeningFog 11s ease-in-out infinite alternate;
         }
 
-        .awakening-eye {
-          opacity: 0;
-          transform-origin: center;
-          animation:
-            awakeningOpen 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards,
-            awakeningBlink 11s ease-in-out infinite;
-          animation-delay: var(--eye-delay), calc(var(--eye-delay) + 5.5s);
-        }
-
         .awakening-status {
           opacity: 0;
           animation: awakeningStatus 0.8s ease-out 3.35s forwards;
-        }
-
-        @keyframes awakeningOpen {
-          0% {
-            opacity: 0;
-            clip-path: inset(50% 0 50% 0);
-          }
-          100% {
-            opacity: 0.92;
-            clip-path: inset(0 0 0 0);
-          }
-        }
-
-        @keyframes awakeningBlink {
-          0%,
-          71%,
-          73%,
-          100% {
-            clip-path: inset(0 0 0 0);
-          }
-          72% {
-            clip-path: inset(45% 0 45% 0);
-          }
         }
 
         @keyframes awakeningLight {
@@ -566,10 +507,8 @@ export function PrzebudzenieMoaiSection() {
             scroll-behavior: auto !important;
           }
 
-          .awakening-eye,
           .awakening-status {
             opacity: 0.92;
-            clip-path: inset(0 0 0 0);
           }
         }
       `}</style>
