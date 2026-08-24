@@ -1,5 +1,5 @@
 declare module "framer-motion" {
-  import type { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
+  import type { ComponentPropsWithoutRef, ElementType, ReactNode, RefObject } from "react";
 
   type MotionProps = {
     animate?: unknown;
@@ -27,4 +27,15 @@ declare module "framer-motion" {
   };
 
   export function AnimatePresence(props: { children?: ReactNode }): ReactNode;
+
+  export function useInView(
+    ref: RefObject<Element | null>,
+    options?: {
+      root?: RefObject<Element | null>;
+      once?: boolean;
+      margin?: string;
+      amount?: "some" | "all" | number;
+      initial?: boolean;
+    }
+  ): boolean;
 }

@@ -153,8 +153,8 @@ export const transformationNightImages: Record<NightVisualTone, string> = {
   rowBlue: "/assets/przebudzenie-moai/owner-awakening-eyes-row-blue.jpeg",
   rowEmerald: "/assets/przebudzenie-moai/owner-awakening-eyes-row-emerald.jpeg",
   winterBlue: "/assets/przebudzenie-moai/owner-awakening-eyes-winter-blue.jpeg",
-  singleEmerald: "/assets/przebudzenie-moai/owner-awakening-eyes-single-emerald.png",
-  gateBlue: "/assets/przebudzenie-moai/owner-awakening-eyes-gate-blue.png"
+  singleEmerald: "/assets/przebudzenie-moai/owner-awakening-eyes-single-emerald-optimized.webp",
+  gateBlue: "/assets/przebudzenie-moai/owner-awakening-eyes-gate-blue-optimized.webp"
 };
 
 export const awakeningActivities: AwakeningActivity[] = [
@@ -165,7 +165,7 @@ export const awakeningActivities: AwakeningActivity[] = [
     icon: "01",
     size: "hero",
     order: 1,
-    image: "/assets/przebudzenie-moai/owner-eyes-temple-horizontal.png",
+    image: "/assets/przebudzenie-moai/owner-eyes-temple-horizontal-optimized.webp",
     altKey: "awakening.assets.templeHorizontalAlt",
     visualMode: "contain",
     details: ["awakening.activityDetails.light", "awakening.activityDetails.sequence", "awakening.activityDetails.ceremony"]
@@ -177,7 +177,7 @@ export const awakeningActivities: AwakeningActivity[] = [
     icon: "02",
     size: "large",
     order: 2,
-    image: "/assets/przebudzenie-moai/owner-moai-five-ocean.png",
+    image: "/assets/przebudzenie-moai/owner-moai-five-ocean-optimized.webp",
     altKey: "awakening.assets.fiveOceanAlt",
     visualMode: "contain",
     details: ["awakening.activityDetails.path", "awakening.activityDetails.symbols"]
@@ -189,7 +189,7 @@ export const awakeningActivities: AwakeningActivity[] = [
     icon: "03",
     size: "large",
     order: 3,
-    image: "/assets/przebudzenie-moai/owner-ahu-tongariki-day.png",
+    image: "/assets/przebudzenie-moai/owner-ahu-tongariki-day-optimized.webp",
     altKey: "awakening.assets.ahuDayAlt",
     visualMode: "contain",
     details: ["awakening.activityDetails.narration", "awakening.activityDetails.education"]
@@ -201,7 +201,7 @@ export const awakeningActivities: AwakeningActivity[] = [
     icon: "04",
     size: "medium",
     order: 4,
-    image: "/assets/przebudzenie-moai/owner-moai-close-day.png",
+    image: "/assets/przebudzenie-moai/owner-moai-close-day-optimized.webp",
     altKey: "awakening.assets.closeDayAlt",
     visualMode: "contain",
     details: ["awakening.activityDetails.hosting", "awakening.activityDetails.daylight"]
@@ -213,7 +213,7 @@ export const awakeningActivities: AwakeningActivity[] = [
     icon: "05",
     size: "medium",
     order: 5,
-    image: "/assets/przebudzenie-moai/owner-eyes-black-gold.png",
+    image: "/assets/przebudzenie-moai/owner-eyes-black-gold-optimized.webp",
     altKey: "awakening.assets.blackGoldAlt",
     visualMode: "contain",
     details: ["awakening.activityDetails.photo", "awakening.activityDetails.goldHour"]
@@ -225,7 +225,7 @@ export const awakeningActivities: AwakeningActivity[] = [
     icon: "06",
     size: "medium",
     order: 6,
-    image: "/assets/przebudzenie-moai/owner-eyes-storm-landscape.png",
+    image: "/assets/przebudzenie-moai/owner-eyes-storm-landscape-optimized.webp",
     altKey: "awakening.assets.stormLandscapeAlt",
     visualMode: "contain",
     details: ["awakening.activityDetails.workshop", "awakening.activityDetails.sign"]
@@ -237,7 +237,7 @@ export const awakeningActivities: AwakeningActivity[] = [
     icon: "07",
     size: "medium",
     order: 7,
-    image: "/assets/przebudzenie-moai/owner-moai-hills-close.png",
+    image: "/assets/przebudzenie-moai/owner-moai-hills-close-optimized.webp",
     altKey: "awakening.assets.hillsAlt",
     visualMode: "contain",
     details: ["awakening.activityDetails.clue", "awakening.activityDetails.family"]
