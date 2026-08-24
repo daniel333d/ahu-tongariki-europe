@@ -705,6 +705,32 @@
         "singleEmerald": "Samotny strażnik",
         "gateBlue": "Brama nocy"
       },
+      "story": {
+        "rowBlue": {
+          "title": "Pierwszy błękit w szeregu.",
+          "body": "Noc zaczyna się spokojnie. Wzdłuż Ahu pojawia się chłodny rytm światła, który nie zagłusza kamienia, lecz prowadzi wzrok od pierwszego Moai do ostatniego."
+        },
+        "closeBlue": {
+          "title": "Spojrzenie z bliska.",
+          "body": "Dopiero w zbliżeniu widać, że światło nie jest dekoracją. Wydobywa rysy, pęknięcia i ciężar twarzy, jakby kamień przez chwilę odpowiadał ciszy."
+        },
+        "rowEmerald": {
+          "title": "Zieleń głęboka jak noc.",
+          "body": "Szmaragdowy ton zmienia napięcie sceny. Nie tworzy efektu grozy, tylko drugi oddech opowieści: bardziej mineralny, ciemniejszy, bliższy ziemi."
+        },
+        "winterBlue": {
+          "title": "Strażnicy w zimowej ciemności.",
+          "body": "Na śniegu światło staje się jeszcze cichsze. Biel krajobrazu nie odbiera Moai monumentalności, lecz wzmacnia ich obecność w przestrzeni."
+        },
+        "singleEmerald": {
+          "title": "Samotny znak w krajobrazie.",
+          "body": "Jeden Moai zostaje sam na tle ciężkiego nieba. To pauza w narracji, moment skupienia przed finałem całej drogi."
+        },
+        "gateBlue": {
+          "title": "Brama do nocnego finału.",
+          "body": "Ostatni obraz zamyka rozdział jak wejście do Parku po zmroku. Dwa monumentalne strażniki prowadzą wzrok w stronę szeregu, który świeci daleko w głębi."
+        }
+      },
       "states": {
         "day": {
           "label": "Dzień",

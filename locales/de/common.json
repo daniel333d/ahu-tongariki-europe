@@ -697,6 +697,32 @@
         "singleEmerald": "Einsamer Waechter",
         "gateBlue": "Nachttor"
       },
+      "story": {
+        "rowBlue": {
+          "title": "Das erste Blau in der Reihe.",
+          "body": "Die Nacht beginnt ruhig. Entlang des Ahu erscheint ein kuehler Rhythmus aus Licht, der den Blick vom ersten Moai bis zum letzten fuehrt, ohne den Stein zu uebertoenen."
+        },
+        "closeBlue": {
+          "title": "Ein Blick aus der Naehe.",
+          "body": "Erst in der Nahansicht wirkt das Licht nicht mehr wie Dekoration. Es zeigt Zuege, Risse und das Gewicht des Gesichts, als wuerde der Stein kurz auf die Stille antworten."
+        },
+        "rowEmerald": {
+          "title": "Gruen, tief wie die Nacht.",
+          "body": "Der Smaragdton veraendert die Spannung der Szene. Es ist kein Horror, sondern ein zweiter Atemzug der Erzaehlung: mineralischer, dunkler, naeher an der Erde."
+        },
+        "winterBlue": {
+          "title": "Waechter in winterlicher Dunkelheit.",
+          "body": "Im Schnee wird das Licht noch stiller. Die weisse Landschaft nimmt den Moai nichts von ihrer Monumentalitaet; sie verstaerkt ihre Praesenz im offenen Raum."
+        },
+        "singleEmerald": {
+          "title": "Ein einsames Zeichen in der Landschaft.",
+          "body": "Ein einzelner Moai bleibt unter schwerem Himmel zurueck. Es ist eine Pause in der Erzaehlung, ein Moment der Konzentration vor dem finalen Bild."
+        },
+        "gateBlue": {
+          "title": "Das Tor zum naechtlichen Finale.",
+          "body": "Das letzte Bild schliesst das Kapitel wie ein Eingang in den Park nach Einbruch der Dunkelheit. Zwei monumentale Waechter fuehren den Blick zur leuchtenden Reihe in der Ferne."
+        }
+      },
       "states": {
         "day": {
           "label": "Tag",

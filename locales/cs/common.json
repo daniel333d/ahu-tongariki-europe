@@ -697,6 +697,32 @@
         "singleEmerald": "Osamely strazce",
         "gateBlue": "Nocni brana"
       },
+      "story": {
+        "rowBlue": {
+          "title": "Prvni modra v rade.",
+          "body": "Noc zacina klidne. Podel Ahu se objevuje chladny rytmus svetla, ktery vede pohled od prvniho Moai k poslednimu, aniz by prehlusil kamen."
+        },
+        "closeBlue": {
+          "title": "Pohled zblizka.",
+          "body": "Teprve v detailu svetlo prestava pusobit jako dekorace. Odhaluje rysy, praskliny a vahu tvare, jako by kamen na okamzik odpovedel tichu."
+        },
+        "rowEmerald": {
+          "title": "Zelen hluboka jako noc.",
+          "body": "Smaragdovy ton meni napeti sceny. Neni to horor, ale druhy dech pribehu: mineralnejsi, tmavsi, blizsi zemi."
+        },
+        "winterBlue": {
+          "title": "Strazci v zimni tme.",
+          "body": "Na snehu je svetlo jeste tissi. Bila krajina Moai nezjemnuje; posiluje jejich pritomnost v otevrenem prostoru."
+        },
+        "singleEmerald": {
+          "title": "Osamely znak v krajine.",
+          "body": "Jeden Moai zustava pod tezkou oblohou. Je to pauza ve vypraveni, okamzik soustredeni pred zaverecnym obrazem."
+        },
+        "gateBlue": {
+          "title": "Brana k nocnimu finale.",
+          "body": "Posledni obraz uzavira kapitolu jako vstup do Parku po setmeni. Dva monumentalni strazci vedou pohled k osvetlene rade v dali."
+        }
+      },
       "states": {
         "day": {
           "label": "Den",

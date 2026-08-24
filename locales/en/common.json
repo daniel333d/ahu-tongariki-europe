@@ -705,6 +705,32 @@
         "singleEmerald": "Lone guardian",
         "gateBlue": "Night gate"
       },
+      "story": {
+        "rowBlue": {
+          "title": "The first blue across the line.",
+          "body": "The night begins quietly. A cool rhythm of light appears along the Ahu, guiding the eye from the first Moai to the last without drowning out the stone."
+        },
+        "closeBlue": {
+          "title": "A gaze seen up close.",
+          "body": "Only in close view does the light stop feeling decorative. It reveals the features, fractures and weight of the face, as if the stone briefly answered the silence."
+        },
+        "rowEmerald": {
+          "title": "Green as deep as night.",
+          "body": "The emerald tone changes the tension of the scene. It is not horror, but a second breath of the story: more mineral, darker, closer to the earth."
+        },
+        "winterBlue": {
+          "title": "Guardians in winter darkness.",
+          "body": "On snow, the light becomes even quieter. The white landscape does not soften the Moai; it strengthens their presence in the open space."
+        },
+        "singleEmerald": {
+          "title": "A lone sign in the landscape.",
+          "body": "One Moai remains alone beneath a heavy sky. It is a pause in the narrative, a moment of focus before the final view."
+        },
+        "gateBlue": {
+          "title": "The gate to the night finale.",
+          "body": "The last image closes the chapter like an entrance to the Park after dark. Two monumental guardians lead the eye toward the distant illuminated line."
+        }
+      },
       "states": {
         "day": {
           "label": "Day",

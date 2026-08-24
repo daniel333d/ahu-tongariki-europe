@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { useI18n } from "../../app/i18n-provider";
 import {
   awakeningActivities,
@@ -189,38 +188,67 @@ function ParkAwakens() {
   );
 }
 
-function getInitialNightTone(): NightVisualTone {
-  if (typeof window === "undefined") {
-    return "rowBlue";
+const transformationStoryFrames: Array<{
+  tone: NightVisualTone;
+  titleKey: string;
+  bodyKey: string;
+  className: string;
+  imageClassName: string;
+}> = [
+  {
+    tone: "rowBlue",
+    titleKey: "awakening.transformation.story.rowBlue.title",
+    bodyKey: "awakening.transformation.story.rowBlue.body",
+    className: "lg:col-span-7",
+    imageClassName: "aspect-[16/9]"
+  },
+  {
+    tone: "closeBlue",
+    titleKey: "awakening.transformation.story.closeBlue.title",
+    bodyKey: "awakening.transformation.story.closeBlue.body",
+    className: "lg:col-span-5",
+    imageClassName: "aspect-[4/5]"
+  },
+  {
+    tone: "rowEmerald",
+    titleKey: "awakening.transformation.story.rowEmerald.title",
+    bodyKey: "awakening.transformation.story.rowEmerald.body",
+    className: "lg:col-span-6",
+    imageClassName: "aspect-[16/11]"
+  },
+  {
+    tone: "winterBlue",
+    titleKey: "awakening.transformation.story.winterBlue.title",
+    bodyKey: "awakening.transformation.story.winterBlue.body",
+    className: "lg:col-span-6",
+    imageClassName: "aspect-[16/11]"
+  },
+  {
+    tone: "singleEmerald",
+    titleKey: "awakening.transformation.story.singleEmerald.title",
+    bodyKey: "awakening.transformation.story.singleEmerald.body",
+    className: "lg:col-span-5",
+    imageClassName: "aspect-[4/5]"
+  },
+  {
+    tone: "gateBlue",
+    titleKey: "awakening.transformation.story.gateBlue.title",
+    bodyKey: "awakening.transformation.story.gateBlue.body",
+    className: "lg:col-span-7",
+    imageClassName: "aspect-[16/9]"
   }
-
-  const tone = new URLSearchParams(window.location.search).get("nightTone");
-  if (
-    tone === "closeBlue" ||
-    tone === "rowEmerald" ||
-    tone === "winterBlue" ||
-    tone === "singleEmerald" ||
-    tone === "gateBlue"
-  ) {
-    return tone;
-  }
-
-  return "rowBlue";
-}
+];
 
 function TransformationChapter() {
   const { text } = useI18n();
-  const [nightTone, setNightTone] = useState<NightVisualTone>(getInitialNightTone);
   const activeState =
     awakeningTransformationStates.find((state) => state.id === "night") ?? awakeningTransformationStates[0];
-  const visualImage = transformationNightImages[nightTone];
 
   return (
     <section
       id="przebudzenie-transformacja"
       className="awakening-transformation bg-[#071018] px-6 py-24 text-white sm:px-10 sm:py-32"
       data-state="night"
-      data-night-tone={nightTone}
     >
       <div className="mx-auto max-w-7xl">
         <Reveal className="max-w-5xl">
@@ -233,64 +261,63 @@ function TransformationChapter() {
           </p>
         </Reveal>
 
-        <Reveal className="mt-14 grid gap-8 xl:grid-cols-[1.12fr_0.88fr] xl:items-stretch">
-          <div className="relative min-h-[420px] overflow-hidden border border-white/14 bg-[#02080d] shadow-[0_28px_80px_rgba(0,0,0,0.38)] sm:min-h-[560px]">
-            <Image
-              key={nightTone}
-              src={visualImage}
-              alt={text("awakening.transformation.visualAlt")}
-              fill
-              sizes="(min-width: 1280px) 58vw, 100vw"
-              className="transformation-base object-cover"
-              style={{ objectPosition: "50% 50%" }}
-              loading="eager"
-            />
-            <div className="absolute left-5 top-5 z-30 border border-gold/60 bg-[#02080d]/76 px-4 py-3 text-xs font-bold uppercase tracking-[0.22em] text-gold backdrop-blur sm:left-7 sm:top-7">
-              {text(activeState.labelKey)}
-            </div>
+        <Reveal className="mt-12 grid gap-8 xl:grid-cols-[0.84fr_1.16fr] xl:items-start">
+          <div className="border-l border-gold/45 pl-6 sm:pl-8">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold">{text(activeState.nameKey)}</p>
+            <h3 className="mt-4 max-w-2xl text-balance font-serif text-[clamp(2.35rem,4.2vw,4.5rem)] font-semibold leading-[1.02]">
+              {text(activeState.headlineKey)}
+            </h3>
           </div>
 
-          <div className="flex flex-col justify-between border border-white/14 bg-[#02080d] p-7 shadow-[0_28px_80px_rgba(0,0,0,0.3)] sm:p-9 lg:p-10">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold">{text(activeState.nameKey)}</p>
-              <h3 className="mt-4 text-balance font-serif text-[clamp(2.35rem,4.2vw,4.5rem)] font-semibold leading-[1.02]">
-                {text(activeState.headlineKey)}
-              </h3>
-              <p className="mt-7 whitespace-pre-line text-lg leading-8 text-white/74">{text(activeState.bodyKey)}</p>
-              <p className="mt-7 border-l border-gold/55 pl-5 text-base leading-7 text-[#f7e6bd]/86 sm:text-lg">
-                {text(activeState.detailKey)}
-              </p>
+          <div className="border-t border-white/14 pt-7 xl:border-l xl:border-t-0 xl:pl-10 xl:pt-0">
+            <p className="whitespace-pre-line text-lg leading-8 text-white/74">{text(activeState.bodyKey)}</p>
+            <p className="mt-7 text-base leading-7 text-[#f7e6bd]/86 sm:text-lg">{text(activeState.detailKey)}</p>
+          </div>
+        </Reveal>
 
-              {activeState.quoteKey ? (
-                <p className="mt-8 font-serif text-3xl font-semibold leading-tight text-white">
-                  {text(activeState.quoteKey)}
-                </p>
-              ) : null}
-
-              <div className="mt-8 flex flex-wrap gap-3" aria-label={text("awakening.transformation.nightToneAria")}>
-                {(["rowBlue", "rowEmerald", "closeBlue", "winterBlue", "singleEmerald", "gateBlue"] as const).map((tone) => (
-                  <button
-                    key={tone}
-                    type="button"
-                    onClick={() => setNightTone(tone)}
-                    className={`min-h-11 border px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold ${
-                      nightTone === tone
-                        ? "border-gold bg-gold text-navy"
-                        : "border-white/16 text-white/64 hover:border-gold/60 hover:text-gold"
-                    }`}
-                  >
-                    {text(`awakening.transformation.nightTones.${tone}`)}
-                  </button>
-                ))}
+        <div className="mt-16 grid gap-6 lg:grid-cols-12">
+          {transformationStoryFrames.map((frame, index) => (
+            <Reveal
+              key={frame.tone}
+              className={`group overflow-hidden border border-white/14 bg-[#02080d] shadow-[0_28px_80px_rgba(0,0,0,0.28)] ${frame.className}`}
+            >
+              <div className={`relative overflow-hidden bg-[#02080d] ${frame.imageClassName}`}>
+                <Image
+                  src={transformationNightImages[frame.tone]}
+                  alt={text("awakening.transformation.visualAlt")}
+                  fill
+                  sizes="(min-width: 1280px) 58vw, (min-width: 1024px) 50vw, 100vw"
+                  className="object-cover transition duration-700 group-hover:scale-[1.015]"
+                  style={{ objectPosition: "50% 50%" }}
+                  loading={index < 2 ? "eager" : "lazy"}
+                />
               </div>
-            </div>
+              <div className="p-6 sm:p-8 lg:p-9">
+                <div className="flex items-center gap-4">
+                  <span className="font-serif text-3xl font-semibold text-gold">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="h-px flex-1 bg-white/12" />
+                </div>
+                <h4 className="mt-5 max-w-xl text-balance font-serif text-[clamp(2rem,3.4vw,3.6rem)] font-semibold leading-[1.02] text-white">
+                  {text(frame.titleKey)}
+                </h4>
+                <p className="mt-5 max-w-2xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
+                  {text(frame.bodyKey)}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
 
-            <div className="mt-10 border-t border-white/12 pt-8">
+        <Reveal className="mt-8 border border-gold/30 bg-[#091013] p-7 sm:p-9">
+          <div className="grid gap-7 lg:grid-cols-[0.7fr_1fr] lg:items-center">
+            <div>
               <p className="font-serif text-3xl font-semibold leading-tight text-gold">
                 {text("awakening.transformation.summary.night")}
               </p>
-              <p className="mt-5 text-lg leading-8 text-white/68">{text("awakening.transformation.summary.body")}</p>
             </div>
+            <p className="text-lg leading-8 text-white/72">{text("awakening.transformation.summary.body")}</p>
           </div>
         </Reveal>
       </div>
