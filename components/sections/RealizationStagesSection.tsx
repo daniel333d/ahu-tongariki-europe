@@ -70,7 +70,7 @@ const stageTwoCards: StageTwoCard[] = [
     number: "02.4",
     title: "Wieża Widokowa Moai",
     subtitle: "RapaNuiPark z zupełnie innej perspektywy.",
-    image: "/assets/realization-stages/etap-2-wieza-moai.png",
+    image: "/assets/realization-stages/etap-2-wieza-moai-nowe-tlo.png",
     alt: "Koncepcja Wieży Widokowej Moai z platformą obserwacyjną i Sky Café.",
     body:
       "Monumentalna wieża inspirowana formą Moai ma stać się jedną z najbardziej rozpoznawalnych dominant RapaNuiPark. Sky Café znajduje się na poziomie widokowym wieży.",
