@@ -1,6 +1,8 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 type StageId = "stage1" | "stage2" | "stage3";
@@ -16,6 +18,11 @@ type StageTwoCard = {
   className: string;
   imageFrameClassName: string;
 };
+
+const StageOnePresentationViewer = dynamic(
+  () => import("./StageOnePresentationViewer").then((mod) => mod.StageOnePresentationViewer),
+  { ssr: false }
+);
 
 const tabs: Array<{ id: StageId; label: string; title: string }> = [
   { id: "stage1", label: "Etap I", title: "Fundament" },
@@ -114,6 +121,8 @@ function StageHeader({
 }
 
 function StageOne() {
+  const [isPresentationOpen, setPresentationOpen] = useState(false);
+
   return (
     <div>
       <StageHeader
@@ -140,6 +149,49 @@ function StageOne() {
           Pierwsza faza realizacji wyznacza przestrzenny i symboliczny fundament RapaNuiPark.
         </figcaption>
       </figure>
+      <article className="mx-auto mt-8 grid max-w-6xl overflow-hidden border border-white/12 bg-[#07111a] shadow-[0_28px_80px_rgba(0,0,0,0.34)] lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
+          <p className="text-xs font-bold uppercase tracking-[0.24em] text-gold">I Faza Inwestycji</p>
+          <h3 className="mt-5 text-balance font-serif text-[clamp(2rem,4.4vw,4.2rem)] font-semibold leading-[1.02] text-white">
+            Poznaj wzorce odwzorowania
+          </h3>
+          <p className="mt-6 text-base leading-8 text-white/70 sm:text-lg">
+            Zobacz autentyczne miejsca i formy Rapa Nui, które wyznaczają kierunek pierwszej fazy RapaNuiPark.
+          </p>
+          <button
+            type="button"
+            onClick={() => setPresentationOpen(true)}
+            className="mt-8 inline-flex w-full items-center justify-center gap-3 border border-gold/65 bg-gold px-5 py-4 text-sm font-bold uppercase tracking-[0.14em] text-[#02080d] transition hover:bg-[#f7e6bd] focus:outline-none focus-visible:ring-2 focus-visible:ring-gold sm:w-auto"
+            aria-haspopup="dialog"
+          >
+            Otwórz prezentację
+            <ArrowRight size={18} aria-hidden="true" />
+          </button>
+          <p className="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-white/38">
+            25 slajdów / lekki viewer webowy
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={() => setPresentationOpen(true)}
+          className="group relative min-h-[260px] bg-black text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold sm:min-h-[360px] lg:min-h-[430px]"
+          aria-label="Otwórz prezentację I Fazy Inwestycji"
+        >
+          <Image
+            src="/assets/realization-stage-1/cover.webp"
+            alt="Okładka prezentacji I Fazy Inwestycji RapaNuiPark."
+            fill
+            sizes="(min-width: 1280px) 660px, 100vw"
+            className="object-cover transition duration-700 group-hover:scale-[1.02]"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,8,13,0.04),rgba(2,8,13,0.3)_52%,rgba(2,8,13,0.72))]" />
+          <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between gap-4 border-t border-gold/35 pt-4 text-xs font-bold uppercase tracking-[0.18em] text-[#f7e6bd]">
+            <span>Etap I</span>
+            <span>1 / 25</span>
+          </div>
+        </button>
+      </article>
+      <StageOnePresentationViewer isOpen={isPresentationOpen} onClose={() => setPresentationOpen(false)} />
     </div>
   );
 }
