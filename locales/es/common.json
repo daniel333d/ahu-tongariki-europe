@@ -697,6 +697,32 @@
         "singleEmerald": "Guardian solitario",
         "gateBlue": "Puerta nocturna"
       },
+      "story": {
+        "rowBlue": {
+          "title": "El primer azul en la fila.",
+          "body": "La noche empieza con calma. A lo largo del Ahu aparece un ritmo frio de luz que guia la mirada desde el primer Moai hasta el ultimo sin apagar la piedra."
+        },
+        "closeBlue": {
+          "title": "Una mirada de cerca.",
+          "body": "Solo en la vista cercana la luz deja de parecer decoracion. Revela los rasgos, las grietas y el peso del rostro, como si la piedra respondiera por un instante al silencio."
+        },
+        "rowEmerald": {
+          "title": "Verde profundo como la noche.",
+          "body": "El tono esmeralda cambia la tension de la escena. No es terror, sino un segundo aliento del relato: mas mineral, mas oscuro, mas cercano a la tierra."
+        },
+        "winterBlue": {
+          "title": "Guardianes en la oscuridad invernal.",
+          "body": "Sobre la nieve, la luz se vuelve aun mas silenciosa. El paisaje blanco no suaviza a los Moai; refuerza su presencia en el espacio abierto."
+        },
+        "singleEmerald": {
+          "title": "Un signo solitario en el paisaje.",
+          "body": "Un solo Moai queda bajo un cielo pesado. Es una pausa en la narracion, un momento de concentracion antes de la imagen final."
+        },
+        "gateBlue": {
+          "title": "La puerta del final nocturno.",
+          "body": "La ultima imagen cierra el capitulo como una entrada al Parque despues del anochecer. Dos guardianes monumentales llevan la mirada hacia la fila iluminada al fondo."
+        }
+      },
       "states": {
         "day": {
           "label": "Dia",
