@@ -24,7 +24,7 @@ const scaleImages: Record<ScaleMode, { src: string; className: string }> = {
 
 export function ScaleSection() {
   const { copy } = useI18n();
-  const [mode, setMode] = useState<ScaleMode>("monumental");
+  const [mode, setMode] = useState<ScaleMode>("comparison");
   const [reduceMotion, setReduceMotion] = useState(false);
   const scale = copy.scale;
   const activeImage = scaleImages[mode];
@@ -54,7 +54,7 @@ export function ScaleSection() {
           </div>
 
           <div className="flex flex-wrap gap-2 lg:justify-end" role="tablist" aria-label={scale.modesLabel}>
-            {(["monumental", "comparison", "heights"] as const).map((modeKey) => (
+            {(["comparison", "monumental", "heights"] as const).map((modeKey) => (
               <button
                 key={modeKey}
                 type="button"
