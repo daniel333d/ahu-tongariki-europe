@@ -669,10 +669,13 @@ function HomeContent() {
         >
           <a
             href="#"
-            className="inline-flex items-center transition duration-300 hover:opacity-[0.82] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+            className="inline-flex flex-col leading-none transition duration-300 hover:opacity-[0.82] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
             aria-label={`${copy.brand.name} - strona główna`}
           >
-            <BrandLogo />
+            <span className="font-serif text-3xl font-semibold tracking-wide text-white">RapaNuiPark</span>
+            <span className="mt-2 text-[0.66rem] font-bold uppercase tracking-[0.32em] text-white">
+              Bystrzyca Kłodzka
+            </span>
           </a>
           <button
             type="button"
@@ -714,10 +717,13 @@ function HomeContent() {
               <a
                 href="#"
                 onClick={() => setMobileMenuOpen(false)}
-                className="inline-flex items-center"
+                className="inline-flex flex-col leading-none"
                 aria-label={`${copy.brand.name} - strona główna`}
               >
-                <BrandLogo variant="mark" className="h-14 w-14 object-contain" />
+                <span className="font-serif text-3xl font-semibold tracking-wide text-white">RapaNuiPark</span>
+                <span className="mt-2 text-[0.66rem] font-bold uppercase tracking-[0.32em] text-gold">
+                  Bystrzyca Kłodzka
+                </span>
               </a>
               <button
                 type="button"
@@ -756,7 +762,7 @@ function HomeContent() {
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-96px)] max-w-[1500px] items-end px-6 pb-10 pt-16 sm:pb-14 lg:px-10 lg:pb-20">
           <div className="w-full">
             <div className="max-w-4xl">
-              <div className="mb-6 inline-flex h-24 w-24 items-center justify-center rounded-full border border-gold/45 bg-black/28 p-2 shadow-[0_22px_70px_rgba(0,0,0,0.42)] backdrop-blur-sm sm:mb-8 sm:h-32 sm:w-32 lg:h-36 lg:w-36">
+              <div className="mb-6 inline-flex h-32 w-32 items-center justify-center rounded-full border border-gold/50 bg-black/30 p-2.5 shadow-[0_28px_86px_rgba(0,0,0,0.48)] backdrop-blur-sm sm:mb-8 sm:h-40 sm:w-40 lg:h-48 lg:w-48">
                 <Image
                   src="/brand/rapanuipark-logo.webp"
                   alt=""
