@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { type CSSProperties, type FormEvent, useEffect, useState } from "react";
+import { BrandLogo } from "../components/brand/BrandLogo";
+import { ImageWatermark } from "../components/brand/ImageWatermark";
 import { VisitCounter } from "../components/common/VisitCounter";
 import { MoaiPresenceEffect } from "../components/effects/MoaiPresenceEffect";
 import { ScaleSection } from "../components/scale/ScaleSection";
@@ -665,8 +667,15 @@ function HomeContent() {
           className="relative z-10 mx-auto flex max-w-[1500px] items-center justify-between px-6 py-7 lg:px-10"
           aria-label={copy.accessibility.navigationLabel}
         >
-          <a href="#" className="font-serif text-2xl font-semibold tracking-wide">
-            {copy.brand.name}
+          <a
+            href="#"
+            className="inline-flex flex-col leading-none transition duration-300 hover:opacity-[0.82] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+            aria-label={`${copy.brand.name} - strona główna`}
+          >
+            <span className="font-serif text-3xl font-semibold tracking-wide text-white">RapaNuiPark</span>
+            <span className="mt-2 text-[0.66rem] font-bold uppercase tracking-[0.32em] text-white">
+              Bystrzyca Kłodzka
+            </span>
           </a>
           <button
             type="button"
@@ -705,7 +714,17 @@ function HomeContent() {
             aria-label={copy.accessibility.mobileMenuLabel}
           >
             <div className="flex items-center justify-between">
-              <span className="font-serif text-2xl font-semibold tracking-wide">{copy.brand.name}</span>
+              <a
+                href="#"
+                onClick={() => setMobileMenuOpen(false)}
+                className="inline-flex flex-col leading-none"
+                aria-label={`${copy.brand.name} - strona główna`}
+              >
+                <span className="font-serif text-3xl font-semibold tracking-wide text-white">RapaNuiPark</span>
+                <span className="mt-2 text-[0.66rem] font-bold uppercase tracking-[0.32em] text-gold">
+                  Bystrzyca Kłodzka
+                </span>
+              </a>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
@@ -743,6 +762,16 @@ function HomeContent() {
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-96px)] max-w-[1500px] items-end px-6 pb-10 pt-16 sm:pb-14 lg:px-10 lg:pb-20">
           <div className="w-full">
             <div className="max-w-4xl">
+              <div className="mb-6 inline-flex h-32 w-32 items-center justify-center rounded-full border border-gold/50 bg-black/30 p-2.5 shadow-[0_28px_86px_rgba(0,0,0,0.48)] backdrop-blur-sm sm:mb-8 sm:h-40 sm:w-40 lg:h-48 lg:w-48">
+                <Image
+                  src="/brand/rapanuipark-logo.webp"
+                  alt=""
+                  width={320}
+                  height={320}
+                  className="h-full w-full object-contain"
+                  aria-hidden="true"
+                />
+              </div>
               <p className="section-kicker mb-5 max-w-[18rem] sm:mb-6 sm:max-w-none">{copy.hero.location}</p>
               <h1 className="hero-title text-balance font-serif text-[3.35rem] font-semibold leading-[0.92] min-[430px]:text-[3.85rem] sm:text-7xl lg:text-[7.5rem]">
                 {copy.brand.name}
@@ -843,6 +872,7 @@ function HomeContent() {
                 className="object-cover object-[63%_center] brightness-125 sm:object-center"
                 sizes="(min-width: 1024px) 1400px, 100vw"
               />
+              <ImageWatermark />
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,20,38,0.66),rgba(7,20,38,0.28)_42%,rgba(7,20,38,0.03)),linear-gradient(0deg,rgba(7,20,38,0.72),transparent_34%)]" />
               <div className="absolute inset-x-0 bottom-0 z-10 p-6 sm:p-8 lg:p-12">
                 <div className="max-w-2xl">
@@ -890,6 +920,7 @@ function HomeContent() {
               className="object-cover object-[57%_center] sm:object-center"
               sizes="(min-width: 1024px) 58vw, 100vw"
             />
+            <ImageWatermark />
             <div className="from-navy/82 via-navy/16 absolute inset-0 bg-gradient-to-t to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white md:p-10">
               <span className="text-sm font-bold uppercase tracking-[0.22em] text-gold">
@@ -1030,6 +1061,7 @@ function HomeContent() {
                 className="night-hero-image object-cover object-[52%_center] sm:object-center"
                 sizes="(min-width: 1024px) 1400px, 100vw"
               />
+              <ImageWatermark className="opacity-[0.1] sm:opacity-[0.13]" />
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,16,31,0.88),rgba(6,16,31,0.38)_42%,rgba(6,16,31,0.1)_76%),linear-gradient(180deg,rgba(6,16,31,0.52),rgba(6,16,31,0.08)_46%,rgba(6,16,31,0.42))]" />
               <div className="night-mist absolute inset-x-0 bottom-0 h-48 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.17),transparent_62%)] opacity-40 blur-xl" />
               <div className="night-light absolute inset-x-[12%] bottom-[18%] h-24 bg-[radial-gradient(ellipse_at_center,rgba(200,164,90,0.36),transparent_66%)] opacity-0 blur-2xl" />
@@ -1062,6 +1094,7 @@ function HomeContent() {
                   className="object-cover object-center"
                   sizes="(min-width: 1024px) 680px, 100vw"
                 />
+                <ImageWatermark />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,16,31,0.04),rgba(6,16,31,0.18)_45%,rgba(6,16,31,0.84))]" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                   <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold">{copy.night.panelKicker}</p>
@@ -1343,10 +1376,18 @@ function HomeContent() {
         </div>
       </section>
 
-      <footer className="border-t border-black/10 bg-white px-6 py-8 lg:px-10">
-        <div className="text-ink/62 mx-auto flex max-w-[1400px] flex-col gap-3 text-sm sm:flex-row sm:items-center sm:justify-between">
-          <span className="font-semibold text-navy">{copy.footer.brand}</span>
-          <div className="flex flex-col gap-1 sm:items-end">
+      <footer className="border-t border-gold/25 bg-[#02080d] px-6 py-12 text-white lg:px-10">
+        <div className="mx-auto grid max-w-[1400px] gap-8 sm:grid-cols-[auto_1fr] sm:items-end">
+          <div className="flex items-center gap-5">
+            <BrandLogo variant="footer" />
+            <div>
+              <p className="font-serif text-3xl font-semibold leading-none text-white">RapaNuiPark</p>
+              <p className="mt-3 text-xs font-bold uppercase tracking-[0.22em] text-gold">
+                Bystrzyca Kłodzka, Dolny Śląsk, Polska
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-2 text-sm text-white/58 sm:items-end">
             <span>{copy.footer.domain}</span>
             <VisitCounter />
           </div>

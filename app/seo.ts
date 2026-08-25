@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { dictionaries, type LanguageCode } from "./i18n";
 
-export const siteUrl = "https://ahutongariki.pl";
+export const siteUrl = "https://rapanuipark.com";
 
 export const languagePaths: Record<LanguageCode, string> = {
   pl: "/",
@@ -40,6 +40,10 @@ export function getLanguageMetadata(language: LanguageCode): Metadata {
     title: copy.seo.title,
     description: copy.seo.description,
     metadataBase: new URL(siteUrl),
+    icons: {
+      icon: "/icon.png",
+      apple: "/apple-icon.png"
+    },
     alternates: {
       canonical: canonicalPath,
       languages: languageAlternates
@@ -89,6 +93,7 @@ export function getStructuredData(language: LanguageCode) {
   const copy = dictionaries[language];
   const canonical = absoluteUrl(languagePaths[language]);
   const image = absoluteUrl(copy.seo.image);
+  const logo = absoluteUrl("/brand/rapanuipark-logo.webp");
 
   return {
     "@context": "https://schema.org",
@@ -123,7 +128,7 @@ export function getStructuredData(language: LanguageCode) {
         "@id": `${siteUrl}/#organization`,
         name: copy.brand.name,
         url: siteUrl,
-        logo: image
+        logo
       }
     ]
   };

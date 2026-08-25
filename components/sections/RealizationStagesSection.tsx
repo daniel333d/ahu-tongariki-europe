@@ -4,6 +4,8 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
+import { BrandBackdrop } from "../brand/BrandBackdrop";
+import { ImageWatermark } from "../brand/ImageWatermark";
 
 type StageId = "stage1" | "stage2" | "stage3";
 
@@ -141,6 +143,7 @@ function StageOne() {
             sizes="(min-width: 1280px) 1120px, 100vw"
             className="object-cover"
           />
+          <ImageWatermark />
           <span className="absolute left-4 top-4 border border-gold/45 bg-black/58 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#f7e6bd] backdrop-blur sm:left-6 sm:top-6">
             Plan Etapu I
           </span>
@@ -184,6 +187,7 @@ function StageOne() {
             sizes="(min-width: 1280px) 660px, 100vw"
             className="object-cover transition duration-700 group-hover:scale-[1.02]"
           />
+          <ImageWatermark />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,8,13,0.04),rgba(2,8,13,0.3)_52%,rgba(2,8,13,0.72))]" />
           <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between gap-4 border-t border-gold/35 pt-4 text-xs font-bold uppercase tracking-[0.18em] text-[#f7e6bd]">
             <span>Etap I</span>
@@ -239,6 +243,7 @@ function StageTwo() {
                   sizes="(min-width: 1280px) 620px, 100vw"
                   className="object-contain transition duration-700 group-hover:scale-[1.015]"
                 />
+                <ImageWatermark />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/26 via-transparent to-black/10" />
                 <span className="absolute left-5 top-5 border border-gold/50 bg-black/56 px-3 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#f7e6bd] backdrop-blur">
                   {card.number}
@@ -310,6 +315,7 @@ export function RealizationStagesSection() {
     >
       <div className="relative isolate px-4 py-24 sm:px-6 lg:px-8">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(184,150,72,0.18),transparent_34%),linear-gradient(180deg,#07111a_0%,#02080d_48%,#07111a_100%)]" />
+        <BrandBackdrop className="-z-10 opacity-80" />
         <div className="mx-auto max-w-5xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.26em] text-gold">Plan rozwoju</p>
           <h1 className="mx-auto mt-5 max-w-4xl text-balance font-serif text-[clamp(2.65rem,6.6vw,6.4rem)] font-semibold leading-[0.96] text-white">
