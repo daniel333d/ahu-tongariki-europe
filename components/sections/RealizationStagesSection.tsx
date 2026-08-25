@@ -262,7 +262,7 @@ function StageThree() {
 }
 
 export function RealizationStagesSection() {
-  const { copy } = useI18n();
+  const { copy, language } = useI18n();
   const t = copy.realizationStages;
   const [activeStage, setActiveStage] = useState<StageId>("stage1");
 
@@ -284,7 +284,11 @@ export function RealizationStagesSection() {
         <BrandBackdrop className="-z-10 opacity-80" />
         <div className="mx-auto max-w-5xl text-center">
           <p className="text-xs font-bold uppercase tracking-[0.26em] text-gold">{t.kicker}</p>
-          <h1 className="mx-auto mt-5 max-w-4xl text-balance font-serif text-[clamp(2.65rem,6.6vw,6.4rem)] font-semibold leading-[0.96] text-white">
+          <h1
+            lang={language}
+            className="mx-auto mt-5 max-w-4xl text-balance font-serif text-[clamp(2.65rem,6.6vw,6.4rem)] font-semibold leading-[0.96] text-white"
+            style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "auto" }}
+          >
             {t.title}
           </h1>
           <p className="mt-7 text-xl font-semibold leading-8 text-[#f7e6bd] sm:text-2xl">{t.subtitle}</p>
