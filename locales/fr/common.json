@@ -14,7 +14,7 @@
     }
   },
   "intro": {
-    "subtitle": "The Spirit of Rapa Nui Lives Here",
+    "subtitle": "L'esprit de Rapa Nui vit ici.",
     "welcomeWords": "Welcome · Bienvenue · Willkommen · Bienvenido · Vítejte · Witamy",
     "tagline": "Ressentir l’esprit de Rapa Nui",
     "motto": "Un héritage monumental. Une expérience intemporelle.",
@@ -646,81 +646,81 @@
     }
   },
   "awakening": {
-    "kicker": "RECIT DU REGARD",
-    "title": "Reveil des Moai",
-    "subtitle": "Le jour ou la pierre retrouve la memoire.",
-    "lead": "Le Reveil des Moai est la couche narrative de RapaNuiPark : lumiere, silence, traces et recit guident les visiteurs vers le sens des gardiens, et non vers un simple programme d attractions.",
+    "kicker": "RÉCIT DU REGARD",
+    "title": "Réveil des Moaï",
+    "subtitle": "Le jour où la pierre retrouve la mémoire.",
+    "lead": "Le Réveil des Moaï est la couche narrative de RapaNuiPark : lumière, silence, traces et récit guident les visiteurs vers le sens des gardiens, et non vers une simple liste d'attractions.",
     "rareLine": "Un moment de concentration, pas un spectacle.",
-    "started": "AWAKENING BEGUN",
-    "scrollCue": "Entrer dans le recit du Reveil",
-    "scrollAria": "Faire defiler vers le recit du Reveil des Moai",
-    "heroAlt": "Monumental RapaNuiPark Moai with a subtle eye-opening animation.",
+    "started": "L'ÉVEIL A COMMENCÉ",
+    "scrollCue": "Entrer dans le récit du Réveil",
+    "scrollAria": "Faire défiler vers le récit du Réveil des Moaï",
+    "heroAlt": "Moaï monumental de RapaNuiPark avec une subtile animation d'ouverture des yeux.",
     "manifest": {
-      "kicker": "A PLACE THAT REMEMBERS",
-      "title": "When the eyes of the Moai are open, the Park becomes more than a place to visit.",
-      "body": "This section tells of a symbolic moment in which the guardians gaze gives order to the whole space. Every part of the Park can then become part of a larger story: about stone, ocean, memory, walking and responsibility toward the heritage of Rapa Nui.",
-      "freeRule": "The Awakening does not need excess effects. Its power lies in the rhythm of passage: from the first gaze, through traces in the landscape, to evening light."
+      "kicker": "UN LIEU QUI SE SOUVIENT",
+      "title": "Quand les yeux des Moaï s'ouvrent, le Parc devient plus qu'un lieu à visiter.",
+      "body": "Cette section raconte un moment symbolique où le regard des gardiens donne un ordre à tout l'espace. Chaque partie du Parc peut alors s'inscrire dans un récit plus vaste : la pierre, l'océan, la mémoire, la marche et la responsabilité envers l'héritage de Rapa Nui.",
+      "freeRule": "Le Réveil n'a pas besoin d'effets excessifs. Sa force réside dans le rythme du passage : du premier regard, à travers les traces dans le paysage, jusqu'à la lumière du soir."
     },
     "moments": {
-      "kicker": "RHYTHM OF PLACE",
-      "title": "The Park speaks through small signs.",
-      "body": "Instead of multiplying activities, the section builds rhythm: light, pause, sign, short story, moving onward. It is a calm dramaturgy of place, where every scene has meaning and does not need to be loud.",
+      "kicker": "LE RYTHME DU LIEU",
+      "title": "Le Parc parle à travers de petits signes.",
+      "body": "Plutôt que de multiplier les activités, cette section construit un rythme : lumière, pause, signe, courte histoire, poursuite du chemin. C'est une dramaturgie calme du lieu, où chaque scène a un sens sans jamais devoir être bruyante.",
       "guardians": {
-        "title": "THE GUARDIANS GAZE",
-        "description": "A subtle opening of the eyes raises the question: who is watching, who remembers, and who has been entrusted with care for the place."
+        "title": "LE REGARD DES GARDIENS",
+        "description": "Une subtile ouverture des yeux soulève une question : qui observe, qui se souvient, et à qui a été confié le soin du lieu."
       },
       "voice": {
-        "title": "THE VOICE OF STORY",
-        "description": "A short narration can explain the meaning of Moai, Ahu and pukao without turning the space into a spectacle."
+        "title": "LA VOIX DU RÉCIT",
+        "description": "Une courte narration peut expliquer le sens des Moaï, des Ahu et des pukao sans transformer l'espace en spectacle."
       },
       "ahuLight": {
-        "title": "LIGHT BY THE AHU",
-        "description": "Warm illumination does not advertise an attraction; it reveals the texture of stone, proportion and the gravity of the arrangement."
+        "title": "LA LUMIÈRE PRÈS DE L'AHU",
+        "description": "Un éclairage chaud ne met pas en avant une attraction ; il révèle la texture de la pierre, les proportions et la gravité de l'ensemble."
       },
       "sign": {
-        "title": "A SIGN IN THE LANDSCAPE",
-        "description": "A discreet symbol leads onward and turns the passage through the Park into a reading of the landscape."
+        "title": "UN SIGNE DANS LE PAYSAGE",
+        "description": "Un symbole discret conduit plus loin et transforme la traversée du Parc en une lecture du paysage."
       }
     },
     "transformation": {
-      "kicker": "LE CHAPITRE NOCTURNE DE L'EVEIL",
-      "title": "La nuit de l'Eveil des Moai.",
-      "lead": "Cette partie se concentre uniquement sur le moment nocturne de l'Eveil : la lumiere des yeux, l'obscurite, la pierre et le silence. Le jour et le crepuscule restent decrits ailleurs dans la section.",
-      "visualAlt": "Moai nocturnes aux yeux illumines.",
-      "switcherAria": "Choisir un chapitre de l'Eveil des Moai",
-      "nightToneAria": "Choisir une image nocturne des Moai",
+      "kicker": "LE CHAPITRE NOCTURNE DE L'ÉVEIL",
+      "title": "La nuit de l'Éveil des Moaï.",
+      "lead": "Cette partie se concentre uniquement sur le moment nocturne de l'Éveil : la lumière des yeux, l'obscurité, la pierre et le silence. Le jour et le crépuscule restent décrits ailleurs dans la section.",
+      "visualAlt": "Moaï nocturnes aux yeux illuminés.",
+      "switcherAria": "Choisir un chapitre de l'Éveil des Moaï",
+      "nightToneAria": "Choisir une image nocturne des Moaï",
       "nightTones": {
-        "rowBlue": "Rangee bleue",
-        "rowEmerald": "Rangee emeraude",
-        "closeBlue": "Vue rapprochee",
+        "rowBlue": "Rangée bleue",
+        "rowEmerald": "Rangée émeraude",
+        "closeBlue": "Vue rapprochée",
         "winterBlue": "Nuit d'hiver",
         "singleEmerald": "Gardien solitaire",
         "gateBlue": "Porte nocturne"
       },
       "story": {
         "rowBlue": {
-          "title": "Le premier bleu dans la ligne.",
-          "body": "La nuit commence calmement. Un rythme froid de lumiere apparait le long de l'Ahu et guide le regard du premier Moai jusqu'au dernier sans etouffer la pierre."
+          "title": "Le premier bleu le long de la ligne.",
+          "body": "La nuit commence calmement. Un rythme froid de lumière apparaît le long de l'Ahu et guide le regard du premier Moaï jusqu'au dernier sans jamais étouffer la pierre."
         },
         "closeBlue": {
-          "title": "Un regard vu de pres.",
-          "body": "Dans le gros plan, la lumiere cesse d'etre un decor. Elle revele les traits, les fissures et le poids du visage, comme si la pierre repondait un instant au silence."
+          "title": "Un regard vu de près.",
+          "body": "Ce n'est que de près que la lumière cesse de paraître décorative. Elle révèle les traits, les fissures et le poids du visage, comme si la pierre répondait un instant au silence."
         },
         "rowEmerald": {
-          "title": "Un vert profond comme la nuit.",
-          "body": "La teinte emeraude change la tension de la scene. Ce n'est pas l'horreur, mais un second souffle du recit: plus mineral, plus sombre, plus proche de la terre."
+          "title": "Un vert aussi profond que la nuit.",
+          "body": "La teinte émeraude change la tension de la scène. Ce n'est pas de l'horreur, mais un second souffle du récit : plus minéral, plus sombre, plus proche de la terre."
         },
         "winterBlue": {
-          "title": "Les gardiens dans l'obscurite hivernale.",
-          "body": "Sur la neige, la lumiere devient encore plus silencieuse. Le paysage blanc n'affaiblit pas les Moai; il renforce leur presence dans l'espace ouvert."
+          "title": "Les gardiens dans l'obscurité hivernale.",
+          "body": "Sur la neige, la lumière devient encore plus silencieuse. Le paysage blanc n'adoucit pas les Moaï ; il renforce leur présence dans l'espace ouvert."
         },
         "singleEmerald": {
           "title": "Un signe solitaire dans le paysage.",
-          "body": "Un seul Moai reste face au ciel lourd. C'est une pause dans le recit, un moment de concentration avant la vision finale."
+          "body": "Un seul Moaï demeure seul sous un ciel lourd. C'est une pause dans le récit, un moment de concentration avant la vision finale."
         },
         "gateBlue": {
           "title": "La porte du final nocturne.",
-          "body": "La derniere image ferme le chapitre comme une entree dans le Parc apres la tombee de la nuit. Deux gardiens monumentaux conduisent le regard vers la ligne illuminee au loin."
+          "body": "La dernière image referme le chapitre comme une entrée dans le Parc après la tombée de la nuit. Deux gardiens monumentaux guident le regard vers la ligne illuminée au loin."
         }
       },
       "states": {
@@ -728,166 +728,166 @@
           "label": "Jour",
           "name": "JOUR — REGARD",
           "headline": "Le jour, ils regardent.",
-          "body": "L'Eveil commence en plein jour.\n\nCe jour-la, les Moai de RapaNuiPark retrouvent leurs yeux. Un regard clair, contraste avec la pierre sombre, change notre maniere de percevoir les figures monumentales.\n\nPour la premiere fois, nous ne regardons pas seulement les Gardiens.\n\nNous avons l'impression qu'ils nous regardent.",
-          "detail": "Les yeux restent naturels et calmes. Ils ne brillent pas. Leur force vient justement du fait qu'un changement minime peut transformer tout un visage de pierre.",
-          "quote": "\"Ai-je vraiment vu cela ?\""
+          "body": "L'Éveil commence en plein jour.\n\nCe jour-là, les Moaï de RapaNuiPark retrouvent leurs yeux. Un regard clair, contrastant avec la pierre sombre, change notre manière de percevoir les figures monumentales.\n\nPour la première fois, nous ne regardons pas seulement les Gardiens.\n\nNous sentons qu'ils nous regardent.",
+          "detail": "Les yeux restent naturels et calmes. Ils ne brillent pas. Leur force vient de la façon dont un changement minime peut transformer entièrement un visage de pierre.",
+          "quote": "« Ai-je vraiment vu cela ? »"
         },
         "dusk": {
-          "label": "Crepuscule",
-          "name": "CREPUSCULE — TRANSFORMATION",
-          "headline": "Le regard commence a changer.",
-          "body": "Puis vient le crepuscule.\n\nAvec la derniere lumiere du jour, l'Eveil change lui aussi. L'illumination commence a faire surgir de la penombre les silhouettes monumentales, les traits des visages et la texture de la pierre.\n\nLes yeux, clairs et naturels pendant le jour, commencent a reflechir la lumiere qui les entoure.",
-          "detail": "La limite entre le regard naturel et l'experience nocturne disparait peu a peu. Ce n'est pas encore la pleine lumiere des yeux, mais un passage silencieux."
+          "label": "Crépuscule",
+          "name": "CRÉPUSCULE — TRANSFORMATION",
+          "headline": "Le regard commence à changer.",
+          "body": "Puis vient le crépuscule.\n\nAvec la dernière lumière du jour, l'Éveil change lui aussi. L'illumination commence à faire émerger de la pénombre les silhouettes monumentales, les traits des visages et la texture de la pierre.\n\nLes yeux, clairs et naturels le jour, commencent à refléter la lumière qui les entoure.",
+          "detail": "La frontière entre le regard naturel et l'expérience nocturne s'efface peu à peu. Ce n'est pas encore la pleine lumière des yeux, mais un passage silencieux."
         },
         "night": {
           "label": "Nuit",
-          "name": "NUIT — LUMIERE DES YEUX",
-          "headline": "La nuit, leur regard devient lumiere.",
-          "body": "Apres la tombee de la nuit, l'Eveil atteint son final.\n\nCertains yeux de Moai commencent a luire d'un bleu froid ou d'un vert emeraude profond. Jamais tous en meme temps.\n\nD'abord un regard. Puis un autre. Jusqu'a ce que la rangee monumentale des Gardiens devienne une scene nocturne de lumiere, de pierre et de silence.",
-          "detail": "Le bleu est profond et lunaire, l'emeraude sombre et minerale. La lumiere reste subtile : pas de neon, pas d'horreur, pas de rythme forain."
+          "name": "NUIT — LUMIÈRE DES YEUX",
+          "headline": "La nuit, leur regard devient lumière.",
+          "body": "Après la tombée de la nuit, l'Éveil atteint son final.\n\nCertains yeux de Moaï commencent à luire d'un bleu froid ou d'un vert émeraude profond. Jamais tous en même temps.\n\nD'abord un regard. Puis un autre. Jusqu'à ce que la rangée monumentale des Gardiens devienne une composition nocturne de lumière, de pierre et de silence.",
+          "detail": "Le bleu est profond et lunaire ; l'émeraude, sombre et minérale. La lumière reste subtile : pas de néon, pas d'horreur, pas de rythme forain."
         }
       },
       "summary": {
         "day": "Le jour, ils regardent.",
-        "night": "La nuit, leur regard devient lumiere.",
-        "body": "L'Eveil des Moai dure du premier regard jusqu'au final nocturne."
+        "night": "La nuit, leur regard devient lumière.",
+        "body": "L'Éveil des Moaï dure du premier regard jusqu'au final nocturne."
       }
     },
     "activities": {
-      "kicker": "CHAPTERS OF AWAKENING",
-      "title": "Eight fragments of one story",
+      "kicker": "LES CHAPITRES DE L'ÉVEIL",
+      "title": "Huit fragments d'un seul récit",
       "ceremony": {
-        "title": "Opening of the Gaze",
-        "description": "The first chapter does not begin with noise, but with light. Faces slowly emerge from half-shadow, and the eyes of the Moai become the point around which the whole story takes shape."
+        "title": "Ouverture du Regard",
+        "description": "Le premier chapitre ne commence pas dans le bruit, mais dans la lumière. Les visages émergent lentement de la pénombre, et les yeux des Moaï deviennent le point autour duquel toute l'histoire prend forme."
       },
       "trail": {
-        "title": "Path of Signs",
-        "description": "The walk through the Park leads through small traces: symbols, fragments of text, stone points and places to pause. It is a route for discovering rather than ticking off."
+        "title": "Chemin des Signes",
+        "description": "La marche à travers le Parc suit de petites traces : symboles, fragments de texte, points de pierre et lieux de pause. C'est un parcours de découverte, non une liste à cocher."
       },
       "stories": {
-        "title": "Stories of the Ahu",
-        "description": "Each Ahu can have its own voice: about the placement of statues, the relation to landscape, ancestral memory and the meaning of looking toward the community."
+        "title": "Récits de l'Ahu",
+        "description": "Chaque Ahu peut avoir sa propre voix : la disposition des statues, le lien au paysage, la mémoire des ancêtres et le sens du regard tourné vers la communauté."
       },
       "feast": {
-        "title": "Hospitality of Place",
-        "description": "If food appears, it is part of the story of meeting, not the main product. It should build warmth, rest and respect for shared time."
+        "title": "Hospitalité du Lieu",
+        "description": "Si la nourriture apparaît, elle fait partie du récit de la rencontre, non du produit principal. Elle doit construire la chaleur, le repos et le respect du temps partagé."
       },
       "photos": {
-        "title": "Frames of Memory",
-        "description": "Photography is not promotion here, but an attempt to capture a moment: gaze, stone texture, light and scale that stays with the visitor after leaving the Park."
+        "title": "Cadres de Mémoire",
+        "description": "La photographie n'est pas ici une promotion, mais une tentative de saisir un instant : le regard, la texture de la pierre, la lumière et une échelle qui reste avec le visiteur après avoir quitté le Parc."
       },
       "symbols": {
-        "title": "Signs and Seals",
-        "description": "A workshop can be a calm gesture: imprinting a symbol, making a mark, leaving a trace in memory. Understanding the motif matters more than the souvenir."
+        "title": "Signes et Sceaux",
+        "description": "Un atelier peut être un geste calme : imprimer un symbole, laisser une marque, une trace dans la mémoire. Comprendre le motif compte plus que le souvenir."
       },
       "mystery": {
-        "title": "Hidden Story",
-        "description": "Fragments of a larger story may appear in the terrain. They do not lead to a prize, but to the final meaning: why the guardians watch and what they guard."
+        "title": "Récit Caché",
+        "description": "Des fragments d'un récit plus vaste peuvent apparaître sur le terrain. Ils ne mènent pas à un prix, mais à un sens final : pourquoi les gardiens veillent et sur quoi."
       },
       "light": {
-        "title": "Evening Silence",
-        "description": "The last chapter should quiet the place. Light embraces the faces, the eyes remain open, and the Park becomes a landscape of memory, stone and night focus. Pendant le final de l'Eveil, les yeux des Gardiens deviennent une partie de l'illumination. Des regards bleus et emeraude apparaissent entre la lumiere de l'Ahu et l'obscurite de la nuit."
+        "title": "Silence du Soir",
+        "description": "Le dernier chapitre doit apaiser le lieu. La lumière enveloppe les visages, les yeux restent ouverts, et le Parc devient un paysage de mémoire, de pierre et de concentration nocturne. Pendant le final de l'Éveil, les yeux des Gardiens deviennent une partie de l'illumination. Des regards bleus et émeraude apparaissent entre la lumière de l'Ahu et l'obscurité de la nuit."
       }
     },
     "timeline": {
-      "kicker": "NARRATIVE OF THE DAY",
-      "title": "One day. Five states of place.",
+      "kicker": "LE RÉCIT DE LA JOURNÉE",
+      "title": "Un jour. Cinq états du lieu.",
       "dawn": {
-        "time": "DAWN",
-        "title": "First gaze",
-        "description": "The beginning of the story and the slow opening of the eyes."
+        "time": "AUBE",
+        "title": "Premier regard",
+        "description": "Le début du récit et la lente ouverture des yeux."
       },
       "noon": {
-        "time": "NOON",
-        "title": "Reading signs",
-        "description": "Paths, symbols and short stories guide visitors through the grounds."
+        "time": "MIDI",
+        "title": "Lecture des signes",
+        "description": "Chemins, symboles et courtes histoires guident les visiteurs à travers le domaine."
       },
       "afternoon": {
-        "time": "AFTERNOON",
-        "title": "Memory and meeting",
-        "description": "Stories about Ahu, Moai, people and landscape."
+        "time": "APRÈS-MIDI",
+        "title": "Mémoire et rencontre",
+        "description": "Récits sur l'Ahu, les Moaï, les habitants et le paysage."
       },
       "dusk": {
-        "time": "DUSK",
-        "title": "Light of stone",
-        "description": "Faces and textures revealed by calm illumination."
+        "time": "CRÉPUSCULE",
+        "title": "Lumière de la pierre",
+        "description": "Visages et textures révélés par un éclairage calme."
       },
       "night": {
-        "time": "NIGHT",
-        "title": "Silence of the guardians",
-        "description": "The finale leaves the image of open eyes."
+        "time": "NUIT",
+        "title": "Silence des gardiens",
+        "description": "Le final laisse l'image des yeux ouverts."
       }
     },
     "final": {
-      "kicker": "CLOSING",
-      "title": "The guardians keep watching.",
-      "subtitle": "The story does not end with dusk.",
-      "eventPending": "The next chapter of the Awakening should grow from the rhythm of the Park and the maturity of the whole narrative.",
-      "announcedFallback": "The next chapter of the Awakening has been announced.",
-      "cta": "Return to the story"
+      "kicker": "CLÔTURE",
+      "title": "Les gardiens continuent de veiller.",
+      "subtitle": "Le récit ne s'achève pas au crépuscule.",
+      "eventPending": "Le prochain chapitre de l'Éveil devrait naître du rythme du Parc et de la maturité de l'ensemble du récit.",
+      "announcedFallback": "Le prochain chapitre de l'Éveil a été annoncé.",
+      "cta": "Retourner au récit"
     },
     "lastLook": {
       "kicker": "DERNIER REGARD",
       "title": "Quand la nuit tombe, les Gardiens ne ferment pas les yeux.",
-      "body": "C'est alors que l'Eveil atteint sa forme la plus etonnante. La lumiere demeure encore un instant dans les yeux des Moai, avant que ce jour exceptionnel ne s'acheve."
+      "body": "C'est alors que l'Éveil atteint sa forme la plus extraordinaire. La lumière demeure encore un instant dans les yeux des Moaï, avant que ce jour exceptionnel ne s'achève."
     },
     "assets": {
-      "templeWideAlt": "Moai eyes in a dark stone space.",
-      "templeCloseAlt": "Close view of Moai eyes in a monumental setting.",
-      "templeHorizontalAlt": "Horizontal view of Moai eyes with monumental statues in the background.",
-      "referenceEyesAlt": "Reference view of traditional Moai eyes.",
-      "ahuDayAlt": "Ahu Tongariki in daylight.",
-      "pavilionAlt": "RapaNuiPark pavilion as a hospitality space.",
-      "blackGoldAlt": "Moai eyes on a dark landscape with warm light.",
-      "stormLandscapeAlt": "Moai eyes in a cloudy landscape.",
-      "hillsAlt": "Moai on a green slope beneath a blue sky.",
-      "oceanCliffAlt": "Moai eyes above a rough ocean and cliff.",
-      "stormNightAlt": "Moai eyes before a night storm scene and guardians.",
-      "stormAnimatedAlt": "Animated view of Moai eyes in a night atmosphere.",
-      "fiveOceanAlt": "Five Moai with open eyes against the ocean and bright sky.",
-      "closeDayAlt": "Close daylight view of a Moai with open eyes.",
-      "purpleAnimatedAlt": "Animated view of Moai eyes in a purple dusk atmosphere."
+      "templeWideAlt": "Yeux de Moaï dans un espace de pierre sombre.",
+      "templeCloseAlt": "Vue rapprochée des yeux d'un Moaï dans un cadre monumental.",
+      "templeHorizontalAlt": "Vue horizontale des yeux de Moaï avec des statues monumentales en arrière-plan.",
+      "referenceEyesAlt": "Vue de référence des yeux traditionnels des Moaï.",
+      "ahuDayAlt": "Ahu Tongariki en pleine lumière du jour.",
+      "pavilionAlt": "Pavillon de RapaNuiPark comme espace d'accueil.",
+      "blackGoldAlt": "Yeux de Moaï sur un paysage sombre avec une lumière chaude.",
+      "stormLandscapeAlt": "Yeux de Moaï dans un paysage nuageux.",
+      "hillsAlt": "Moaï sur une pente verte sous un ciel bleu.",
+      "oceanCliffAlt": "Yeux de Moaï au-dessus d'un océan agité et d'une falaise.",
+      "stormNightAlt": "Yeux de Moaï devant une scène d'orage nocturne et des gardiens.",
+      "stormAnimatedAlt": "Vue animée des yeux de Moaï dans une atmosphère nocturne.",
+      "fiveOceanAlt": "Cinq Moaï aux yeux ouverts face à l'océan sous un ciel lumineux.",
+      "closeDayAlt": "Vue rapprochée en plein jour d'un Moaï aux yeux ouverts.",
+      "purpleAnimatedAlt": "Vue animée des yeux de Moaï dans une atmosphère crépusculaire violette."
     },
     "activityDetails": {
-      "light": "light",
-      "sequence": "sequence",
-      "ceremony": "ceremony",
-      "path": "path",
-      "symbols": "symbols",
-      "narration": "story",
-      "education": "education",
-      "hosting": "hospitality",
-      "daylight": "day",
-      "photo": "photography",
-      "goldHour": "golden hour",
-      "workshop": "workshop",
-      "sign": "sign",
+      "light": "lumière",
+      "sequence": "séquence",
+      "ceremony": "cérémonie",
+      "path": "chemin",
+      "symbols": "symboles",
+      "narration": "récit",
+      "education": "éducation",
+      "hosting": "accueil",
+      "daylight": "jour",
+      "photo": "photographie",
+      "goldHour": "heure dorée",
+      "workshop": "atelier",
+      "sign": "signe",
       "clue": "trace",
-      "family": "family",
-      "night": "night",
-      "finalLight": "final light"
+      "family": "famille",
+      "night": "nuit",
+      "finalLight": "lumière finale"
     },
     "story": {
-      "kicker": "FOUR LAYERS OF STORY",
-      "title": "It is not about an event. It is about what the place begins to say.",
-      "body": "Moai Awakening should guide the visitor calmly: first through image, then through sign, then through story, and finally through a personal encounter with the monumental silence of the statues."
+      "kicker": "QUATRE COUCHES DE RÉCIT",
+      "title": "Il ne s'agit pas d'un événement. Il s'agit de ce que le lieu commence à dire.",
+      "body": "Le Réveil des Moaï doit guider le visiteur calmement : d'abord par l'image, puis par le signe, puis par le récit, et enfin par une rencontre personnelle avec le silence monumental des statues."
     },
     "storyChapters": {
       "firstLook": {
-        "title": "First gaze",
-        "body": "The eyes of the Moai are not a special effect. They are a sign that the guardians have been noticed anew. From that moment, the visitor not only looks at the statues, but feels watched by them."
+        "title": "Premier regard",
+        "body": "Les yeux des Moaï ne sont pas un effet spécial. Ils sont le signe que les gardiens ont été remarqués à nouveau. Dès cet instant, le visiteur ne se contente plus de regarder les statues : il se sent observé par elles."
       },
       "memory": {
-        "title": "Memory held in stone",
-        "body": "The story returns to Rapa Nui: to the work of hands, the weight of transport, the Ahu, and the communities that gave the statues meaning. The Awakening should remind us that Moai are not decoration, but carriers of memory."
+        "title": "Mémoire gravée dans la pierre",
+        "body": "Le récit revient à Rapa Nui : au travail des mains, au poids du transport, à l'Ahu, et aux communautés qui ont donné leur sens aux statues. L'Éveil doit rappeler que les Moaï ne sont pas des décorations, mais des porteurs de mémoire."
       },
       "path": {
-        "title": "Traces lead through the Park",
-        "body": "Instead of intrusive attractions, discreet traces appear: a symbol on stone, light by the path, the voice of a guide, a short story written at a viewpoint. Each step reveals another fragment of the narrative."
+        "title": "Des traces guident à travers le Parc",
+        "body": "Plutôt que des attractions envahissantes, apparaissent des traces discrètes : un symbole sur la pierre, une lumière près du chemin, la voix d'un guide, une courte histoire écrite à un point de vue. Chaque pas révèle un nouveau fragment du récit."
       },
       "evening": {
-        "title": "Evening closes the story",
-        "body": "As dusk falls, the Awakening turns into silence. Light does not create spectacle; it reveals faces, profiles and gazes. The finale should leave the memory of guardians who are still watching."
+        "title": "Le soir referme le récit",
+        "body": "À la tombée du crépuscule, l'Éveil se transforme en silence. La lumière ne crée pas de spectacle ; elle révèle les visages, les profils et les regards. Le final doit laisser le souvenir de gardiens qui veillent encore."
       }
     }
   }
