@@ -890,5 +890,110 @@
         "body": "Mit einbrechender Dämmerung verwandelt sich das Erwachen in Stille. Licht schafft kein Spektakel; es offenbart Gesichter, Profile und Blicke. Das Finale soll die Erinnerung an Wächter hinterlassen, die weiterhin wachen."
       }
     }
+  },
+  "realizationStages": {
+    "ariaLabel": "Realisierungsphasen von RapaNuiPark",
+    "kicker": "Entwicklungsplan",
+    "title": "Realisierungsphasen von RapaNuiPark",
+    "subtitle": "Drei Phasen. Eine monumentale Vision.",
+    "body": "RapaNuiPark wurde als ein in Etappen entwickeltes Vorhaben konzipiert. Jede weitere Phase erweitert die Möglichkeiten des Ortes und bewahrt zugleich den Wert des bereits Geschaffenen.",
+    "tabsAriaLabel": "Realisierungsphasen",
+    "tabs": {
+      "stage1": {
+        "label": "Phase I",
+        "title": "Fundament"
+      },
+      "stage2": {
+        "label": "Phase II",
+        "title": "Der Ort erwacht zum Leben"
+      },
+      "stage3": {
+        "label": "Phase III",
+        "title": "Vollständige Vision"
+      }
+    },
+    "stage1": {
+      "kicker": "Phase I",
+      "title": "Fundament",
+      "lead": "Der räumliche und symbolische Kern von RapaNuiPark entsteht.",
+      "body": "Die erste Realisierungsphase schafft die grundlegende räumliche Anordnung von RapaNuiPark sowie seine wichtigsten monumentalen Ensembles. Diese Phase bestimmt den Maßstab, den landschaftlichen Charakter und die Wiedererkennbarkeit des gesamten Vorhabens.",
+      "planImageAlt": "Plan der Phase I mit der grundlegenden räumlichen Anordnung von RapaNuiPark.",
+      "planBadge": "Plan der Phase I",
+      "planCaption": "Die erste Realisierungsphase legt das räumliche und symbolische Fundament von RapaNuiPark fest.",
+      "presentation": {
+        "eyebrow": "Investitionsphase I",
+        "title": "Entdecken Sie die Referenzvorbilder",
+        "lead": "Entdecken Sie authentische Orte und Formen von Rapa Nui, die die Richtung der ersten Phase von RapaNuiPark vorgeben.",
+        "openButton": "Präsentation öffnen",
+        "meta": "25 Folien / schlanker Web-Viewer",
+        "coverAlt": "Titelbild der Präsentation zur Investitionsphase I von RapaNuiPark.",
+        "openAria": "Präsentation zur Investitionsphase I öffnen",
+        "stageLabel": "Phase I",
+        "slideCount": "1 / 25"
+      }
+    },
+    "stage2": {
+      "miniTimeline": {
+        "stage1Label": "Phase I",
+        "stage1Title": "Der Ort entsteht.",
+        "stage2Label": "Phase II",
+        "stage2Title": "Der Ort erwacht zum Leben."
+      },
+      "kicker": "Phase II",
+      "title": "Der Ort erwacht zum Leben",
+      "lead": "Der Ort erwacht zum Leben.",
+      "body": "Die zweite Phase erweitert das monumentale Fundament von RapaNuiPark um Räume, die einen längeren Aufenthalt ermöglichen: Entdecken, Bildung, Veranstaltungen, Gastronomie, Beobachtung, Begegnungen und Erholung.",
+      "cards": {
+        "amphitheater": {
+          "title": "Rapa-Nui-Amphitheater",
+          "alt": "Konzept des Rapa-Nui-Amphitheaters in der zweiten Phase von RapaNuiPark.",
+          "body": "Ein intimer Raum für Veranstaltungen, Erzählungen und abendliche Begegnungen. Das Amphitheater soll Präsentationen, Kammerkonzerte, Filmvorführungen, Bildungsveranstaltungen und künstlerische Programme rund um die Kultur von Rapa Nui ermöglichen."
+        },
+        "model": {
+          "title": "Rapa Nui auf einen Blick",
+          "subtitle": "Monumentales Modell der Insel",
+          "alt": "Monumentales Modell der Insel Rapa Nui als Bildungsattraktion von RapaNuiPark.",
+          "body": "Ein räumliches Modell soll Rapa Nui als Ganzes zeigen: Vulkane, Küstenlinie, die wichtigsten Ahu, historische Stätten sowie das Verhältnis von Landschaft und Kultur."
+        },
+        "discoveryCenter": {
+          "title": "Entdeckungszentrum — Te Tokanga",
+          "subtitle": "Eine archäologische Stätte als Herz der Erzählung.",
+          "alt": "Entdeckungszentrum mit einem liegenden Te Tokanga als Teil der archäologischen Stätte.",
+          "body": "Das Entdeckungszentrum soll Besucher in die Welt der Archäologie und der Erforschung der monumentalen Moai versetzen. In seinem Zentrum liegt ein Te Tokanga, dargestellt als Teil der archäologischen Stätte.",
+          "details": [
+            "Rekonstruktion der Ausgrabung",
+            "Rano Raraku",
+            "Entstehung der Moai",
+            "Steinbearbeitungstechniken",
+            "Transport der Moai",
+            "Forschung und Dokumentation",
+            "Konservierung",
+            "Multimedia und Bildung"
+          ]
+        },
+        "viewTower": {
+          "title": "Moai-Aussichtsturm",
+          "subtitle": "RapaNuiPark aus einer völlig anderen Perspektive.",
+          "alt": "Konzept des Moai-Aussichtsturms mit Aussichtsplattform und Sky Café.",
+          "body": "Ein monumentaler, von der Form eines Moai inspirierter Turm soll zu einem der markantesten Wahrzeichen von RapaNuiPark werden. Das Sky Café befindet sich auf der Aussichtsebene des Turms."
+        },
+        "pavilion": {
+          "title": "Rapa-Nui-Pavillon",
+          "subtitle": "Das Herz des Lebens in RapaNuiPark.",
+          "alt": "Konzepttafel des Rapa-Nui-Pavillons mit Museum, Restaurant, Galerie, Visitor Center und Wegen.",
+          "body": "Ein niedriger, ringförmiger Pavillon soll das Rapa-Nui-Museum, das Rapa-Nui-Restaurant, die RapaNuiPark-Galerie und das Visitor Center vereinen. Wege und Landschaftsgestaltung verbinden die Attraktionen zu einem einzigen Rundgang."
+        }
+      },
+      "closing": {
+        "title": "Der Ort erwacht zum Leben.",
+        "body": "Die zweite Phase verleiht dem monumentalen Raum Funktionen, die es ermöglichen, RapaNuiPark stundenlang zu erleben — zu entdecken, zu beobachten, sich zu erholen, an Veranstaltungen teilzunehmen und zu verschiedenen Tages- und Jahreszeiten wiederzukehren."
+      }
+    },
+    "stage3": {
+      "kicker": "Phase III",
+      "title": "Vollständige Vision",
+      "badge": "In Ausarbeitung",
+      "body": "Die dritte Phase wird RapaNuiPark auf seinen vollen geplanten Maßstab erweitern. Der detaillierte Umfang dieses Projektteils wird in einer späteren Ausarbeitungsphase vorgestellt."
+    }
   }
 }

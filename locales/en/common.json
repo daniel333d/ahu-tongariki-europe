@@ -898,5 +898,110 @@
         "body": "As dusk falls, the Awakening turns into silence. Light does not create spectacle; it reveals faces, profiles and gazes. The finale should leave the memory of guardians who are still watching."
       }
     }
+  },
+  "realizationStages": {
+    "ariaLabel": "RapaNuiPark Realization Stages",
+    "kicker": "Development Plan",
+    "title": "RapaNuiPark Realization Stages",
+    "subtitle": "Three stages. One monumental vision.",
+    "body": "RapaNuiPark has been conceived as a project developed in stages. Each successive phase expands what the place can offer, while preserving the value of everything built before it.",
+    "tabsAriaLabel": "Realization Stages",
+    "tabs": {
+      "stage1": {
+        "label": "Stage I",
+        "title": "Foundation"
+      },
+      "stage2": {
+        "label": "Stage II",
+        "title": "The Place Comes Alive"
+      },
+      "stage3": {
+        "label": "Stage III",
+        "title": "Full Vision"
+      }
+    },
+    "stage1": {
+      "kicker": "Stage I",
+      "title": "Foundation",
+      "lead": "The spatial and symbolic core of RapaNuiPark takes shape.",
+      "body": "The first phase of realization creates the basic spatial layout of RapaNuiPark and its most important monumental complexes. This is the stage that defines the scale, the character of the landscape and the recognizability of the entire undertaking.",
+      "planImageAlt": "Stage I plan showing the basic spatial layout of RapaNuiPark.",
+      "planBadge": "Stage I Plan",
+      "planCaption": "The first phase of realization sets the spatial and symbolic foundation of RapaNuiPark.",
+      "presentation": {
+        "eyebrow": "Investment Stage I",
+        "title": "Discover the reference patterns",
+        "lead": "See the authentic Rapa Nui places and forms that set the direction for the first phase of RapaNuiPark.",
+        "openButton": "Open the presentation",
+        "meta": "25 slides / lightweight web viewer",
+        "coverAlt": "Cover of the RapaNuiPark Investment Stage I presentation.",
+        "openAria": "Open the Investment Stage I presentation",
+        "stageLabel": "Stage I",
+        "slideCount": "1 / 25"
+      }
+    },
+    "stage2": {
+      "miniTimeline": {
+        "stage1Label": "Stage I",
+        "stage1Title": "The place comes into being.",
+        "stage2Label": "Stage II",
+        "stage2Title": "The place comes alive."
+      },
+      "kicker": "Stage II",
+      "title": "The Place Comes Alive",
+      "lead": "The place comes alive.",
+      "body": "The second phase expands the monumental foundation of RapaNuiPark with spaces that let visitors stay longer: discovery, education, events, dining, observation, gatherings and rest.",
+      "cards": {
+        "amphitheater": {
+          "title": "Rapa Nui Amphitheatre",
+          "alt": "Concept of the Rapa Nui Amphitheatre in the second phase of RapaNuiPark.",
+          "body": "An intimate space for events, storytelling and evening gatherings. The Amphitheatre is designed to host presentations, chamber concerts, screenings, educational meetings and artistic programs related to Rapa Nui culture."
+        },
+        "model": {
+          "title": "Rapa Nui at a Single Glance",
+          "subtitle": "A monumental scale model of the island",
+          "alt": "Monumental scale model of Rapa Nui island as an educational attraction of RapaNuiPark.",
+          "body": "A spatial scale model lets visitors see Rapa Nui as a whole: its volcanoes, coastline, the most important Ahu, historic sites, and the relationship between landscape and culture."
+        },
+        "discoveryCenter": {
+          "title": "Discovery Center — Te Tokanga",
+          "subtitle": "An archaeological site as the heart of the story.",
+          "alt": "Discovery Center with a reclining Te Tokanga presented as part of the archaeological site.",
+          "body": "The Discovery Center takes visitors into the world of archaeology and research on the monumental Moai. At its center lies a reclining Te Tokanga, presented as part of the archaeological site.",
+          "details": [
+            "excavation reconstruction",
+            "Rano Raraku",
+            "how a Moai is made",
+            "stone-working techniques",
+            "transporting the Moai",
+            "research and documentation",
+            "conservation",
+            "multimedia and education"
+          ]
+        },
+        "viewTower": {
+          "title": "Moai Viewing Tower",
+          "subtitle": "RapaNuiPark from a completely different perspective.",
+          "alt": "Concept of the Moai Viewing Tower with an observation platform and Sky Café.",
+          "body": "A monumental tower inspired by the form of a Moai is set to become one of RapaNuiPark's most recognizable landmarks. The Sky Café sits at the tower's viewing level."
+        },
+        "pavilion": {
+          "title": "Rapa Nui Pavilion",
+          "subtitle": "The heart of life at RapaNuiPark.",
+          "alt": "Concept board of the Rapa Nui Pavilion with a museum, restaurant, gallery, Visitor Center and pathways.",
+          "body": "A low, ring-shaped pavilion is designed to bring together the Rapa Nui Museum, the Rapa Nui Restaurant, the RapaNuiPark Gallery and the Visitor Center. Paths and landscaping tie the attractions into a single visiting route."
+        }
+      },
+      "closing": {
+        "title": "The place comes alive.",
+        "body": "The second phase gives the monumental space functions that let visitors experience RapaNuiPark for hours at a time — discovering, observing, resting, taking part in events, and returning at different times of day and year."
+      }
+    },
+    "stage3": {
+      "kicker": "Stage III",
+      "title": "Full Vision",
+      "badge": "In development",
+      "body": "The third phase will expand RapaNuiPark to its full intended scale. The detailed scope of this part of the project will be presented at a later stage of development."
+    }
   }
 }
