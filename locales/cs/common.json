@@ -890,5 +890,110 @@
         "body": "Se soumrakem se Probuzení mění v ticho. Světlo nevytváří podívanou; odhaluje tváře, profily a pohledy. Finále má zanechat vzpomínku na strážce, kteří stále bdí."
       }
     }
+  },
+  "realizationStages": {
+    "ariaLabel": "Etapy realizace RapaNuiParku",
+    "kicker": "Plán rozvoje",
+    "title": "Etapy realizace RapaNuiParku",
+    "subtitle": "Tři etapy. Jedna monumentální vize.",
+    "body": "RapaNuiPark byl navržen jako projekt rozvíjený po etapách. Každá další fáze rozšiřuje možnosti místa a zároveň zachovává hodnotu toho, co již bylo vytvořeno.",
+    "tabsAriaLabel": "Etapy realizace",
+    "tabs": {
+      "stage1": {
+        "label": "Etapa I",
+        "title": "Základ"
+      },
+      "stage2": {
+        "label": "Etapa II",
+        "title": "Místo ožívá"
+      },
+      "stage3": {
+        "label": "Etapa III",
+        "title": "Úplná vize"
+      }
+    },
+    "stage1": {
+      "kicker": "Etapa I",
+      "title": "Základ",
+      "lead": "Vzniká prostorové a symbolické jádro RapaNuiParku.",
+      "body": "První fáze realizace vytváří základní prostorové uspořádání RapaNuiParku a jeho nejdůležitější monumentální celky. Je to etapa, která určuje měřítko, krajinný charakter a rozpoznatelnost celého záměru.",
+      "planImageAlt": "Plán Etapy I znázorňující základní prostorové uspořádání RapaNuiParku.",
+      "planBadge": "Plán Etapy I",
+      "planCaption": "První fáze realizace vytyčuje prostorový a symbolický základ RapaNuiParku.",
+      "presentation": {
+        "eyebrow": "Investiční etapa I",
+        "title": "Poznejte referenční vzory",
+        "lead": "Podívejte se na autentická místa a formy Rapa Nui, které určují směr první fáze RapaNuiParku.",
+        "openButton": "Otevřít prezentaci",
+        "meta": "25 snímků / odlehčený webový prohlížeč",
+        "coverAlt": "Titulní snímek prezentace Investiční etapy I RapaNuiParku.",
+        "openAria": "Otevřít prezentaci Investiční etapy I",
+        "stageLabel": "Etapa I",
+        "slideCount": "1 / 25"
+      }
+    },
+    "stage2": {
+      "miniTimeline": {
+        "stage1Label": "Etapa I",
+        "stage1Title": "Místo vzniká.",
+        "stage2Label": "Etapa II",
+        "stage2Title": "Místo ožívá."
+      },
+      "kicker": "Etapa II",
+      "title": "Místo ožívá",
+      "lead": "Místo ožívá.",
+      "body": "Druhá fáze rozšiřuje monumentální základ RapaNuiParku o prostory, které umožňují zůstat zde déle: objevování, vzdělávání, akce, gastronomii, pozorování, setkávání a odpočinek.",
+      "cards": {
+        "amphitheater": {
+          "title": "Amfiteátr Rapa Nui",
+          "alt": "Koncept Amfiteátru Rapa Nui ve druhé fázi RapaNuiParku.",
+          "body": "Komorní prostor pro akce, vyprávění a večerní setkání. Amfiteátr má umožňovat prezentace, komorní koncerty, promítání, vzdělávací setkání a umělecké programy spojené s kulturou Rapa Nui."
+        },
+        "model": {
+          "title": "Rapa Nui na jeden pohled",
+          "subtitle": "Monumentální model ostrova",
+          "alt": "Monumentální model ostrova Rapa Nui jako vzdělávací atrakce RapaNuiParku.",
+          "body": "Prostorový model má umožnit vidět Rapa Nui jako celek: sopky, pobřežní linii, nejdůležitější Ahu, historická místa a vztah krajiny a kultury."
+        },
+        "discoveryCenter": {
+          "title": "Centrum objevů — Te Tokanga",
+          "subtitle": "Archeologické naleziště jako srdce příběhu.",
+          "alt": "Centrum objevů s ležícím Te Tokanga jako součástí archeologického naleziště.",
+          "body": "Centrum objevů má návštěvníky přenést do světa archeologie a výzkumu monumentálních Moai. V jeho středu leží Te Tokanga, představený jako součást archeologického naleziště.",
+          "details": [
+            "rekonstrukce výkopu",
+            "Rano Raraku",
+            "vznik Moai",
+            "techniky opracování kamene",
+            "přeprava Moai",
+            "výzkum a dokumentace",
+            "konzervace",
+            "multimédia a vzdělávání"
+          ]
+        },
+        "viewTower": {
+          "title": "Vyhlídková věž Moai",
+          "subtitle": "RapaNuiPark z zcela jiné perspektivy.",
+          "alt": "Koncept Vyhlídkové věže Moai s vyhlídkovou plošinou a Sky Café.",
+          "body": "Monumentální věž inspirovaná tvarem Moai se má stát jednou z nejrozpoznatelnějších dominant RapaNuiParku. Sky Café se nachází na vyhlídkové úrovni věže."
+        },
+        "pavilion": {
+          "title": "Pavilon Rapa Nui",
+          "subtitle": "Srdce života RapaNuiParku.",
+          "alt": "Koncepční plán Pavilonu Rapa Nui s muzeem, restaurací, galerií, Visitor Center a cestami.",
+          "body": "Nízký, prstencový pavilon má sdružovat Muzeum Rapa Nui, Restauraci Rapa Nui, Galerii RapaNuiParku a Visitor Center. Cesty a krajina propojují atrakce do jednoho okruhu prohlídky."
+        }
+      },
+      "closing": {
+        "title": "Místo ožívá.",
+        "body": "Druhá fáze dává monumentálnímu prostoru funkce, které umožňují zažívat RapaNuiPark po mnoho hodin — objevovat, pozorovat, odpočívat, účastnit se akcí a vracet se v různých denních i ročních dobách."
+      }
+    },
+    "stage3": {
+      "kicker": "Etapa III",
+      "title": "Úplná vize",
+      "badge": "Ve zpracování",
+      "body": "Třetí fáze rozšíří RapaNuiPark do jeho cílového měřítka. Podrobný rozsah této části projektu bude představen v další fázi zpracování."
+    }
   }
 }

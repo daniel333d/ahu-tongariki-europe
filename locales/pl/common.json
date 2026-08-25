@@ -898,5 +898,110 @@
         "body": "Gdy zapada zmierzch, Przebudzenie przechodzi w ciszę. Światło nie buduje widowiska, ale wydobywa twarze, profile i spojrzenia. Finał ma zostawić w pamięci obraz strażników, którzy nadal patrzą."
       }
     }
+  },
+  "realizationStages": {
+    "ariaLabel": "Etapy realizacji RapaNuiPark",
+    "kicker": "Plan rozwoju",
+    "title": "Etapy realizacji RapaNuiPark",
+    "subtitle": "Trzy etapy. Jedna monumentalna wizja.",
+    "body": "RapaNuiPark został pomyślany jako przedsięwzięcie rozwijane etapowo. Każda kolejna faza rozszerza możliwości miejsca, zachowując wartość wcześniejszych realizacji.",
+    "tabsAriaLabel": "Etapy realizacji",
+    "tabs": {
+      "stage1": {
+        "label": "Etap I",
+        "title": "Fundament"
+      },
+      "stage2": {
+        "label": "Etap II",
+        "title": "Życie miejsca"
+      },
+      "stage3": {
+        "label": "Etap III",
+        "title": "Pełna wizja"
+      }
+    },
+    "stage1": {
+      "kicker": "Etap I",
+      "title": "Fundament",
+      "lead": "Powstaje przestrzenny i symboliczny rdzeń RapaNuiPark.",
+      "body": "Pierwsza faza realizacji tworzy podstawowy układ przestrzenny RapaNuiPark oraz jego najważniejsze monumentalne zespoły. To etap, który określa skalę, charakter krajobrazowy i rozpoznawalność całego przedsięwzięcia.",
+      "planImageAlt": "Plansza Etapu I pokazująca podstawowy układ przestrzenny RapaNuiPark.",
+      "planBadge": "Plan Etapu I",
+      "planCaption": "Pierwsza faza realizacji wyznacza przestrzenny i symboliczny fundament RapaNuiPark.",
+      "presentation": {
+        "eyebrow": "I Faza Inwestycji",
+        "title": "Poznaj wzorce odwzorowania",
+        "lead": "Zobacz autentyczne miejsca i formy Rapa Nui, które wyznaczają kierunek pierwszej fazy RapaNuiPark.",
+        "openButton": "Otwórz prezentację",
+        "meta": "25 slajdów / lekki viewer webowy",
+        "coverAlt": "Okładka prezentacji I Fazy Inwestycji RapaNuiPark.",
+        "openAria": "Otwórz prezentację I Fazy Inwestycji",
+        "stageLabel": "Etap I",
+        "slideCount": "1 / 25"
+      }
+    },
+    "stage2": {
+      "miniTimeline": {
+        "stage1Label": "Etap I",
+        "stage1Title": "Powstaje miejsce.",
+        "stage2Label": "Etap II",
+        "stage2Title": "Miejsce zaczyna żyć."
+      },
+      "kicker": "Etap II",
+      "title": "Życie miejsca",
+      "lead": "Miejsce zaczyna żyć.",
+      "body": "Druga faza rozwija monumentalny fundament RapaNuiPark o przestrzenie, które pozwalają zatrzymać się tutaj na dłużej: odkrywanie, edukację, wydarzenia, gastronomię, obserwację, spotkania i odpoczynek.",
+      "cards": {
+        "amphitheater": {
+          "title": "Amfiteatr Rapa Nui",
+          "alt": "Koncepcja Amfiteatru Rapa Nui w drugiej fazie RapaNuiPark.",
+          "body": "Kameralna przestrzeń wydarzeń, opowieści i wieczornych spotkań. Amfiteatr ma umożliwiać prezentacje, koncerty kameralne, projekcje, spotkania edukacyjne i programy artystyczne związane z kulturą Rapa Nui."
+        },
+        "model": {
+          "title": "Rapa Nui w jednym spojrzeniu",
+          "subtitle": "Monumentalna makieta wyspy",
+          "alt": "Monumentalna makieta wyspy Rapa Nui jako atrakcja edukacyjna RapaNuiPark.",
+          "body": "Przestrzenna makieta ma pozwalać zobaczyć Rapa Nui jako całość: wulkany, linię brzegową, najważniejsze Ahu, miejsca historyczne oraz relację krajobrazu i kultury."
+        },
+        "discoveryCenter": {
+          "title": "Centrum Odkryć — Te Tokanga",
+          "subtitle": "Stanowisko archeologiczne jako centrum opowieści.",
+          "alt": "Centrum Odkryć z leżącym Te Tokanga jako częścią stanowiska archeologicznego.",
+          "body": "Centrum Odkryć ma przenieść odwiedzających w przestrzeń archeologii i badań nad monumentalnymi Moai. W centrum znajduje się leżący Te Tokanga, przedstawiony jako część stanowiska archeologicznego.",
+          "details": [
+            "rekonstrukcja wykopu",
+            "Rano Raraku",
+            "powstawanie Moai",
+            "techniki obróbki kamienia",
+            "transport Moai",
+            "badania i dokumentacja",
+            "konserwacja",
+            "multimedia i edukacja"
+          ]
+        },
+        "viewTower": {
+          "title": "Wieża Widokowa Moai",
+          "subtitle": "RapaNuiPark z zupełnie innej perspektywy.",
+          "alt": "Koncepcja Wieży Widokowej Moai z platformą obserwacyjną i Sky Café.",
+          "body": "Monumentalna wieża inspirowana formą Moai ma stać się jedną z najbardziej rozpoznawalnych dominant RapaNuiPark. Sky Café znajduje się na poziomie widokowym wieży."
+        },
+        "pavilion": {
+          "title": "Pawilon Rapa Nui",
+          "subtitle": "Centrum życia RapaNuiPark.",
+          "alt": "Plansza koncepcyjna Pawilonu Rapa Nui z muzeum, restauracją, galerią, Visitor Center i ścieżkami.",
+          "body": "Niski, pierścieniowy pawilon ma skupiać Muzeum Rapa Nui, Restaurację Rapa Nui, Galerię RapaNuiPark i Visitor Center. Ścieżki i krajobraz łączą atrakcje w jeden system zwiedzania."
+        }
+      },
+      "closing": {
+        "title": "Miejsce zaczyna żyć.",
+        "body": "Druga faza nadaje monumentalnej przestrzeni funkcje, które pozwalają doświadczać RapaNuiPark przez wiele godzin — poznawać, obserwować, odpoczywać, uczestniczyć w wydarzeniach i wracać o różnych porach dnia oraz roku."
+      }
+    },
+    "stage3": {
+      "kicker": "Etap III",
+      "title": "Pełna wizja",
+      "badge": "W opracowaniu",
+      "body": "Trzecia faza rozwinie RapaNuiPark do jego docelowej skali. Szczegółowy zakres tej części projektu zostanie przedstawiony w kolejnym etapie opracowania."
+    }
   }
 }

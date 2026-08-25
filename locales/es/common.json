@@ -890,5 +890,110 @@
         "body": "Cuando cae el crepúsculo, el Despertar se transforma en silencio. La luz no crea espectáculo; revela rostros, perfiles y miradas. El final debe dejar el recuerdo de guardianes que siguen vigilando."
       }
     }
+  },
+  "realizationStages": {
+    "ariaLabel": "Etapas de realización de RapaNuiPark",
+    "kicker": "Plan de desarrollo",
+    "title": "Etapas de realización de RapaNuiPark",
+    "subtitle": "Tres etapas. Una visión monumental.",
+    "body": "RapaNuiPark ha sido concebido como un proyecto desarrollado por etapas. Cada fase sucesiva amplía las posibilidades del lugar, preservando el valor de lo ya realizado.",
+    "tabsAriaLabel": "Etapas de realización",
+    "tabs": {
+      "stage1": {
+        "label": "Etapa I",
+        "title": "Fundación"
+      },
+      "stage2": {
+        "label": "Etapa II",
+        "title": "El lugar cobra vida"
+      },
+      "stage3": {
+        "label": "Etapa III",
+        "title": "Visión completa"
+      }
+    },
+    "stage1": {
+      "kicker": "Etapa I",
+      "title": "Fundación",
+      "lead": "Toma forma el núcleo espacial y simbólico de RapaNuiPark.",
+      "body": "La primera fase de realización crea la disposición espacial básica de RapaNuiPark y sus conjuntos monumentales más importantes. Es la etapa que define la escala, el carácter paisajístico y el reconocimiento de todo el proyecto.",
+      "planImageAlt": "Plano de la Etapa I que muestra la disposición espacial básica de RapaNuiPark.",
+      "planBadge": "Plano de la Etapa I",
+      "planCaption": "La primera fase de realización establece el fundamento espacial y simbólico de RapaNuiPark.",
+      "presentation": {
+        "eyebrow": "Etapa I de la Inversión",
+        "title": "Descubre los patrones de referencia",
+        "lead": "Descubre los lugares y formas auténticas de Rapa Nui que marcan la dirección de la primera fase de RapaNuiPark.",
+        "openButton": "Abrir la presentación",
+        "meta": "25 diapositivas / visor web ligero",
+        "coverAlt": "Portada de la presentación de la Etapa I de la Inversión RapaNuiPark.",
+        "openAria": "Abrir la presentación de la Etapa I de la Inversión",
+        "stageLabel": "Etapa I",
+        "slideCount": "1 / 25"
+      }
+    },
+    "stage2": {
+      "miniTimeline": {
+        "stage1Label": "Etapa I",
+        "stage1Title": "El lugar nace.",
+        "stage2Label": "Etapa II",
+        "stage2Title": "El lugar cobra vida."
+      },
+      "kicker": "Etapa II",
+      "title": "El lugar cobra vida",
+      "lead": "El lugar cobra vida.",
+      "body": "La segunda fase enriquece el fundamento monumental de RapaNuiPark con espacios que permiten permanecer aquí más tiempo: descubrimiento, educación, eventos, gastronomía, observación, encuentros y descanso.",
+      "cards": {
+        "amphitheater": {
+          "title": "Anfiteatro Rapa Nui",
+          "alt": "Concepto del Anfiteatro Rapa Nui en la segunda fase de RapaNuiPark.",
+          "body": "Un espacio íntimo para eventos, relatos y encuentros nocturnos. El Anfiteatro debe permitir presentaciones, conciertos de cámara, proyecciones, encuentros educativos y programas artísticos relacionados con la cultura de Rapa Nui."
+        },
+        "model": {
+          "title": "Rapa Nui de un solo vistazo",
+          "subtitle": "Maqueta monumental de la isla",
+          "alt": "Maqueta monumental de la isla de Rapa Nui como atracción educativa de RapaNuiPark.",
+          "body": "Una maqueta espacial debe permitir ver Rapa Nui como un todo: volcanes, línea de costa, los Ahu más importantes, lugares históricos y la relación entre paisaje y cultura."
+        },
+        "discoveryCenter": {
+          "title": "Centro de Descubrimientos — Te Tokanga",
+          "subtitle": "Un yacimiento arqueológico como corazón del relato.",
+          "alt": "Centro de Descubrimientos con un Te Tokanga tumbado, presentado como parte del yacimiento arqueológico.",
+          "body": "El Centro de Descubrimientos debe trasladar a los visitantes al mundo de la arqueología y la investigación sobre los Moái monumentales. En su centro se encuentra un Te Tokanga tumbado, presentado como parte del yacimiento arqueológico.",
+          "details": [
+            "reconstrucción de la excavación",
+            "Rano Raraku",
+            "cómo se hacía un Moái",
+            "técnicas de talla en piedra",
+            "transporte de los Moái",
+            "investigación y documentación",
+            "conservación",
+            "multimedia y educación"
+          ]
+        },
+        "viewTower": {
+          "title": "Torre Mirador Moái",
+          "subtitle": "RapaNuiPark desde una perspectiva completamente distinta.",
+          "alt": "Concepto de la Torre Mirador Moái con plataforma de observación y Sky Café.",
+          "body": "Una torre monumental inspirada en la forma de un Moái debe convertirse en uno de los hitos más reconocibles de RapaNuiPark. El Sky Café se encuentra en el nivel mirador de la torre."
+        },
+        "pavilion": {
+          "title": "Pabellón Rapa Nui",
+          "subtitle": "El corazón de la vida de RapaNuiPark.",
+          "alt": "Panel conceptual del Pabellón Rapa Nui con museo, restaurante, galería, Visitor Center y senderos.",
+          "body": "Un pabellón bajo, en forma de anillo, debe reunir el Museo Rapa Nui, el Restaurante Rapa Nui, la Galería RapaNuiPark y el Visitor Center. Senderos y paisajismo enlazan las atracciones en un único recorrido de visita."
+        }
+      },
+      "closing": {
+        "title": "El lugar cobra vida.",
+        "body": "La segunda fase dota al espacio monumental de funciones que permiten vivir RapaNuiPark durante muchas horas: descubrir, observar, descansar, participar en eventos y volver en distintos momentos del día y del año."
+      }
+    },
+    "stage3": {
+      "kicker": "Etapa III",
+      "title": "Visión completa",
+      "badge": "En desarrollo",
+      "body": "La tercera fase ampliará RapaNuiPark hasta su escala definitiva. El alcance detallado de esta parte del proyecto se presentará en una etapa posterior de su desarrollo."
+    }
   }
 }
