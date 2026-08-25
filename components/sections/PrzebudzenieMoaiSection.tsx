@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { useI18n } from "../../app/i18n-provider";
 import {
   awakeningActivities,
@@ -32,16 +33,84 @@ function Reveal({ children, className = "" }: { children: React.ReactNode; class
   );
 }
 
+const AWAKENING_STORM_VIDEO = {
+  webm: "/assets/przebudzenie-moai/owner-eyes-storm-animated.webm",
+  mp4: "/assets/przebudzenie-moai/owner-eyes-storm-animated.mp4",
+  poster: "/assets/przebudzenie-moai/owner-eyes-storm-animated-poster.webp"
+};
+
+function usePrefersReducedMotion() {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setPrefersReducedMotion(mediaQuery.matches);
+
+    const handleChange = () => setPrefersReducedMotion(mediaQuery.matches);
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
+  return prefersReducedMotion;
+}
+
+function AwakeningStormVideo({ alt, className }: { alt: string; className: string }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const isNearViewport = useInView(containerRef, { once: true, margin: "0px 0px 600px 0px" });
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const shouldPlayVideo = isNearViewport && !prefersReducedMotion;
+
+  useEffect(() => {
+    if (!shouldPlayVideo || !videoRef.current) {
+      return;
+    }
+
+    const video = videoRef.current;
+    video.load();
+    video.play().catch(() => {
+      // Autoplay can be rejected by the browser; the poster frame remains visible.
+    });
+  }, [shouldPlayVideo]);
+
+  return (
+    <div ref={containerRef} className="absolute inset-0">
+      {shouldPlayVideo ? (
+        <video
+          ref={videoRef}
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster={AWAKENING_STORM_VIDEO.poster}
+          aria-label={alt}
+          className={`h-full w-full ${className}`}
+        >
+          <source src={AWAKENING_STORM_VIDEO.webm} type="video/webm" />
+          <source src={AWAKENING_STORM_VIDEO.mp4} type="video/mp4" />
+        </video>
+      ) : (
+        <Image
+          src={AWAKENING_STORM_VIDEO.poster}
+          alt={alt}
+          fill
+          sizes="(min-width: 1024px) 630px, 100vw"
+          className={className}
+        />
+      )}
+    </div>
+  );
+}
+
 function Hero() {
   const { text } = useI18n();
 
   return (
     <section className="relative min-h-[92svh] overflow-hidden bg-[#02070c] text-white">
       <Image
-        src="/assets/przebudzenie-moai/owner-eyes-temple-horizontal.png"
+        src="/assets/przebudzenie-moai/owner-eyes-temple-horizontal-optimized.webp"
         alt={text("awakening.heroAlt")}
         fill
-        priority
         sizes="100vw"
         className="scale-[1.03] object-cover object-center opacity-78"
       />
@@ -262,7 +331,6 @@ function TransformationChapter() {
                   sizes="(min-width: 1280px) 58vw, (min-width: 1024px) 50vw, 100vw"
                   className="object-cover transition duration-700 group-hover:scale-[1.015]"
                   style={{ objectPosition: "50% 50%" }}
-                  loading={index < 2 ? "eager" : "lazy"}
                 />
               </div>
               <div className="p-6 sm:p-8 lg:p-9">
@@ -324,6 +392,16 @@ function ActivityGrid() {
                 activity.size === "hero"
                   ? "text-[clamp(2.4rem,4.4vw,4.3rem)]"
                   : "text-[clamp(2.05rem,2.7vw,3rem)]";
+              const imageSizes =
+                activity.size === "hero"
+                  ? "(min-width: 1024px) 740px, 100vw"
+                  : activity.size === "large"
+                    ? "(min-width: 1024px) 630px, 100vw"
+                    : "(min-width: 1024px) 415px, 100vw";
+              const imageClassName = `transition duration-700 group-hover:scale-[1.02] ${
+                activity.visualMode === "cover" ? "object-cover" : "object-contain p-4"
+              }`;
+              const isAnimated = activity.image.endsWith(".gif");
 
               return (
                 <Reveal
@@ -331,16 +409,17 @@ function ActivityGrid() {
                   className={`group grid overflow-hidden border border-white/14 bg-[#02080d] shadow-[0_28px_80px_rgba(0,0,0,0.32)] ${spanClass}`}
                 >
                   <div className="relative flex aspect-[16/9] min-h-0 items-center justify-center overflow-hidden bg-[#071018] lg:aspect-auto lg:min-h-[250px]">
-                    <Image
-                      src={activity.image}
-                      alt={text(activity.altKey)}
-                      fill
-                      sizes={activity.size === "hero" ? "100vw" : "(min-width: 1024px) 48vw, 100vw"}
-                      className={`transition duration-700 group-hover:scale-[1.02] ${
-                        activity.visualMode === "cover" ? "object-cover" : "object-contain p-4"
-                      }`}
-                      loading="eager"
-                    />
+                    {isAnimated ? (
+                      <AwakeningStormVideo alt={text(activity.altKey)} className={imageClassName} />
+                    ) : (
+                      <Image
+                        src={activity.image}
+                        alt={text(activity.altKey)}
+                        fill
+                        sizes={imageSizes}
+                        className={imageClassName}
+                      />
+                    )}
                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,8,13,0.02),rgba(2,8,13,0.12)),radial-gradient(circle_at_50%_96%,rgba(184,150,72,0.12),transparent_42%)]" />
                   </div>
                   <div className="flex min-h-[260px] min-w-0 flex-col justify-between p-7 sm:p-9">
@@ -402,12 +481,11 @@ function Finale() {
   return (
     <section className="relative min-h-[92svh] overflow-hidden bg-[#02070c] px-6 py-24 text-white sm:px-10">
       <Image
-        src="/assets/przebudzenie-moai/owner-eyes-storm-night.png"
+        src="/assets/przebudzenie-moai/owner-eyes-storm-night-optimized.webp"
         alt={text("awakening.assets.stormNightAlt")}
         fill
         sizes="100vw"
         className="object-cover object-center opacity-72"
-        loading="eager"
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,7,12,0.92),rgba(2,7,12,0.52)_52%,rgba(2,7,12,0.78)),radial-gradient(circle_at_50%_28%,rgba(184,150,72,0.16),transparent_32%)]" />
       <Reveal className="relative z-10 mx-auto flex min-h-[72svh] max-w-7xl flex-col justify-end">
