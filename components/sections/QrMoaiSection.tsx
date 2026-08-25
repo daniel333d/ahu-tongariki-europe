@@ -3,6 +3,8 @@
 import { Camera, Compass, Hand, MapPinned, Sparkles } from "lucide-react";
 import type { LanguageCode } from "../../app/i18n";
 import { useI18n } from "../../app/i18n-provider";
+import { BrandBackdrop } from "../brand/BrandBackdrop";
+import { ImageWatermark } from "../brand/ImageWatermark";
 import { AssetImage } from "../common/AssetImage";
 
 type QrMoaiCopy = {
@@ -321,6 +323,7 @@ export function QrMoaiSection() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_16%,rgba(184,150,72,0.16),transparent_28%),linear-gradient(180deg,#071426,#02080d)]"
         aria-hidden="true"
       />
+      <BrandBackdrop />
       <div className="relative mx-auto max-w-[1400px]">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
@@ -344,6 +347,7 @@ export function QrMoaiSection() {
               sizes="(min-width: 1024px) 820px, 100vw"
             />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,12,24,0.42),rgba(4,12,24,0.02)_56%),linear-gradient(0deg,rgba(4,12,24,0.56),transparent_38%)]" />
+            <ImageWatermark />
             <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-9">
               <div className="inline-flex items-center gap-3 border border-gold/45 bg-navy/70 px-4 py-3 text-xs font-bold uppercase tracking-[0.2em] text-gold backdrop-blur">
                 <Compass size={16} aria-hidden="true" />
@@ -366,6 +370,7 @@ export function QrMoaiSection() {
                   sizes="(min-width: 1024px) 540px, 100vw"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,12,24,0.06),rgba(4,12,24,0.58))]" />
+                <ImageWatermark className="opacity-[0.1] sm:opacity-[0.13]" />
                 <figcaption className="border-white/18 absolute bottom-4 left-4 border bg-navy/70 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white backdrop-blur">
                   {image.label}
                 </figcaption>

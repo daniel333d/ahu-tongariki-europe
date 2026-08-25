@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Aperture, ArrowRight, Camera, Eye, FlameKindling, Landmark, Moon, MountainSnow, Snowflake, Sparkles, Telescope } from "lucide-react";
 import Link from "next/link";
 import { type CSSProperties } from "react";
+import { BrandBackdrop } from "../brand/BrandBackdrop";
+import { ImageWatermark } from "../brand/ImageWatermark";
 import { AssetImage } from "../common/AssetImage";
 import { useI18n } from "../../app/i18n-provider";
 
@@ -75,6 +77,7 @@ function WinterImagePanel({
         sizes="(min-width: 1024px) 820px, 100vw"
         style={{ filter: brightenWinterImage(filter) } as CSSProperties}
       />
+      <ImageWatermark />
       <div className={`absolute inset-0 ${overlay}`} aria-hidden="true" />
       {showVisitors ? <WinterScaleVisitors /> : null}
       {label ? (
@@ -251,6 +254,7 @@ export function WinterExperienceSection() {
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(200,164,90,0.1),transparent_28%),linear-gradient(180deg,rgba(6,16,31,1),rgba(2,8,13,1))]"
           aria-hidden="true"
         />
+        <BrandBackdrop />
         <div className="relative mx-auto max-w-[1400px]">
           <div className="grid gap-12 lg:grid-cols-[0.72fr_1fr] lg:items-center">
             <FadeBlock>
@@ -406,6 +410,7 @@ export function WinterExperienceSection() {
                     sizes="(min-width: 1024px) 780px, 100vw"
                     style={{ filter: "brightness(0.9) saturate(0.9) contrast(1.04)" } as CSSProperties}
                   />
+                  <ImageWatermark />
                   <div
                     className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,10,20,0.38),rgba(3,10,20,0.02)_48%,rgba(3,10,20,0.16)),linear-gradient(180deg,rgba(3,10,20,0.03),rgba(3,10,20,0.28))]"
                     aria-hidden="true"

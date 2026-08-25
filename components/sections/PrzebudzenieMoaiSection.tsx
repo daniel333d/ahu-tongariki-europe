@@ -4,6 +4,8 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useI18n } from "../../app/i18n-provider";
+import { BrandBackdrop } from "../brand/BrandBackdrop";
+import { ImageWatermark } from "../brand/ImageWatermark";
 import {
   awakeningActivities,
   awakeningEvent,
@@ -149,8 +151,9 @@ function Manifest() {
   const { text } = useI18n();
 
   return (
-    <section id="przebudzenie-manifest" className="bg-[#071018] px-6 py-24 text-white sm:px-10 sm:py-32">
-      <Reveal className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+    <section id="przebudzenie-manifest" className="relative overflow-hidden bg-[#071018] px-6 py-24 text-white sm:px-10 sm:py-32">
+      <BrandBackdrop />
+      <Reveal className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
         <div>
           <SectionKicker>{text("awakening.manifest.kicker")}</SectionKicker>
           <h2 className="mt-5 max-w-3xl text-balance font-serif text-[clamp(2.65rem,5.4vw,5rem)] font-semibold leading-[1] [hyphens:none] [overflow-wrap:normal] [word-break:normal]">
@@ -289,10 +292,11 @@ function TransformationChapter() {
   return (
     <section
       id="przebudzenie-transformacja"
-      className="awakening-transformation bg-[#071018] px-6 py-24 text-white sm:px-10 sm:py-32"
+      className="awakening-transformation relative overflow-hidden bg-[#071018] px-6 py-24 text-white sm:px-10 sm:py-32"
       data-state="night"
     >
-      <div className="mx-auto max-w-7xl">
+      <BrandBackdrop />
+      <div className="relative mx-auto max-w-7xl">
         <Reveal className="max-w-5xl">
           <SectionKicker>{text("awakening.transformation.kicker")}</SectionKicker>
           <h2 className="mt-5 max-w-4xl text-balance font-serif text-[clamp(2.55rem,5.2vw,5rem)] font-semibold leading-[1]">
@@ -332,6 +336,7 @@ function TransformationChapter() {
                   className="object-cover transition duration-700 group-hover:scale-[1.015]"
                   style={{ objectPosition: "50% 50%" }}
                 />
+                <ImageWatermark />
               </div>
               <div className="p-6 sm:p-8 lg:p-9">
                 <div className="flex items-center gap-4">
@@ -420,6 +425,7 @@ function ActivityGrid() {
                         className={imageClassName}
                       />
                     )}
+                    <ImageWatermark />
                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,8,13,0.02),rgba(2,8,13,0.12)),radial-gradient(circle_at_50%_96%,rgba(184,150,72,0.12),transparent_42%)]" />
                   </div>
                   <div className="flex min-h-[260px] min-w-0 flex-col justify-between p-7 sm:p-9">
@@ -487,6 +493,7 @@ function Finale() {
         sizes="100vw"
         className="object-cover object-center opacity-72"
       />
+      <ImageWatermark className="opacity-[0.1] sm:opacity-[0.13]" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,7,12,0.92),rgba(2,7,12,0.52)_52%,rgba(2,7,12,0.78)),radial-gradient(circle_at_50%_28%,rgba(184,150,72,0.16),transparent_32%)]" />
       <Reveal className="relative z-10 mx-auto flex min-h-[72svh] max-w-7xl flex-col justify-end">
         <SectionKicker>{text("awakening.final.kicker")}</SectionKicker>
