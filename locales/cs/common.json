@@ -14,7 +14,7 @@
     }
   },
   "intro": {
-    "subtitle": "The Spirit of Rapa Nui Lives Here",
+    "subtitle": "Duch Rapa Nui žije právě zde.",
     "welcomeWords": "Welcome · Bienvenue · Willkommen · Bienvenido · Vítejte · Witamy",
     "tagline": "Prožijte ducha Rapa Nui",
     "motto": "Monumentální dědictví. Nadčasový zážitek.",
@@ -646,248 +646,248 @@
     }
   },
   "awakening": {
-    "kicker": "PRIBEH POHLEDU",
-    "title": "Probuzeni Moai",
-    "subtitle": "Den, kdy kamen znovu ziskava pamet.",
-    "lead": "Probuzeni Moai je narativni vrstva RapaNuiParku: svetlo, ticho, stopy a pribeh vedou navstevniky k vyznamu strazcu, ne k beznemu programu atrakci.",
-    "rareLine": "Okamzik soustredeni, ne predstaveni.",
-    "started": "AWAKENING BEGUN",
-    "scrollCue": "Vstupte do pribehu Probuzeni",
-    "scrollAria": "Prejit k pribehu Probuzeni Moai",
-    "heroAlt": "Monumental RapaNuiPark Moai with a subtle eye-opening animation.",
+    "kicker": "PŘÍBĚH POHLEDU",
+    "title": "Probuzení Moai",
+    "subtitle": "Den, kdy kámen znovu získává paměť.",
+    "lead": "Probuzení Moai je narativní vrstva RapaNuiParku: světlo, ticho, stopy a příběh vedou návštěvníky k významu strážců, ne k běžnému programu atrakcí.",
+    "rareLine": "Okamžik soustředění, ne představení.",
+    "started": "PROBUZENÍ ZAČALO",
+    "scrollCue": "Vstupte do příběhu Probuzení",
+    "scrollAria": "Přejít k příběhu Probuzení Moai",
+    "heroAlt": "Monumentální Moai z RapaNuiParku s jemnou animací otevírání očí.",
     "manifest": {
-      "kicker": "A PLACE THAT REMEMBERS",
-      "title": "When the eyes of the Moai are open, the Park becomes more than a place to visit.",
-      "body": "This section tells of a symbolic moment in which the guardians gaze gives order to the whole space. Every part of the Park can then become part of a larger story: about stone, ocean, memory, walking and responsibility toward the heritage of Rapa Nui.",
-      "freeRule": "The Awakening does not need excess effects. Its power lies in the rhythm of passage: from the first gaze, through traces in the landscape, to evening light."
+      "kicker": "MÍSTO, KTERÉ SI PAMATUJE",
+      "title": "Když se oči Moai otevřou, Park se stává víc než místem k návštěvě.",
+      "body": "Tato sekce vypráví o symbolickém okamžiku, kdy pohled strážců dává řád celému prostoru. Každá část Parku se pak může stát součástí většího příběhu: o kameni, oceánu, paměti, chůzi a odpovědnosti vůči dědictví Rapa Nui.",
+      "freeRule": "Probuzení nepotřebuje nadbytečné efekty. Jeho síla spočívá v rytmu průchodu: od prvního pohledu, přes stopy v krajině, až po večerní světlo."
     },
     "moments": {
-      "kicker": "RHYTHM OF PLACE",
-      "title": "The Park speaks through small signs.",
-      "body": "Instead of multiplying activities, the section builds rhythm: light, pause, sign, short story, moving onward. It is a calm dramaturgy of place, where every scene has meaning and does not need to be loud.",
+      "kicker": "RYTMUS MÍSTA",
+      "title": "Park promlouvá skrze drobná znamení.",
+      "body": "Namísto množení aktivit sekce buduje rytmus: světlo, pauza, znamení, krátký příběh, pokračování v cestě. Je to klidná dramaturgie místa, kde má každá scéna smysl a nemusí být hlasitá.",
       "guardians": {
-        "title": "THE GUARDIANS GAZE",
-        "description": "A subtle opening of the eyes raises the question: who is watching, who remembers, and who has been entrusted with care for the place."
+        "title": "POHLED STRÁŽCŮ",
+        "description": "Jemné otevření očí vyvolává otázku: kdo pozoruje, kdo si pamatuje a komu byla svěřena péče o toto místo."
       },
       "voice": {
-        "title": "THE VOICE OF STORY",
-        "description": "A short narration can explain the meaning of Moai, Ahu and pukao without turning the space into a spectacle."
+        "title": "HLAS PŘÍBĚHU",
+        "description": "Krátké vyprávění dokáže vysvětlit význam Moai, Ahu a pukao, aniž by se prostor proměnil ve spektákl."
       },
       "ahuLight": {
-        "title": "LIGHT BY THE AHU",
-        "description": "Warm illumination does not advertise an attraction; it reveals the texture of stone, proportion and the gravity of the arrangement."
+        "title": "SVĚTLO U AHU",
+        "description": "Teplé osvětlení nepropaguje atrakci; odhaluje texturu kamene, proporce a tíhu celého uspořádání."
       },
       "sign": {
-        "title": "A SIGN IN THE LANDSCAPE",
-        "description": "A discreet symbol leads onward and turns the passage through the Park into a reading of the landscape."
+        "title": "ZNAMENÍ V KRAJINĚ",
+        "description": "Nenápadný symbol vede dál a mění průchod Parkem ve čtení krajiny."
       }
     },
     "transformation": {
-      "kicker": "NOCNI KAPITOLA PROBUZENI",
-      "title": "Noc Probuzeni Moai.",
-      "lead": "Tato cast se soustredi pouze na nocni okamzik Probuzeni: svetlo oci, tmu, kamen a ticho. Den a soumrak zustavaji popsane jinde v sekci.",
-      "visualAlt": "Nocni Moai s osvetlenyma ocima.",
-      "switcherAria": "Vybrat kapitolu Probuzeni Moai",
-      "nightToneAria": "Vybrat nocni obraz Moai",
+      "kicker": "NOČNÍ KAPITOLA PROBUZENÍ",
+      "title": "Noc Probuzení Moai.",
+      "lead": "Tato část se soustředí pouze na noční okamžik Probuzení: světlo očí, tmu, kámen a ticho. Den a soumrak zůstávají popsané jinde v sekci.",
+      "visualAlt": "Noční Moai s osvětlenýma očima.",
+      "switcherAria": "Vybrat kapitolu Probuzení Moai",
+      "nightToneAria": "Vybrat noční obraz Moai",
       "nightTones": {
-        "rowBlue": "Modra rada",
-        "rowEmerald": "Smaragdova rada",
+        "rowBlue": "Modrá řada",
+        "rowEmerald": "Smaragdová řada",
         "closeBlue": "Detail",
-        "winterBlue": "Zimni noc",
-        "singleEmerald": "Osamely strazce",
-        "gateBlue": "Nocni brana"
+        "winterBlue": "Zimní noc",
+        "singleEmerald": "Osamělý strážce",
+        "gateBlue": "Noční brána"
       },
       "story": {
         "rowBlue": {
-          "title": "Prvni modra v rade.",
-          "body": "Noc zacina klidne. Podel Ahu se objevuje chladny rytmus svetla, ktery vede pohled od prvniho Moai k poslednimu, aniz by prehlusil kamen."
+          "title": "První modrá v řadě.",
+          "body": "Noc začíná klidně. Podél Ahu se objevuje chladný rytmus světla, který vede pohled od prvního Moai k poslednímu, aniž by přehlušil kámen."
         },
         "closeBlue": {
-          "title": "Pohled zblizka.",
-          "body": "Teprve v detailu svetlo prestava pusobit jako dekorace. Odhaluje rysy, praskliny a vahu tvare, jako by kamen na okamzik odpovedel tichu."
+          "title": "Pohled zblízka.",
+          "body": "Teprve v detailu světlo přestává působit jako dekorace. Odhaluje rysy, praskliny a váhu tváře, jako by kámen na okamžik odpověděl tichu."
         },
         "rowEmerald": {
-          "title": "Zelen hluboka jako noc.",
-          "body": "Smaragdovy ton meni napeti sceny. Neni to horor, ale druhy dech pribehu: mineralnejsi, tmavsi, blizsi zemi."
+          "title": "Zeleň hluboká jako noc.",
+          "body": "Smaragdový tón mění napětí scény. Není to hrůza, ale druhý dech příběhu: minerálnější, tmavší, bližší zemi."
         },
         "winterBlue": {
-          "title": "Strazci v zimni tme.",
-          "body": "Na snehu je svetlo jeste tissi. Bila krajina Moai nezjemnuje; posiluje jejich pritomnost v otevrenem prostoru."
+          "title": "Strážci v zimní tmě.",
+          "body": "Na sněhu je světlo ještě tišší. Bílá krajina Moai neubírá na monumentalitě; posiluje jejich přítomnost v otevřeném prostoru."
         },
         "singleEmerald": {
-          "title": "Osamely znak v krajine.",
-          "body": "Jeden Moai zustava pod tezkou oblohou. Je to pauza ve vypraveni, okamzik soustredeni pred zaverecnym obrazem."
+          "title": "Osamělé znamení v krajině.",
+          "body": "Jeden Moai zůstává pod těžkou oblohou. Je to pauza ve vyprávění, okamžik soustředění před závěrečným obrazem."
         },
         "gateBlue": {
-          "title": "Brana k nocnimu finale.",
-          "body": "Posledni obraz uzavira kapitolu jako vstup do Parku po setmeni. Dva monumentalni strazci vedou pohled k osvetlene rade v dali."
+          "title": "Brána k nočnímu finále.",
+          "body": "Poslední obraz uzavírá kapitolu jako vstup do Parku po setmění. Dva monumentální strážci vedou pohled k osvětlené řadě v dáli."
         }
       },
       "states": {
         "day": {
           "label": "Den",
           "name": "DEN — POHLED",
-          "headline": "Ve dne se divaji.",
-          "body": "Probuzeni zacina za dne.\n\nV tento den Moai v RapaNuiPark ziskavaji zpet sve oci. Svetly pohled v kontrastu s tmavym kamenem meni zpusob, jak vnimame monumentalni postavy.\n\nPoprve se nedivame jen na Strazce.\n\nMame pocit, ze oni se divaji na nas.",
-          "detail": "Oci zustavaji prirozene a klidne. Nesviti. Jejich sila je prave v tom, jak mala zmena dokaze zcela promenit kamennou tvar.",
-          "quote": "\"Opravdu jsem to videl?\""
+          "headline": "Ve dne se dívají.",
+          "body": "Probuzení začíná za dne.\n\nV tento den Moai v RapaNuiPark získávají zpět své oči. Světlý pohled v kontrastu s tmavým kamenem mění způsob, jak vnímáme monumentální postavy.\n\nPoprvé se nedíváme jen na Strážce.\n\nMáme pocit, že oni se dívají na nás.",
+          "detail": "Oči zůstávají přirozené a klidné. Nesvítí. Jejich síla je právě v tom, jak malá změna dokáže zcela proměnit kamennou tvář.",
+          "quote": "„Opravdu jsem to viděl?“"
         },
         "dusk": {
           "label": "Soumrak",
-          "name": "SOUMRAK — PROMENA",
-          "headline": "Pohled se zacina menit.",
-          "body": "A potom prichazi soumrak.\n\nS poslednim svetlem dne se meni i Probuzeni. Iluminace zacina z polostinu vytahovat monumentalni siluety, rysy tvari a strukturu kamene.\n\nOci, ktere byly ve dne jasne a prirozene, zacinaji odrazet svetlo okoli.",
-          "detail": "Hranice mezi prirozenym pohledem a nocnim zazitkem se pomalu ztraci. Jeste to neni plne svetlo oci, ale tichy okamzik prechodu."
+          "name": "SOUMRAK — PROMĚNA",
+          "headline": "Pohled se začíná měnit.",
+          "body": "A potom přichází soumrak.\n\nS posledním světlem dne se mění i Probuzení. Iluminace začíná z polostínu vytahovat monumentální siluety, rysy tváří a strukturu kamene.\n\nOči, které byly ve dne jasné a přirozené, začínají odrážet světlo okolí.",
+          "detail": "Hranice mezi přirozeným pohledem a nočním zážitkem se pomalu ztrácí. Ještě to není plné světlo očí, ale tichý okamžik přechodu."
         },
         "night": {
           "label": "Noc",
-          "name": "NOC — SVETLO OCI",
-          "headline": "V noci se jejich pohled stava svetlem.",
-          "body": "Po setmeni dosahuje Probuzeni sveho finale.\n\nVybrane oci Moai zacinaji zarit chladnou modri nebo hlubokou smaragdovou zeleni. Nikdy vsechny naraz.\n\nNejdrive jeden pohled. Potom dalsi. Az se monumentalni rada Strazcu stane soucasti nocni sceny svetla, kamene a ticha.",
-          "detail": "Modra je hluboka a mesicni, smaragdova tmava a mineralni. Svetlo zustava jemne: zadny neon, zadny horor, zadny pouťovy rytmus."
+          "name": "NOC — SVĚTLO OČÍ",
+          "headline": "V noci se jejich pohled stává světlem.",
+          "body": "Po setmění dosahuje Probuzení svého finále.\n\nVybrané oči Moai začínají zářit chladnou modří nebo hlubokou smaragdovou zelení. Nikdy všechny najednou.\n\nNejdřív jeden pohled. Potom další. Až se monumentální řada Strážců stane součástí noční scény světla, kamene a ticha.",
+          "detail": "Modrá je hluboká a měsíční, smaragdová tmavá a minerální. Světlo zůstává jemné: žádný neon, žádná hrůza, žádný pouťový rytmus."
         }
       },
       "summary": {
-        "day": "Ve dne se divaji.",
-        "night": "V noci se jejich pohled stava svetlem.",
-        "body": "Probuzeni Moai trva od prvniho pohledu az po nocni finale."
+        "day": "Ve dne se dívají.",
+        "night": "V noci se jejich pohled stává světlem.",
+        "body": "Probuzení Moai trvá od prvního pohledu až po noční finále."
       }
     },
     "activities": {
-      "kicker": "CHAPTERS OF AWAKENING",
-      "title": "Eight fragments of one story",
+      "kicker": "KAPITOLY PROBUZENÍ",
+      "title": "Osm fragmentů jednoho příběhu",
       "ceremony": {
-        "title": "Opening of the Gaze",
-        "description": "The first chapter does not begin with noise, but with light. Faces slowly emerge from half-shadow, and the eyes of the Moai become the point around which the whole story takes shape."
+        "title": "Otevření Pohledu",
+        "description": "První kapitola nezačíná hlukem, ale světlem. Tváře se pomalu vynořují z polostínu a oči Moai se stávají bodem, kolem kterého se utváří celý příběh."
       },
       "trail": {
-        "title": "Path of Signs",
-        "description": "The walk through the Park leads through small traces: symbols, fragments of text, stone points and places to pause. It is a route for discovering rather than ticking off."
+        "title": "Stezka Znamení",
+        "description": "Procházka Parkem vede drobnými stopami: symboly, útržky textu, kamennými body a místy k zastavení. Je to cesta objevování, ne seznam k odškrtání."
       },
       "stories": {
-        "title": "Stories of the Ahu",
-        "description": "Each Ahu can have its own voice: about the placement of statues, the relation to landscape, ancestral memory and the meaning of looking toward the community."
+        "title": "Příběhy Ahu",
+        "description": "Každý Ahu může mít svůj vlastní hlas: o rozmístění soch, vztahu ke krajině, paměti předků a významu pohledu směrem ke komunitě."
       },
       "feast": {
-        "title": "Hospitality of Place",
-        "description": "If food appears, it is part of the story of meeting, not the main product. It should build warmth, rest and respect for shared time."
+        "title": "Pohostinnost Místa",
+        "description": "Pokud se objeví jídlo, je součástí příběhu setkání, ne hlavním produktem. Má budovat vřelost, odpočinek a respekt ke společně stráveném čase."
       },
       "photos": {
-        "title": "Frames of Memory",
-        "description": "Photography is not promotion here, but an attempt to capture a moment: gaze, stone texture, light and scale that stays with the visitor after leaving the Park."
+        "title": "Rámy Paměti",
+        "description": "Fotografie zde není propagací, ale pokusem zachytit okamžik: pohled, texturu kamene, světlo a měřítko, které zůstane s návštěvníkem i po odchodu z Parku."
       },
       "symbols": {
-        "title": "Signs and Seals",
-        "description": "A workshop can be a calm gesture: imprinting a symbol, making a mark, leaving a trace in memory. Understanding the motif matters more than the souvenir."
+        "title": "Znamení a Pečetě",
+        "description": "Dílna může být klidným gestem: otisknutí symbolu, vytvoření značky, zanechání stopy v paměti. Pochopení motivu je důležitější než suvenýr."
       },
       "mystery": {
-        "title": "Hidden Story",
-        "description": "Fragments of a larger story may appear in the terrain. They do not lead to a prize, but to the final meaning: why the guardians watch and what they guard."
+        "title": "Skrytý Příběh",
+        "description": "V terénu se mohou objevit fragmenty většího příběhu. Nevedou k ceně, ale k závěrečnému významu: proč strážci bdí a co střeží."
       },
       "light": {
-        "title": "Evening Silence",
-        "description": "The last chapter should quiet the place. Light embraces the faces, the eyes remain open, and the Park becomes a landscape of memory, stone and night focus. Behem finale Probuzeni se oci Strazcu stavaji soucasti iluminace. Modre a smaragdove pohledy se objevuji mezi svetlem Ahu a temnotou noci."
+        "title": "Večerní Ticho",
+        "description": "Poslední kapitola má místo zklidnit. Světlo obepíná tváře, oči zůstávají otevřené a Park se stává krajinou paměti, kamene a nočního soustředění. Během finále Probuzení se oči Strážců stávají součástí iluminace. Modré a smaragdové pohledy se objevují mezi světlem Ahu a temnotou noci."
       }
     },
     "timeline": {
-      "kicker": "NARRATIVE OF THE DAY",
-      "title": "One day. Five states of place.",
+      "kicker": "PŘÍBĚH DNE",
+      "title": "Jeden den. Pět stavů místa.",
       "dawn": {
-        "time": "DAWN",
-        "title": "First gaze",
-        "description": "The beginning of the story and the slow opening of the eyes."
+        "time": "ÚSVIT",
+        "title": "První pohled",
+        "description": "Začátek příběhu a pomalé otevírání očí."
       },
       "noon": {
-        "time": "NOON",
-        "title": "Reading signs",
-        "description": "Paths, symbols and short stories guide visitors through the grounds."
+        "time": "POLEDNE",
+        "title": "Čtení znamení",
+        "description": "Cesty, symboly a krátké příběhy provázejí návštěvníky areálem."
       },
       "afternoon": {
-        "time": "AFTERNOON",
-        "title": "Memory and meeting",
-        "description": "Stories about Ahu, Moai, people and landscape."
+        "time": "ODPOLEDNE",
+        "title": "Paměť a setkání",
+        "description": "Příběhy o Ahu, Moai, lidech a krajině."
       },
       "dusk": {
-        "time": "DUSK",
-        "title": "Light of stone",
-        "description": "Faces and textures revealed by calm illumination."
+        "time": "SOUMRAK",
+        "title": "Světlo kamene",
+        "description": "Tváře a textury odhalené klidným osvětlením."
       },
       "night": {
-        "time": "NIGHT",
-        "title": "Silence of the guardians",
-        "description": "The finale leaves the image of open eyes."
+        "time": "NOC",
+        "title": "Ticho strážců",
+        "description": "Finále zanechává obraz otevřených očí."
       }
     },
     "final": {
-      "kicker": "CLOSING",
-      "title": "The guardians keep watching.",
-      "subtitle": "The story does not end with dusk.",
-      "eventPending": "The next chapter of the Awakening should grow from the rhythm of the Park and the maturity of the whole narrative.",
-      "announcedFallback": "The next chapter of the Awakening has been announced.",
-      "cta": "Return to the story"
+      "kicker": "ZÁVĚR",
+      "title": "Strážci dál bdí.",
+      "subtitle": "Příběh nekončí soumrakem.",
+      "eventPending": "Další kapitola Probuzení by měla vyrůst z rytmu Parku a zralosti celého příběhu.",
+      "announcedFallback": "Další kapitola Probuzení byla oznámena.",
+      "cta": "Návrat k příběhu"
     },
     "lastLook": {
-      "kicker": "POSLEDNI POHLED",
-      "title": "Kdyz prijde noc, Strazci nezaviraji oci.",
-      "body": "Prave tehdy Probuzeni dosahuje sve nejneobycejnejsi podoby. Svetlo zustava v ocich Moai jeste malou chvili, nez vyjimecny den skonci."
+      "kicker": "POSLEDNÍ POHLED",
+      "title": "Když přijde noc, Strážci nezavírají oči.",
+      "body": "Právě tehdy Probuzení dosahuje své nejneobyčejnější podoby. Světlo zůstává v očích Moai ještě malou chvíli, než výjimečný den skončí."
     },
     "assets": {
-      "templeWideAlt": "Moai eyes in a dark stone space.",
-      "templeCloseAlt": "Close view of Moai eyes in a monumental setting.",
-      "templeHorizontalAlt": "Horizontal view of Moai eyes with monumental statues in the background.",
-      "referenceEyesAlt": "Reference view of traditional Moai eyes.",
-      "ahuDayAlt": "Ahu Tongariki in daylight.",
-      "pavilionAlt": "RapaNuiPark pavilion as a hospitality space.",
-      "blackGoldAlt": "Moai eyes on a dark landscape with warm light.",
-      "stormLandscapeAlt": "Moai eyes in a cloudy landscape.",
-      "hillsAlt": "Moai on a green slope beneath a blue sky.",
-      "oceanCliffAlt": "Moai eyes above a rough ocean and cliff.",
-      "stormNightAlt": "Moai eyes before a night storm scene and guardians.",
-      "stormAnimatedAlt": "Animated view of Moai eyes in a night atmosphere.",
-      "fiveOceanAlt": "Five Moai with open eyes against the ocean and bright sky.",
-      "closeDayAlt": "Close daylight view of a Moai with open eyes.",
-      "purpleAnimatedAlt": "Animated view of Moai eyes in a purple dusk atmosphere."
+      "templeWideAlt": "Oči Moai v tmavém kamenném prostoru.",
+      "templeCloseAlt": "Detailní pohled na oči Moai v monumentálním prostředí.",
+      "templeHorizontalAlt": "Horizontální pohled na oči Moai s monumentálními sochami v pozadí.",
+      "referenceEyesAlt": "Referenční pohled na tradiční oči Moai.",
+      "ahuDayAlt": "Ahu Tongariki za denního světla.",
+      "pavilionAlt": "Pavilon RapaNuiParku jako prostor pohostinnosti.",
+      "blackGoldAlt": "Oči Moai na tmavé krajině s teplým světlem.",
+      "stormLandscapeAlt": "Oči Moai v zamračené krajině.",
+      "hillsAlt": "Moai na zeleném svahu pod modrou oblohou.",
+      "oceanCliffAlt": "Oči Moai nad rozbouřeným oceánem a útesem.",
+      "stormNightAlt": "Oči Moai před scénou noční bouře a strážci.",
+      "stormAnimatedAlt": "Animovaný pohled na oči Moai v noční atmosféře.",
+      "fiveOceanAlt": "Pět Moai s otevřenýma očima proti oceánu a jasné obloze.",
+      "closeDayAlt": "Detailní denní pohled na Moai s otevřenýma očima.",
+      "purpleAnimatedAlt": "Animovaný pohled na oči Moai ve fialové soumrakové atmosféře."
     },
     "activityDetails": {
-      "light": "light",
-      "sequence": "sequence",
-      "ceremony": "ceremony",
-      "path": "path",
-      "symbols": "symbols",
-      "narration": "story",
-      "education": "education",
-      "hosting": "hospitality",
-      "daylight": "day",
-      "photo": "photography",
-      "goldHour": "golden hour",
-      "workshop": "workshop",
-      "sign": "sign",
-      "clue": "trace",
-      "family": "family",
-      "night": "night",
-      "finalLight": "final light"
+      "light": "světlo",
+      "sequence": "sekvence",
+      "ceremony": "obřad",
+      "path": "cesta",
+      "symbols": "symboly",
+      "narration": "příběh",
+      "education": "vzdělávání",
+      "hosting": "pohostinnost",
+      "daylight": "den",
+      "photo": "fotografie",
+      "goldHour": "zlatá hodinka",
+      "workshop": "dílna",
+      "sign": "znamení",
+      "clue": "stopa",
+      "family": "rodina",
+      "night": "noc",
+      "finalLight": "závěrečné světlo"
     },
     "story": {
-      "kicker": "FOUR LAYERS OF STORY",
-      "title": "It is not about an event. It is about what the place begins to say.",
-      "body": "Moai Awakening should guide the visitor calmly: first through image, then through sign, then through story, and finally through a personal encounter with the monumental silence of the statues."
+      "kicker": "ČTYŘI VRSTVY PŘÍBĚHU",
+      "title": "Nejde o událost. Jde o to, co místo začíná vyprávět.",
+      "body": "Probuzení Moai má návštěvníka vést klidně: nejprve obrazem, pak znamením, pak příběhem a nakonec osobním setkáním s monumentálním tichem soch."
     },
     "storyChapters": {
       "firstLook": {
-        "title": "First gaze",
-        "body": "The eyes of the Moai are not a special effect. They are a sign that the guardians have been noticed anew. From that moment, the visitor not only looks at the statues, but feels watched by them."
+        "title": "První pohled",
+        "body": "Oči Moai nejsou zvláštní efekt. Jsou znamením, že si strážců znovu všimli. Od té chvíle návštěvník sochy nejen sleduje, ale cítí se jimi pozorován."
       },
       "memory": {
-        "title": "Memory held in stone",
-        "body": "The story returns to Rapa Nui: to the work of hands, the weight of transport, the Ahu, and the communities that gave the statues meaning. The Awakening should remind us that Moai are not decoration, but carriers of memory."
+        "title": "Paměť uchovaná v kameni",
+        "body": "Příběh se vrací k Rapa Nui: k práci rukou, tíze přepravy, k Ahu a komunitám, které sochám daly smysl. Probuzení má připomínat, že Moai nejsou dekorací, ale nositeli paměti."
       },
       "path": {
-        "title": "Traces lead through the Park",
-        "body": "Instead of intrusive attractions, discreet traces appear: a symbol on stone, light by the path, the voice of a guide, a short story written at a viewpoint. Each step reveals another fragment of the narrative."
+        "title": "Stopy vedou Parkem",
+        "body": "Namísto vtíravých atrakcí se objevují nenápadné stopy: symbol na kameni, světlo u cesty, hlas průvodce, krátký příběh napsaný na vyhlídce. Každý krok odhaluje další fragment vyprávění."
       },
       "evening": {
-        "title": "Evening closes the story",
-        "body": "As dusk falls, the Awakening turns into silence. Light does not create spectacle; it reveals faces, profiles and gazes. The finale should leave the memory of guardians who are still watching."
+        "title": "Večer uzavírá příběh",
+        "body": "Se soumrakem se Probuzení mění v ticho. Světlo nevytváří podívanou; odhaluje tváře, profily a pohledy. Finále má zanechat vzpomínku na strážce, kteří stále bdí."
       }
     }
   }
