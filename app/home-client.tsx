@@ -756,6 +756,16 @@ function HomeContent() {
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-96px)] max-w-[1500px] items-end px-6 pb-10 pt-16 sm:pb-14 lg:px-10 lg:pb-20">
           <div className="w-full">
             <div className="max-w-4xl">
+              <div className="mb-6 inline-flex h-24 w-24 items-center justify-center rounded-full border border-gold/45 bg-black/28 p-2 shadow-[0_22px_70px_rgba(0,0,0,0.42)] backdrop-blur-sm sm:mb-8 sm:h-32 sm:w-32 lg:h-36 lg:w-36">
+                <Image
+                  src="/brand/rapanuipark-logo.webp"
+                  alt=""
+                  width={320}
+                  height={320}
+                  className="h-full w-full object-contain"
+                  aria-hidden="true"
+                />
+              </div>
               <p className="section-kicker mb-5 max-w-[18rem] sm:mb-6 sm:max-w-none">{copy.hero.location}</p>
               <h1 className="hero-title text-balance font-serif text-[3.35rem] font-semibold leading-[0.92] min-[430px]:text-[3.85rem] sm:text-7xl lg:text-[7.5rem]">
                 {copy.brand.name}

@@ -27,12 +27,12 @@ export function BrandLogo({ variant = "header", className = "" }: BrandLogoProps
         alt=""
         width={isFooter ? 220 : 56}
         height={isFooter ? 220 : 56}
-        className={isFooter ? "h-28 w-28 object-contain sm:h-36 sm:w-36" : "h-11 w-11 object-contain sm:h-12 sm:w-12"}
+        className={isFooter ? "h-28 w-28 object-contain sm:h-36 sm:w-36" : "h-12 w-12 object-contain sm:h-14 sm:w-14"}
         aria-hidden="true"
       />
       {!isFooter ? (
         <span className="hidden min-w-0 flex-col leading-none sm:flex">
-          <span className="font-serif text-xl font-semibold tracking-wide text-white">RapaNuiPark</span>
+          <span className="font-serif text-2xl font-semibold tracking-wide text-white">RapaNuiPark</span>
           <span className="mt-1 text-[0.62rem] font-bold uppercase tracking-[0.24em] text-gold/82">
             Bystrzyca Kłodzka
           </span>
