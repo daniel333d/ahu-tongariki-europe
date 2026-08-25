@@ -49,9 +49,11 @@ function parseAdditionalPasswords(rawPasswords: string | undefined): string[] {
 function getAllowedPasswords(): string[] {
   const password = process.env.SITE_PASSWORD;
   const additionalPasswords = parseAdditionalPasswords(process.env.SITE_PASSWORDS);
-  const namedAdditionalPasswords = [process.env.SITE_PASSWORD_ROBERT, process.env.SITE_PASSWORD_DAREK].filter(
-    Boolean
-  ) as string[];
+  const namedAdditionalPasswords = [
+    process.env.SITE_PASSWORD_ROBERT,
+    process.env.SITE_PASSWORD_DAREK,
+    process.env.SITE_PASSWORD_JORANA
+  ].filter(Boolean) as string[];
 
   return [...new Set([password, ...additionalPasswords, ...namedAdditionalPasswords].filter(Boolean))] as string[];
 }
