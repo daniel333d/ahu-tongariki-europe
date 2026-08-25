@@ -699,7 +699,7 @@
       "nightToneAria": "Wybór nocnego obrazu Moai",
       "nightTones": {
         "rowBlue": "Rząd błękitny",
-        "rowEmerald": "Rząd szmaragdowy",
+        "rowEmerald": "Rząd czerwony",
         "closeBlue": "Zbliżenie",
         "winterBlue": "Zimowa noc",
         "singleEmerald": "Samotny strażnik",
@@ -715,8 +715,8 @@
           "body": "Dopiero w zbliżeniu widać, że światło nie jest dekoracją. Wydobywa rysy, pęknięcia i ciężar twarzy, jakby kamień przez chwilę odpowiadał ciszy."
         },
         "rowEmerald": {
-          "title": "Zieleń głęboka jak noc.",
-          "body": "Szmaragdowy ton zmienia napięcie sceny. Nie tworzy efektu grozy, tylko drugi oddech opowieści: bardziej mineralny, ciemniejszy, bliższy ziemi."
+          "title": "Czerwień głęboka jak noc.",
+          "body": "Czerwony ton zmienia napięcie sceny. Nie tworzy efektu grozy, tylko drugi oddech opowieści: bardziej skupiony, ciemniejszy, bliższy rytmowi nocnego światła."
         },
         "winterBlue": {
           "title": "Strażnicy w zimowej ciemności.",
