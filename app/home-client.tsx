@@ -1001,7 +1001,7 @@ function HomeContent() {
           <CinematicVideoSection
             caption={copy.location.video.caption}
             videoSrc="/assets/video/ahu-tongariki-europe-film.mp4"
-            posterSrc="/ahu-tongariki-hero-optimized.webp"
+            posterSrc="/assets/video/ahu-tongariki-europe-poster.webp"
             playAriaLabel={copy.location.video.playAriaLabel}
             posterHeading={copy.location.video.posterHeading}
             playLabel={copy.location.video.playLabel}
