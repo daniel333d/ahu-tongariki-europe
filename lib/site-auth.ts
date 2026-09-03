@@ -51,8 +51,7 @@ function getAllowedPasswords(): string[] {
   const additionalPasswords = parseAdditionalPasswords(process.env.SITE_PASSWORDS);
   const namedAdditionalPasswords = [
     process.env.SITE_PASSWORD_ROBERT,
-    process.env.SITE_PASSWORD_DAREK,
-    process.env.SITE_PASSWORD_JORANA
+    process.env.SITE_PASSWORD_DAREK
   ].filter(Boolean) as string[];
 
   return [...new Set([password, ...additionalPasswords, ...namedAdditionalPasswords].filter(Boolean))] as string[];
