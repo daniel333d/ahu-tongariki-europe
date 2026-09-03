@@ -149,7 +149,7 @@ export const awakeningTransformationStates: AwakeningTransformationState[] = [
 ];
 
 export const transformationNightImages: Record<NightVisualTone, string> = {
-  closeBlue: "/assets/przebudzenie-moai/owner-awakening-eyes-close-blue.jpeg",
+  closeBlue: "/assets/przebudzenie-moai/owner-awakening-eyes-close-blue-complete.webp",
   rowBlue: "/assets/przebudzenie-moai/owner-awakening-eyes-row-blue.jpeg",
   rowEmerald: "/assets/przebudzenie-moai/owner-awakening-eyes-row-red.webp",
   winterBlue: "/assets/przebudzenie-moai/owner-awakening-eyes-winter-red-balanced.webp",
