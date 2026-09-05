@@ -10,6 +10,7 @@ import { ScaleSection } from "../components/scale/ScaleSection";
 import { CoCreatorsSection } from "../components/sections/CoCreatorsSection";
 import { PrzebudzenieMoaiSection } from "../components/sections/PrzebudzenieMoaiSection";
 import { QrMoaiSection } from "../components/sections/QrMoaiSection";
+import { RapaNuiStorySection } from "../components/sections/RapaNuiStorySection";
 import { RealizationStagesSection } from "../components/sections/RealizationStagesSection";
 import { WinterExperienceSection } from "../components/sections/WinterExperienceSection";
 import { VideoPlayer } from "../components/video/VideoPlayer";
@@ -1199,6 +1200,8 @@ function HomeContent() {
       </section>
 
       <RealizationStagesSection />
+
+      <RapaNuiStorySection />
 
       <PrzebudzenieMoaiSection />
 
