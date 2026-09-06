@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { type CSSProperties, useEffect, useState } from "react";
+import { type ChangeEvent, type CSSProperties, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import type { LanguageCode } from "../../app/i18n";
 import { useI18n } from "../../app/i18n-provider";
 import { BrandBackdrop } from "../brand/BrandBackdrop";
@@ -80,6 +81,14 @@ type StoryUi = {
   transitionLabel: string;
   nextSectionLabel: string;
   bridgeLine: string;
+  narratorEyebrow: string;
+  narratorLabel: string;
+  narratorPlayAria: string;
+  narratorPauseAria: string;
+  narratorRestartAria: string;
+  narratorSeekAria: string;
+  narratorRateGroupAria: string;
+  narratorDevPlaceholder: string;
 };
 
 const IMAGE_PATH = "/images/rapa-nui-story";
@@ -105,7 +114,15 @@ const uiByLanguage: Record<LanguageCode, StoryUi> = {
       "Warstwa wizualna: artystyczne wizualizacje inspirowane krajobrazem i kulturą Rapa Nui, wygenerowane cyfrowo. Tekst historyczny opiera się na źródłach wymienionych w nocie.",
     transitionLabel: "Przejście do istniejącej sekcji",
     nextSectionLabel: "Zobacz: Przebudzenie Moai",
-    bridgeLine: "Kiedy oczy wracają na swoje miejsce, kamień ponownie staje się spojrzeniem."
+    bridgeLine: "Kiedy oczy wracają na swoje miejsce, kamień ponownie staje się spojrzeniem.",
+    narratorEyebrow: "POSŁUCHAJ OPOWIEŚCI",
+    narratorLabel: "Narracja",
+    narratorPlayAria: "Odtwórz nagranie lektora",
+    narratorPauseAria: "Wstrzymaj nagranie",
+    narratorRestartAria: "Odtwórz od początku",
+    narratorSeekAria: "Przewiń nagranie",
+    narratorRateGroupAria: "Prędkość odtwarzania",
+    narratorDevPlaceholder: "Nagranie zostanie dodane wkrótce (widoczne tylko w trybie deweloperskim)."
   },
   en: {
     timelineTitle: "Timeline",
@@ -118,7 +135,15 @@ const uiByLanguage: Record<LanguageCode, StoryUi> = {
       "Visual layer: artistic visualisations inspired by the landscape and culture of Rapa Nui, generated digitally. The historical text is based on the sources listed in this note.",
     transitionLabel: "Transition to the existing section",
     nextSectionLabel: "Next: Awakening of the Moai",
-    bridgeLine: "When the eyes return to their place, stone becomes a gaze once more."
+    bridgeLine: "When the eyes return to their place, stone becomes a gaze once more.",
+    narratorEyebrow: "LISTEN TO THE STORY",
+    narratorLabel: "Narration",
+    narratorPlayAria: "Play the narration recording",
+    narratorPauseAria: "Pause the narration",
+    narratorRestartAria: "Restart from the beginning",
+    narratorSeekAria: "Seek through the narration",
+    narratorRateGroupAria: "Playback speed",
+    narratorDevPlaceholder: "The recording will be added soon (visible only in development mode)."
   },
   fr: {
     timelineTitle: "Chronologie",
@@ -131,7 +156,15 @@ const uiByLanguage: Record<LanguageCode, StoryUi> = {
       "Couche visuelle : visualisations artistiques inspirées du paysage et de la culture de Rapa Nui, générées numériquement. Le texte historique s'appuie sur les sources indiquées dans cette note.",
     transitionLabel: "Transition vers la section existante",
     nextSectionLabel: "Suivant : Réveil du Moai",
-    bridgeLine: "Quand les yeux reprennent leur place, la pierre redevient un regard."
+    bridgeLine: "Quand les yeux reprennent leur place, la pierre redevient un regard.",
+    narratorEyebrow: "ÉCOUTER LE RÉCIT",
+    narratorLabel: "Narration",
+    narratorPlayAria: "Écouter l'enregistrement de la narration",
+    narratorPauseAria: "Mettre la narration en pause",
+    narratorRestartAria: "Reprendre depuis le début",
+    narratorSeekAria: "Naviguer dans la narration",
+    narratorRateGroupAria: "Vitesse de lecture",
+    narratorDevPlaceholder: "L'enregistrement sera ajouté prochainement (visible uniquement en mode développement)."
   },
   es: {
     timelineTitle: "Cronología",
@@ -144,7 +177,15 @@ const uiByLanguage: Record<LanguageCode, StoryUi> = {
       "Capa visual: visualizaciones artísticas inspiradas en el paisaje y la cultura de Rapa Nui, generadas digitalmente. El texto histórico se basa en las fuentes indicadas en esta nota.",
     transitionLabel: "Transición a la sección existente",
     nextSectionLabel: "Siguiente: El Despertar del Moai",
-    bridgeLine: "Cuando los ojos vuelven a su lugar, la piedra se convierte de nuevo en mirada."
+    bridgeLine: "Cuando los ojos vuelven a su lugar, la piedra se convierte de nuevo en mirada.",
+    narratorEyebrow: "ESCUCHA LA HISTORIA",
+    narratorLabel: "Narración",
+    narratorPlayAria: "Reproducir la grabación de la narración",
+    narratorPauseAria: "Pausar la narración",
+    narratorRestartAria: "Reiniciar desde el principio",
+    narratorSeekAria: "Desplazarse por la narración",
+    narratorRateGroupAria: "Velocidad de reproducción",
+    narratorDevPlaceholder: "La grabación se añadirá próximamente (visible solo en modo desarrollo)."
   },
   de: {
     timelineTitle: "Zeitleiste",
@@ -157,7 +198,15 @@ const uiByLanguage: Record<LanguageCode, StoryUi> = {
       "Visuelle Ebene: künstlerische, digital erzeugte Visualisierungen, inspiriert von Landschaft und Kultur Rapa Nuis. Der historische Text stützt sich auf die in dieser Notiz genannten Quellen.",
     transitionLabel: "Übergang zum bestehenden Abschnitt",
     nextSectionLabel: "Weiter: Erwachen des Moai",
-    bridgeLine: "Wenn die Augen an ihren Platz zurückkehren, wird der Stein erneut zum Blick."
+    bridgeLine: "Wenn die Augen an ihren Platz zurückkehren, wird der Stein erneut zum Blick.",
+    narratorEyebrow: "GESCHICHTE ANHÖREN",
+    narratorLabel: "Erzählung",
+    narratorPlayAria: "Erzählaufnahme abspielen",
+    narratorPauseAria: "Erzählung pausieren",
+    narratorRestartAria: "Von vorn beginnen",
+    narratorSeekAria: "In der Erzählung navigieren",
+    narratorRateGroupAria: "Wiedergabegeschwindigkeit",
+    narratorDevPlaceholder: "Die Aufnahme wird in Kürze hinzugefügt (nur im Entwicklungsmodus sichtbar)."
   },
   cs: {
     timelineTitle: "Časová osa",
@@ -170,7 +219,15 @@ const uiByLanguage: Record<LanguageCode, StoryUi> = {
       "Vizuální vrstva: umělecké vizualizace inspirované krajinou a kulturou Rapa Nui, vytvořené digitálně. Historický text vychází ze zdrojů uvedených v této poznámce.",
     transitionLabel: "Přechod do stávající sekce",
     nextSectionLabel: "Dále: Probuzení Moai",
-    bridgeLine: "Když se oči vrátí na své místo, kámen se znovu stává pohledem."
+    bridgeLine: "Když se oči vrátí na své místo, kámen se znovu stává pohledem.",
+    narratorEyebrow: "POSLECHNĚTE SI PŘÍBĚH",
+    narratorLabel: "Vyprávění",
+    narratorPlayAria: "Přehrát nahrávku vyprávění",
+    narratorPauseAria: "Pozastavit vyprávění",
+    narratorRestartAria: "Přehrát od začátku",
+    narratorSeekAria: "Posunout se ve vyprávění",
+    narratorRateGroupAria: "Rychlost přehrávání",
+    narratorDevPlaceholder: "Nahrávka bude brzy přidána (viditelné pouze ve vývojovém režimu)."
   }
 };
 
@@ -1364,19 +1421,31 @@ function SceneImage({ image }: { image: StoryImage }) {
   );
 }
 
-function Chapter({ chapter, index }: { chapter: StoryChapter; index: number }) {
+function Chapter({
+  chapter,
+  index,
+  ui,
+  language
+}: {
+  chapter: StoryChapter;
+  index: number;
+  ui: StoryUi;
+  language: LanguageCode;
+}) {
   const reduceMotion = usePrefersReducedMotion();
   const isDarkInterlude = chapter.image.tone === "dark";
   const alignRight = chapter.alignOverride ? chapter.alignOverride === "right" : index % 2 === 1;
   const contentAlign = alignRight ? "lg:ml-auto" : "";
   const gradient = chapter.softOverlay
     ? alignRight
-      ? "bg-[linear-gradient(270deg,rgba(2,8,13,0.58),rgba(2,8,13,0.28)_28%,rgba(2,8,13,0.02)_50%),linear-gradient(180deg,rgba(2,8,13,0.04),rgba(2,8,13,0.38))]"
-      : "bg-[linear-gradient(90deg,rgba(2,8,13,0.58),rgba(2,8,13,0.3)_30%,rgba(2,8,13,0.02)_50%),linear-gradient(180deg,rgba(2,8,13,0.04),rgba(2,8,13,0.38))]"
+      ? "bg-[linear-gradient(270deg,rgba(2,8,13,0.42),rgba(2,8,13,0.2)_26%,rgba(2,8,13,0.01)_46%),linear-gradient(180deg,rgba(2,8,13,0.02),rgba(2,8,13,0.22))]"
+      : "bg-[linear-gradient(90deg,rgba(2,8,13,0.42),rgba(2,8,13,0.22)_28%,rgba(2,8,13,0.01)_46%),linear-gradient(180deg,rgba(2,8,13,0.02),rgba(2,8,13,0.22))]"
     : alignRight
-      ? "bg-[linear-gradient(270deg,rgba(2,8,13,0.92),rgba(2,8,13,0.52)_34%,rgba(2,8,13,0.06)_58%),linear-gradient(180deg,rgba(2,8,13,0.1),rgba(2,8,13,0.66))]"
-      : "bg-[linear-gradient(90deg,rgba(2,8,13,0.92),rgba(2,8,13,0.55)_36%,rgba(2,8,13,0.06)_58%),linear-gradient(180deg,rgba(2,8,13,0.1),rgba(2,8,13,0.66))]";
-  const textShadow = chapter.softOverlay ? "[text-shadow:0_2px_20px_rgba(0,0,0,0.9)]" : "";
+      ? "bg-[linear-gradient(270deg,rgba(2,8,13,0.68),rgba(2,8,13,0.36)_32%,rgba(2,8,13,0.03)_54%),linear-gradient(180deg,rgba(2,8,13,0.06),rgba(2,8,13,0.46))]"
+      : "bg-[linear-gradient(90deg,rgba(2,8,13,0.68),rgba(2,8,13,0.38)_34%,rgba(2,8,13,0.03)_54%),linear-gradient(180deg,rgba(2,8,13,0.06),rgba(2,8,13,0.46))]";
+  const textShadow = chapter.softOverlay
+    ? "[text-shadow:0_2px_22px_rgba(0,0,0,0.95)]"
+    : "[text-shadow:0_2px_16px_rgba(0,0,0,0.8)]";
 
   return (
     <article id={`rapa-nui-${chapter.id}`} className="relative overflow-hidden border-y border-white/10 bg-[#02080d] text-white">
@@ -1389,7 +1458,7 @@ function Chapter({ chapter, index }: { chapter: StoryChapter; index: number }) {
       >
         <SceneImage image={chapter.image} />
       </motion.div>
-      <div className={`absolute inset-0 ${isDarkInterlude ? "bg-black/72" : gradient}`} />
+      <div className={`absolute inset-0 ${isDarkInterlude ? "bg-black/58" : gradient}`} />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_48%_18%,rgba(184,150,72,0.11),transparent_32%)]" />
       <span
         aria-hidden="true"
@@ -1444,6 +1513,11 @@ function Chapter({ chapter, index }: { chapter: StoryChapter; index: number }) {
           <p className="mt-8 border-l border-white/20 pl-5 font-serif text-xl font-semibold leading-8 text-white sm:text-2xl">
             {chapter.endLine}
           </p>
+
+          {CHAPTER_AUDIO_FILE[chapter.id] ? (
+            <SectionNarrator ui={ui} title={chapter.title} language={language} chapterId={CHAPTER_AUDIO_FILE[chapter.id]} />
+          ) : null}
+
           <p className="mt-10 font-serif text-3xl font-semibold text-gold/82">{chapter.number}</p>
         </motion.div>
       </div>
@@ -1451,7 +1525,311 @@ function Chapter({ chapter, index }: { chapter: StoryChapter; index: number }) {
   );
 }
 
-function Timeline({ ui, timeline }: { ui: StoryUi; timeline: TimelineItem[] }) {
+// Languages for which a professionally produced narration has been placed at
+// public/audio/narration/{lang}/chapters/{chapterId}.mp3. No request is ever
+// made for a language that isn't listed here.
+const NARRATION_AVAILABLE_LANGUAGES: LanguageCode[] = ["pl"];
+
+// Maps each chapter's internal id to the filename (without extension) of its
+// own narration recording under public/audio/narration/{lang}/chapters/.
+const CHAPTER_AUDIO_FILE: Record<string, string> = {
+  ocean: "01-najpierw-byl-ocean",
+  adaptacja: "02-najwiekszym-monumentem-bylo-przetrwanie",
+  "ahu-moai": "03-przodkowie-pozostali-wsrod-zywych",
+  "rano-raraku": "04-gora-z-ktorej-wychodzili-przodkowie",
+  mana: "05-dopiero-oczy-budzily-kamien",
+  orongo: "06-kultura-zmienila-swoje-symbole",
+  zewnatrz: "07-najciemniejszy-rozdzial-przyszedl-z-zewnatrz",
+  dzisiaj: "08-narod-ktory-przetrwal"
+};
+
+// Only one SectionNarrator across the whole page may play at a time. Starting
+// playback in one instance pauses whichever `<audio>` element was previously
+// playing (that element's own onPause handler then updates its own UI state).
+let currentlyPlayingAudio: HTMLAudioElement | null = null;
+
+function stopOtherNarrators(except: HTMLAudioElement) {
+  if (currentlyPlayingAudio && currentlyPlayingAudio !== except) {
+    currentlyPlayingAudio.pause();
+  }
+  currentlyPlayingAudio = except;
+}
+
+const NARRATOR_PLAYBACK_RATES = [1, 1.25, 1.5] as const;
+type NarratorPlaybackRate = (typeof NARRATOR_PLAYBACK_RATES)[number];
+
+function formatNarratorTime(seconds: number): string {
+  if (!Number.isFinite(seconds) || seconds < 0) return "--:--";
+  const totalSeconds = Math.floor(seconds);
+  const minutes = Math.floor(totalSeconds / 60);
+  const secs = totalSeconds % 60;
+  return `${minutes}:${secs.toString().padStart(2, "0")}`;
+}
+
+function formatNarratorMinutes(seconds: number): string {
+  const minutes = Math.max(1, Math.round(seconds / 60));
+  return `${minutes} min`;
+}
+
+function SectionNarrator({
+  ui,
+  title,
+  language,
+  chapterId
+}: {
+  ui: StoryUi;
+  title: string;
+  language: LanguageCode;
+  chapterId: string;
+}) {
+  const [mounted, setMounted] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [playbackRate, setPlaybackRate] = useState<NarratorPlaybackRate>(1);
+  const [loadFailed, setLoadFailed] = useState(false);
+  const [isMainBarVisible, setIsMainBarVisible] = useState(true);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const mainBarRef = useRef<HTMLDivElement | null>(null);
+
+  const isAvailable = NARRATION_AVAILABLE_LANGUAGES.includes(language) && !loadFailed;
+  const audioSrc = `/audio/narration/${language}/chapters/${chapterId}.mp3`;
+  const showMiniPlayer = mounted && isAvailable && isPlaying && !isMainBarVisible;
+
+  useEffect(() => {
+    return () => {
+      if (currentlyPlayingAudio === audioRef.current) {
+        currentlyPlayingAudio = null;
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    const node = mainBarRef.current;
+    if (!node || typeof IntersectionObserver === "undefined") {
+      return;
+    }
+
+    const observer = new IntersectionObserver(([entry]) => setIsMainBarVisible(entry.isIntersecting), {
+      threshold: 0.15
+    });
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [isAvailable]);
+
+  useEffect(() => {
+    if (currentlyPlayingAudio === audioRef.current) {
+      currentlyPlayingAudio = null;
+    }
+    setHasStarted(false);
+    setIsPlaying(false);
+    setCurrentTime(0);
+    setDuration(0);
+    setPlaybackRate(1);
+    setLoadFailed(false);
+  }, [language]);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (audio) audio.playbackRate = playbackRate;
+  }, [playbackRate]);
+
+  function handleStart() {
+    const audio = audioRef.current;
+    if (!audio) return;
+    setHasStarted(true);
+    stopOtherNarrators(audio);
+    void audio.play();
+  }
+
+  function togglePlay() {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      stopOtherNarrators(audio);
+      void audio.play();
+    }
+  }
+
+  function handleRestart() {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.currentTime = 0;
+    setCurrentTime(0);
+  }
+
+  function handleSeek(event: ChangeEvent<HTMLInputElement>) {
+    const audio = audioRef.current;
+    const value = Number(event.target.value);
+    if (audio) audio.currentTime = value;
+    setCurrentTime(value);
+  }
+
+  function scrollToMainBar() {
+    mainBarRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  if (!isAvailable) {
+    if (process.env.NODE_ENV !== "development") {
+      return null;
+    }
+
+    return (
+      <div className="mt-9 flex min-h-[64px] items-center gap-4 border border-dashed border-white/15 bg-white/[0.02] px-5 py-3.5 opacity-60 sm:min-h-[76px]">
+        <span
+          aria-hidden="true"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/20 text-white/40"
+        >
+          ▶
+        </span>
+        <div>
+          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-white/35">{ui.narratorEyebrow}</p>
+          <p className="mt-1 text-sm text-white/35">{ui.narratorDevPlaceholder}</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <div
+        ref={mainBarRef}
+        data-testid="narrator-main-bar"
+        className="relative mt-9 overflow-hidden border border-gold/20 bg-black/32 backdrop-blur-sm"
+      >
+        <audio
+          ref={audioRef}
+          src={audioSrc}
+          preload="metadata"
+          onPlay={() => setIsPlaying(true)}
+          onPause={() => setIsPlaying(false)}
+          onTimeUpdate={(event) => setCurrentTime(event.currentTarget.currentTime)}
+          onLoadedMetadata={(event) => setDuration(event.currentTarget.duration)}
+          onEnded={() => {
+            setIsPlaying(false);
+            setCurrentTime(0);
+          }}
+          onError={() => setLoadFailed(true)}
+        />
+
+        {!hasStarted ? (
+          <button
+            type="button"
+            onClick={handleStart}
+            className="flex w-full items-center gap-4 px-5 py-3.5 text-left transition hover:bg-white/[0.03] sm:py-4"
+          >
+            <span
+              aria-hidden="true"
+              className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gold/60 bg-gold/10 text-gold sm:h-14 sm:w-14"
+            >
+              <span className="ml-0.5 text-lg sm:text-xl">▶</span>
+            </span>
+            <span className="min-w-0">
+              <span className="block text-[11px] font-bold uppercase leading-none tracking-[0.24em] text-gold">
+                {ui.narratorEyebrow}
+              </span>
+              <span className="mt-1.5 block truncate font-serif text-base font-semibold leading-tight text-white sm:text-lg">
+                {title}
+              </span>
+              <span className="mt-1 block text-xs leading-none text-white/50">
+                {duration > 0 ? formatNarratorMinutes(duration) : "…"} · {ui.narratorLabel}
+              </span>
+            </span>
+          </button>
+        ) : (
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-3 px-5 py-3.5 sm:flex-nowrap sm:py-4">
+            <button
+              type="button"
+              onClick={togglePlay}
+              aria-label={isPlaying ? ui.narratorPauseAria : ui.narratorPlayAria}
+              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gold/50 text-gold transition hover:bg-gold/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+            >
+              <span aria-hidden="true">{isPlaying ? "⏸" : "▶"}</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={handleRestart}
+              aria-label={ui.narratorRestartAria}
+              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/20 text-white/70 transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+            >
+              <span aria-hidden="true">⟲</span>
+            </button>
+
+            <span className="order-last w-full shrink-0 text-center text-xs tabular-nums text-white/55 sm:order-none sm:w-auto sm:text-left">
+              {formatNarratorTime(currentTime)} / {formatNarratorTime(duration)}
+            </span>
+
+            <input
+              type="range"
+              min={0}
+              max={duration || 0}
+              step={0.1}
+              value={Math.min(currentTime, duration || 0)}
+              onChange={handleSeek}
+              aria-label={ui.narratorSeekAria}
+              className="h-1.5 min-w-[100px] flex-1 accent-[#b89648]"
+            />
+
+            <div className="flex shrink-0 items-center gap-1" role="group" aria-label={ui.narratorRateGroupAria}>
+              {NARRATOR_PLAYBACK_RATES.map((rate) => (
+                <button
+                  key={rate}
+                  type="button"
+                  onClick={() => setPlaybackRate(rate)}
+                  aria-pressed={playbackRate === rate}
+                  className={`flex h-8 min-w-[40px] items-center justify-center rounded-full border px-2 text-[11px] font-bold transition ${
+                    playbackRate === rate
+                      ? "border-gold bg-gold/20 text-gold"
+                      : "border-white/20 text-white/55 hover:bg-white/10"
+                  }`}
+                >
+                  {rate}×
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {showMiniPlayer
+        ? createPortal(
+            <div
+              data-testid="narrator-mini-player"
+              className="fixed bottom-5 right-5 z-30 flex items-center gap-3 rounded-full border border-gold/30 bg-[#050b12]/95 py-2 pl-2 pr-4 shadow-[0_12px_32px_rgba(0,0,0,0.45)] backdrop-blur"
+            >
+              <button
+                type="button"
+                onClick={togglePlay}
+                aria-label={isPlaying ? ui.narratorPauseAria : ui.narratorPlayAria}
+                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gold/50 text-gold transition hover:bg-gold/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+              >
+                <span aria-hidden="true">{isPlaying ? "⏸" : "▶"}</span>
+              </button>
+              <button type="button" onClick={scrollToMainBar} className="flex flex-col items-start text-left">
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold/80">
+                  {ui.narratorLabel}
+                </span>
+                <span className="text-xs tabular-nums text-white/60">
+                  {formatNarratorTime(currentTime)} / {formatNarratorTime(duration)}
+                </span>
+              </button>
+            </div>,
+            document.body
+          )
+        : null}
+    </>
+  );
+}
+
+function Timeline({ ui, timeline, language }: { ui: StoryUi; timeline: TimelineItem[]; language: LanguageCode }) {
   return (
     <section className="relative bg-[#061018] px-6 py-20 text-white sm:px-10 sm:py-24" aria-labelledby="rapa-nui-timeline">
       <div className="mx-auto max-w-7xl">
@@ -1471,6 +1849,8 @@ function Timeline({ ui, timeline }: { ui: StoryUi; timeline: TimelineItem[] }) {
             </li>
           ))}
         </ol>
+
+        <SectionNarrator ui={ui} title={ui.timelineTitle} language={language} chapterId="os-czasu" />
       </div>
     </section>
   );
@@ -1553,10 +1933,10 @@ export function RapaNuiStorySection() {
             }
           />
         </motion.div>
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,8,13,0.92),rgba(2,8,13,0.55)_36%,rgba(2,8,13,0.06)_58%),linear-gradient(180deg,rgba(2,8,13,0.1),rgba(2,8,13,0.66))]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,8,13,0.68),rgba(2,8,13,0.38)_34%,rgba(2,8,13,0.03)_54%),linear-gradient(180deg,rgba(2,8,13,0.06),rgba(2,8,13,0.46))]" />
         <BrandBackdrop />
         <div className="relative z-10 mx-auto flex min-h-[94svh] max-w-7xl items-end px-6 py-16 sm:px-10 sm:py-24 lg:items-center">
-          <div className="max-w-[70ch]">
+          <div className="max-w-[70ch] [text-shadow:0_2px_16px_rgba(0,0,0,0.8)]">
             <p className="section-kicker text-gold">{opening.eyebrow}</p>
             <h2
               id="rapa-nui-story-title"
@@ -1572,6 +1952,9 @@ export function RapaNuiStorySection() {
             <blockquote className="mt-9 border-l border-gold/65 pl-5 font-serif text-2xl font-semibold leading-tight text-[#f7e6bd] sm:text-4xl">
               {opening.quote}
             </blockquote>
+
+            <SectionNarrator ui={ui} title={opening.title} language={language} chapterId="00-intro" />
+
             <div className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-white/10 pt-6 text-xs text-white/55">
               <span className="font-bold uppercase tracking-[0.2em] text-white/40">{ui.sourcesTitle}:</span>
               <span>UNESCO</span>
@@ -1592,10 +1975,10 @@ export function RapaNuiStorySection() {
       </article>
 
       {chapters.map((chapter, index) => (
-        <Chapter key={chapter.id} chapter={chapter} index={index} />
+        <Chapter key={chapter.id} chapter={chapter} index={index} ui={ui} language={language} />
       ))}
 
-      <Timeline ui={ui} timeline={timeline} />
+      <Timeline ui={ui} timeline={timeline} language={language} />
       <Sources ui={ui} sources={sources} />
 
       <section className="relative overflow-hidden bg-[#02080d] px-6 pb-24 text-white sm:px-10 sm:pb-28">
@@ -1606,6 +1989,11 @@ export function RapaNuiStorySection() {
           <p className="mt-5 max-w-4xl text-balance font-serif text-[clamp(2.2rem,4.6vw,4.8rem)] font-semibold leading-[1.04] text-white">
             {ui.bridgeLine}
           </p>
+
+          <div className="max-w-[70ch]">
+            <SectionNarrator ui={ui} title={ui.bridgeLine} language={language} chapterId="09-zakonczenie" />
+          </div>
+
           <a
             href="#przebudzenie-moai"
             className="mt-7 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-gold/82 transition hover:text-[#f7e6bd] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
