@@ -1644,7 +1644,10 @@ function SectionNarrator({
     if (!audio) return;
     setHasStarted(true);
     stopOtherNarrators(audio);
-    void audio.play();
+    // A play() request can be legitimately interrupted by the pause() that
+    // stopOtherNarrators() just issued on the previously-playing element (or
+    // by another quick switch) - that rejection is expected, not an error.
+    audio.play().catch(() => {});
   }
 
   function togglePlay() {
@@ -1654,7 +1657,7 @@ function SectionNarrator({
       audio.pause();
     } else {
       stopOtherNarrators(audio);
-      void audio.play();
+      audio.play().catch(() => {});
     }
   }
 
