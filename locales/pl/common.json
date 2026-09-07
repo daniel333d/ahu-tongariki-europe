@@ -167,10 +167,14 @@
     "openMap": "Kliknij miniaturę Ahu Tongariki,\naby otworzyć lokalizację w Google Maps",
     "mapCode": "PL / SW",
     "video": {
-      "caption": "Film promocyjny",
+      "caption": "Miejsce powstania RapaNuiParku",
       "playAriaLabel": "Odtwórz film o Rapa Nui Park",
       "posterHeading": "Haere mai, mataki i te ata",
-      "playLabel": "PLAY"
+      "playLabel": "PLAY",
+      "ctaLabel": "Zobacz teren inwestycji",
+      "modalTitle": "Film – miejsce powstania RapaNuiPark",
+      "modalCloseLabel": "Zamknij film",
+      "modalFullscreenLabel": "Pełny ekran"
     }
   },
   "functions": {

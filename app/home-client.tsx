@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { type CSSProperties, type FormEvent, useEffect, useState } from "react";
+import { type CSSProperties, type FormEvent, useEffect, useRef, useState } from "react";
 import { BrandLogo } from "../components/brand/BrandLogo";
 import { ImageWatermark } from "../components/brand/ImageWatermark";
 import { VisitCounter } from "../components/common/VisitCounter";
@@ -13,7 +13,7 @@ import { QrMoaiSection } from "../components/sections/QrMoaiSection";
 import { RapaNuiStorySection } from "../components/sections/RapaNuiStorySection";
 import { RealizationStagesSection } from "../components/sections/RealizationStagesSection";
 import { WinterExperienceSection } from "../components/sections/WinterExperienceSection";
-import { VideoPlayer } from "../components/video/VideoPlayer";
+import { VideoModal } from "../components/video/VideoModal";
 import { languageOptions } from "./i18n";
 import { I18nProvider, useI18n } from "./i18n-provider";
 import {
@@ -30,6 +30,7 @@ import {
   Menu,
   MapPin,
   Mountain,
+  Play,
   X,
   Utensils,
   UsersRound
@@ -240,22 +241,69 @@ function GovernmentPartnershipSection() {
   );
 }
 
+function TeaserClip() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isNear, setIsNear] = useState(false);
+  const hasPlayedRef = useRef(false);
+
+  useEffect(() => {
+    const node = containerRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setIsNear(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px 0px", threshold: 0.01 }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isNear || hasPlayedRef.current) return;
+    const video = videoRef.current;
+    if (!video) return;
+    hasPlayedRef.current = true;
+    video.play().catch(() => {});
+  }, [isNear]);
+
+  return (
+    <div
+      ref={containerRef}
+      className="relative mt-10 aspect-video w-full max-w-[420px] overflow-hidden border border-gold/25 bg-navy shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:max-w-[520px]"
+    >
+      {isNear ? (
+        <video ref={videoRef} className="h-full w-full object-contain" muted playsInline preload="auto">
+          <source src="/assets/video/rapa-nui-park-teaser.mp4" type="video/mp4" />
+        </video>
+      ) : null}
+    </div>
+  );
+}
+
 function CinematicVideoSection({
   caption,
   videoSrc,
-  posterSrc,
-  playAriaLabel,
-  posterHeading,
-  playLabel
+  ctaLabel,
+  modalTitle,
+  modalCloseLabel,
+  modalFullscreenLabel
 }: {
   caption: string;
   videoSrc: string;
-  posterSrc: string;
-  playAriaLabel: string;
-  posterHeading: string;
-  playLabel: string;
+  ctaLabel: string;
+  modalTitle: string;
+  modalCloseLabel: string;
+  modalFullscreenLabel: string;
 }) {
   const [backgroundFailed, setBackgroundFailed] = useState(false);
+  const [isVideoOpen, setVideoOpen] = useState(false);
 
   return (
     <div className="relative mx-[calc(50%-50vw)] mt-20 w-screen overflow-hidden sm:mt-24">
@@ -316,18 +364,26 @@ function CinematicVideoSection({
 
         <div className="relative z-10 mx-auto flex w-full max-w-[1400px] flex-col items-center">
           <p className="section-kicker text-center">{caption}</p>
-          <div className="mt-8 drop-shadow-[0_45px_90px_rgba(2,7,15,0.65)]">
-            <VideoPlayer
-              videoSrc={videoSrc}
-              posterSrc={posterSrc}
-              orientation="portrait"
-              playAriaLabel={playAriaLabel}
-              posterHeading={posterHeading}
-              playLabel={playLabel}
-            />
-          </div>
+          <TeaserClip />
+          <button
+            type="button"
+            onClick={() => setVideoOpen(true)}
+            className="group mt-10 inline-flex items-center gap-3 border border-gold/70 bg-navy/40 px-9 py-4 text-sm font-bold uppercase tracking-[0.24em] text-gold shadow-premium backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:border-gold hover:bg-navy/60 hover:shadow-[0_24px_65px_rgba(184,150,72,0.22)] focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          >
+            <Play className="h-4 w-4 shrink-0 transition duration-300 group-hover:scale-110" fill="currentColor" aria-hidden="true" />
+            {ctaLabel}
+          </button>
         </div>
       </div>
+
+      <VideoModal
+        isOpen={isVideoOpen}
+        onClose={() => setVideoOpen(false)}
+        videoSrc={videoSrc}
+        title={modalTitle}
+        closeLabel={modalCloseLabel}
+        fullscreenLabel={modalFullscreenLabel}
+      />
     </div>
   );
 }
@@ -1001,11 +1057,11 @@ function HomeContent() {
 
           <CinematicVideoSection
             caption={copy.location.video.caption}
-            videoSrc="/assets/video/ahu-tongariki-europe-film.mp4"
-            posterSrc="/assets/video/ahu-tongariki-europe-poster.webp"
-            playAriaLabel={copy.location.video.playAriaLabel}
-            posterHeading={copy.location.video.posterHeading}
-            playLabel={copy.location.video.playLabel}
+            videoSrc="https://video.rapanuipark.com/RapaNuiPark_teren_1080p_web.mp4"
+            ctaLabel={copy.location.video.ctaLabel}
+            modalTitle={copy.location.video.modalTitle}
+            modalCloseLabel={copy.location.video.modalCloseLabel}
+            modalFullscreenLabel={copy.location.video.modalFullscreenLabel}
           />
         </div>
       </section>
