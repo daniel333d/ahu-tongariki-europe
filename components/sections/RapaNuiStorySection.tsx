@@ -1475,7 +1475,7 @@ function Chapter({
           whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.18 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className={`max-w-[76ch] ${contentAlign} ${textShadow}`}
+          className={`min-w-0 max-w-[76ch] ${contentAlign} ${textShadow}`}
         >
           <div className="border-l border-gold/55 pl-5 sm:pl-8">
             <p className="section-kicker text-gold">{chapter.eyebrow}</p>
@@ -1515,7 +1515,12 @@ function Chapter({
           </p>
 
           {CHAPTER_AUDIO_FILE[chapter.id] ? (
-            <SectionNarrator ui={ui} title={chapter.title} language={language} chapterId={CHAPTER_AUDIO_FILE[chapter.id]} />
+            <SectionNarrator
+              ui={ui}
+              title={chapter.title}
+              language={language}
+              chapterId={getChapterAudioStem(chapter, language)}
+            />
           ) : null}
 
           <p className="mt-10 font-serif text-3xl font-semibold text-gold/82">{chapter.number}</p>
@@ -1528,10 +1533,12 @@ function Chapter({
 // Languages for which a professionally produced narration has been placed at
 // public/audio/narration/{lang}/chapters/{chapterId}.mp3. No request is ever
 // made for a language that isn't listed here.
-const NARRATION_AVAILABLE_LANGUAGES: LanguageCode[] = ["pl"];
+const NARRATION_AVAILABLE_LANGUAGES: LanguageCode[] = ["pl", "en", "fr", "es", "de", "cs"];
 
-// Maps each chapter's internal id to the filename (without extension) of its
-// own narration recording under public/audio/narration/{lang}/chapters/.
+// PL's chapter recordings predate the multilingual rollout and kept their
+// original descriptive Polish filenames; every other locale's files were
+// recorded directly under the neutral "{number}-{id}" pattern (see
+// getChapterAudioStem below), so only PL needs this override map.
 const CHAPTER_AUDIO_FILE: Record<string, string> = {
   ocean: "01-najpierw-byl-ocean",
   adaptacja: "02-najwiekszym-monumentem-bylo-przetrwanie",
@@ -1542,6 +1549,13 @@ const CHAPTER_AUDIO_FILE: Record<string, string> = {
   zewnatrz: "07-najciemniejszy-rozdzial-przyszedl-z-zewnatrz",
   dzisiaj: "08-narod-ktory-przetrwal"
 };
+
+// Resolves the filename (without extension) of a chapter's narration
+// recording under public/audio/narration/{language}/chapters/.
+function getChapterAudioStem(chapter: StoryChapter, language: LanguageCode): string {
+  if (language === "pl") return CHAPTER_AUDIO_FILE[chapter.id];
+  return `${chapter.number}-${chapter.id}`;
+}
 
 // Only one SectionNarrator across the whole page may play at a time. Starting
 // playback in one instance pauses whichever `<audio>` element was previously
@@ -1738,7 +1752,7 @@ function SectionNarrator({
               <span className="block text-[11px] font-bold uppercase leading-none tracking-[0.24em] text-gold">
                 {ui.narratorEyebrow}
               </span>
-              <span className="mt-1.5 block truncate font-serif text-base font-semibold leading-tight text-white sm:text-lg">
+              <span className="mt-1.5 block whitespace-normal break-words font-serif text-base font-semibold leading-tight text-white [overflow-wrap:anywhere] sm:text-lg">
                 {title}
               </span>
               <span className="mt-1 block text-xs leading-none text-white/50">
@@ -1939,7 +1953,7 @@ export function RapaNuiStorySection() {
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,8,13,0.68),rgba(2,8,13,0.38)_34%,rgba(2,8,13,0.03)_54%),linear-gradient(180deg,rgba(2,8,13,0.06),rgba(2,8,13,0.46))]" />
         <BrandBackdrop />
         <div className="relative z-10 mx-auto flex min-h-[94svh] max-w-7xl items-end px-6 py-16 sm:px-10 sm:py-24 lg:items-center">
-          <div className="max-w-[70ch] [text-shadow:0_2px_16px_rgba(0,0,0,0.8)]">
+          <div className="min-w-0 max-w-[70ch] [text-shadow:0_2px_16px_rgba(0,0,0,0.8)]">
             <p className="section-kicker text-gold">{opening.eyebrow}</p>
             <h2
               id="rapa-nui-story-title"
