@@ -167,10 +167,14 @@
     "openMap": "Klicken Sie auf die Miniatur von Ahu Tongariki,\num den Standort in Google Maps zu öffnen",
     "mapCode": "PL / SW",
     "video": {
-      "caption": "Imagefilm",
+      "caption": "Der Entstehungsort von RapaNuiPark",
       "playAriaLabel": "Video von Rapa Nui Park abspielen",
       "posterHeading": "Haere mai, mataki i te ata",
-      "playLabel": "PLAY"
+      "playLabel": "PLAY",
+      "ctaLabel": "Investitionsgelände ansehen",
+      "modalTitle": "Video – der Entstehungsort von RapaNuiPark",
+      "modalCloseLabel": "Video schließen",
+      "modalFullscreenLabel": "Vollbild"
     }
   },
   "functions": {

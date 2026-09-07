@@ -167,10 +167,14 @@
     "openMap": "Haz clic en la miniatura de Ahu Tongariki\npara abrir la ubicación en Google Maps",
     "mapCode": "PL / SW",
     "video": {
-      "caption": "Vídeo promocional",
+      "caption": "El lugar de construcción de RapaNuiPark",
       "playAriaLabel": "Reproducir el vídeo de Rapa Nui Park",
       "posterHeading": "Haere mai, mataki i te ata",
-      "playLabel": "PLAY"
+      "playLabel": "PLAY",
+      "ctaLabel": "Ver el terreno de la inversión",
+      "modalTitle": "Vídeo – el lugar de construcción de RapaNuiPark",
+      "modalCloseLabel": "Cerrar el vídeo",
+      "modalFullscreenLabel": "Pantalla completa"
     }
   },
   "functions": {
