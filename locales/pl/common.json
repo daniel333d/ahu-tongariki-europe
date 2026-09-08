@@ -174,7 +174,8 @@
       "ctaLabel": "Zobacz teren inwestycji",
       "modalTitle": "Film – miejsce powstania RapaNuiPark",
       "modalCloseLabel": "Zamknij film",
-      "modalFullscreenLabel": "Pełny ekran"
+      "modalFullscreenLabel": "Pełny ekran",
+      "teaserReplayAria": "Odtwórz teaser ponownie"
     }
   },
   "functions": {

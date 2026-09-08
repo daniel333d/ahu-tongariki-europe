@@ -174,7 +174,8 @@
       "ctaLabel": "Voir le terrain d'investissement",
       "modalTitle": "Film – le lieu de construction de RapaNuiPark",
       "modalCloseLabel": "Fermer le film",
-      "modalFullscreenLabel": "Plein écran"
+      "modalFullscreenLabel": "Plein écran",
+      "teaserReplayAria": "Relire le teaser"
     }
   },
   "functions": {

@@ -174,7 +174,8 @@
       "ctaLabel": "Investitionsgelände ansehen",
       "modalTitle": "Video – der Entstehungsort von RapaNuiPark",
       "modalCloseLabel": "Video schließen",
-      "modalFullscreenLabel": "Vollbild"
+      "modalFullscreenLabel": "Vollbild",
+      "teaserReplayAria": "Teaser erneut abspielen"
     }
   },
   "functions": {

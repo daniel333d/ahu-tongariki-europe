@@ -174,7 +174,8 @@
       "ctaLabel": "Prohlédnout si pozemek investice",
       "modalTitle": "Video – místo vzniku RapaNuiPark",
       "modalCloseLabel": "Zavřít video",
-      "modalFullscreenLabel": "Celá obrazovka"
+      "modalFullscreenLabel": "Celá obrazovka",
+      "teaserReplayAria": "Přehrát teaser znovu"
     }
   },
   "functions": {
