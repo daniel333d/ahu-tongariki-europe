@@ -31,6 +31,7 @@ import {
   MapPin,
   Mountain,
   Play,
+  RotateCcw,
   X,
   Utensils,
   UsersRound
@@ -242,9 +243,11 @@ function GovernmentPartnershipSection() {
 }
 
 function TeaserClip() {
+  const { copy } = useI18n();
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isNear, setIsNear] = useState(false);
+  const [hasEnded, setHasEnded] = useState(false);
   const hasPlayedRef = useRef(false);
 
   useEffect(() => {
@@ -273,15 +276,43 @@ function TeaserClip() {
     video.play().catch(() => {});
   }, [isNear]);
 
+  function handleReplay() {
+    const video = videoRef.current;
+    if (!video) return;
+    video.currentTime = 0;
+    setHasEnded(false);
+    video.play().catch(() => {});
+  }
+
   return (
     <div
       ref={containerRef}
       className="relative mt-10 aspect-video w-full max-w-[420px] overflow-hidden border border-gold/25 bg-navy shadow-[0_20px_60px_rgba(0,0,0,0.35)] sm:max-w-[520px]"
     >
       {isNear ? (
-        <video ref={videoRef} className="h-full w-full object-contain" muted playsInline preload="auto">
+        <video
+          ref={videoRef}
+          className="h-full w-full object-contain"
+          muted
+          playsInline
+          preload="auto"
+          onEnded={() => setHasEnded(true)}
+        >
           <source src="/assets/video/rapa-nui-park-teaser.mp4" type="video/mp4" />
         </video>
+      ) : null}
+      {hasEnded ? (
+        <button
+          type="button"
+          onClick={handleReplay}
+          aria-label={copy.location.video.teaserReplayAria}
+          title={copy.location.video.teaserReplayAria}
+          className="group absolute inset-0 flex items-center justify-center bg-navy/20 transition duration-300 hover:bg-navy/35"
+        >
+          <span className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/60 bg-navy/70 text-gold shadow-premium backdrop-blur-md transition duration-300 group-hover:scale-110 group-hover:border-gold">
+            <RotateCcw className="h-6 w-6" aria-hidden="true" />
+          </span>
+        </button>
       ) : null}
     </div>
   );

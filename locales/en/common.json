@@ -174,7 +174,8 @@
       "ctaLabel": "See the investment site",
       "modalTitle": "Film – where RapaNuiPark is being built",
       "modalCloseLabel": "Close the film",
-      "modalFullscreenLabel": "Fullscreen"
+      "modalFullscreenLabel": "Fullscreen",
+      "teaserReplayAria": "Replay the teaser"
     }
   },
   "functions": {
